@@ -1,0 +1,254 @@
+---
+// Lembre-se de usar o nome correto do seu Layout/componentes aqui
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+// CORREÇÃO: Importamos a função 'getCollection' para buscar os posts
+import { getCollection } from 'astro:content';
+
+const pageTitle = "Seu Portal Financeiro Completo";
+const pageDescription = "Ferramentas financeiras, cotações e artigos para ajudar você a tomar decisões mais inteligentes com o seu dinheiro.";
+
+// CORREÇÃO: Usamos getCollection para buscar os posts da pasta 'src/content/blog'
+// e ordená-los pela data de publicação
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3); // Pega apenas os 3 mais recentes
+---
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+</head>
+<body>
+    <Header />
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Suas Ferramentas Financeiras em um Só Lugar</h1>
+                <p class="hero-subtitle">Calcule, converta e analise. Tome o controlo das suas finanças com ferramentas gratuitas e fáceis de usar.</p>
+                <a href="/ferramentas/juros-compostos/" class="hero-button">Começar a Usar</a>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="section-title">Nossas Ferramentas</h2>
+            <div class="features-grid">
+                 <a href="/ferramentas/juros-compostos/" class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm3.75-3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm3-3h.008v.008h-.008v-.008Zm-9-3h.008v.008H8.25v-.008Zm3 0h.008v.008h-.008v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    </div>
+                    <h3>Calculadora de Juros Compostos</h3>
+                    <p>Projete o crescimento dos seus investimentos ao longo do tempo com aportes mensais.</p>
+                </a>
+
+                <a href="/ferramentas/conversor-de-moedas/" class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-2.25-2.226-2.25-4.154 0-1.928.984-3.597 2.5-4.596" /></svg>
+                    </div>
+                    <h3>Conversor de Moedas</h3>
+                    <p>Veja a cotação e converta valores entre dezenas de moedas em tempo real.</p>
+                </a>
+
+                <a href="/ferramentas/cotacao-acoes/" class="feature-card">
+                    <div class="icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+                    </div>
+                    <h3>Cotação de Ações</h3>
+                    <p>Busque o preço e a variação de ações da B3 e do mercado internacional.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="posts-section">
+            <h2 class="section-title">Últimos Artigos do Blog</h2>
+            <ul class="posts-grid">
+            <ul class="posts-grid">
+                          {
+                            posts.map(post => (
+                              <li class="post-card">
+                                <a href={`/blog/${post.id}/`}>
+                                  <h3 class="post-title">{post.data.title}</h3>
+                                  <p class="post-date"><FormattedDate date={post.data.pubDate} /></p>
+                                  <p class="post-description">{post.data.description}</p>
+                                  <span class="read-more">Ler mais &rarr;</span>
+                                </a>
+                              </li>
+                            ))
+                          }
+                        </ul>
+              <a href="/blog/">Ver todos os artigos</a>
+            </div>
+        </section>
+    </main>
+    <Footer />
+
+    <style>
+      /* Estilos Gerais da Secção */
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #1f2937;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Secção Hero */
+      .hero-section {
+        text-align: center;
+        padding: 6rem 1.5rem;
+        background-color: #f9fafb;
+      }
+      .hero-content {
+        max-width: 650px;
+        margin: 0 auto;
+      }
+      .hero-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .hero-subtitle {
+        font-size: 1.25rem;
+        color: #4b5563;
+        margin-top: 1rem;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-button {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #7c3aed;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      .hero-button:hover {
+        background-color: #6d28d9;
+      }
+
+      /* Secção de Ferramentas */
+      .features-section {
+        padding: 5rem 1.5rem;
+        background-color: white;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .feature-card {
+        display: block;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      }
+      .icon-wrapper {
+        display: inline-flex;
+        padding: 0.75rem;
+        background-color: #eef2ff;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .icon-wrapper svg {
+        width: 2rem;
+        height: 2rem;
+        color: #6366f1;
+      }
+      .feature-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      .feature-card p {
+        color: #6b7280;
+        line-height: 1.6;
+      }
+
+      /* Secção de Posts */
+      .posts-section {
+        padding: 5rem 1.5rem;
+        background-color: #f9fafb;
+      }
+      .posts-grid {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .post-card {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+       .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      }
+      .post-card a {
+        display: block;
+        padding: 1.5rem;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+      }
+      .post-title {
+        font-size: 1.25rem;
+        margin: 0 0 0.5rem;
+      }
+      .post-date {
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .post-description {
+        color: #4b5563;
+        margin-bottom: 1rem;
+      }
+      .read-more {
+        font-weight: 600;
+        color: #7c3aed;
+      }
+      .all-posts-link {
+        text-align: center;
+        margin-top: 3rem;
+      }
+      .all-posts-link a {
+        font-weight: 600;
+        color: #7c3aed;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+</body>
+</html>

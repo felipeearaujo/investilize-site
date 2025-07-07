@@ -1,0 +1,24 @@
+---
+// 1. Importar as peças corretas para montar a página
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CotacaoAcoesComponent from '../../components/ferramentas/CotacaoAcoes.astro';
+
+// 2. Definir o título e a descrição para o SEO desta página
+const pageTitle = "Cotação de Ações em Tempo Real";
+const pageDescription = "Veja a cotação de ações da B3 e do mercado internacional. Ferramenta gratuita de cotações.";
+---
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <BaseHead title={pageTitle} description={pageDescription} />
+        </head>
+    <body>
+        <Header />
+        <main>
+            <CotacaoAcoesComponent />
+        </main>
+        <Footer />
+    </body>
+</html>

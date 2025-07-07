@@ -1,0 +1,184 @@
+---
+// Nenhuma lógica de servidor necessária aqui
+---
+
+<div class="converter-container">
+  <h2>Conversor de Moedas</h2>
+  <p class="subtitle">Cotações atualizadas em tempo real</p>
+  
+  <div class="converter-body">
+    <div class="currency-group">
+      <select id="from_currency"></select>
+      <input type="number" id="from_amount" value="1" />
+    </div>
+    
+    <div class="swap-icon-container">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+      </svg>
+    </div>
+
+    <div class="currency-group">
+      <select id="to_currency"></select>
+      <input type="number" id="to_amount" />
+    </div>
+  </div>
+
+  <div id="rate-info">Carregando cotações...</div>
+</div>
+
+<style>
+.converter-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 2rem auto;
+}
+h2 {
+  color: #1f2937;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 2em;
+}
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #6b7280;
+}
+.converter-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.currency-group {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+select, input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+select {
+  background-color: #f9fafb;
+}
+input {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.swap-icon-container {
+  width: 32px;
+  height: 32px;
+  color: #9ca3af;
+  margin-top: auto; /* Alinha com os inputs */
+}
+#rate-info {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+</style>
+
+<script>
+// Elementos do DOM
+const fromCurrencySelect = document.getElementById('from_currency') as HTMLSelectElement;
+const fromAmountInput = document.getElementById('from_amount') as HTMLInputElement;
+const toCurrencySelect = document.getElementById('to_currency') as HTMLSelectElement;
+const toAmountInput = document.getElementById('to_amount') as HTMLInputElement;
+const rateInfoDiv = document.getElementById('rate-info');
+
+// URL da API
+const API_URL = 'https://api.frankfurter.app';
+
+// Função para popular os menus de seleção de moedas
+async function populateCurrencies() {
+  try {
+    const response = await fetch(`${API_URL}/currencies`);
+    const currencies = await response.json();
+    
+    for (const currencyCode in currencies) {
+      const option1 = document.createElement('option');
+      option1.value = currencyCode;
+      option1.textContent = `${currencyCode} - ${currencies[currencyCode]}`;
+      fromCurrencySelect.appendChild(option1);
+      
+      const option2 = document.createElement('option');
+      option2.value = currencyCode;
+      option2.textContent = `${currencyCode} - ${currencies[currencyCode]}`;
+      toCurrencySelect.appendChild(option2);
+    }
+    
+    // Definir valores padrão
+    fromCurrencySelect.value = 'BRL';
+    toCurrencySelect.value = 'USD';
+    
+    // Chamar a conversão inicial
+    await convertCurrency();
+  } catch (error) {
+    if (rateInfoDiv) rateInfoDiv.textContent = 'Erro ao carregar moedas.';
+    console.error('Erro ao popular moedas:', error);
+  }
+}
+
+// Função para converter os valores
+async function convertCurrency() {
+  const fromCurrency = fromCurrencySelect.value;
+  const toCurrency = toCurrencySelect.value;
+  const amount = parseFloat(fromAmountInput.value);
+
+  if (!rateInfoDiv) return;
+
+  if (fromCurrency === toCurrency) {
+    toAmountInput.value = fromAmountInput.value;
+    rateInfoDiv.textContent = 'As moedas são iguais.';
+    return;
+  }
+  
+  if (isNaN(amount)) {
+    rateInfoDiv.textContent = 'Insira um valor válido.';
+    return;
+  }
+
+  rateInfoDiv.textContent = 'Buscando cotação...';
+
+  try {
+    const response = await fetch(`${API_URL}/latest?amount=${amount}&from=${fromCurrency}&to=${toCurrency}`);
+    const data = await response.json();
+    
+    if (data.rates && data.rates[toCurrency]) {
+      const convertedAmount = data.rates[toCurrency];
+      toAmountInput.value = convertedAmount.toFixed(2);
+      
+      const singleUnitResponse = await fetch(`${API_URL}/latest?from=${fromCurrency}&to=${toCurrency}`);
+      const singleUnitData = await singleUnitResponse.json();
+      const rate = singleUnitData.rates[toCurrency];
+      
+      rateInfoDiv.textContent = `1 ${fromCurrency} = ${rate.toFixed(4)} ${toCurrency}`;
+    } else {
+      rateInfoDiv.textContent = 'Não foi possível obter a cotação.';
+    }
+  } catch (error) {
+    rateInfoDiv.textContent = 'Erro de rede ao buscar cotação.';
+    console.error('Erro na conversão:', error);
+  }
+}
+
+// Event Listeners
+fromCurrencySelect.addEventListener('change', convertCurrency);
+toCurrencySelect.addEventListener('change', convertCurrency);
+fromAmountInput.addEventListener('input', convertCurrency);
+
+// Iniciar ao carregar a página
+document.addEventListener('DOMContentLoaded', populateCurrencies);
+</script>

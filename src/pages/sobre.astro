@@ -1,0 +1,72 @@
+---
+// Ficheiro: src/pages/sobre.astro
+
+// 1. Importar as peças para montar a página
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// 2. Definir o título e a descrição para o SEO
+const pageTitle = "Sobre Nós | Portal Financeiro";
+const pageDescription = "Conheça a nossa missão de fornecer as melhores ferramentas financeiras gratuitas para ajudar no seu planejamento e tomada de decisões.";
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+</head>
+<body>
+    <Header />
+    <main class="about-container">
+        <h1 class="about-title">Sobre o Nosso Projeto</h1>
+        
+        <div class="about-content">
+            <p>
+                Bem-vindo ao nosso Portal Financeiro! Nascemos da paixão por tecnologia e da crença de que todos merecem ter acesso a ferramentas financeiras de alta qualidade, de forma gratuita e transparente.
+            </p>
+            <p>
+                Nossa missão é simplificar o mundo das finanças para você. Aqui, você encontrará calculadoras, conversores e simuladores que o ajudarão a planear seus investimentos, entender o mercado e tomar decisões mais inteligentes com o seu dinheiro. Cada ferramenta é desenvolvida com foco na precisão, facilidade de uso e, acima de tudo, no respeito à sua privacidade.
+            </p>
+            <p>
+                Acreditamos no poder do conhecimento e da autonomia. Por isso, além das ferramentas, também nos dedicamos a criar artigos e conteúdos que desmistificam conceitos financeiros e oferecem insights valiosos para a sua jornada.
+            </p>
+            <p>
+                Este é um projeto em constante evolução. Novas ferramentas e artigos são adicionados regularmente. Explore, use à vontade e, se tiver alguma sugestão, <a href="/contato">entre em contato conosco</a>! Esperamos fazer parte do seu sucesso financeiro.
+            </p>
+        </div>
+    </main>
+    <Footer />
+
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .about-content p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+        .about-content a {
+            color: #7c3aed;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</body>
+</html>

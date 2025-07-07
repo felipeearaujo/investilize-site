@@ -1,0 +1,65 @@
+---
+// Ficheiro: src/pages/politica-de-privacidade.astro
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Política de Privacidade";
+const pageDescription = "Entenda como os seus dados são recolhidos e utilizados no nosso site. A sua privacidade é importante para nós.";
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+</head>
+<body>
+    <Header />
+    <main class="legal-container">
+        <h1 class="legal-title">Política de Privacidade</h1>
+        
+        <div class="legal-content">
+            <p><strong>Exemplo de como o texto pode começar:</strong></p>
+            <p>A sua privacidade é importante para nós. É política do [Nome do Seu Site] respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site [Nome do Seu Site], e outros sites que possuímos e operamos.</p>
+            
+        </div>
+    </main>
+    <Footer />
+
+    <style>
+        .legal-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .legal-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        /* Estilos para o conteúdo legal que você vai colar */
+        .legal-content :global(h2) {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+         .legal-content :global(p),
+         .legal-content :global(li) {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+         .legal-content :global(a) {
+            color: #7c3aed;
+        }
+    </style>
+</body>
+</html>

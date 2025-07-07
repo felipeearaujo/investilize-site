@@ -1,0 +1,130 @@
+---
+// Componente da Ferramenta de Cotação de Ações
+---
+<div class="quote-container">
+  <h2>Cotação de Ações</h2>
+  <p class="subtitle">Digite o símbolo da ação (ex: PETR4.SA, AAPL, MGLU3.SA)</p>
+
+  <div class="search-bar">
+    <input type="text" id="symbol-input" placeholder="PETR4.SA" />
+    <button id="search-btn">Buscar</button>
+  </div>
+
+  <div id="quote-result-container">
+    <p class="info-text">Aguardando a sua busca...</p>
+  </div>
+</div>
+
+<style>
+  .quote-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 2rem auto;
+  }
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #symbol-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  #search-btn {
+    padding: 10px 20px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #search-btn:hover { background-color: #6d28d9; }
+  #quote-result-container {
+    text-align: left;
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 100px;
+  }
+  .info-text, .error-text { color: #6b7280; }
+  .quote-line { margin: 10px 0; font-size: 1.1rem; }
+  .positive { color: #16a34a; }
+  .negative { color: #dc2626; }
+</style>
+
+<script>
+  function setupQuoteTool() {
+    const symbolInput = document.getElementById('symbol-input') as HTMLInputElement;
+    const searchBtn = document.getElementById('search-btn') as HTMLButtonElement;
+    const resultContainer = document.getElementById('quote-result-container') as HTMLDivElement;
+
+    if (!symbolInput || !searchBtn || !resultContainer) {
+      console.error("Erro de inicialização: Elementos da ferramenta de cotação não foram encontrados.");
+      return;
+    }
+
+    async function fetchQuote() {
+      const symbol = symbolInput.value.trim();
+      if (!symbol) {
+        resultContainer.innerHTML = `<p class="error-text">Por favor, digite um símbolo.</p>`;
+        return;
+      }
+
+      resultContainer.innerHTML = `<p class="info-text">Buscando cotação para ${symbol.toUpperCase()}...</p>`;
+
+      try {
+        // MUDANÇA: A URL agora é "limpa", sem parâmetros
+        const urlToFetch = `/api/cotacao`;
+
+        // MUDANÇA: Adicionamos um objeto de opções para configurar o POST
+        const response = await fetch(urlToFetch, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ symbol: symbol }), // Enviamos o símbolo no "corpo" do pedido
+        });
+
+        const data = await response.json();
+        if (!response.ok) { throw new Error(data.error || 'Erro desconhecido.'); }
+
+        const price = parseFloat(data['05. price']);
+        const changeValue = parseFloat(data['09. change']);
+        const changePercent = parseFloat(data['10. change percent'].replace('%', ''));
+        const changeClass = changeValue >= 0 ? 'positive' : 'negative';
+        const changeSign = changeValue >= 0 ? '+' : '';
+        const quoteSymbol = data['01. symbol'];
+        const BRL_FORMATTER = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        resultContainer.innerHTML = `
+          <h3>${quoteSymbol}</h3>
+          <p class="quote-line"><strong>Preço:</strong> ${BRL_FORMATTER.format(price)}</p>
+          <p class="quote-line"><strong>Variação:</strong> <span class="${changeClass}">${changeSign}${changeValue.toFixed(2)} (${changeSign}${changePercent.toFixed(2)}%)</span></p>
+        `;
+
+      } catch (error) {
+        let errorMessage = 'Ocorreu um erro inesperado.';
+        if (error instanceof Error) { errorMessage = error.message; }
+        resultContainer.innerHTML = `<p class="error-text">Erro: ${errorMessage}</p>`;
+      }
+    }
+
+    searchBtn.addEventListener('click', fetchQuote);
+    symbolInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') { fetchQuote(); }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupQuoteTool);
+</script>

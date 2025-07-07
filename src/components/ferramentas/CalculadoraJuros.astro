@@ -1,0 +1,243 @@
+---
+// Nenhuma lógica de servidor necessária aqui.
+---
+
+<div class="calculator-container">
+    <h1>Calculadora de Juros Compostos</h1>
+    <p class="subtitle">Com Aportes Mensais e Gráfico de Evolução</p>
+    
+    <div class="input-group">
+        <label for="capital">Capital Inicial (R$):</label>
+        <input type="number" id="capital" placeholder="Ex: 1000">
+    </div>
+
+    <div class="input-group">
+        <label for="aporte">Valor do Aporte Mensal (R$):</label>
+        <input type="number" id="aporte" placeholder="Ex: 300">
+    </div>
+    
+    <div class="input-group">
+        <label for="taxa">Taxa de Juros Mensal (%):</label>
+        <input type="number" id="taxa" placeholder="Ex: 1">
+    </div>
+
+    <div class="input-group">
+        <label for="tempo">Período (meses):</label>
+        <input type="number" id="tempo" placeholder="Ex: 12">
+    </div>
+    
+    <button id="calculate-btn">Calcular e Gerar Gráfico</button>
+    
+    <div id="result-container"></div>
+
+    <div class="chart-container">
+        <canvas id="evolutionChart"></canvas>
+    </div>
+</div>
+
+<style>
+/* Seus estilos CSS permanecem os mesmos */
+.calculator-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 2rem auto;
+}
+h1 {
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+.input-group { margin-bottom: 20px; text-align: left; }
+label { display: block; margin-bottom: 5px; font-weight: 600; color: #374151; }
+input { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+input:focus {
+    border-color: #7c3aed;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background-color: #7c3aed; 
+    color: white; border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+button:hover { background-color: #6d28d9; }
+#result-container {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+    text-align: left;
+    line-height: 1.6;
+}
+.chart-container {
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+}
+</style>
+
+<script>
+function setupCalculator() {
+    // 1. Obter referências aos elementos
+    const capitalInput = document.getElementById('capital') as HTMLInputElement;
+    const aporteInput = document.getElementById('aporte') as HTMLInputElement;
+    const taxaInput = document.getElementById('taxa') as HTMLInputElement;
+    const tempoInput = document.getElementById('tempo') as HTMLInputElement;
+    const calculateBtn = document.getElementById('calculate-btn');
+    const resultContainer = document.getElementById('result-container');
+    const chartCanvas = document.getElementById('evolutionChart') as HTMLCanvasElement;
+
+    // 2. A "Guarda de Proteção"
+    if (!capitalInput || !aporteInput || !taxaInput || !tempoInput || !calculateBtn || !resultContainer || !chartCanvas) {
+        console.error("Erro de inicialização: Elementos da calculadora não encontrados.");
+        return;
+    }
+
+    const chartCtx = chartCanvas.getContext('2d');
+    if (!chartCtx) {
+        console.error("Erro de inicialização: Não foi possível obter o contexto do canvas.");
+        return;
+    }
+    
+    let evolutionChart: any;
+
+    calculateBtn.addEventListener('click', () => {
+        const capitalInicial = parseFloat(capitalInput.value);
+        const aporteMensal = parseFloat(aporteInput.value) || 0;
+        const taxaJurosMensal = parseFloat(taxaInput.value);
+        const tempoMeses = parseInt(tempoInput.value);
+
+        if (isNaN(capitalInicial) || isNaN(taxaJurosMensal) || isNaN(tempoMeses)) {
+            resultContainer.innerHTML = '<p style="color: red;">Preencha o Capital, a Taxa e o Tempo.</p>';
+            return;
+        }
+
+        const taxaDecimal = taxaJurosMensal / 100;
+        const labels = ['Mês 0'];
+        const dataCapitalTotal = [capitalInicial];
+        const dataMontanteTotal = [capitalInicial];
+        
+        let montanteAcumulado = capitalInicial;
+        let capitalInvestido = capitalInicial;
+
+        for (let mes = 1; mes <= tempoMeses; mes++) {
+            montanteAcumulado *= (1 + taxaDecimal);
+            montanteAcumulado += aporteMensal;
+            capitalInvestido += aporteMensal;
+            
+            labels.push(`Mês ${mes}`);
+            dataMontanteTotal.push(montanteAcumulado);
+            dataCapitalTotal.push(capitalInvestido);
+        }
+
+        const montanteFinal = montanteAcumulado;
+        const totalJuros = montanteFinal - capitalInvestido;
+        
+        // ATUALIZAÇÃO: Criando um formatador de moeda reutilizável
+        const formatoMoeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        resultContainer.innerHTML = `
+            <p><strong>Montante Final:</strong> ${formatoMoeda.format(montanteFinal)}</p>
+            <p><strong>Total Investido (Capital + Aportes):</strong> ${formatoMoeda.format(capitalInvestido)}</p>
+            <p><strong>Total Ganho em Juros:</strong> ${formatoMoeda.format(totalJuros)}</p>
+        `;
+
+        if (evolutionChart) {
+            evolutionChart.destroy();
+        }
+        
+        evolutionChart = new (window as any).Chart(chartCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                {
+                    label: 'Total Acumulado (com Juros)',
+                    data: dataMontanteTotal,
+                    borderColor: '#7c3aed',
+                    backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                },
+                {
+                    label: 'Total Investido (sem Juros)',
+                    data: dataCapitalTotal,
+                    borderColor: '#6b7280',
+                    borderDash: [5, 5],
+                    fill: false,
+                    tension: 0.1
+                }
+            ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Evolução do Património ao Longo do Tempo'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context: any) {
+                                let label = context.dataset.label || '';
+                                if (label) { label += ': '; }
+                                if (context.parsed.y !== null) {
+                                    // ATUALIZAÇÃO: Usando o formatador aqui também
+                                    label += formatoMoeda.format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: {
+                            // ATUALIZAÇÃO: E aqui
+                            callback: function(value: string | number) {
+                                // O 'value' aqui é um número, então podemos formatá-lo
+                                if (typeof value === 'number') {
+                                    return formatoMoeda.format(value);
+                                }
+                                return value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+}
+
+// Garante que o script só rode quando a página estiver pronta
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCalculator);
+} else {
+    setupCalculator();
+}
+</script>

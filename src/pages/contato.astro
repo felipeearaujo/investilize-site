@@ -1,0 +1,111 @@
+---
+// Ficheiro: src/pages/contato.astro
+
+// 1. Importar as peças para montar a página
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// 2. Definir o título e a descrição para o SEO
+const pageTitle = "Contato | Portal Financeiro";
+const pageDescription = "Entre em contato conosco para enviar perguntas, sugestões ou feedback. Estamos sempre abertos a ouvir a nossa comunidade.";
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+</head>
+<body>
+    <Header />
+    <main class="contact-container">
+        <h1 class="contact-title">Entre em Contato</h1>
+        <p class="contact-subtitle">
+            Tem alguma pergunta, sugestão ou feedback? Adoraríamos ouvir de você! Preencha o formulário abaixo e responderemos o mais breve possível.
+        </p>
+        
+        <form 
+          action="https://formspree.io/f/xwpbzpay"  method="POST" 
+          class="contact-form"
+        >
+            <div class="form-group">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Seu Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Sua Mensagem:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Mensagem</button>
+        </form>
+    </main>
+    <Footer />
+
+    <style>
+        .contact-container {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #111827;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .contact-subtitle {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 2.5rem;
+            font-size: 1.125rem;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #7c3aed;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.8rem 1.5rem;
+            background-color: #7c3aed;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #6d28d9;
+        }
+    </style>
+</body>
+</html>
