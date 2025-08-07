@@ -2,6 +2,7 @@
 title: 'Análise de Cotações: Guia para Iniciantes'
 description: 'Aprenda os fundamentos da análise de ações, desde a abordagem fundamentalista até a técnica, e descubra os principais indicadores para tomar decisões de investimento mais seguras e assertivas.'
 pubDate: '2025-08-07'
+author: 'Felipe'
 heroImage: '/images/blog/csd.jpg'
 ---
 
