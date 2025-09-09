@@ -37,7 +37,7 @@ O [Tesouro](https://investilize.com.br/blog/tesouro-direto/) Selic é um título
 
 #### CDBs (Certificados de Depósito Bancário)
 
-Os CDBs são títulos emitidos por bancos para captar recursos. São tão seguros quanto a poupança, mas geralmente rendem muito mais.
+Os [CDBs](https://investilize.com.br/blog/cdb-cdi-diferenca/) são títulos emitidos por bancos para captar recursos. São tão seguros quanto a poupança, mas geralmente rendem muito mais.
 
 * **O que procurar?** Busque por um CDB de liquidez diária que pague, no mínimo, 100% do CDI (uma taxa que anda lado a lado com a Selic).
 * **Segurança:** Contam com a proteção do FGC (Fundo Garantidor de Créditos), que assegura até R$ 250 mil por CPF por instituição.
