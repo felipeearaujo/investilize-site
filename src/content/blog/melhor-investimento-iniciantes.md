@@ -1,7 +1,7 @@
 ---
 title: 'Qual o Melhor Investimento Para Iniciantes?'
 description: 'Saber o melhor investimento para ininciantes é o principal passo para você começar no mundo dos investimentos. É de extrema importancia saber quais os títulos mais recomandados nessa fase.'
-pubDate: '2025-09-08'
+pubDate: '2025-09-09'
 author: 'Felipe'
 tags: ['Renda Fixa', 'Tesouro Direto', 'Investimentos', 'Selic', 'iniciantes',]
 heroImage: '/images/blog/investimento-iniciantes.png'
