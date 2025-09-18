@@ -1,0 +1,23 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import SimuladorPerfil from '../../components/ferramentas/SimuladorPerfil.astro';
+
+const pageTitle="Descubra seu perfil de investidor";
+const pageDescription="Calculadora Perfil de Investidor: Conservador, Moderado ou Arrojado?";
+---
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        {/* CORREÇÃO AQUI: Mude de 'title' para 'pageTitle' */}
+        <BaseHead pageTitle={pageTitle} description={pageDescription} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <SimuladorPerfil />
+        </main>
+        <Footer />
+    </body>
+</html>

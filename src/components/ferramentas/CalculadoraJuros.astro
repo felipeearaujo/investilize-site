@@ -146,10 +146,17 @@ function setupCalculator() {
         let capitalInvestido = capitalInicial;
 
         for (let mes = 1; mes <= tempoMeses; mes++) {
-            montanteAcumulado *= (1 + taxaDecimal);
+            // 1. PRIMEIRO: Adiciona o aporte mensal ao montante acumulado.
+            // Assim, o dinheiro novo já começa a render juros neste mesmo mês.
             montanteAcumulado += aporteMensal;
+            
+            // 2. SEGUNDO: Calcula os juros sobre o novo total (saldo anterior + aporte).
+            montanteAcumulado *= (1 + taxaDecimal);
+            
+            // Atualiza o total que saiu do seu bolso (sem juros)
             capitalInvestido += aporteMensal;
             
+            // Adiciona os dados para o gráfico
             labels.push(`Mês ${mes}`);
             dataMontanteTotal.push(montanteAcumulado);
             dataCapitalTotal.push(capitalInvestido);

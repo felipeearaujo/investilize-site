@@ -1,0 +1,198 @@
+---
+// Nenhuma lógica de servidor necessária aqui.
+// Todo o funcionamento será no navegador do usuário (client-side).
+---
+
+<div class="suitability-container">
+    <h1>Simulador de Perfil de Investidor</h1>
+    <p class="subtitle">Descubra seu perfil de risco com base nas normas da CVM</p>
+
+    <form id="suitability-form">
+        <div class="question-group">
+            <label for="q1">1. Por quanto tempo você pretende manter seus investimentos?</label>
+            <select id="q1" name="q1">
+                <option value="1">Curto prazo (até 2 anos)</option>
+                <option value="2">Médio prazo (de 2 a 5 anos)</option>
+                <option value="3">Longo prazo (mais de 5 anos)</option>
+            </select>
+        </div>
+        <div class="question-group">
+            <label for="q2">2. Qual é o seu principal objetivo ao investir?</label>
+            <select id="q2" name="q2">
+                <option value="1">Preservar meu patrimônio, com baixo risco.</option>
+                <option value="2">Equilibrar risco e retorno para um crescimento moderado.</option>
+                <option value="3">Maximizar o retorno, mesmo que envolva maiores riscos.</option>
+            </select>
+        </div>
+        <div class="question-group">
+            <label for="q3">3. Qual frase descreve melhor sua atitude em relação a investimentos?</label>
+            <select id="q3" name="q3">
+                <option value="1">Prefiro investimentos seguros, mesmo com rendimento menor.</option>
+                <option value="2">Aceito um risco moderado para ter a chance de um retorno maior.</option>
+                <option value="3">Estou disposto a correr riscos significativos para altos retornos.</option>
+            </select>
+        </div>
+
+        <div class="question-group">
+            <label for="q4">4. Qual porcentagem da sua renda mensal você consegue poupar/investir?</label>
+            <select id="q4" name="q4">
+                <option value="1">Menos de 10%</option>
+                <option value="2">De 10% a 30%</option>
+                <option value="3">Mais de 30%</option>
+            </select>
+        </div>
+        <div class="question-group">
+            <label for="q5">5. Se tivesse uma despesa inesperada, qual sua necessidade de resgatar seus investimentos?</label>
+            <select id="q5" name="q5">
+                <option value="1">Alta. Precisaria do dinheiro em poucos dias.</option>
+                <option value="2">Média. Talvez precisasse resgatar uma parte.</option>
+                <option value="3">Baixa. Tenho uma reserva de emergência separada.</option>
+            </select>
+        </div>
+
+        <div class="question-group">
+            <label for="q6">6. Qual seu nível de conhecimento sobre o mercado financeiro?</label>
+            <select id="q6" name="q6">
+                <option value="1">Baixo. Sou iniciante e conheço apenas o básico.</option>
+                <option value="2">Médio. Acompanho o noticiário e conheço alguns produtos.</option>
+                <option value="3">Alto. Tenho experiência e/ou estudo o mercado a fundo.</option>
+            </select>
+        </div>
+    </form>
+    
+    <button id="calculate-profile-btn">Ver Meu Perfil</button>
+    
+    <div id="profile-result-container"></div>
+</div>
+
+<style>
+/* Estilos adaptados da sua calculadora para manter a consistência visual */
+.suitability-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 2rem auto;
+}
+h1 {
+    color: #1f2937;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #6b7280;
+}
+.question-group { 
+    margin-bottom: 20px; 
+    text-align: left; 
+}
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    color: #374151; 
+}
+select { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    background-color: white;
+}
+select:focus {
+    border-color: #7c3aed;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background-color: #7c3aed; 
+    color: white; border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: 10px;
+}
+button:hover { 
+    background-color: #6d28d9; 
+}
+#profile-result-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 5px;
+    text-align: left;
+    line-height: 1.6;
+    display: none; /* Começa escondido */
+}
+#profile-result-container h2 {
+    margin-top: 0;
+    color: #1f2937;
+}
+</style>
+
+<script>
+function setupSuitabilityTest() {
+    // 1. Obter referências aos elementos da página
+    const calculateBtn = document.getElementById('calculate-profile-btn');
+    const resultContainer = document.getElementById('profile-result-container');
+    const questions = document.querySelectorAll('#suitability-form select');
+
+    if (!calculateBtn || !resultContainer || questions.length === 0) {
+        console.error("Erro de inicialização: Elementos do simulador não encontrados.");
+        return;
+    }
+
+    // 2. Adicionar o evento de clique ao botão
+    calculateBtn.addEventListener('click', () => {
+        let totalScore = 0;
+        
+        // 3. Calcular a pontuação total somando os valores de cada resposta
+        questions.forEach(selectElement => {
+            // A pontuação é o próprio valor da <option> selecionada
+            totalScore += parseInt((selectElement as HTMLSelectElement).value);
+        });
+
+        // 4. Determinar o perfil e a descrição com base na pontuação
+        let profileName = '';
+        let profileDescription = '';
+
+        // Pontuação Mínima: 6 (todas as opções '1')
+        // Pontuação Máxima: 18 (todas as opções '3')
+        if (totalScore <= 9) { // Ajustando os limites para 6 perguntas
+            profileName = "CONSERVADOR";
+            profileDescription = "Você prioriza a segurança e a preservação do seu capital. Geralmente, prefere investimentos de baixo risco e com alta liquidez, mesmo que a rentabilidade seja mais modesta.";
+        } else if (totalScore <= 14) {
+            profileName = "MODERADO";
+            profileDescription = "Você busca um equilíbrio entre segurança e rentabilidade. Está disposto a correr riscos moderados para obter retornos maiores, diversificando seus investimentos entre opções mais e menos arriscadas.";
+        } else { // totalScore >= 15
+            profileName = "ARROJADO (AGRESSIVO)";
+            profileDescription = "Seu principal objetivo é maximizar os retornos. Você tem um bom conhecimento do mercado e está disposto a assumir riscos elevados, entendendo que podem ocorrer perdas significativas em busca de alta rentabilidade.";
+        }
+
+        // 5. Exibir o resultado na tela
+        resultContainer.innerHTML = `
+            <h2>Seu perfil é: ${profileName}</h2>
+            <p>${profileDescription}</p>
+            <hr>
+            <p style="font-size: 0.8em; color: #6b7280;"><strong>Aviso:</strong> Este teste é uma ferramenta educacional e não substitui a análise de adequação de perfil (suitability) oficial da sua corretora.</p>
+        `;
+        resultContainer.style.display = 'block'; // Mostra o container de resultado
+    });
+}
+
+// Garante que o script só rode quando a página estiver pronta
+document.addEventListener('DOMContentLoaded', setupSuitabilityTest);
+</script>
