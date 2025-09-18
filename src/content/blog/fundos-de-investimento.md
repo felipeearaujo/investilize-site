@@ -16,8 +16,6 @@ Neste guia completo, vamos desvendar tudo sobre o universo dos fundos de investi
 
 De forma simplificada, um fundo de investimento funciona de maneira parecida com um condomínio, onde investidores (chamados de **cotistas**) reúnem seus recursos em um único patrimônio. Todo esse montante é gerenciado por um **gestor profissional**, responsável por decidir onde o dinheiro será aplicado, sempre norteado por uma estratégia pré-definida no regulamento do fundo.
 
-*(Observação: FIIs, ou Fundos de Investimento Imobiliário, são um tipo específico de fundo. O termo geral é apenas "Fundo de Investimento").*
-
 ## Vantagens de Investir em Fundos
 
 Optar por fundos de investimento oferece vantagens claras, principalmente para quem busca praticidade e eficiência.
@@ -50,6 +48,41 @@ Estes fundos investem em ativos atrelados a moedas estrangeiras, como o dólar o
 ## Como Escolher o Fundo de Investimento Ideal?
 
 Para tomar a melhor decisão, analise três pilares fundamentais:
+
+<div class="cta-block">
+    <h3>Não sabe qual é o seu perfil de investidor?</h3>
+    <p>Descobrir sua tolerância ao risco é o primeiro passo. Use nossa ferramenta gratuita e descubra em minutos se você é conservador, moderado ou arrojado.</p>
+    <a href="https://investilize.com.br/ferramentas/investimentos/" class="cta-button">Fazer Teste de Perfil de Investidor &rarr;</a>
+</div>
+
+<style>
+    .cta-block {
+        background-color: #f3f4f6;
+        border-left: 5px solid #7c3aed;
+        padding: 20px 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+    .cta-block h3 {
+        margin-top: 0;
+        color: #1f2937;
+    }
+    .cta-button {
+        display: inline-block;
+        background-color: #7c3aed;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+        background-color: #6d28d9;
+        color: white;
+    }
+</style>
 
 1.  **Seu Perfil de Investidor:** Qual a sua tolerância à exposição aos riscos? Você é conservador, moderado ou arrojado?
 2.  **Seus Objetivos e Prazos:** Qual o motivo do seu investimento? Para uma [reserva de emergência](https://investilize.com.br/blog/reserva-emergencia/), por exemplo, um fundo de renda fixa com liquidez diária é o mais recomendado.
