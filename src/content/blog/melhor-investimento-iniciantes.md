@@ -4,7 +4,7 @@ description: 'Saber o melhor investimento para ininciantes é o principal passo 
 pubDate: '2025-09-09'
 author: 'Felipe'
 tags: ['Renda Fixa', 'Tesouro Direto', 'Investimentos', 'Selic', 'iniciantes',]
-heroImage: 'src\assets\blog\investimento-iniciantes.png'
+heroImage: 'src/assets/blog/investimento-iniciantes.png'
 ---
  
 Dar o primeiro passo no mundo dos investimentos pode parecer uma tarefa complexa e intimidante. Com tantas siglas e opções disponíveis, a dúvida "qual o melhor investimento para iniciantes?" é a mais comum — e a mais importante. A boa notícia é que começar a construir seu futuro financeiro é mais simples do que parece.

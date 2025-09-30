@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: 'Fundos de Investimento: O que são, tipos e como investir'
 description: 'Um guia completo para desvendar o universo dos fundos de investimento: o que são, suas vantagens, os tipos disponíveis e um passo a passo para começar a investir.'
 pubDate: 2025-09-18
-heroImage: 'src\assets\blog\fundoi.png'
+heroImage: 'src/assets/blog/fundoi.png'
 ---
 
 Começar a investir pode parecer uma jornada complexa, repleta de siglas e estratégias. No entanto, existe uma porta de entrada que simplifica esse processo e o torna acessível para milhões de brasileiros: os **fundos de investimento**. Eles representam uma das formas mais inteligentes de aplicar seu dinheiro, permitindo diversificação e gestão profissional mesmo para quem está começando com pouco.

@@ -4,7 +4,7 @@ description: 'Entenda a distinção fundamental entre Renda Fixa e Renda Variáv
 author: 'Felipe'
 pubDate: '2025-08-14'
 tags: ['Renda Fixa', 'Renda Variável', 'Investimentos']
-heroImage: 'src\assets\blog\rendafxv.webp'
+heroImage: 'src/assets/blog/rendafxv.webp'
 ---
 
 A diferença fundamental entre Renda Fixa e Renda Variável reside na previsibilidade do retorno do investimento. Enquanto na Renda Fixa o investidor conhece a regra de remuneração no momento da aplicação, na Renda Variável essa rentabilidade não é garantida e flutua conforme as condições do mercado. Essa distinção primária acarreta outras diferenças importantes em termos de risco, potencial de ganho e perfil do investidor. Neste artigo a [Investilize](https://investilize.com.br/) vai te explicar as principais diferenças entre eles.

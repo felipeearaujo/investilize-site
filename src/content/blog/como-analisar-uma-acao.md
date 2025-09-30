@@ -3,7 +3,7 @@ title: 'Como Analisar uma Ação: Guia para Iniciantes (P/L, P/VP e Mais)'
 description: 'Aprenda a analisar a cotação de uma ação além do preço. Guia completo sobre os principais indicadores fundamentalistas como P/L, P/VP, Dividend Yield e ROE.'
 pubDate: '2025-07-16'
 author: 'Felipe'
-heroImage: 'src\assets\blog\analise-de-acoes.webp'
+heroImage: 'src/assets/blog/analise-de-acoes.webp'
 ---
 
 Entrar no mercado de ações pode parecer assustador. São gráficos, números e siglas por toda parte. Porém, compreender o que está por trás do valor de uma ação é o passo mais crucial para tomar decisões de investimentos seguras e inteligentes. Pode parecer um quebra-cabeças de difícil solução, contudo, com um passo a passo claro, você perceberá que analisar uma ação é mais tranquilo do que pensava.

@@ -3,7 +3,7 @@ title: 'Vai Viajar? Guia Completo para Planejar seus Gastos com a Variação do 
 description: 'Planejando uma viagem internacional? Aprenda a se proteger da variação do câmbio com 6 estratégias práticas sobre como e quando comprar dólar, euro e outras moedas.'
 pubDate: '2025-07-16'
 author: 'Felipe'
-heroImage: 'src\assets\blog\viagem-cambio.webp'
+heroImage: 'src/assets/blog/viagem-cambio.webp'
 ---
 
 Planejar a viagem dos sonhos é um dos momentos mais prazerosos da vida. A escolha do destino, a montagem do roteiro, a reserva dos hotéis... cada passo aumenta a expectativa. No entanto, um detalhe crucial pode transformar essa empolgação em uma grande dor de cabeça financeira: a **variação do câmbio**.
