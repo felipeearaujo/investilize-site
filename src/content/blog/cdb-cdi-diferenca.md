@@ -4,7 +4,7 @@ description: 'Qual a diferença entre um Certificado de Depósito Bancário e um
 pubDate: '2025-09-09'
 author: 'Felipe'
 tags: ['Renda Fixa', 'CDB', 'Investimentos', 'CDI', 'iniciantes', 'reserva de emergencia', 'certificado de depósito bancário',]
-heroImage: '/images/blog/cdb-cdi.png'
+heroImage: 'src\assets\blog\cdb-cdi.png'
 ---
 
 Caminhando pelo universo dos investimentos pode parecer algo difícil, principalmente quando nos deparamos com uma verdadeira sopa de letrinhas como CDB e CDI. Se você está em busca de compreender o que são os Certificados de Depósito Bancário e sua relação com o CDI, você está no lugar certo. Entender essa diferença é a porta de entrada para fazer escolhas mais assertivas e rentáveis para seus recursos. 

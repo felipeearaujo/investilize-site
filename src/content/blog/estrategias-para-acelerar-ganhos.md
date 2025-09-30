@@ -2,7 +2,7 @@
 title: '5 Estratégias Práticas para Acelerar seus Ganhos com Juros Compostos'
 description: 'Descubra como otimizar seus investimentos. Aprenda 5 estratégias sobre tempo, aportes, rentabilidade e custos para fazer o poder dos juros compostos trabalhar mais rápido para você.'
 pubDate: '2025-07-11'
-heroImage: '/images/blog/foguete-financeiro.avif'
+heroImage: 'src\assets\blog\foguete-financeiro.avif'
 ---
 
 No nosso último artigo, aprendemos [**o que são juros compostos**](https://investilize.com.br/blog/o-que-sao-juros-compostos/) e como eles impactam de forma positiva e negativa as nossas vidas. Mostrámos também que você não precisa de decorar fórmulas para os calcular, basta utilizar a nossa [**calculadora de juros compostos**](https://investilize.com.br/ferramentas/juros-compostos/).

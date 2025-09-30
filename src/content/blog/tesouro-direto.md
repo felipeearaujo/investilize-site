@@ -4,7 +4,7 @@ description: 'Quer saber se o Tesouro Direto é um bom investimento? Entenda com
 author: 'Felipe'
 pubDate: '2025-08-21'
 tags: ['Renda Fixa', 'Tesouro Direto', 'Investimentos', 'SELIC','IPCA', 'TAXA']
-heroImage: '/images/blog/tesouro-direto.webp'
+heroImage: 'src\assets\blog\tesouro-direto.webp'
 ---
 
 O [Tesouro Direto](https://www.tesourodireto.com.br/produtos/nossos-produtos) é uma popular e segura porta de entrada para o universo dos investimentos, especialmente para aqueles que estão começando a organizar sua vida financeira e busca uma alternativa à poupança. Mas o Tesouro Direto é um bom investimento? Como ele funciona na prática?
