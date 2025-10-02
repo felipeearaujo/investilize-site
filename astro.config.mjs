@@ -20,5 +20,7 @@ export default defineConfig({
     sitemap()
   ],
 
-  adapter: netlify(),
+  adapter: netlify({
+  imageCDN: false
+}),
 });

@@ -5,27 +5,37 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
-// CORREÇÃO 3.1: Importe o componente de Schema que estava faltando
 import ArticleSchema from '../components/ArticleSchema.astro'; 
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
-
-{/* CORREÇÃO 2: Corrija o idioma da página */}
 <html lang="pt-br">
     <head>
-        <BaseHead title={title} description={description} />
-        
-        {/* CORREÇÃO 3.2: Adicione o componente de Schema no <head> */}
+        <BaseHead title={title} description={description} />       
         <ArticleSchema
             title={title}
             description={description}
             publishDate={pubDate}
             imagePath={heroImage}
         />
+
+        <script type="application/ld+json" is:inline>
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Investilize",
+          "url": "https://investilize.com.br/",
+          "logo": "https://investilize.com.br/logo.png",
+          "sameAs": [
+            "https://www.instagram.com/seu_perfil_aqui",
+            "https://www.facebook.com/sua_pagina_aqui",
+            "https://www.linkedin.com/company/seu_perfil_aqui"
+          ]
+        }
+        </script>
 
         <style>
             main {
@@ -41,6 +51,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 margin: 0 auto;
                 border-radius: 12px;
                 box-shadow: var(--box-shadow);
+                max-width: 100%;
+                height: auto;
             }
             .prose {
                 width: 720px;
@@ -73,7 +85,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <main>
             <article>
                 <div class="hero-image">
-                    {/* CORREÇÃO 1: Adicione o alt text na imagem */}
+                    {/* Esta linha está sintaticamente correta para renderização condicional */}
                     {heroImage && <Image width={1020} height={510} src={heroImage} alt={title} />}
                 </div>
                 <div class="prose">
