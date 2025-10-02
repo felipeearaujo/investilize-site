@@ -45,14 +45,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
             .hero-image {
                 width: 100%;
+				/* Define uma proporção fixa (16 de largura para 9 de altura). Ajuste se necessário. */
+                aspect-ratio: 16 / 9; 
+                overflow: hidden; /* Esconde partes da imagem que sobrarem */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px; /* Mova o border-radius para o contêiner */
+                box-shadow: var(--box-shadow); /* Mova a sombra para o contêiner */
             }
             .hero-image img {
                 display: block;
                 margin: 0 auto;
-                border-radius: 12px;
-                box-shadow: var(--box-shadow);
+				object-fit: cover;
+                border-radius: 0;
+                box-shadow: none;
+				border-radius: none;
                 max-width: 100%;
-                height: auto;
+                height: 100%;
             }
             .prose {
                 width: 720px;
