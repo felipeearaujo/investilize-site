@@ -1,0 +1,98 @@
+//Salve este código em: src/components/Breadcrumbs.astro
+---
+const url = Astro.url;
+// Divide a URL em segmentos, removendo itens vazios (da primeira e última barra)
+const pathSegments = url.pathname.split('/').filter(segment => segment);
+
+// Função para formatar o texto (ex: 'juros-compostos' vira 'Juros Compostos')
+const formatSegment = (segment: string) => {
+  return segment
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, char => char.toUpperCase());
+};
+
+// Gera a lista de breadcrumbs
+let cumulativePath = '';
+const breadcrumbs = pathSegments.map((segment, index) => {
+  cumulativePath += `/${segment}`;
+  return {
+    name: formatSegment(segment),
+    url: cumulativePath,
+    isCurrent: index === pathSegments.length - 1,
+  };
+});
+
+// Gera o schema JSON-LD para o Google
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": Astro.site ? Astro.site.origin : url.origin
+    },
+    ...breadcrumbs.map((breadcrumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": breadcrumb.name,
+      "item": Astro.site ? `${Astro.site.origin}${breadcrumb.url}` : `${url.origin}${breadcrumb.url}`
+    }))
+  ]
+};
+---
+
+{/* Renderiza o menu de navegação visual */}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb-list">
+    <li>
+      <a href="/">Home</a>
+      <span aria-hidden="true">›</span>
+    </li>
+    {breadcrumbs.map((breadcrumb) => (
+      <li>
+        {breadcrumb.isCurrent ? (
+          <span aria-current="page">{breadcrumb.name}</span>
+        ) : (
+          <>
+            <a href={breadcrumb.url}>{breadcrumb.name}</a>
+            <span aria-hidden="true">›</span>
+          </>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+{/* Adiciona o script do schema na página */}
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />
+
+
+<style>
+  .breadcrumb-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    font-size: 0.9em;
+  }
+  .breadcrumb-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .breadcrumb-list a {
+    text-decoration: none;
+    color: rgb(var(--gray));
+  }
+  .breadcrumb-list a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb-list [aria-current="page"] {
+    color: rgb(var(--gray-dark));
+    font-weight: 600;
+  }
+</style>
