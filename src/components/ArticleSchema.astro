@@ -1,0 +1,45 @@
+// Salve este código como: src/components/ArticleSchema.astro
+---
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  imagePath: string; // Caminho da imagem de capa
+}
+
+const { title, description, publishDate, imagePath } = Astro.props;
+
+// Constrói a URL completa da imagem a partir do caminho relativo
+// Garante que Astro.site está definido em astro.config.mjs
+const imageUrl = new URL(imagePath, Astro.site).href;
+
+// Pega a URL canônica da página atual
+const canonicalURL = Astro.url.href;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting", // Mais específico que "Article"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL
+  },
+  "headline": title,
+  "description": description,
+  "image": imageUrl,
+  "author": {
+    "@type": "Organization", // Como não há um autor específico por post, atribuímos à organização
+    "name": "Investilize"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Investilize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL('/logo.png', Astro.site).href // URL completa do logo
+    }
+  },
+  "datePublished": publishDate.toISOString()
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
