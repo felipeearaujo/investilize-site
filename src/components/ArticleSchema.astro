@@ -1,4 +1,4 @@
-// Salve este código como: src/components/ArticleSchema.astro
+
 ---
 interface Props {
   title: string;
@@ -33,6 +33,7 @@ const schema = {
   "publisher": {
     "@type": "Organization",
     "name": "Investilize",
+    
     "logo": {
       "@type": "ImageObject",
       "url": new URL('/logo.png', Astro.site).href // URL completa do logo
