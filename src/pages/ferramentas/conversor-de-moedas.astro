@@ -4,11 +4,35 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import ConversorMoedas from '../../components/ferramentas/ConversorMoedas.astro';
+import ConteudoConversorMoedas from '../../components/ferramentas/ConteudoConversorMoedas.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro'; // Seu componente dinâmico
+import FaqSchema from '../../components/FaqSchema.astro';     // Nosso componente de FAQ
 
-// 2. Definir o título e a descrição para o SEO desta página
-const pageTitle = "Conversor de Moedas em Tempo Real";
-const pageDescription = "Converta valores entre diversas moedas com cotações atualizadas. Dólar, Euro, Real e muitas outras.";
+// 2. DEFINIR AS METADADOS DE SEO
+const pageTitle = "Conversor de Moedas Online: Cotação Dólar, Euro e Mais";
+const pageDescription = "Use nosso conversor de moedas para saber a cotação do Dólar, Euro, Real e mais. Ferramenta grátis com FAQ sobre Dólar comercial, turismo e spread.";
+
+// 3. DEFINIR OS DADOS DO NOVO FAQ
+const dadosFaqMoedas = [
+  {
+    question: "Qual a diferença entre Dólar Comercial e Dólar Turismo?",
+    answer: "Essa é a dúvida mais comum. O Dólar Comercial é a cotação usada para grandes transações financeiras entre empresas e bancos (importação, exportação). É o valor que você vê nos jornais e aqui no nosso conversor. O Dólar Turismo é o que você paga na casa de câmbio para comprar a moeda em espécie (dinheiro vivo). Ele é sempre mais caro, pois inclui custos operacionais, impostos (como o IOF) e a margem de lucro da casa de câmbio."
+  },
+  {
+    question: "A cotação do conversor é em tempo real?",
+    answer: "Nossa ferramenta atualiza as taxas de câmbio comercial com alta frequência, buscando os valores mais recentes disponíveis no mercado financeiro global. Para transações que exigem valores exatos no segundo, como operações de trade, consulte sempre sua corretora."
+  },
+  {
+    question: "O que é \"spread\" cambial?",
+    answer: "O \"spread\" é a diferença entre o preço de compra e o preço de venda de uma moeda. Quando você vai a uma casa de câcâmbio, ela \"compra\" seu dólar por um preço e \"vende\" dólar por um preço um pouco mais alto. Essa diferença é o spread, que representa o lucro da instituição."
+  },
+  {
+    question: "O valor do conversor é o que vou pagar na minha fatura do cartão de crédito?",
+    answer: "Não exatamente. A fatura do cartão de crédito internacional geralmente usa uma cotação do dólar próxima ao comercial, mas adiciona o \"spread\" do banco (a margem de lucro dele) e o IOF (Imposto sobre Operações Financeiras) obrigatório para compras internacionais."
+  }
+];
 ---
+
 <!doctype html>
 <html lang="pt-BR">
     <head>
@@ -17,7 +41,13 @@ const pageDescription = "Converta valores entre diversas moedas com cotações a
     <body>
         <Header />
         <main>
+            <Breadcrumbs /> 
+            {}
             <ConversorMoedas />
+            {/* Seu componente dinâmico de Breadcrumbs */}
+            
+            {/* O componente com todo o texto explicativo e FAQ */}
+            <ConteudoConversorMoedas />
         </main>
         <Footer />
     </body>

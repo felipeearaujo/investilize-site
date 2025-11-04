@@ -4,20 +4,46 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astro';
+import ConteudoJuros from '../../components/ferramentas/ConteudoJuros.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 // 2. Definir o título e a descrição para o SEO desta página
-const pageTitle = "Calculadora de Juros Compostos";
-const pageDescription = "Simule seus investimentos com juros compostos e aportes mensais. Veja a evolução do seu patrimônio em um gráfico interativo e planeje seu futuro financeiro.";
+const pageTitle = "Calculadora de Juros Compostos: Simule e Aprenda";
+const pageDescription = "Calculadora de Juros Compostos completa. Simule seus investimentos com aportes mensais e aprenda o que são, como funcionam e por que são importantes com nosso guia e FAQ.";
+
+// --- PASSO 1: DEFINA A VARIÁVEL AQUI ---
+// Esta constante precisa estar dentro das linhas '---'
+const dadosFaq = [
+  {
+    question: "Qual a diferença entre juros simples e juros compostos?",
+    answer: "Nos juros simples, o rendimento é sempre calculado apenas sobre o valor inicial. Ex: R$ 1.000 a 10% ao ano renderá R$ 100 todo ano. Nos juros compostos, o rendimento é calculado sobre o valor atualizado (principal + juros acumulados). No segundo ano, os 10% renderiam sobre R$ 1.100, e assim por diante."
+  },
+  {
+    question: "O que significa a \"taxa de juros\" na calculadora?",
+    answer: "É o percentual de rendimento que você espera ter. Se você investe no Tesouro Selic, pode usar a taxa Selic atual (ex: 10,5% a.a.). Se investe em um CDB que paga 110% do CDI, você deve calcular esse valor. Para ações, usa-se uma média histórica esperada (ex: 8% a.a.)."
+  },
+  {
+    question: "Essa calculadora já desconta a inflação ou o Imposto de Renda?",
+    answer: "Não. Esta é uma calculadora de juros compostos \"brutos\". Ela mostra o crescimento total do seu dinheiro antes de qualquer desconto. Para saber seu ganho real, você precisaria subtrair a inflação do período e os impostos devidos (como o IR, que varia dependendo do tempo de investimento)."
+  }
+];
 ---
 <!doctype html>
 <html lang="pt-BR">
     <head>
         <BaseHead title={pageTitle} description={pageDescription} />
+        <FaqSchema faqList={dadosFaq} />
     </head>
     <body>
         <Header />
         <main>
+            <Breadcrumbs />
+            {}
             <CalculadoraJuros />
+            {}
+            <ConteudoJuros /> {/* USE O NOVO COMPONENTE AQUI */}
+            
         </main>
         <Footer />
     </body>

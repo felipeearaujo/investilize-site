@@ -1,0 +1,38 @@
+---
+// src/components/FaqSchema.astro
+
+// 1. Definimos a "interface" das props.
+// Esperamos receber uma lista (array) de objetos.
+// Cada objeto deve ter uma 'question' e uma 'answer', ambas como string.
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+interface Props {
+  faqList: FaqItem[];
+}
+
+// 2. Pegamos a lista que foi passada para o componente
+const { faqList } = Astro.props;
+
+// 3. Mapeamos essa lista para o formato "mainEntity" do Schema
+const mainEntity = faqList.map(item => ({
+  "@type": "Question",
+  "name": item.question,
+  "acceptedAnswer": {
+    "@type": "Answer",
+    "text": item.answer
+  }
+}));
+
+// 4. Montamos o objeto Schema completo
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": mainEntity
+};
+
+// 5. Convertemos o objeto em uma string JSON
+const jsonSchemaString = JSON.stringify(schema);
+---
+<script type="application/ld+json" set:html={jsonSchemaString} />

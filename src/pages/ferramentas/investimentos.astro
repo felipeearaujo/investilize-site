@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import SimuladorPerfil from '../../components/ferramentas/SimuladorPerfil.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const pageTitle="Descubra seu perfil de investidor";
 const pageDescription="Calculadora Perfil de Investidor: Conservador, Moderado ou Arrojado?";
@@ -16,7 +17,10 @@ const pageDescription="Calculadora Perfil de Investidor: Conservador, Moderado o
     <body>
         <Header />
         <main>
+            <Breadcrumbs />
+            {}
             <SimuladorPerfil />
+            
         </main>
         <Footer />
     </body>
