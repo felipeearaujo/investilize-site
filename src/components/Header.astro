@@ -1,12 +1,14 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import logo from 'src/assets/logo.png';
 
 ---
 
 <header>
 	<nav>
-		<a href="/"><img src="/logo.png" alt={SITE_TITLE} width="190" /></a>
+		<a href="/"><Image src={logo} alt="Investilize" width="190" /></a>
 		
 		<div class="internal-links">
 			<HeaderLink href="/blog">Blog</HeaderLink>

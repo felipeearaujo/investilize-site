@@ -7,6 +7,7 @@ import ConversorMoedas from '../../components/ferramentas/ConversorMoedas.astro'
 import ConteudoConversorMoedas from '../../components/ferramentas/ConteudoConversorMoedas.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro'; // Seu componente dinâmico
 import FaqSchema from '../../components/FaqSchema.astro';     // Nosso componente de FAQ
+import { Chart, registerables } from 'chart.js/auto';
 
 // 2. DEFINIR AS METADADOS DE SEO
 const pageTitle = "Conversor de Moedas Online: Cotação Dólar, Euro e Mais";
@@ -43,7 +44,7 @@ const dadosFaqMoedas = [
         <main>
             <Breadcrumbs /> 
             {}
-            <ConversorMoedas />
+            <ConversorMoedas client:visible />
             {/* Seu componente dinâmico de Breadcrumbs */}
             
             {/* O componente com todo o texto explicativo e FAQ */}

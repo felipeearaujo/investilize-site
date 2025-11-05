@@ -7,6 +7,7 @@ import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astr
 import ConteudoJuros from '../../components/ferramentas/ConteudoJuros.astro';
 import FaqSchema from '../../components/FaqSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { Chart, registerables } from 'chart.js/auto';
 
 // 2. Definir o título e a descrição para o SEO desta página
 const pageTitle = "Calculadora de Juros Compostos: Simule e Aprenda";
@@ -40,7 +41,7 @@ const dadosFaq = [
         <main>
             <Breadcrumbs />
             {}
-            <CalculadoraJuros />
+            <CalculadoraJuros client:visible />
             {}
             <ConteudoJuros /> {/* USE O NOVO COMPONENTE AQUI */}
             

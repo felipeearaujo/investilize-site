@@ -4,6 +4,8 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import netlify from '@astrojs/netlify';
 
+import partytown from '@astrojs/partytown';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://investilize.com.br',
@@ -15,10 +17,7 @@ export default defineConfig({
     }
   },
 
-  integrations: [
-    mdx(),
-    sitemap()
-  ],
+  integrations: [mdx(), sitemap(), partytown()],
 
   adapter: netlify({
   imageCDN: false
