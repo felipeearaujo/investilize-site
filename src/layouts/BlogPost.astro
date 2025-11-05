@@ -7,10 +7,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 import ArticleSchema from '../components/ArticleSchema.astro'; 
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqSchema from '../components/FaqSchema.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqList } = Astro.props;
+
 ---
 <html lang="pt-br">
     <head>
@@ -21,6 +23,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             publishDate={pubDate}
             imagePath={heroImage}
         />
+
+        {faqList && <FaqSchema faqList={faqList} />}
 
         <script type="application/ld+json" is:inline>
         {
