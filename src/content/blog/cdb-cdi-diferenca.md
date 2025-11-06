@@ -100,7 +100,8 @@ Sim, é um excelente investimento de renda fixa, especialmente para iniciantes e
 
 ### LCI/LCA também rende CDI?
 
-Sim, muitos LCIs e LCAs também são pós-fixados e usam o CDI como referência, com a grande vantagem de serem **isentos de Imposto de Renda** para pessoa física.
+Sim, muitos LCIs e LCAs também são pós-fixados e usam o CDI como referência. A grande vantagem é que são **isentos de Imposto de Renda** para pessoa física.
+Para entender a fundo, veja nosso [**Guia Completo sobre LCI e LCA**](https://investilize.com.br/blog/lci-lca-guia/), onde comparamos a rentabilidade líquida deles com a de um CDB.
 
 ## Conclusão
 

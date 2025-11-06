@@ -55,9 +55,9 @@ Estes indicadores comparam o preço da ação com algum fundamento da empresa.
 
 * **Preço/Lucro (P/L):** Mostra a relação entre o preço atual da ação e o lucro por ação que a empresa gerou nos últimos 12 meses. Em resumo, o P/L aponta em quantos anos o investidor recuperaria o capital investido, caso o lucro da empresa se mantenha constante.
 * **Preço/Valor Patrimonial (P/VP):** Compara o preço de mercado da ação com o valor patrimonial da empresa por ação. O **Valor Patrimonial da Ação (VPA)** é o que sobraria para os acionistas caso a empresa vendesse todos os seus ativos e quitasse todas as suas dívidas.
-    * *P/VP = 1:* Ação negociada pelo seu valor "justo" de património.
-    * *P/VP > 1:* O mercado paga um "prémio" por ela (geralmente por esperar crescimento).
-    * *P/VP < 1:* Ação negociada abaixo do seu valor patrimonial (pode indicar uma oportunidade ou problemas).
+  * *P/VP = 1:* Ação negociada pelo seu valor "justo" de património.
+  * *P/VP > 1:* O mercado paga um "prémio" por ela (geralmente por esperar crescimento).
+  * *P/VP < 1:* Ação negociada abaixo do seu valor patrimonial (pode indicar uma oportunidade ou problemas).
 
 ### Indicadores de Eficiência (Rentabilidade) - "A empresa é lucrativa?"
 
@@ -68,9 +68,9 @@ Estes indicadores mostram se a empresa é uma boa "máquina de fazer dinheiro".
 
 ### Indicadores de Dividendos - "A empresa paga bons proventos?"
 
-Essencial para quem busca renda passiva.
+Essencial para quem busca renda passiva. Para aprender tudo sobre como essa estratégia funciona, leia primeiro nosso [**Guia Completo sobre o que são Dividendos e Renda Passiva**](https://investilize.com.br/blog/o-que-sao-dividendos/).
 
-* **Dividend Yield (DY):** Mostra a relação percentual entre os dividendos pagos por ação no último ano e a cotação atual. Um DY de 6% significa que a empresa distribuiu em dividendos o equivalente a 6% do preço atual da sua ação.
+* **Dividend Yield (DY):** Este é o indicador-chave. Ele mostra a relação percentual entre os dividendos pagos por ação no último ano e a cotação atual.
 
 ### Indicadores de Saúde e Segurança
 
@@ -80,22 +80,26 @@ Essencial para quem busca renda passiva.
 ## Colocando em Prática: Um Roteiro Simples
 
 Agora que você conhece a teoria, siga este roteiro:
-1.  **Escolha a Empresa:** Comece com uma empresa que você conhece e admira.
-2.  **Busque os Dados:** Encontre o ticker da empresa e procure por seus indicadores.
+
+1. **Escolha a Empresa:** Comece com uma empresa que você conhece e admira.
+2. **Busque os Dados:** Encontre o ticker da empresa e procure por seus indicadores.
     > **Ferramenta Recomendada:** Para facilitar sua análise, utilize a nossa ferramenta gratuita de [**Cotação de Ações**](https://investilize.com.br/ferramentas/cotacao-acoes). Lá você encontrará todos os indicadores mencionados neste guia de forma clara e atualizada.
-3.  **Compare os Indicadores:** Não olhe os números de forma isolada. Compare-os com os de outras empresas do mesmo setor (ex: compare o ROE do Itaú com o do Bradesco).
-4.  **Faça a Análise Qualitativa:** Leia sobre a empresa no site de Relações com Investidores (RI), busque notícias recentes e tente entender seu posicionamento no mercado.
-5.  **Tome sua Decisão:** Com base na combinação da análise dos números e da qualidade do negócio, você decide se faz sentido investir naquela ação.
+3. **Compare os Indicadores:** Não olhe os números de forma isolada. Compare-os com os de outras empresas do mesmo setor (ex: compare o ROE do Itaú com o do Bradesco).
+4. **Faça a Análise Qualitativa:** Leia sobre a empresa no site de Relações com Investidores (RI), busque notícias recentes e tente entender seu posicionamento no mercado.
+5. **Tome sua Decisão:** Com base na combinação da análise dos números e da qualidade do negócio, você decide se faz sentido investir naquela ação.
 
 ## FAQ: Dúvidas Comuns sobre Análise de Ações
 
 ### O que é Valor Patrimonial da Ação (VPA)?
+
 É o valor total do patrimônio líquido da empresa (ativos - passivos) dividido pelo número de ações. Ele representa quanto "vale" cada ação se a empresa fosse liquidada hoje. É usado no cálculo do indicador P/VP (Preço / Valor Patrimonial).
 
 ### Qual o P/L ideal para uma ação?
+
 Não existe um número mágico. Um P/L baixo pode indicar uma ação barata ou uma empresa estagnada. Um P/L alto pode indicar uma ação cara ou uma empresa com alta expectativa de crescimento. Deve ser comparado com o histórico da empresa e com seus concorrentes do mesmo setor.
 
 ### Análise técnica ou fundamentalista, qual a melhor?
+
 Depende do seu objetivo. Para o 'buy and hold' (investir no longo prazo, tornando-se sócio), a análise fundamentalista é a mais indicada. Para o 'day trade' (operações de curto prazo), usa-se a análise técnica, que foca em gráficos e padrões de preço.
 
 ## Conclusão

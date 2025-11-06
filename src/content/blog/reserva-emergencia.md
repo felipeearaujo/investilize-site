@@ -59,7 +59,8 @@ Com base nesses pilares, evite a todo custo alocar sua reserva nestes ativos. El
 
 * Ações e Fundos Imobiliários (FIIs): Falham no pilar do Risco. São voláteis e podem estar valendo menos no exato dia em que você precisar do dinheiro;
 * Criptomoedas: Falham espetacularmente em Risco e Segurança;
-* CDBs com Vencimento Longo: Podem ter Segurança, mas falham feio no pilar da Liquidez Diária. Se o dinheiro só pode ser retirado em 2028, ele não serve para o pneu que furou hoje.
+* CDBs com Vencimento Longo: Podem ter Segurança, mas falham feio no pilar da Liquidez Diária.
+* **LCIs e LCAs:** Embora sejam ótimos investimentos isentos de IR, eles também falham no pilar da liquidez. Por lei, [**LCI e LCA têm um prazo mínimo de carência**](https://investilize.com.br/blog/lci-lca-guia/) (ex: 90 dias) e não servem para emergências.
 
 ## Onde guardar e investir a reserva de emergência?
 
@@ -69,7 +70,8 @@ As três melhores opções do mercado cumprem esses requisitos, cada uma com sua
 
 **Opção 1: Tesouro Selic (O Mais Seguro)**
 
-O Tesouro Selic é um título público emitido pelo governo. Na prática, você está "emprestando" seu dinheiro para o Brasil, recebendo em troca uma rentabilidade atrelada à taxa básica de juros (a Selic). É considerado o investimento mais seguro do país, pois é 100% garantido pelo Tesouro Nacional.
+O Tesouro Selic é um título público emitido pelo governo. Na prática, você está "emprestando" seu dinheiro para o Brasil... É considerado o investimento mais seguro do país, pois é 100% garantido pelo Tesouro Nacional.
+Para um guia completo sobre como ele funciona e a diferença para outros títulos, leia nosso [**Guia Completo do Tesouro Direto**](https://investilize.com.br/blog/tesouro-direto-guia/).
 
 **Prós:**
 

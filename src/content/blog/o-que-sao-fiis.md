@@ -53,7 +53,7 @@ Os FIIs são geralmente divididos em três grandes grupos:
 
 3. **FIIs de Fundos (FOFs):** São fundos que investem em cotas de *outros* FIIs. É uma forma simples de diversificar sua carteira comprando apenas uma cota.
 
-> **Quer se aprofundar?** [*Em breve: nosso guia completo FIIs de Tijolo vs. Papel: Qual o Melhor?*]
+> **Quer se aprofundar?** Leia nosso guia completo [**FIIs de Tijolo vs. Papel: Qual o Melhor?**](https://investilize.com.br/blog/fiis-tijolo-vs-papel/)
 
 ## Vantagens de Investir em FIIs
 
