@@ -25,7 +25,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="pt-BR">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script type="text/parytown" async src="https://www.googletagmanager.com/gtag/js?id=G-Z43W7EWFKP"></script>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-Z43W7EWFKP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -82,25 +82,26 @@ const posts = (await getCollection('blog')).sort(
         </section>
 
         <section class="posts-section">
-            <h2 class="section-title">Últimos Artigos do Blog</h2>
-            <ul class="posts-grid">
-            <ul class="posts-grid">
-                          {
-                            posts.map(post => (
-                              <li class="post-card">
-                                <a href={`/blog/${post.id}/`}>
+          <h2 class="section-title">Últimos Artigos do Blog</h2>
+          
+          <div class="posts-wrapper" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+
+              <ul class="posts-grid">
+                  {
+                      posts.map(post => (
+                          <li class="post-card">
+                              <a href={`/blog/${post.id}/`}>
                                   <h3 class="post-title">{post.data.title}</h3>
                                   <p class="post-date"><FormattedDate date={post.data.pubDate} /></p>
                                   <p class="post-description">{post.data.description}</p>
                                   <span class="read-more">Ler mais &rarr;</span>
-                                </a>
-                              </li>
-                            ))
-                          }
-                        </ul>
-              <a href="/blog/">Ver todos os artigos</a>
-            </div>
-        </section>
+                              </a>
+                          </li>
+                      ))
+                  }
+              </ul> <div class="all-posts-link"> <a href="/blog/">Ver todos os artigos</a>
+              </div>
+          </section>
     </main>
     <Footer />
 
