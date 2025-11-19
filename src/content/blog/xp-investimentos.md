@@ -12,7 +12,6 @@ heroImage: '~/assets/blog/xp.webp'
 Fundada em Porto Alegre no ano de 2001, por Guilherme Benchimol e Marcelo Maisonnave, o objetivo inicial da XP era criar um escritório só com agentes autônomos. A empresa iniciou com um capital de R$ 15 mil e dez computadores usados que foram adquiridos de uma lan house. Um dos pontos de virada da corretora foi compreender que a principal barreira para as pessoas entrarem no mercado de investimentos, era a falta de informação do público e a pouca familiaridade com os mercados de ações. 
 A democratização do acesso ao mercado financeiro fez com que a [XP Investimentos](https://www.xpi.com.br/) se tornasse uma das maiores e mais tradicionais corretoras do Brasil.
 
-
 ##### Para quem a XP é indicada?
 
 Um dos principais destaques da corretora é que ela consegue atrair diversos perfis de investidores. E isso se dá por alguns motivos. Além de ser bastante intuitiva, ela disponibiliza uma grande quantidade de conteúdo educacional. Que são características ideias para o investidor iniciante. Para o público mais experiente a corretora oferece para essa parcela dos investidores uma grande quantidade de produtos e também a possibilidade de o investidor ter uma assessoria de investimentos.
@@ -22,10 +21,10 @@ Um dos principais destaques da corretora é que ela consegue atrair diversos per
 A ampla variedade de produtos como: [Renda Fixa, Renda Variável](https://investilize.com.br/blog/renda-fix-veriavel-diferenca/), Fundos de Investimentos e outros faz parte de uma das principais vantagens da corretora, você pode fazer seus investimentos em um único lugar. Além disso, o acesso à assessoria de investimentos é um diferencial de grande valor, pois ajuda o investidor a traçar sua estratégia de investimentos. A robustez da plataforma e a disponibilização de conteúdo educacional se põe como uma ferramenta valiosa, contribuindo para a entrada de novos investidores no mundo dos investimentos.
 Porém nem tudo são flores, como toda grande empresa a XP tem pontos que devem ser levados em consideração antes de você se tornar cliente. Um ponto negativo é o foco em investidores de maior patrimônio, os serviços de assessoria são direcionados para esse público. Apesar da taxa de corretagem ser zero para ações, vale ficar de olho nas outras taxas, como os fundos de investimento.
 
-
 ##### Como Abrir Conta na XP: Passo a Passo Simplificado
 
 Abrir uma conta na XP é um processo simples. Siga os passos:
+
 1. Reúna os documentos necessários, como RG, CPF e comprovante de residência;
 2. Preencha o formulário online com seus dados pessoais e de contato;
 3. Envie as fotos dos documentos solicitados;

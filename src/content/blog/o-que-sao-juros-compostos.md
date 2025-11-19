@@ -20,6 +20,7 @@ Agora, vamos à mágica. Diferente dos juros simples, que incidem sempre sobre o
 Isso significa que, a cada período, a taxa de juros incide não apenas sobre o valor inicial, mas sobre a soma do valor inicial **mais todos os juros que já foram acumulados**.
 
 Vamos a um exemplo clássico:
+
 - Você investe **R$ 100,00** em janeiro com uma taxa de 10% ao mês.
 - Em fevereiro, você terá R$ 110,00.
 - Em março, os 10% de juros incidirão sobre os R$ 110,00, não mais sobre os R$ 100,00 iniciais. Seu novo saldo será de R$ 121,00.

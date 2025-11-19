@@ -52,5 +52,3 @@ Para gastos mais significativos, como passagens aéreas, hotéis e passeios, pro
 ## Conclusão: Planejamento é a Melhor Bagagem
 
 Controlar a economia global é impossível, mas controlar suas finanças pessoais é totalmente viável. Ao seguir essas dicas, você minimiza os riscos da variação cambial e garante que o orçamento planejado seja o mais próximo possível do realizado. Lembre-se que, em uma viagem, a melhor bagagem é a tranquilidade de saber que suas finanças estão seguras.
-
-<br/>

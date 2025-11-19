@@ -20,10 +20,10 @@ De forma simplificada, um fundo de investimento funciona de maneira parecida com
 
 Optar por fundos de investimento oferece vantagens claras, principalmente para quem busca praticidade e eficiência.
 
--   **Gestão Profissional:** Uma das grandes vantagens é ter um profissional que acompanha o mercado diariamente e toma as decisões de compra e venda de ativos por você.
--   **Diversificação Acessível:** Com apenas um aporte, o investidor tem acesso a uma carteira diversificada de ativos, algo que seria complexo e caro para montar individualmente.
--   **Praticidade:** Toda a parte operacional e burocrática é feita pelo administrador do fundo, o que poupa o tempo do investidor.
--   **Baixo Custo de Entrada:** A maioria dos fundos permite aplicações iniciais com valores baixos, democratizando o acesso a investimentos mais sofisticados.
+- **Gestão Profissional:** Uma das grandes vantagens é ter um profissional que acompanha o mercado diariamente e toma as decisões de compra e venda de ativos por você.
+- **Diversificação Acessível:** Com apenas um aporte, o investidor tem acesso a uma carteira diversificada de ativos, algo que seria complexo e caro para montar individualmente.
+- **Praticidade:** Toda a parte operacional e burocrática é feita pelo administrador do fundo, o que poupa o tempo do investidor.
+- **Baixo Custo de Entrada:** A maioria dos fundos permite aplicações iniciais com valores baixos, democratizando o acesso a investimentos mais sofisticados.
 
 ## Principais Tipos de Fundos de Investimento
 
@@ -84,22 +84,22 @@ Para tomar a melhor decisão, analise três pilares fundamentais:
     }
 </style>
 
-1.  **Seu Perfil de Investidor:** Qual a sua tolerância à exposição aos riscos? Você é conservador, moderado ou arrojado?
-2.  **Seus Objetivos e Prazos:** Qual o motivo do seu investimento? Para uma [reserva de emergência](https://investilize.com.br/blog/reserva-emergencia/), por exemplo, um fundo de renda fixa com liquidez diária é o mais recomendado.
-3.  **Análise das Taxas:** Fique atento, pois os custos impactam diretamente a rentabilidade. As principais são:
-    -   **Taxa de Administração:** Percentual pago anualmente pela gestão e administração do fundo.
-    -   **Taxa de Performance:** Cobrada apenas se a rentabilidade do fundo superar um índice de referência (benchmark), como o Ibovespa ou o CDI.
-    -   **Tributação:** A maioria dos fundos sofre a cobrança semestral do Imposto de Renda, conhecida como "come-cotas".
+1. **Seu Perfil de Investidor:** Qual a sua tolerância à exposição aos riscos? Você é conservador, moderado ou arrojado?
+2. **Seus Objetivos e Prazos:** Qual o motivo do seu investimento? Para uma [reserva de emergência](https://investilize.com.br/blog/reserva-emergencia/), por exemplo, um fundo de renda fixa com liquidez diária é o mais recomendado.
+3. **Análise das Taxas:** Fique atento, pois os custos impactam diretamente a rentabilidade. As principais são:
+    -  **Taxa de Administração:** Percentual pago anualmente pela gestão e administração do fundo.
+    -  **Taxa de Performance:** Cobrada apenas se a rentabilidade do fundo superar um índice de referência (benchmark), como o Ibovespa ou o CDI.
+    -  **Tributação:** A maioria dos fundos sofre a cobrança semestral do Imposto de Renda, conhecida como "come-cotas".
 
 ## Passo a Passo para Investir em Fundos
 
 Investir em um fundo é mais simples do que parece. Siga estes passos:
 
-1.  **Abra uma Conta em uma Corretora:** Escolha uma corretora de valores de sua confiança. É através da plataforma dela que você terá acesso a uma vasta prateleira de fundos.
-2.  **Defina seu Perfil de Investidor:** A própria corretora aplicará um questionário (suitability) para identificar sua tolerância ao risco.
-3.  **Pesquise e Compare os Fundos:** Utilize as ferramentas da corretora para filtrar os fundos por tipo, aplicação mínima e rentabilidade histórica.
-4.  **Leia os Documentos:** Antes de aplicar, leia a lâmina de informações e o regulamento do fundo. Ali estão todas as informações sobre a estratégia, os custos e os riscos.
-5.  **Realize o Investimento:** Após escolher, basta transferir o dinheiro para a corretora e efetuar a aplicação no fundo desejado.
+1. **Abra uma Conta em uma Corretora:** Escolha uma corretora de valores de sua confiança. É através da plataforma dela que você terá acesso a uma vasta prateleira de fundos.
+2. **Defina seu Perfil de Investidor:** A própria corretora aplicará um questionário (suitability) para identificar sua tolerância ao risco.
+3. **Pesquise e Compare os Fundos:** Utilize as ferramentas da corretora para filtrar os fundos por tipo, aplicação mínima e rentabilidade histórica.
+4. **Leia os Documentos:** Antes de aplicar, leia a lâmina de informações e o regulamento do fundo. Ali estão todas as informações sobre a estratégia, os custos e os riscos.
+5. **Realize o Investimento:** Após escolher, basta transferir o dinheiro para a corretora e efetuar a aplicação no fundo desejado.
 
 ## Conclusão: É um bom momento para investir?
 

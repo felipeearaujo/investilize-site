@@ -17,11 +17,11 @@ Neste guia, vamos desmistificar o universo financeiro e apresentar as opções m
 
 Antes de aplicar seu dinheiro, é fundamental organizar a base da sua vida financeira. Pular essas etapas é como construir uma casa sem alicerce.
 
-1.  **Defina Seus Objetivos:** Por que você quer investir? Para comprar um carro, fazer uma viagem, garantir a aposentadoria ou criar uma reserva de emergência? Ter metas claras ajuda a escolher o investimento com o prazo e o risco adequados.
+1. **Defina Seus Objetivos:** Por que você quer investir? Para comprar um carro, fazer uma viagem, garantir a aposentadoria ou criar uma reserva de emergência? Ter metas claras ajuda a escolher o investimento com o prazo e o risco adequados.
 
-2.  **Monte sua Reserva de Emergência:** Este é o passo mais crucial. Tenha um valor equivalente a 6 meses do seu custo de vida guardado em um local seguro e de fácil acesso. Esse dinheiro será sua segurança para imprevistos, evitando que você precise resgatar seus investimentos em um momento ruim.
+2. **Monte sua Reserva de Emergência:** Este é o passo mais crucial. Tenha um valor equivalente a 6 meses do seu custo de vida guardado em um local seguro e de fácil acesso. Esse dinheiro será sua segurança para imprevistos, evitando que você precise resgatar seus investimentos em um momento ruim.
 
-3.  **Abra Conta em uma Corretora de Valores:** Esqueça os grandes bancos tradicionais. As corretoras oferecem uma variedade muito maior de produtos, com taxas menores (muitas vezes, taxa zero) e plataformas mais intuitivas.
+3. **Abra Conta em uma Corretora de Valores:** Esqueça os grandes bancos tradicionais. As corretoras oferecem uma variedade muito maior de produtos, com taxas menores (muitas vezes, taxa zero) e plataformas mais intuitivas.
 
 ### Renda Fixa: O Porto Seguro do Investidor Iniciante
 

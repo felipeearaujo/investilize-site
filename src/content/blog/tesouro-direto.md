@@ -19,10 +19,10 @@ O Tesouro Direto é um programa do Tesouro Nacional em parceria com a [B3](https
 
 Como ele é garantido pelo Tesouro Nacional, o Tesouro Direto é considerado um dos investimentos mais seguros do mercado. Seu funcionamento é bem simples:
 
-1.  **Abra uma conta:** Que pode ser em um banco ou corretora de valores;
-2.  **Transfira o dinheiro:** Envie o dinheiro que deseja investir para a sua corretora ou seu banco;
-3.  **Escolha o títulos:** Acesse o Tesouro Direto e escolha o título que mais se adequa a seu perfil e necessidades;
-4.  **Invista:** Você pode comprar títulos a partir de R$30,00.
+1. **Abra uma conta:** Que pode ser em um banco ou corretora de valores;
+2. **Transfira o dinheiro:** Envie o dinheiro que deseja investir para a sua corretora ou seu banco;
+3. **Escolha o títulos:** Acesse o Tesouro Direto e escolha o título que mais se adequa a seu perfil e necessidades;
+4. **Invista:** Você pode comprar títulos a partir de R$30,00.
 
 ### Tipos de Títulos
 
@@ -39,10 +39,10 @@ Apesar de ser um investimento bem acessível, existe a incidência de algumas ta
 * **Taxa de Custódia da B3:** É uma taxa de 0,20% ao ano sobre o valor total investido, cobrada semestralmente (em janeiro e julho) ou no momento do resgate. **Atenção:** Investimentos de até R$ 10.000,00 no Tesouro Selic são isentos desta taxa.
 * **Taxa da Corretora:** Muitas instituições financeiras já zeraram suas taxas de administração para investir no Tesouro Direto, mas é importante verificar as condições da sua corretora.
 * **Imposto de Renda (IR):** Incide apenas sobre os rendimentos e segue uma tabela regressiva. Quanto mais tempo o dinheiro fica investido, menor a alíquota:
-    * Até 180 dias: 22,5%
-    * De 181 a 360 dias: 20%
-    * De 361 a 720 dias: 17,5%
-    * Acima de 720 dias: 15%
+* Até 180 dias: 22,5%
+* De 181 a 360 dias: 20%
+* De 361 a 720 dias: 17,5%
+* Acima de 720 dias: 15%
 * **IOF (Imposto sobre Operações Financeiras):** É cobrado apenas se o resgate for feito em menos de 30 dias após a aplicação. A alíquota também é regressiva, começando em 96% no primeiro dia e chegando a zero no 30º dia.
 
 ### Rendimentos: O Tesouro Direto Vale a Pena?
