@@ -4,7 +4,7 @@ description: 'Entenda a diferença entre CDB (investimento) e CDI (taxa). Saiba 
 author: 'Felipe'
 pubDate: '2025-09-09'
 tags: ['Renda Fixa', 'CDB', 'Investimentos', 'CDI', 'iniciantes', 'reserva de emergencia', 'certificado de depósito bancário']
-heroImage: 'src/assets/blog/cdb-cdi.png'
+heroImage: '~/assets/blog/cdb-cdi.png'
 # ADICIONE OS DADOS DO FAQ AQUI NO FRONTMATTER
 faqList:
   - question: "O que é melhor, CDB ou CDI?"

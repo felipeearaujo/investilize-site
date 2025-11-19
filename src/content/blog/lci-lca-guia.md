@@ -4,7 +4,7 @@ description: 'O que são LCI e LCA? Entenda como funciona a isenção de Imposto
 author: 'Felipe'
 pubDate: '2025-11-05' # Altere para a data de publicação
 tags: ['Renda Fixa', 'LCI', 'LCA', 'Investimentos', 'iniciantes', 'Imposto de Renda']
-heroImage: 'src/assets/blog/lci-lca.jpg' # (Sugestão de nome de imagem)
+heroImage: '~/assets/blog/lci-lca.jpg' # (Sugestão de nome de imagem)
 faqList:
   - question: "LCI ou LCA, qual é melhor?"
     answer: "Para o investidor, tanto faz. A lógica do investimento e a isenção de IR são idênticas. Sua única preocupação deve ser escolher o título que oferece a melhor taxa de rentabilidade e o prazo de vencimento que se encaixa nos seus objetivos."

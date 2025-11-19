@@ -4,7 +4,7 @@ description: 'Guia completo sobre Fundos Imobiliários (FIIs). Aprenda o que sã
 author: 'Felipe'
 pubDate: '2025-11-06' 
 tags: ['FIIs', 'Fundos Imobiliários', 'Renda Passiva', 'Investimentos', 'iniciantes', 'Dividendos']
-heroImage: 'src/assets/blog/fiis-guia.png' 
+heroImage: '~/assets/blog/fiis-guia.png' 
 faqList:
   - question: "Qual a diferença de FIIs para Ações?"
     answer: "Ao comprar Ações, você se torna sócio de uma empresa (ex: um banco, uma varejista). Ao comprar FIIs, você se torna 'sócio' de um portfólio de imóveis (ex: shoppings, escritórios). FIIs são obrigados a distribuir 95% do lucro (os aluguéis) e são focados em renda passiva mensal."

@@ -4,7 +4,7 @@ description: 'Aprenda o que são dividendos, como funcionam (Data Com, Data Ex),
 author: 'Felipe'
 pubDate: '2025-11-05' # Altere para a data de publicação
 tags: ['Ações', 'Dividendos', 'Renda Passiva', 'Investimentos', 'iniciantes', 'Dividend Yield']
-heroImage: 'src/assets/blog/dividendos.jpg' # (Sugestão de nome de imagem)
+heroImage: '~/assets/blog/dividendos.jpg' # (Sugestão de nome de imagem)
 faqList:
   - question: "Qual a diferença entre Dividendos e Juros sobre Capital Próprio (JCP)?"
     answer: "Ambos são formas de distribuir lucro. A principal diferença é o imposto: Dividendos são isentos de IR para o investidor. JCPs têm desconto de 15% de IR na fonte. Para a empresa, o JCP é lançado como despesa, o que reduz o lucro e, por consequência, o imposto que ela paga."

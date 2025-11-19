@@ -4,7 +4,7 @@ description: 'Descubra se você precisa declarar Imposto de Renda. Entenda as re
 author: 'Felipe'
 pubDate: '2025-11-19' 
 tags: ['Imposto de Renda', 'Declaração Anual', 'IRPF', 'Tributação', 'Investimentos']
-heroImage: 'src/assets/blog/imposto-renda.png'
+heroImage: '~/assets/blog/imposto-renda.png'
 faqList:
   - question: "Investi pouco dinheiro, preciso declarar?"
     answer: "Depende. Se você tinha mais de R$ 300 mil em bens totais (imóveis, carros, investimentos) OU se realizou vendas de ativos na bolsa (ações, FIIs) acima de R$ 40 mil no ano, ou se teve lucro sujeito a imposto, você é obrigado a declarar."

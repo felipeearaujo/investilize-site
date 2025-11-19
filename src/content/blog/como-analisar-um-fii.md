@@ -4,7 +4,7 @@ description: 'Aprenda a analisar um FII antes de investir. Entenda os 5 indicado
 author: 'Felipe'
 pubDate: '2025-11-06' 
 tags: ['FIIs', 'Fundos Imobiliários', 'Análise Fundamentalista', 'Indicadores', 'Renda Passiva', 'P/VP', 'Dividend Yield']
-heroImage: 'src/assets/blog/analise-fiis.png' 
+heroImage: '~/assets/blog/analise-fiis.png' 
 faqList:
   - question: "O que é um P/VP bom para um FII?"
     answer: "Geralmente, um P/VP próximo de 1.0 é considerado 'justo'. Abaixo de 1.0 pode indicar um FII 'barato' (descontado). Acima de 1.0, um FII 'caro'. No entanto, FIIs de tijolo de alta qualidade (como shoppings dominantes) quase sempre negociam acima de 1.0, pois o mercado embute uma expectativa de valorização."

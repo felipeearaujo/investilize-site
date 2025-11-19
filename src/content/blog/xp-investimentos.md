@@ -4,7 +4,7 @@ description: 'XP Investimentos: Conheça a história e as vantagens da corretora
 author: 'Felipe'
 pubDate: '2025-08-26'
 tags: ['Renda Fixa', 'Tesouro Direto', 'Investimentos', 'SELIC','IPCA', 'TAXA', CORRETORA, XP INVESTIMENTOS]
-heroImage: 'src/assets/blog/xp.webp'
+heroImage: '~/assets/blog/xp.webp'
 ---
 
 ##### O que é a XP Investimentos?

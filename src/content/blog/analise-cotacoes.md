@@ -3,7 +3,7 @@ title: 'Análise de Cotações: Guia para Iniciantes'
 description: 'Aprenda os fundamentos da análise de ações, desde a abordagem fundamentalista até a técnica, e descubra os principais indicadores para tomar decisões de investimento mais seguras e assertivas.'
 pubDate: '2025-08-07'
 author: 'Felipe'
-heroImage: 'src/assets/blog/csd.jpg'
+heroImage: '~/assets/blog/csd.jpg'
 ---
 
 Fazer a análise da cotação de uma ação é uma etapa fundamental para todo investidor que precisa tomar decisões mais assertivas e seguras na bolsa de valores. Essa análise está longe de ser um exercício de adivinhação; ela engloba métodos e o estudo de indicadores que contribuem para o entendimento da saúde financeira de uma empresa e se o preço atual de suas ações indica uma oportunidade para um bom investimento.

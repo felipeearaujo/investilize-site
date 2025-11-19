@@ -4,7 +4,7 @@ description: 'Saiba a diferença entre FIIs de Tijolo (imóveis físicos) e Pape
 author: 'Felipe'
 pubDate: '2025-11-06' 
 tags: ['FIIs', 'Fundos Imobiliários', 'Renda Passiva', 'FIIs de Tijolo', 'FIIs de Papel', 'CRIs']
-heroImage: 'src/assets/blog/tijolo-vs-papel.png' 
+heroImage: '~/assets/blog/tijolo-vs-papel.png' 
 faqList:
   - question: "Qual é mais arriscado, FII de Tijolo ou de Papel?"
     answer: "Os riscos são diferentes. O FII de Tijolo tem o risco da 'economia real', como a vacância (imóvel vazio) ou inadimplência (calote do aluguel). O FII de Papel tem o 'risco de crédito', que é o calote do devedor do título (CRI). Um bom FII de Papel dilui esse risco em centenas de devedores."

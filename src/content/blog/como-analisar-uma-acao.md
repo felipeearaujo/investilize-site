@@ -3,7 +3,7 @@ title: 'Como Analisar Ações: O Guia Completo para Iniciantes (Indicadores e M�
 description: 'Aprenda a analisar uma ação antes de investir. Entenda indicadores fundamentalistas como P/L, Dividend Yield (DY), ROE, Valor Patrimonial e saiba como escolher.'
 pubDate: '2025-07-16'
 author: 'Felipe'
-heroImage: 'src/assets/blog/analise-de-acoes.webp'
+heroImage: '~/assets/blog/analise-de-acoes.webp'
 faqList:
   - question: "O que é Valor Patrimonial da Ação (VPA)?"
     answer: "É o valor total do patrimônio líquido da empresa (ativos - passivos) dividido pelo número de ações. Ele representa quanto 'vale' cada ação se a empresa fosse liquidada hoje. É usado no cálculo do indicador P/VP (Preço / Valor Patrimonial)."

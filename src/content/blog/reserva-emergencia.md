@@ -4,7 +4,7 @@ description: 'Não sabe como começar sua reserva de emergência? Aprenda o cál
 author: 'Felipe'
 pubDate: '2025-08-18'
 tags: ['Renda Fixa', 'Renda Variável', 'Investimentos', 'reserva de emergencia','cdb', 'nubank']
-heroImage: 'src/assets/blog/emergencia.webp'
+heroImage: '~/assets/blog/emergencia.webp'
 ---
 
 Uma reserva de emergência é um valor muito importante para sua segurança financeira. Esse recurso deve ser de fácil acesso para cobrir despesas não planejadas, como questões de saúde, desemprego, etc. Ter um valor poupado evita que você precise recorrer a empréstimos em momentos de vulnerabilidade.

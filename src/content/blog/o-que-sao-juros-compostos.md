@@ -2,7 +2,7 @@
 title: 'Juros Compostos: O que são?'
 description: 'Entenda de uma vez por todas o que são juros compostos, o famoso "juros sobre juros", e como essa força pode trabalhar a seu favor nos investimentos.'
 pubDate: '2025-07-04' # Data de hoje: 4 de Julho de 2025
-heroImage: 'src/assets/blog/o-que-sao-juros-compostos/grafico-capa.avif' # Imagem de capa do artigo
+heroImage: '~/assets/blog/o-que-sao-juros-compostos/grafico-capa.avif' # Imagem de capa do artigo
 ---
 
 Você sabia que os **juros compostos** são frequentemente considerados a oitava maravilha do mundo financeiro? Entender o que são, onde se aplicam e como calculá-los é um dos passos mais importantes para tomar o controlo da sua vida financeira.

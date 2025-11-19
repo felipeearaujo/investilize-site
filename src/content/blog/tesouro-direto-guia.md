@@ -4,7 +4,7 @@ description: 'Guia completo do Tesouro Direto. Entenda a diferença entre Tesour
 author: 'Felipe'
 pubDate: '2025-11-05' # Altere para a data de publicação
 tags: ['Renda Fixa', 'Tesouro Direto', 'Tesouro Selic', 'Investimentos', 'iniciantes', 'reserva de emergencia']
-heroImage: 'src/assets/blog//tesouro-direto-guia.jpeg' # (Sugestão de nome de imagem)
+heroImage: '~/assets/blog//tesouro-direto-guia.jpeg' # (Sugestão de nome de imagem)
 faqList:
   - question: "Tesouro Direto é mais seguro que a poupança?"
     answer: "Sim. A poupança é garantida pelo FGC (Fundo Garantidor de Crédito) até R$ 250 mil. O Tesouro Direto é 100% garantido pelo Tesouro Nacional, ou seja, pelo próprio Governo Federal. É considerado o investimento de menor risco (risco soberano) do país."
