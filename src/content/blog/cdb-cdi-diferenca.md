@@ -87,7 +87,10 @@ A tributação sobre os rendimentos do CDB segue a tabela regressiva do Imposto 
 | De 361 a 720 dias | 17,5% |
 | Acima de 720 dias | 15,0% |
 
+Dúvidas sobre como declarar esses rendimentos? Consulte o [Guia Completo de IR 2025](https://investilize.com.br/blog/imposto-de-renda-investidores/).
+
 ---
+
 ## FAQ: Dúvidas Comuns sobre CDB e CDI
 
 ### O que é melhor, CDB ou CDI?

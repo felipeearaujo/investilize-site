@@ -38,6 +38,8 @@ Essa é a grande vantagem delas. A isenção de Imposto de Renda (IR) para pesso
 
 Como o setor imobiliário e o agronegócio são considerados vitais para a economia do Brasil, o Governo abre mão de cobrar o IR sobre esses investimentos para torná-los mais atraentes. Isso incentiva os investidores (como você) a direcionarem seu dinheiro para esses setores.
 
+Para entender as regras de isenção e como declarar, veja nosso [Guia de Imposto de Renda para Investidores](https://investilize.com.br/blog/imposto-de-renda-investidores/).
+
 ## A Grande Dúvida: LCI/LCA vs. CDB (Qual Rende Mais?)
 
 Aqui é onde o investidor precisa ter atenção. Você verá ofertas como "CDB pagando 110% do CDI" e "LCI pagando 95% do CDI". Qual é melhor?
