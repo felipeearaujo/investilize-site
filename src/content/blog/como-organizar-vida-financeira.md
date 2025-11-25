@@ -76,6 +76,8 @@ Agora que você tem a meta (50/30/20), é hora de ajustar a realidade. Olhe para
 * **Tarifas Bancárias:** Você ainda paga cesta de serviços ou anuidade de cartão? Hoje em dia, com bancos digitais, isso é jogar dinheiro fora.
 * **O "Cafezinho":** Não é para cortar o café, mas para ter consciência. R$ 10 por dia são R$ 300 no mês. Isso caberia no seu pote de investimentos?
 
+Não sabe como definir seus objetivos? Leia nosso guia sobre [Como Definir Metas Financeiras de Curto, Médio e Longo Prazo](https://investilize.com.br/blog/metas-financeiras-como-definir/).
+
 ## Passo 4: O Destino do Dinheiro (Começando a Investir)
 
 Conseguiu organizar a casa e sobrou dinheiro (os 20% dos Objetivos)? Ótimo! Agora, **não deixe esse dinheiro parado na conta corrente**.
