@@ -4,8 +4,8 @@ description: 'Entenda a diferença entre CDB (investimento) e CDI (taxa). Saiba 
 author: 'Felipe'
 pubDate: '2025-09-09'
 tags: ['Renda Fixa', 'CDB', 'Investimentos', 'CDI', 'iniciantes', 'reserva de emergencia', 'certificado de depósito bancário']
-heroImage: '~/assets/blog/cdb-cdi.png'
-# ADICIONE OS DADOS DO FAQ AQUI NO FRONTMATTER
+heroImage: '../../assets/blog/cdb-cdi.png'
+heroImageAlt: 'Gráfico ilustrativo da diferença entre CDB e CDI na rentabilidade de investimentos'
 faqList:
   - question: "O que é melhor, CDB ou CDI?"
     answer: "Essa é uma confusão comum. O CDB é o investimento (o produto) e o CDI é a taxa (o quanto ele rende). A pergunta correta é \"Qual o melhor CDB?\", e a resposta é: aquele que paga um percentual maior do CDI (ex: 110%), tem boa liquidez e a segurança do FGC."
@@ -15,7 +15,18 @@ faqList:
     answer: "Sim, muitos LCIs e LCAs também são pós-fixados e usam o CDI como referência, com a grande vantagem de serem isentos de Imposto de Renda para pessoa física."
 ---
 
-Caminhando pelo universo dos investimentos pode parecer algo difícil, principalmente quando nos deparamos com uma verdadeira sopa de letrinhas como CDB e CDI. Se você está em busca de compreender o que são os Certificados de Depósito Bancário e sua relação com o CDI, você está no lugar certo. Entender essa diferença é a porta de entrada para fazer escolhas mais assertivas e rentáveis para seus recursos.
+Qual a diferença entre CDB e CDI? Embora pareçam iguais, o CDB é o investimento (onde você põe o dinheiro) e o CDI é a taxa de juros (que define o rendimento). Entender essa relação é essencial para saber se seu dinheiro está rendendo mais que a poupança. Neste guia de 2025, explicaremos tudo sobre como calcular e render mais.
+
+## Resumo da Diferença: CDB vs. CDI
+
+Para nunca mais confundir, veja esta tabela comparativa:
+
+| Característica | CDB (Certificado de Depósito Bancário) | CDI (Certificado de Depósito Interbancário) |
+| :--- | :--- | :--- |
+| **O que é?** | Um **produto de investimento**. Você compra. | Uma **taxa de juros**. Você não compra. |
+| **Para quem serve?** | Para **você** (investidor). | Para **bancos** (empréstimos entre eles). |
+| **Qual a relação?** | O CDB *usa* o CDI como **índice de rentabilidade**. | O CDI *serve de* **referência** para o CDB. |
+| **Exemplo:** | "Investi em um CDB que paga 110% do CDI." | "O CDI hoje está em 10,50% ao ano." |
 
 ## O que é CDB (Certificado de Depósito Bancário)?
 
@@ -39,18 +50,9 @@ Isso significa que, se um CDB oferece uma rentabilidade de 100% do CDI, por exem
 
 Essa é a dúvida prática número 1 de quem começa. O valor do CDI anda sempre "colado" na Taxa Selic (a taxa básica de juros da economia).
 
-Para fins práticos, você pode considerar que **100% do CDI rende o mesmo que a Taxa Selic**. Se a Taxa Selic está em 10,50% ao ano, 100% do CDI renderá aproximadamente 10,50% ao ano. Um CDB de 110% do CDI, por sua vez, renderá 11,55% ao ano (10,50% x 1,10).
+Se a Selic está a **10,50% ao ano** e você aplica R$ 1.000,00 em um **CDB a 100% do CDI**, você terá R$ 1.105,00 ao final de um ano (antes do imposto). Se for **110% do CDI**, seu rendimento sobe para **11,55%**, resultando em R$ 1.155,50.
 
-## Resumo da Diferença: CDB vs. CDI
-
-Para nunca mais confundir, veja esta tabela comparativa:
-
-| Característica | CDB (Certificado de Depósito Bancário) | CDI (Certificado de Depósito Interbancário) |
-| :--- | :--- | :--- |
-| **O que é?** | Um **produto de investimento**. Você compra. | Uma **taxa de juros**. Você não compra. |
-| **Para quem serve?** | Para **você** (investidor). | Para **bancos** (empréstimos entre eles). |
-| **Qual a relação?** | O CDB *usa* o CDI como **índice de rentabilidade**. | O CDI *serve de* **referência** para o CDB. |
-| **Exemplo:** | "Investi em um CDB que paga 110% do CDI." | "O CDI hoje está em 10,50% ao ano." |
+**Quer simular quanto um CDB de 110% do CDI renderia no seu bolso?** [Use nossa Calculadora de Juros Compostos gratuita](https://investilize.com.br/ferramentas/juros-compostos/) e veja o impacto do tempo no seu dinheiro.
 
 ## Tipos de Rentabilidade do CDB
 
@@ -71,6 +73,7 @@ Compare o percentual do CDI oferecido por diferentes instituições. Busque por 
 ### 2. Liquidez (Diária vs. No Vencimento)
 
 Verifique o prazo de vencimento e as condições de resgate. Existem CDBs de liquidez diária, que permitem o resgate a qualquer tempo, sendo ideais para sua [reserva de emergência](https://investilize.com.br/blog/reserva-emergencia/). Outros títulos exigem que o recurso permaneça investido até o vencimento, mas geralmente oferecem uma rentabilidade maior por isso.
+Por conta dessa liquidez, CDBs que rendem 100% do CDI são a opção preferida para constituir uma **reserva de emergência,** substituindo a poupança com segurança.
 
 ### 3. Segurança (O FGC e o Risco do Banco)
 
