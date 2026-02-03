@@ -1,250 +1,181 @@
 ---
-// Nenhuma lógica de servidor necessária aqui.
+// src/components/ferramentas/CalculadoraJuros.astro
+// NÃO IMPORTAMOS LAYOUT, HEADER OU FOOTER AQUI.
+// Este arquivo deve conter APENAS a calculadora.
 ---
 
-<div class="calculator-container">
-    <h1>Calculadora de Juros Compostos</h1>
-    <p class="subtitle">Com Aportes Mensais e Gráfico de Evolução</p>
-    
-    <div class="input-group">
-        <label for="capital">Capital Inicial (R$):</label>
-        <input type="number" id="capital" placeholder="Ex: 1000">
-    </div>
+<div class="tool-page">
+    <div class="calculator-container">
+        <p class="subtitle">Preencha os dados abaixo para simular:</p>
+        
+        <div class="grid-inputs">
+            <div class="input-group">
+                <label for="capital">Capital Inicial (R$):</label>
+                <input type="number" id="capital" placeholder="Ex: 1000">
+            </div>
 
-    <div class="input-group">
-        <label for="aporte">Valor do Aporte Mensal (R$):</label>
-        <input type="number" id="aporte" placeholder="Ex: 300">
-    </div>
-    
-    <div class="input-group">
-        <label for="taxa">Taxa de Juros Mensal (%):</label>
-        <input type="number" id="taxa" placeholder="Ex: 1">
-    </div>
+            <div class="input-group">
+                <label for="aporte">Aporte Mensal (R$):</label>
+                <input type="number" id="aporte" placeholder="Ex: 300">
+            </div>
+            
+            <div class="input-group">
+                <label for="taxa">Taxa Mensal (%):</label>
+                <input type="number" id="taxa" placeholder="Ex: 0.8" step="0.01">
+                <small style="color: #666; font-size: 0.8em;">Ex: CDI hoje é ~0.85% ao mês</small>
+            </div>
 
-    <div class="input-group">
-        <label for="tempo">Período (meses):</label>
-        <input type="number" id="tempo" placeholder="Ex: 12">
-    </div>
-    
-    <button id="calculate-btn">Calcular e Gerar Gráfico</button>
-    
-    <div id="result-container"></div>
+            <div class="input-group">
+                <label for="tempo">Período (meses):</label>
+                <input type="number" id="tempo" placeholder="Ex: 24">
+            </div>
+        </div>
+        
+        <button id="calculate-btn">Calcular e Gerar Gráfico</button>
+        
+        <div id="result-container"></div>
 
-    <div class="chart-container">
-        <canvas id="evolutionChart"></canvas>
+        <div class="chart-container">
+            <canvas id="evolutionChart"></canvas>
+        </div>
     </div>
 </div>
 
 <style>
-/* Seus estilos CSS permanecem os mesmos */
-.calculator-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 2rem auto;
-}
-h1 {
-    color: #1f2937;
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 2em;
-}
-.subtitle {
-    margin-top: 0;
-    margin-bottom: 25px;
-    color: #6b7280;
-}
-.input-group { margin-bottom: 20px; text-align: left; }
-label { display: block; margin-bottom: 5px; font-weight: 600; color: #374151; }
-input { 
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #d1d5db; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
-    font-size: 1rem;
-}
-input:focus {
-    border-color: #7c3aed;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
-}
-button { 
-    width: 100%; 
-    padding: 12px; 
-    background-color: #7c3aed; 
-    color: white; border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    font-weight: 600; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-}
-button:hover { background-color: #6d28d9; }
-#result-container {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #f3f4f6;
-    border-radius: 5px;
-    text-align: left;
-    line-height: 1.6;
-}
-.chart-container {
-    margin-top: 30px;
-    width: 100%;
-    position: relative;
-}
+    /* Estilos Locais da Calculadora */
+    .tool-page { width: 100%; font-family: sans-serif; }
+    .subtitle { text-align: center; margin-bottom: 25px; color: #666; }
+
+    .calculator-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        border: 1px solid #f0f0f0;
+        margin-top: 0;
+    }
+    .grid-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 600px) { .grid-inputs { grid-template-columns: 1fr; } }
+    
+    .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+    .input-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+    
+    button { 
+        width: 100%; padding: 15px; background-color: #2563eb; color: white; 
+        border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; 
+        transition: background 0.2s;
+    }
+    button:hover { background-color: #1d4ed8; }
+
+    #result-container { margin-top: 25px; padding: 15px; background: #f8fafc; border-radius: 8px; }
+    .chart-container { margin-top: 40px; height: 350px; position: relative; }
 </style>
 
 <script>
-function setupCalculator() {
-    // 1. Obter referências aos elementos
-    const capitalInput = document.getElementById('capital') as HTMLInputElement;
-    const aporteInput = document.getElementById('aporte') as HTMLInputElement;
-    const taxaInput = document.getElementById('taxa') as HTMLInputElement;
-    const tempoInput = document.getElementById('tempo') as HTMLInputElement;
-    const calculateBtn = document.getElementById('calculate-btn');
-    const resultContainer = document.getElementById('result-container');
-    const chartCanvas = document.getElementById('evolutionChart') as HTMLCanvasElement;
+    import Chart from 'chart.js/auto';
 
-    // 2. A "Guarda de Proteção"
-    if (!capitalInput || !aporteInput || !taxaInput || !tempoInput || !calculateBtn || !resultContainer || !chartCanvas) {
-        console.error("Erro de inicialização: Elementos da calculadora não encontrados.");
-        return;
-    }
+    function initCalculator() {
+        const capitalInput = document.getElementById('capital') as HTMLInputElement;
+        const aporteInput = document.getElementById('aporte') as HTMLInputElement;
+        const taxaInput = document.getElementById('taxa') as HTMLInputElement;
+        const tempoInput = document.getElementById('tempo') as HTMLInputElement;
+        const calculateBtn = document.getElementById('calculate-btn');
+        const resultContainer = document.getElementById('result-container');
+        const chartCanvas = document.getElementById('evolutionChart') as HTMLCanvasElement;
 
-    const chartCtx = chartCanvas.getContext('2d');
-    if (!chartCtx) {
-        console.error("Erro de inicialização: Não foi possível obter o contexto do canvas.");
-        return;
-    }
-    
-    let evolutionChart: any;
+        // Se não encontrar os elementos, sai da função (evita erros em outras páginas)
+        if (!calculateBtn || !chartCanvas) return;
 
-    calculateBtn.addEventListener('click', () => {
-        const capitalInicial = parseFloat(capitalInput.value);
-        const aporteMensal = parseFloat(aporteInput.value) || 0;
-        const taxaJurosMensal = parseFloat(taxaInput.value);
-        const tempoMeses = parseInt(tempoInput.value);
+        let evolutionChart: Chart | null = null;
 
-        if (isNaN(capitalInicial) || isNaN(taxaJurosMensal) || isNaN(tempoMeses)) {
-            resultContainer.innerHTML = '<p style="color: red;">Preencha o Capital, a Taxa e o Tempo.</p>';
-            return;
-        }
+        calculateBtn.addEventListener('click', () => {
+            const capitalInicial = parseFloat(capitalInput.value);
+            const aporteMensal = parseFloat(aporteInput.value) || 0;
+            const taxaJurosMensal = parseFloat(taxaInput.value);
+            const tempoMeses = parseInt(tempoInput.value);
 
-        const taxaDecimal = taxaJurosMensal / 100;
-        const labels = ['Mês 0'];
-        const dataCapitalTotal = [capitalInicial];
-        const dataMontanteTotal = [capitalInicial];
-        
-        let montanteAcumulado = capitalInicial;
-        let capitalInvestido = capitalInicial;
-
-        for (let mes = 1; mes <= tempoMeses; mes++) {
-            // 1. PRIMEIRO: Adiciona o aporte mensal ao montante acumulado.
-            // Assim, o dinheiro novo já começa a render juros neste mesmo mês.
-            montanteAcumulado += aporteMensal;
-            
-            // 2. SEGUNDO: Calcula os juros sobre o novo total (saldo anterior + aporte).
-            montanteAcumulado *= (1 + taxaDecimal);
-            
-            // Atualiza o total que saiu do seu bolso (sem juros)
-            capitalInvestido += aporteMensal;
-            
-            // Adiciona os dados para o gráfico
-            labels.push(`Mês ${mes}`);
-            dataMontanteTotal.push(montanteAcumulado);
-            dataCapitalTotal.push(capitalInvestido);
-        }
-
-        const montanteFinal = montanteAcumulado;
-        const totalJuros = montanteFinal - capitalInvestido;
-        
-        // ATUALIZAÇÃO: Criando um formatador de moeda reutilizável
-        const formatoMoeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
-
-        resultContainer.innerHTML = `
-            <p><strong>Montante Final:</strong> ${formatoMoeda.format(montanteFinal)}</p>
-            <p><strong>Total Investido (Capital + Aportes):</strong> ${formatoMoeda.format(capitalInvestido)}</p>
-            <p><strong>Total Ganho em Juros:</strong> ${formatoMoeda.format(totalJuros)}</p>
-        `;
-
-        if (evolutionChart) {
-            evolutionChart.destroy();
-        }
-        
-        evolutionChart = new (window as any).Chart(chartCtx, {
-            type: 'line',
-            data: {
-                labels: labels,
-                datasets: [
-                {
-                    label: 'Total Acumulado (com Juros)',
-                    data: dataMontanteTotal,
-                    borderColor: '#7c3aed',
-                    backgroundColor: 'rgba(124, 58, 237, 0.1)',
-                    fill: true,
-                    tension: 0.1
-                },
-                {
-                    label: 'Total Investido (sem Juros)',
-                    data: dataCapitalTotal,
-                    borderColor: '#6b7280',
-                    borderDash: [5, 5],
-                    fill: false,
-                    tension: 0.1
-                }
-            ]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Evolução do Património ao Longo do Tempo'
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context: any) {
-                                let label = context.dataset.label || '';
-                                if (label) { label += ': '; }
-                                if (context.parsed.y !== null) {
-                                    // ATUALIZAÇÃO: Usando o formatador aqui também
-                                    label += formatoMoeda.format(context.parsed.y);
-                                }
-                                return label;
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        ticks: {
-                            // ATUALIZAÇÃO: E aqui
-                            callback: function(value: string | number) {
-                                // O 'value' aqui é um número, então podemos formatá-lo
-                                if (typeof value === 'number') {
-                                    return formatoMoeda.format(value);
-                                }
-                                return value;
-                            }
-                        }
-                    }
-                }
+            if (isNaN(capitalInicial) || isNaN(taxaJurosMensal) || isNaN(tempoMeses)) {
+                if(resultContainer) resultContainer.innerHTML = '<p style="color: red;">Preencha todos os campos obrigatórios.</p>';
+                return;
             }
-        });
-    });
-}
 
-// Garante que o script só rode quando a página estiver pronta
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupCalculator);
-} else {
-    setupCalculator();
-}
+            const taxaDecimal = taxaJurosMensal / 100;
+            const labels = ['Início'];
+            const dataCapitalTotal = [capitalInicial];
+            const dataMontanteTotal = [capitalInicial];
+            
+            let montanteAcumulado = capitalInicial;
+            let capitalInvestido = capitalInicial;
+
+            for (let mes = 1; mes <= tempoMeses; mes++) {
+                montanteAcumulado += aporteMensal;
+                montanteAcumulado *= (1 + taxaDecimal);
+                capitalInvestido += aporteMensal;
+                
+                labels.push(`Mês ${mes}`);
+                dataMontanteTotal.push(montanteAcumulado);
+                dataCapitalTotal.push(capitalInvestido);
+            }
+
+            const montanteFinal = montanteAcumulado;
+            const totalJuros = montanteFinal - capitalInvestido;
+            const formatoMoeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+            if(resultContainer) {
+                resultContainer.innerHTML = `
+                    <div style="display: grid; gap: 8px;">
+                        <div style="font-size: 1.2rem; font-weight: bold;">Montante Final: <span style="color: #059669;">${formatoMoeda.format(montanteFinal)}</span></div>
+                        <div style="color: #666;">Total Investido: ${formatoMoeda.format(capitalInvestido)}</div>
+                        <div style="color: #666;">Total em Juros: <span style="color: #2563eb;">${formatoMoeda.format(totalJuros)}</span></div>
+                    </div>
+                `;
+            }
+
+            if (evolutionChart) evolutionChart.destroy();
+            
+            evolutionChart = new Chart(chartCanvas, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Total Acumulado',
+                            data: dataMontanteTotal,
+                            borderColor: '#2563eb',
+                            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Dinheiro do Bolso',
+                            data: dataCapitalTotal,
+                            borderColor: '#94a3b8',
+                            borderDash: [5, 5],
+                            fill: false,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    scales: { y: { ticks: { callback: (v) => formatoMoeda.format(Number(v)) } } }
+                }
+            });
+        });
+    }
+
+    // Inicialização segura para Astro (View Transitions ou normal)
+    document.addEventListener('astro:page-load', initCalculator);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCalculator);
+    } else {
+        initCalculator();
+    }
 </script>

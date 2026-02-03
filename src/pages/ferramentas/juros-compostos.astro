@@ -3,18 +3,20 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Importamos os "pedaços" da página
 import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astro';
 import ConteudoJuros from '../../components/ferramentas/ConteudoJuros.astro';
-import FaqSchema from '../../components/FaqSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { Chart, registerables } from 'chart.js/auto';
+
+// NOTA: Removi o "import Chart..." daqui. Ele deve ficar DENTRO do <script> do arquivo CalculadoraJuros.astro
 
 // 2. Definir o título e a descrição para o SEO desta página
 const pageTitle = "Calculadora de Juros Compostos: Simule e Aprenda";
 const pageDescription = "Calculadora de Juros Compostos completa. Simule seus investimentos com aportes mensais e aprenda o que são, como funcionam e por que são importantes com nosso guia e FAQ.";
 
-// --- PASSO 1: DEFINA A VARIÁVEL AQUI ---
-// Esta constante precisa estar dentro das linhas '---'
+// 3. Dados do FAQ (Schema)
 const dadosFaq = [
   {
     question: "Qual a diferença entre juros simples e juros compostos?",
@@ -30,20 +32,42 @@ const dadosFaq = [
   }
 ];
 ---
+
 <!doctype html>
 <html lang="pt-BR">
     <head>
         <BaseHead title={pageTitle} description={pageDescription} />
         <FaqSchema faqList={dadosFaq} />
+        
+        <style>
+            /* CSS para centralizar a página (já que não estamos usando o Layout padrão) */
+            main {
+                width: 960px;
+                max-width: calc(100% - 2em);
+                margin: 0 auto;
+                padding: 3em 1em;
+            }
+            /* Espaço entre a calculadora e o texto */
+            .spacer {
+                margin-bottom: 4rem;
+            }
+        </style>
     </head>
     <body>
         <Header />
         <main>
             <Breadcrumbs />
-            {}
-            <CalculadoraJuros client:visible />
-            {}
-            <ConteudoJuros /> {/* USE O NOVO COMPONENTE AQUI */}
+            
+            <h1>{pageTitle}</h1>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+                {pageDescription}
+            </p>
+
+            <CalculadoraJuros />
+            
+            <div class="spacer"></div>
+
+            <ConteudoJuros />
             
         </main>
         <Footer />
