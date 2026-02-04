@@ -1,53 +1,74 @@
 ---
-// 1. Importar as peças corretas para montar a página
+// src/pages/ferramentas/conversor-de-moedas.astro
 
+import Layout from '../../layouts/BlogPost.astro'; // Usando layout de Blog
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Componentes da Ferramenta
 import ConversorMoedas from '../../components/ferramentas/ConversorMoedas.astro';
 import ConteudoConversorMoedas from '../../components/ferramentas/ConteudoConversorMoedas.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro'; // Seu componente dinâmico
-import FaqSchema from '../../components/FaqSchema.astro';     // Nosso componente de FAQ
-import { Chart, registerables } from 'chart.js/auto';
 
-// 2. DEFINIR AS METADADOS DE SEO
-const pageTitle = "Conversor de Moedas Online: Cotação Dólar, Euro e Mais";
-const pageDescription = "Use nosso conversor de moedas para saber a cotação do Dólar, Euro, Real e mais. Ferramenta grátis com FAQ sobre Dólar comercial, turismo e spread.";
+// SEO Otimizado
+const pageTitle = "Conversor de Moedas Online: Dólar, Euro e Real (2026)";
+const pageDescription = "Converta moedas em tempo real. Cotação do Dólar, Euro, Libra e mais de 30 moedas estrangeiras. Ferramenta gratuita e atualizada.";
+const pubDate = new Date(); // Data necessária para o layout de Blog
 
-// 3. DEFINIR OS DADOS DO NOVO FAQ
-const dadosFaqMoedas = [
+// Dados para o Google (Schema)
+const faqData = [
   {
-    question: "Qual a diferença entre Dólar Comercial e Dólar Turismo?",
-    answer: "Essa é a dúvida mais comum. O Dólar Comercial é a cotação usada para grandes transações financeiras entre empresas e bancos (importação, exportação). É o valor que você vê nos jornais e aqui no nosso conversor. O Dólar Turismo é o que você paga na casa de câmbio para comprar a moeda em espécie (dinheiro vivo). Ele é sempre mais caro, pois inclui custos operacionais, impostos (como o IOF) e a margem de lucro da casa de câmbio."
+    question: "Qual a diferença entre Dólar Comercial e Turismo?",
+    answer: "O Comercial é usado entre bancos e empresas. O Turismo é vendido em casas de câmbio para viagem e é mais caro pois inclui custos e impostos."
   },
   {
     question: "A cotação do conversor é em tempo real?",
-    answer: "Nossa ferramenta atualiza as taxas de câmbio comercial com alta frequência, buscando os valores mais recentes disponíveis no mercado financeiro global. Para transações que exigem valores exatos no segundo, como operações de trade, consulte sempre sua corretora."
+    answer: "Sim, a ferramenta atualiza as taxas de mercado comercial com alta frequência. Para compra de espécie, lembre-se de adicionar o spread da casa de câmbio."
   },
   {
-    question: "O que é \"spread\" cambial?",
-    answer: "O \"spread\" é a diferença entre o preço de compra e o preço de venda de uma moeda. Quando você vai a uma casa de câcâmbio, ela \"compra\" seu dólar por um preço e \"vende\" dólar por um preço um pouco mais alto. Essa diferença é o spread, que representa o lucro da instituição."
+    question: "O que é Spread cambial?",
+    answer: "Spread é a diferença entre o preço que a instituição paga pela moeda e o preço que ela vende para você. É o lucro do banco/corretora."
   },
   {
-    question: "O valor do conversor é o que vou pagar na minha fatura do cartão de crédito?",
-    answer: "Não exatamente. A fatura do cartão de crédito internacional geralmente usa uma cotação do dólar próxima ao comercial, mas adiciona o \"spread\" do banco (a margem de lucro dele) e o IOF (Imposto sobre Operações Financeiras) obrigatório para compras internacionais."
+    question: "O valor do conversor é o da fatura do cartão?",
+    answer: "Não. O cartão usa o dólar PTAX + Spread do Banco + IOF. O valor final da fatura será maior que a conversão comercial simples."
   }
 ];
 ---
 
-<!doctype html>
-<html lang="pt-BR">
-    <head>
-        <BaseHead title={pageTitle} description={pageDescription} />
-        </head>
-    <body>
-        <Header />
-        <main>
-            <Breadcrumbs /> 
-            {}
-            <ConversorMoedas client:visible />
-            {/* Seu componente dinâmico de Breadcrumbs */}
-            
-            {/* O componente com todo o texto explicativo e FAQ */}
-            <ConteudoConversorMoedas />
-        </main>
-        <Footer />
-    </body>
-</html>
+<Layout title={pageTitle} description={pageDescription} pubDate={pubDate}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        
+        <div class="header-section">
+            <div class="intro-seo">
+                <p>
+                    Use nosso <strong>Conversor de Moedas</strong> gratuito para simular o valor do seu dinheiro em qualquer lugar do mundo. 
+                    Ideal para planejar viagens, compras internacionais ou investimentos em dólar.
+                </p>
+            </div>
+        </div>
+
+        <ConversorMoedas />
+
+        <ConteudoConversorMoedas />
+
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .intro-seo {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+</style>
