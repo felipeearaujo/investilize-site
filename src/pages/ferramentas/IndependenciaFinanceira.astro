@@ -1,0 +1,82 @@
+---
+// src/pages/ferramentas/independencia-financeira.astro
+import Layout from '../../layouts/BlogPost.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+
+import IndependenciaFinanceira from '../../components/ferramentas/IndependenciaFinanceira.astro';
+import ConteudoIndependencia from '../../components/ferramentas/ConteudoIndependencia.astro';
+
+// SEO Estratégico
+const pageTitle = "Calculadora de Independência Financeira: Viver de Renda (2026)";
+const pageDescription = "Descubra quanto dinheiro você precisa para parar de trabalhar. Simule sua aposentadoria antecipada (FIRE) e planeje sua liberdade financeira.";
+const pubDate = new Date('2026-01-01');
+
+const faqData = [
+  {
+    question: "Quanto dinheiro preciso para viver de renda?",
+    answer: "Geralmente, você precisa acumular cerca de 300 vezes o seu custo de vida mensal (Regra dos 4% ao ano)."
+  },
+  {
+    question: "O que é o movimento FIRE?",
+    answer: "Sigla para 'Financial Independence, Retire Early'. É um movimento de pessoas que buscam alta taxa de poupança para se aposentar jovens."
+  },
+  {
+    question: "Onde investir para aposentadoria?",
+    answer: "Ativos que geram renda passiva e protegem da inflação, como Tesouro IPCA+, Fundos Imobiliários (FIIs) e Ações de Dividendos."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} pubDate={pubDate}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        <Breadcrumbs />
+
+        <div class="header-section">
+            <h1>{pageTitle}</h1>
+            <div class="intro-seo">
+                <p>
+                    O sonho de <strong>Viver de Renda</strong> é possível, mas exige planejamento. Nossa calculadora utiliza a matemática financeira 
+                    para mostrar exatamente quanto tempo e dinheiro faltam para você conquistar sua <strong>Liberdade Financeira</strong>.
+                </p>
+            </div>
+        </div>
+
+        <IndependenciaFinanceira />
+
+        <ConteudoIndependencia />
+
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 960px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header-section h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: rgb(var(--black));
+        line-height: 1.2;
+    }
+    .intro-seo {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .header-section h1 { font-size: 1.8rem; }
+    }
+</style>

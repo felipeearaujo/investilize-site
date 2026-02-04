@@ -1,0 +1,119 @@
+---
+// src/pages/ferramentas/cotacao-acoes.astro
+
+// 1. IMPORTS
+import Layout from '../../layouts/BlogPost.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Importando os componentes "limpos" da pasta ferramentas
+import CotacaoAcoes from '../../components/ferramentas/CotacaoAcoes.astro';
+import ConteudoCotacoes from '../../components/ferramentas/Conteudoacoes.astro';
+
+// 2. FRONTMATTER SEO (Regra de Ouro: Ano 2026 + Palavra-chave)
+const pageTitle = "Cotação de Ações Online: Preço em Tempo Real (2026)";
+const pageDescription = "Consulte a cotação atualizada de ações da B3. Entenda o que é Ticker, Dividend Yield e acompanhe a variação do mercado de forma simples.";
+
+// 3. DADOS DO FAQ (Sincronizado com o seu texto para o Google)
+const faqData = [
+  {
+    question: "O que significa o Ticker (Código) da Ação?",
+    answer: "O Ticker é um código único que identifica uma ação na Bolsa de Valores. No Brasil (B3), ele é formado por 4 letras maiúsculas e um número."
+  },
+  {
+    question: "Esta cotação é em tempo real?",
+    answer: "As cotações de ações na maioria dos sites gratuitos geralmente têm um pequeno atraso (delay) de cerca de 15 minutos em relação ao pregão ao vivo da B3."
+  },
+  {
+    question: "O que é \"Variação %\"?",
+    answer: "A variação percentual mostra quanto o preço da ação subiu ou desceu no dia atual, em relação ao preço de fechamento do dia anterior."
+  },
+  {
+    question: "Por que algumas ações têm final 3, 4 ou 11?",
+    answer: "Final 3 são Ordinárias (voto), Final 4 são Preferenciais (dividendos) e Final 11 são Units (pacotes de ações)."
+  },
+  {
+    question: "O que significa \"Dividend Yield (DY)\"?",
+    answer: "O Dividend Yield é um indicador que mostra quanto uma empresa pagou em dividendos nos últimos 12 meses, dividido pelo preço atual da ação."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        <Breadcrumbs />
+
+        <div class="header-section">
+            <h1>{pageTitle}</h1>
+            
+            <div class="intro-seo">
+                <p>
+                    A <strong>Cotação de Ações Online</strong> é a ferramenta essencial para investidores que desejam acompanhar o mercado financeiro com agilidade. 
+                    Com esta ferramenta gratuita, você pode inserir o código do ativo (Ticker) para descobrir o <strong>preço atual</strong> e a <strong>variação do dia</strong> instantaneamente.
+                </p>
+                <p>
+                    Ideal para quem investe na <strong>B3 (Brasil)</strong> ou em Stocks (EUA), nossa busca permite que você monitore seus ativos favoritos, 
+                    como PETR4, VALE3 ou AAPL, sem precisar fazer login em home brokers complexos. Simule e acompanhe seus investimentos agora mesmo.
+                </p>
+            </div>
+        </div>
+
+        <CotacaoAcoes />
+
+        <ConteudoCotacoes />
+
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 960px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .header-section h1 {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        color: rgb(var(--black));
+        line-height: 1.2;
+    }
+
+    .lead {
+        color: #666;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .header-section h1 {
+            font-size: 1.8rem;
+        }
+        .tool-page-wrapper {
+            padding: 1rem;
+        }
+    }
+
+    .intro-seo {
+        max-width: 700px; /* Limita a largura para leitura confortável */
+        margin: 0 auto;   /* Centraliza o bloco */
+        color: #4b5563;   /* Cinza escuro para boa legibilidade */
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .intro-seo p {
+        margin-bottom: 1rem; /* Espaço entre os parágrafos */
+    }
+    
+</style>

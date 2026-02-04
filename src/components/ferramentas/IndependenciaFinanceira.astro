@@ -1,0 +1,192 @@
+---
+// src/components/ferramentas/IndependenciaFinanceira.astro
+---
+
+<div class="tool-page">
+  <div class="calculator-container">
+    <div class="header-icon">🏖️</div>
+    <h2>Calculadora de Independência Financeira</h2>
+    <p class="subtitle">Descubra quanto tempo falta para você viver de renda</p>
+
+    <div class="grid-inputs">
+        <div class="input-group">
+            <label for="rendaDesejada">Renda Mensal Desejada (R$):</label>
+            <input type="number" id="rendaDesejada" placeholder="Ex: 5000" />
+            <small>Quanto você quer receber por mês sem trabalhar.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="patrimonioAtual">Patrimônio Atual (R$):</label>
+            <input type="number" id="patrimonioAtual" placeholder="Ex: 10000" />
+        </div>
+
+        <div class="input-group">
+            <label for="aporteMensal">Investimento Mensal (R$):</label>
+            <input type="number" id="aporteMensal" placeholder="Ex: 1500" />
+        </div>
+
+        <div class="input-group">
+            <label for="taxaAnual">Rentabilidade Real Anual (%):</label>
+            <input type="number" id="taxaAnual" placeholder="Ex: 6" value="6" step="0.1" />
+            <small>Acima da inflação (Ex: 5% a 7%).</small>
+        </div>
+    </div>
+    
+    <button id="calc-fire-btn">Calcular Minha Liberdade</button>
+    
+    <div id="fire-result" class="result-box" style="display: none;"></div>
+  </div>
+</div>
+
+<style>
+  /* Padrão Investilize */
+  .tool-page { width: 100%; font-family: sans-serif; }
+  
+  .calculator-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .header-icon { font-size: 2.5rem; margin-bottom: 10px; }
+  h2 { color: #1f2937; margin: 0; font-size: 1.8rem; }
+  .subtitle { margin-top: 5px; margin-bottom: 30px; color: #6b7280; font-size: 0.95rem; }
+
+  .grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .input-group { display: flex; flex-direction: column; }
+  
+  label { font-size: 0.9rem; font-weight: 600; color: #374151; margin-bottom: 5px; }
+  
+  input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus { border-color: #7c3aed; }
+  
+  small { color: #9ca3af; font-size: 0.75rem; margin-top: 4px; }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  button:hover { background-color: #6d28d9; }
+
+  .result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    color: #166534;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .highlight-number {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #15803d;
+    display: block;
+    margin: 5px 0 15px 0;
+  }
+
+  @media (max-width: 600px) {
+    .grid-inputs { grid-template-columns: 1fr; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function initFireCalc() {
+    const btn = document.getElementById('calc-fire-btn');
+    const resultDiv = document.getElementById('fire-result');
+    
+    if (!btn || !resultDiv) return;
+
+    btn.addEventListener('click', () => {
+        const rendaDesejada = parseFloat((document.getElementById('rendaDesejada') as HTMLInputElement).value);
+        const patrimonioAtual = parseFloat((document.getElementById('patrimonioAtual') as HTMLInputElement).value) || 0;
+        const aporteMensal = parseFloat((document.getElementById('aporteMensal') as HTMLInputElement).value);
+        const taxaAnual = parseFloat((document.getElementById('taxaAnual') as HTMLInputElement).value);
+
+        if (!rendaDesejada || !aporteMensal || !taxaAnual) {
+            resultDiv.innerHTML = '<p style="color:red">Preencha todos os campos obrigatórios.</p>';
+            resultDiv.style.display = 'block';
+            return;
+        }
+
+        // Regra dos 4% (safe withdrawal rate) adaptada para o Brasil (estimativa conservadora de 0.5% a.m. de retirada real)
+        // Montante Necessário = Renda Desejada / Taxa de Retirada Mensal Segura
+        // Vamos usar uma taxa de retirada segura de 0.5% ao mês (aprox 6% ao ano real) para simplificar e ser realista no Brasil.
+        // Se a taxa do usuário for diferente, ajustamos o cálculo.
+        
+        const taxaMensal = (Math.pow(1 + (taxaAnual / 100), 1 / 12)) - 1;
+        
+        // Montante Mágico = Valor que rende a renda desejada apenas com os juros
+        const montanteNecessario = rendaDesejada / taxaMensal;
+        
+        // Cálculo do Tempo (Nper)
+        // Fórmula: n = log((PMT + PV*i) / (PMT + FV*i)) / log(1+i) ... adaptada para loop ou logaritmo
+        
+        let meses = 0;
+        let saldo = patrimonioAtual;
+        
+        // Simulação loop (mais segura para evitar erros de logaritmo com números negativos)
+        while (saldo < montanteNecessario && meses < 1200) { // Limite de 100 anos
+            saldo = saldo * (1 + taxaMensal) + aporteMensal;
+            meses++;
+        }
+        
+        const anos = Math.floor(meses / 12);
+        const mesesRestantes = meses % 12;
+        
+        const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        resultDiv.innerHTML = `
+            <p>Para receber <strong>${formatter.format(rendaDesejada)}</strong> por mês, você precisa acumular:</p>
+            <span class="highlight-number">${formatter.format(montanteNecessario)}</span>
+            
+            <p>Com seu plano atual, você alcançará sua liberdade financeira em:</p>
+            <span class="highlight-number" style="color: #7c3aed; font-size: 2rem;">
+                ${anos} anos e ${mesesRestantes} meses
+            </span>
+            <p style="font-size: 0.9rem; color: #666;">Considerando rentabilidade real (acima da inflação) de ${taxaAnual}% a.a.</p>
+        `;
+        resultDiv.style.display = 'block';
+    });
+  }
+
+  document.addEventListener('astro:page-load', initFireCalc);
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFireCalc);
+  } else {
+      initFireCalc();
+  }
+</script>

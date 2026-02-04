@@ -1,46 +1,71 @@
-// Ficheiro: src/pages/api/cotacao.ts
 import type { APIRoute } from 'astro';
 
-// A LINHA MÁGICA QUE RESOLVE TUDO!
-// Diz ao Astro para tratar este ficheiro como um endpoint dinâmico de servidor.
-export const prerender = false;
-
 export const POST: APIRoute = async ({ request }) => {
-  const apiKey = import.meta.env.ALPHA_VANTAGE_API_KEY;
-
-  if (!apiKey) {
-    return new Response(JSON.stringify({ error: 'A chave da API não foi configurada no servidor.' }), { status: 500 });
-  }
-
   try {
     const body = await request.json();
-    const symbol = body.symbol;
+    let symbol = body.symbol;
 
     if (!symbol) {
-      return new Response(JSON.stringify({ error: 'O símbolo da ação é obrigatório no corpo do pedido.' }), { status: 400 });
+      return new Response(JSON.stringify({ error: 'Símbolo não fornecido' }), {
+        status: 400,
+      });
     }
 
-    const externalApiUrl = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${apiKey}`;
-    const externalResponse = await fetch(externalApiUrl);
+    // Tratamento básico para garantir letras maiúsculas
+    symbol = symbol.toUpperCase();
+
+    // 1. Buscamos os dados no Yahoo Finance (Endpoint gratuito e público)
+    // Usamos o endpoint 'chart' que retorna metadados precisos do preço atual
+    const response = await fetch(
+      `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1d`
+    );
+
+    if (!response.ok) {
+      return new Response(JSON.stringify({ error: 'Ativo não encontrado ou erro na API externa' }), {
+        status: 404,
+      });
+    }
+
+    const data = await response.json();
+
+    // 2. Verificamos se a resposta tem o formato esperado
+    if (!data.chart || !data.chart.result || data.chart.result.length === 0) {
+      return new Response(JSON.stringify({ error: 'Dados inválidos recebidos' }), {
+        status: 404,
+      });
+    }
+
+    // 3. Extraímos os dados importantes
+    const meta = data.chart.result[0].meta;
+    const price = meta.regularMarketPrice;
+    const previousClose = meta.chartPreviousClose;
     
-    if (!externalResponse.ok) {
-        throw new Error("Falha na comunicação com a API externa de cotações.");
-    }
+    // Calculamos a variação se a API não entregar pronta
+    const change = price - previousClose;
+    const changePercent = (change / previousClose) * 100;
 
-    const data = await externalResponse.json();
-    
-    if (data["Error Message"] || !data["Global Quote"] || Object.keys(data["Global Quote"]).length === 0) {
-       return new Response(JSON.stringify({ error: 'Não foi possível obter a cotação. Verifique o símbolo ou a sua chave de API.' }), { status: 404 });
-    }
-
-    return new Response(JSON.stringify(data["Global Quote"]), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    // 4. Montamos o JSON de resposta para o seu Frontend
+    return new Response(
+      JSON.stringify({
+        symbol: meta.symbol,
+        price: price.toFixed(2), // Preço com 2 casas
+        change: change.toFixed(2), // Variação em R$
+        changePercent: changePercent.toFixed(2) + '%', // Variação em %
+        currency: meta.currency,
+        timestamp: new Date().toISOString()
+      }),
+      {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
 
   } catch (error) {
-    let message = 'Erro ao processar o pedido.';
-    if(error instanceof Error) message = error.message;
-    return new Response(JSON.stringify({ error: message }), { status: 400 });
+    console.error('Erro na API de cotação:', error);
+    return new Response(JSON.stringify({ error: 'Erro interno no servidor' }), {
+      status: 500,
+    });
   }
 };

@@ -1,130 +1,250 @@
 ---
-// Componente da Ferramenta de Cotação de Ações
+// src/components/ferramentas/CotacaoAcoes.astro
 ---
-<div class="quote-container">
-  <h2>Cotação de Ações</h2>
-  <p class="subtitle">Digite o símbolo da ação (ex: PETR4.SA, AAPL, MGLU3.SA)</p>
 
-  <div class="search-bar">
-    <input type="text" id="symbol-input" placeholder="PETR4.SA" />
-    <button id="search-btn">Buscar</button>
-  </div>
+<div class="tool-page">
+  <div class="calculator-container">
+    <div class="quote-header">
+      <span class="icon">📈</span>
+      <h2>Cotação de Ações</h2>
+    </div>
+    <p class="subtitle">Digite o símbolo da ação (ex: PETR4.SA, VALE3.SA, AAPL)</p>
 
-  <div id="quote-result-container">
-    <p class="info-text">Aguardando a sua busca...</p>
+    <div class="search-box">
+      <input type="text" id="symbol-input" placeholder="Ex: PETR4.SA" autocomplete="off" />
+      <button id="search-btn">Buscar</button>
+    </div>
+
+    <div id="quote-result-container">
+      <p class="info-text">Aguardando busca...</p>
+    </div>
   </div>
 </div>
 
 <style>
-  .quote-container {
-    background-color: #ffffff;
+  /* Container Principal */
+  .tool-page { width: 100%; font-family: sans-serif; }
+  
+  .calculator-container {
+    background-color: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
     max-width: 600px;
+    margin: 0 auto;
     text-align: center;
-    box-sizing: border-box;
-    margin: 2rem auto;
   }
-  .search-bar {
+
+  .quote-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .quote-header h2 { margin: 0; color: #1f2937; }
+  .quote-header .icon { font-size: 1.5rem; }
+
+  .subtitle { text-align: center; margin-bottom: 25px; color: #666; font-size: 0.95rem; }
+
+  /* Área de Busca */
+  .search-box {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
-  #symbol-input {
+
+  input {
     flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  #search-btn {
-    padding: 10px 20px;
+  input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  }
+
+  button {
+    padding: 12px 25px;
     background-color: #7c3aed;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
   }
-  #search-btn:hover { background-color: #6d28d9; }
+  button:hover { background-color: #6d28d9; }
+
+  /* Área de Resultados */
   #quote-result-container {
-    text-align: left;
-    background-color: #f3f4f6;
+    background-color: #f8fafc;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #e2e8f0;
   }
-  .info-text, .error-text { color: #6b7280; }
-  .quote-line { margin: 10px 0; font-size: 1.1rem; }
-  .positive { color: #16a34a; }
-  .negative { color: #dc2626; }
+
+  .info-text { color: #6b7280; font-size: 0.95rem; }
+  .error-text { color: #dc2626; font-weight: 500; }
+  
+  /* Resultado da Ação */
+  .result-card {
+    animation: fadeIn 0.3s ease-in;
+    width: 100%;
+  }
+
+  .symbol-title { 
+    margin: 0; 
+    font-size: 1.8rem; 
+    color: #111827; 
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .company-name {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .price-display { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin: 5px 0 15px 0; 
+    color: #111827; 
+  }
+  
+  .change-badge { 
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    padding: 6px 16px; 
+    border-radius: 30px; 
+  }
+  
+  .positive { color: #15803d; background-color: #dcfce7; }
+  .negative { color: #b91c1c; background-color: #fee2e2; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsividade */
+  @media (max-width: 480px) {
+    .search-box { flex-direction: column; }
+    button { width: 100%; }
+  }
 </style>
 
 <script>
   function setupQuoteTool() {
-    const symbolInput = document.getElementById('symbol-input') as HTMLInputElement;
-    const searchBtn = document.getElementById('search-btn') as HTMLButtonElement;
-    const resultContainer = document.getElementById('quote-result-container') as HTMLDivElement;
+    const symbolInput = document.getElementById('symbol-input');
+    const searchBtn = document.getElementById('search-btn');
+    const resultContainer = document.getElementById('quote-result-container');
 
-    if (!symbolInput || !searchBtn || !resultContainer) {
-      console.error("Erro de inicialização: Elementos da ferramenta de cotação não foram encontrados.");
-      return;
-    }
+    // Se os elementos não existirem na página, para a execução.
+    if (!symbolInput || !searchBtn || !resultContainer) return;
 
     async function fetchQuote() {
-      const symbol = symbolInput.value.trim();
+      // Pega o valor do input (type casting manual para evitar erro de TS no navegador)
+      const symbol = (symbolInput as HTMLInputElement).value.trim();
+      
       if (!symbol) {
-        resultContainer.innerHTML = `<p class="error-text">Por favor, digite um símbolo.</p>`;
+        resultContainer.innerHTML = `<p class="error-text">⚠️ Por favor, digite um código (ex: PETR4.SA).</p>`;
         return;
       }
 
-      resultContainer.innerHTML = `<p class="info-text">Buscando cotação para ${symbol.toUpperCase()}...</p>`;
+      // Estado de Carregamento
+      searchBtn.setAttribute('disabled', 'true');
+      searchBtn.textContent = 'Buscando...';
+      resultContainer.innerHTML = `<p class="info-text">🔎 Buscando cotação para <strong>${symbol.toUpperCase()}</strong>...</p>`;
+      resultContainer.style.borderStyle = 'solid';
 
       try {
-        // MUDANÇA: A URL agora é "limpa", sem parâmetros
-        const urlToFetch = `/api/cotacao`;
-
-        // MUDANÇA: Adicionamos um objeto de opções para configurar o POST
-        const response = await fetch(urlToFetch, {
+        // Faz a chamada para a API interna
+        const response = await fetch('/api/cotacao', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ symbol: symbol }), // Enviamos o símbolo no "corpo" do pedido
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ symbol: symbol }),
         });
 
         const data = await response.json();
-        if (!response.ok) { throw new Error(data.error || 'Erro desconhecido.'); }
 
-        const price = parseFloat(data['05. price']);
-        const changeValue = parseFloat(data['09. change']);
-        const changePercent = parseFloat(data['10. change percent'].replace('%', ''));
-        const changeClass = changeValue >= 0 ? 'positive' : 'negative';
-        const changeSign = changeValue >= 0 ? '+' : '';
-        const quoteSymbol = data['01. symbol'];
-        const BRL_FORMATTER = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+        if (!response.ok) {
+          throw new Error(data.error || 'Não foi possível encontrar este ativo.');
+        }
 
+        // Processamento dos dados
+        const price = parseFloat(data.price);
+        const changeValue = parseFloat(data.change);
+        const changePercent = parseFloat(data.changePercent.replace('%', ''));
+        const quoteSymbol = data.symbol.toUpperCase();
+        
+        const isPositive = changeValue >= 0;
+        const changeClass = isPositive ? 'positive' : 'negative';
+        const changeSign = isPositive ? '+' : '';
+        const arrow = isPositive ? '▲' : '▼';
+        
+        const BRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        // Renderiza o resultado
         resultContainer.innerHTML = `
-          <h3>${quoteSymbol}</h3>
-          <p class="quote-line"><strong>Preço:</strong> ${BRL_FORMATTER.format(price)}</p>
-          <p class="quote-line"><strong>Variação:</strong> <span class="${changeClass}">${changeSign}${changeValue.toFixed(2)} (${changeSign}${changePercent.toFixed(2)}%)</span></p>
+          <div class="result-card">
+            <h3 class="symbol-title">${quoteSymbol}</h3>
+            <div class="price-display">${BRL.format(price)}</div>
+            <div class="change-badge ${changeClass}">
+               ${arrow} ${changeSign}${changeValue.toFixed(2)} (${changeSign}${changePercent.toFixed(2)}%)
+            </div>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #9ca3af;">Atualizado recentemente</p>
+          </div>
         `;
+        resultContainer.style.borderStyle = 'solid';
 
       } catch (error) {
-        let errorMessage = 'Ocorreu um erro inesperado.';
-        if (error instanceof Error) { errorMessage = error.message; }
-        resultContainer.innerHTML = `<p class="error-text">Erro: ${errorMessage}</p>`;
+        let msg = 'Erro desconhecido.';
+        if (error instanceof Error) msg = error.message;
+        
+        resultContainer.innerHTML = `
+          <div style="text-align: center;">
+            <p class="error-text">❌ ${msg}</p>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 5px;">Verifique se o código está correto (ex: use .SA para Brasil).</p>
+          </div>
+        `;
+        resultContainer.style.borderStyle = 'dashed';
+      } finally {
+        searchBtn.removeAttribute('disabled');
+        searchBtn.textContent = 'Buscar';
       }
     }
 
+    // Event Listeners
     searchBtn.addEventListener('click', fetchQuote);
-    symbolInput.addEventListener('keypress', (event) => {
-      if (event.key === 'Enter') { fetchQuote(); }
+    symbolInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') fetchQuote();
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setupQuoteTool);
+  // Garante que o script rode tanto no carregamento inicial quanto nas trocas de página do Astro
+  document.addEventListener('astro:page-load', setupQuoteTool);
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupQuoteTool);
+  } else {
+      setupQuoteTool();
+  }
 </script>

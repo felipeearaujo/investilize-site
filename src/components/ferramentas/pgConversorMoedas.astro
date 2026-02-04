@@ -1,0 +1,86 @@
+---
+// src/pages/ferramentas/conversor-de-moedas.astro
+import Layout from '../../layouts/BlogPost.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Componentes da Ferramenta
+import ConversorMoedas from '../../components/ferramentas/ConversorMoedas.astro';
+import ConteudoConversorMoedas from '../../components/ferramentas/ConteudoConversorMoedas.astro';
+
+// SEO Otimizado
+const pageTitle = "Conversor de Moedas Online: Dólar, Euro e Real (2026)";
+const pageDescription = "Converta moedas em tempo real. Cotação do Dólar, Euro, Libra e mais de 30 moedas estrangeiras. Ferramenta gratuita e atualizada.";
+
+// Dados para o Google (Schema) baseados no seu texto
+const faqData = [
+  {
+    question: "Qual a diferença entre Dólar Comercial e Turismo?",
+    answer: "O Comercial é usado entre bancos e empresas. O Turismo é vendido em casas de câmbio para viagem e é mais caro pois inclui custos e impostos."
+  },
+  {
+    question: "A cotação do conversor é em tempo real?",
+    answer: "Sim, a ferramenta atualiza as taxas de mercado comercial com alta frequência. Para compra de espécie, lembre-se de adicionar o spread da casa de câmbio."
+  },
+  {
+    question: "O que é Spread cambial?",
+    answer: "Spread é a diferença entre o preço que a instituição paga pela moeda e o preço que ela vende para você. É o lucro do banco/corretora."
+  },
+  {
+    question: "O valor do conversor é o da fatura do cartão?",
+    answer: "Não. O cartão usa o dólar PTAX + Spread do Banco + IOF. O valor final da fatura será maior que a conversão comercial simples."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        <Breadcrumbs />
+
+        <div class="header-section">
+            <h1>{pageTitle}</h1>
+            <div class="intro-seo">
+                <p>
+                    Use nosso <strong>Conversor de Moedas</strong> gratuito para simular o valor do seu dinheiro em qualquer lugar do mundo. 
+                    Ideal para planejar viagens, compras internacionais ou investimentos em dólar.
+                </p>
+            </div>
+        </div>
+
+        <ConversorMoedas />
+
+        <ConteudoConversorMoedas />
+
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 960px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header-section h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: rgb(var(--black));
+        line-height: 1.2;
+    }
+    .intro-seo {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .header-section h1 { font-size: 1.8rem; }
+    }
+</style>
