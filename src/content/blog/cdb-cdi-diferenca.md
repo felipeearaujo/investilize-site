@@ -17,6 +17,8 @@ faqList:
 
 Qual a diferença entre CDB e CDI? Embora pareçam iguais, o CDB é o investimento (onde você põe o dinheiro) e o CDI é a taxa de juros (que define o rendimento). Entender essa relação é essencial para saber se seu dinheiro está rendendo mais que a poupança. Neste guia de 2025, explicaremos tudo sobre como calcular e render mais.
 
+Está com dúvida sobre qual rende mais no seu caso? Não faça contas de cabeça! Use nosso [Comparador de CDB x LCI Gratuito](https://investilize.com.br/ferramentas/comparador-renda-fixa/) para ver o resultado exato.
+
 ## Resumo da Diferença: CDB vs. CDI
 
 Para nunca mais confundir, veja esta tabela comparativa:

@@ -1,0 +1,77 @@
+---
+// src/pages/ferramentas/comparador-renda-fixa.astro
+import Layout from '../../layouts/BlogPost.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+import ComparadorRendaFixa from '../../components/ferramentas/ComparadorRendaFixa.astro';
+import ConteudoComparador from '../../components/ferramentas/ConteudoComparador.astro';
+
+// SEO Estratégico (Keywords: Comparador, CDB, LCI, Simulador)
+const pageTitle = "Comparador CDB x LCI/LCA: Simulador de Rendimento Líquido (2026)";
+const pageDescription = "Qual rende mais? Compare CDB vs LCI/LCA grátis. Nossa calculadora desconta o Imposto de Renda automaticamente e mostra o lucro real.";
+
+const faqData = [
+  {
+    question: "Qual a diferença entre CDB e LCI?",
+    answer: "O CDB tem desconto de Imposto de Renda sobre o lucro. A LCI é isenta de IR para pessoa física. Por isso, as taxas nominais não podem ser comparadas diretamente."
+  },
+  {
+    question: "O que é a tabela regressiva de IR?",
+    answer: "É a tabela usada no CDB onde o imposto cai conforme o tempo: começa em 22,5% (até 6 meses) e cai até 15% (acima de 2 anos)."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+       
+
+        <div class="header-section">
+            
+            <div class="intro-seo">
+                <p>
+                    Está na dúvida entre investir em um <strong>CDB</strong> ou uma <strong>LCI/LCA</strong>? 
+                    Não se deixe enganar apenas pela taxa bruta. Use nosso comparador gratuito para calcular o 
+                    <strong>ganho líquido real</strong>, já descontando o Imposto de Renda.
+                </p>
+            </div>
+        </div>
+
+        <ComparadorRendaFixa />
+
+        <ConteudoComparador />
+
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header-section h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: rgb(var(--black));
+        line-height: 1.2;
+    }
+    .intro-seo {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .header-section h1 { font-size: 1.8rem; }
+    }
+</style>

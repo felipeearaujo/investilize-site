@@ -1,0 +1,254 @@
+---
+// src/components/ferramentas/ComparadorRendaFixa.astro
+---
+
+<div class="tool-page">
+  <div class="calculator-container">
+    <div class="header-icon">⚖️</div>
+    <h2>CDB vs LCI/LCA</h2>
+    <p class="subtitle">Descubra qual rende mais no seu bolso (Descontando IR)</p>
+
+    <div class="grid-inputs">
+        <div class="input-group">
+            <label for="valorInvestido">Valor a Investir (R$):</label>
+            <input type="number" id="valorInvestido" placeholder="Ex: 1000" value="1000" />
+        </div>
+
+        <div class="input-group">
+            <label for="prazoMeses">Prazo (Meses):</label>
+            <input type="number" id="prazoMeses" placeholder="Ex: 12" value="12" />
+            <small>O prazo define a alíquota do IR.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="taxaCdb">Taxa do CDB (% do CDI):</label>
+            <input type="number" id="taxaCdb" placeholder="Ex: 110" value="110" />
+        </div>
+
+        <div class="input-group">
+            <label for="taxaLci">Taxa da LCI/LCA (% do CDI):</label>
+            <input type="number" id="taxaLci" placeholder="Ex: 90" value="90" />
+        </div>
+
+        <div class="input-group full-width">
+            <label for="taxaCdi">CDI Atual (% a.a.):</label>
+            <input type="number" id="taxaCdi" placeholder="Ex: 13.15" value="13.15" step="0.01" />
+            <small>Taxa usada como referência para o cálculo.</small>
+        </div>
+    </div>
+    
+    <button id="calc-compare-btn">Comparar Rentabilidade</button>
+    
+    <div id="compare-result" class="result-box" style="display: none;"></div>
+  </div>
+</div>
+
+<style>
+  .tool-page { width: 100%; font-family: sans-serif; }
+  
+  .calculator-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .header-icon { font-size: 2.5rem; margin-bottom: 10px; }
+  h2 { color: #1f2937; margin: 0; font-size: 1.8rem; }
+  .subtitle { margin-top: 5px; margin-bottom: 30px; color: #6b7280; font-size: 0.95rem; }
+
+  .grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  .input-group { display: flex; flex-direction: column; }
+  .full-width { grid-column: span 2; }
+  
+  label { font-size: 0.9rem; font-weight: 600; color: #374151; margin-bottom: 5px; }
+  
+  input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus { border-color: #7c3aed; }
+  
+  small { color: #9ca3af; font-size: 0.75rem; margin-top: 4px; }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  button:hover { background-color: #6d28d9; }
+
+  .result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .winner-banner {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #bbf7d0;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .comparison-table th { text-align: left; color: #6b7280; font-size: 0.85rem; padding-bottom: 5px; }
+  .comparison-table td { padding: 8px 0; font-size: 1rem; color: #1f2937; border-bottom: 1px solid #f3f4f6; }
+  .comparison-table .val-final { font-weight: 800; }
+  .comparison-table .cdb-row td { color: #4b5563; }
+  .comparison-table .lci-row td { color: #4b5563; }
+  
+  /* Destaca a linha vencedora */
+  .winner-row td { color: #166534 !important; }
+
+  @media (max-width: 600px) {
+    .grid-inputs { grid-template-columns: 1fr; }
+    .full-width { grid-column: span 1; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function initCompareCalc() {
+    const btn = document.getElementById('calc-compare-btn');
+    const resultDiv = document.getElementById('compare-result');
+    
+    if (!btn || !resultDiv) return;
+
+    // Remove listener anterior para evitar duplicidade
+    const newBtn = btn.cloneNode(true);
+    if(btn.parentNode) btn.parentNode.replaceChild(newBtn, btn);
+
+    newBtn.addEventListener('click', () => {
+        // Inputs
+        const valor = parseFloat((document.getElementById('valorInvestido') as HTMLInputElement).value);
+        const meses = parseFloat((document.getElementById('prazoMeses') as HTMLInputElement).value);
+        const pctCdb = parseFloat((document.getElementById('taxaCdb') as HTMLInputElement).value);
+        const pctLci = parseFloat((document.getElementById('taxaLci') as HTMLInputElement).value);
+        const cdiAnual = parseFloat((document.getElementById('taxaCdi') as HTMLInputElement).value);
+
+        if (!valor || !meses || !pctCdb || !pctLci || !cdiAnual) {
+            resultDiv.innerHTML = '<p style="color:red; text-align:center;">Preencha todos os campos.</p>';
+            resultDiv.style.display = 'block';
+            return;
+        }
+
+        // 1. Definir Alíquota IR do CDB (Tabela Regressiva)
+        let aliquotaIR = 22.5;
+        const dias = meses * 30;
+        
+        if (dias <= 180) aliquotaIR = 22.5;
+        else if (dias <= 360) aliquotaIR = 20.0;
+        else if (dias <= 720) aliquotaIR = 17.5;
+        else aliquotaIR = 15.0;
+
+        // 2. Cálculos Financeiros (Juros Compostos Simples)
+        // Transformar taxa anual em mensal
+        const taxaCdiMensal = Math.pow(1 + (cdiAnual / 100), 1 / 12) - 1;
+        
+        // CDB
+        const taxaCdbMensal = taxaCdiMensal * (pctCdb / 100);
+        const brutoCdb = valor * Math.pow(1 + taxaCdbMensal, meses);
+        const lucroCdb = brutoCdb - valor;
+        const impostoCdb = lucroCdb * (aliquotaIR / 100);
+        const liquidoCdb = brutoCdb - impostoCdb;
+
+        // LCI (Isenta)
+        const taxaLciMensal = taxaCdiMensal * (pctLci / 100);
+        const brutoLci = valor * Math.pow(1 + taxaLciMensal, meses); // Bruto = Líquido na LCI
+        const liquidoLci = brutoLci;
+
+        // 3. Resultado
+        const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+        
+        let winnerText = "";
+        let cdbClass = "cdb-row";
+        let lciClass = "lci-row";
+
+        if (liquidoCdb > liquidoLci) {
+            const dif = liquidoCdb - liquidoLci;
+            winnerText = `O CDB rende mais (R$ ${dif.toFixed(2)} a mais)`;
+            cdbClass += " winner-row";
+        } else {
+            const dif = liquidoLci - liquidoCdb;
+            winnerText = `A LCI/LCA rende mais (R$ ${dif.toFixed(2)} a mais)`;
+            lciClass += " winner-row";
+        }
+
+        resultDiv.innerHTML = `
+            <div class="winner-banner">${winnerText}</div>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Investimento</th>
+                        <th>IR (%)</th>
+                        <th>Valor Líquido Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="${cdbClass}">
+                        <td><strong>CDB (${pctCdb}% CDI)</strong></td>
+                        <td>${aliquotaIR}%</td>
+                        <td class="val-final">${formatter.format(liquidoCdb)}</td>
+                    </tr>
+                    <tr class="${lciClass}">
+                        <td><strong>LCI (${pctLci}% CDI)</strong></td>
+                        <td>0% (Isento)</td>
+                        <td class="val-final">${formatter.format(liquidoLci)}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.8rem; color:#999; margin-top:15px; text-align:center;">
+                *Considerando 252 dias úteis/ano para maior precisão de mercado.
+            </p>
+        `;
+        resultDiv.style.display = 'block';
+    });
+  }
+
+  document.addEventListener('astro:page-load', initCompareCalc);
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCompareCalc);
+  } else {
+      initCompareCalc();
+  }
+</script>
