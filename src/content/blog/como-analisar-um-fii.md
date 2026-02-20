@@ -93,5 +93,7 @@ Um bom FII, de forma simplificada, é aquele que:
 
 Se um fundo passa nestes 4 pontos, você já está muito à frente da maioria dos investidores e encontrou um candidato forte para sua carteira de renda passiva.
 
+>Após analisar os fundamentos, é hora de descobrir se o preço está atrativo. [Acesse nossa Calculadora de Preço Justo (Graham e Bazin)](https://investilize.com.br/ferramentas/calculadora-preco-justo/)
+
 ---
 *Aviso: Este texto tem objetivos puramente informativos e educacionais e não representa uma recomendação de compra ou venda de qualquer ativo. A decisão de realizar ou não o investimento cabe exclusivamente ao investidor.*

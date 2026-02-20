@@ -87,6 +87,8 @@ Compare o percentual do CDI oferecido por diferentes instituições. Busque por 
 Verifique o prazo de vencimento e as condições de resgate. Existem CDBs de liquidez diária, que permitem o resgate a qualquer tempo, sendo ideais para sua [reserva de emergência](https://investilize.com.br/blog/reserva-emergencia/). Outros títulos exigem que o recurso permaneça investido até o vencimento, mas geralmente oferecem uma rentabilidade maior por isso.
 Por conta dessa liquidez, CDBs que rendem 100% do CDI são a opção preferida para constituir uma **reserva de emergência,** substituindo a poupança com segurança.
 
+>**O CDB de liquidez diária é o destino favorito para a sua reserva**. [Veja quanto você precisa poupar aqui](https://investilize.com.br/ferramentas/calculadora-reserva-emergencia/).
+
 ### 3. Segurança (O FGC e o Risco do Banco)
 
 Os CDBs são protegidos pelo Fundo Garantidor de Crédito (FGC), que assegura ao investidor até R$ 250 mil por CPF por instituição, caso o banco emissor quebre. Isso torna o CDB um dos investimentos mais seguros do mercado.
@@ -124,3 +126,5 @@ Para entender a fundo, veja nosso [**Guia Completo sobre LCI e LCA**](https://in
 ## Conclusão
 
 A principal diferença que o investidor precisa saber é que o CDB é um produto financeiro onde ele pode aplicar o seu dinheiro, enquanto o CDI é a taxa de referência, que na maioria das vezes determinará o quanto seu dinheiro vai render.
+
+"Agora que você sabe a diferença entre CDB e CDI, [calcule sua reserva de emergência](https://investilize.com.br/ferramentas/calculadora-reserva-emergencia) e saiba quanto investir hoje mesmo."

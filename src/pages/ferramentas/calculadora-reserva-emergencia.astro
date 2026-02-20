@@ -1,0 +1,84 @@
+---
+// src/pages/ferramentas/calculadora-reserva-emergencia.astro
+import Layout from '../../layouts/BlogPost.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+import CalculadoraReserva from '../../components/ferramentas/ReservaEmergencia.astro';
+import ConteudoReservaEmergencia from '../../components/ferramentas/ConteudoReservaEmergencia.astro';
+
+// SEO Estratégico baseado nos seus dados do Search Console
+const pageTitle = "Calculadora de Reserva de Emergência: Quanto poupar? (2026)";
+const pageDescription = "Descubra o valor ideal para sua segurança financeira. Nossa calculadora considera seu custo de vida e perfil (CLT ou Autônomo). Grátis e rápido!";
+
+const faqData = [
+  {
+    question: "Como calcular a reserva de emergência?",
+    answer: "O cálculo básico consiste em multiplicar o seu custo de vida mensal pelo número de meses de cobertura desejados (geralmente entre 6 a 12 meses)."
+  },
+  {
+    question: "Quanto devo ter de reserva de emergência?",
+    answer: "Para funcionários CLT, o recomendado são 6 meses de gastos. Para autônomos ou freelancers, o ideal são 12 meses devido à maior oscilação de renda."
+  },
+  {
+    question: "Onde guardar o dinheiro da reserva?",
+    answer: "A reserva deve ser investida em ativos de alta liquidez e baixo risco, como o Tesouro Selic ou CDBs de liquidez diária que rendam pelo menos 100% do CDI."
+  }
+];
+
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        <div class="header-section">
+            <div class="intro-seo">
+                <h1>Calculadora de Reserva de Emergência</h1>
+                <p>
+                    Planejar o futuro começa com segurança. Use nossa ferramenta gratuita para calcular o 
+                    <strong>valor ideal da sua reserva</strong> com base no seu custo de vida e 
+                    garanta tranquilidade para você e sua família.
+                </p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <article class="prose max-w-none mt-12">
+                <h2>Como calcular a reserva de emergência?</h2>
+                <p>O cálculo é simples: multiplique seu custo de vida mensal pelo número de meses que você deseja ter de cobertura. Se você gasta R$ 3.000 por mês e quer 6 meses de segurança, sua meta é R$ 18.000.</p>
+            </article>
+        </div>
+
+        <CalculadoraReserva />
+        <ConteudoReservaEmergencia/>
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .header-section {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header-section h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        color: #111827;
+        line-height: 1.2;
+    }
+    .intro-seo {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .header-section h1 { font-size: 1.8rem; }
+    }
+</style>

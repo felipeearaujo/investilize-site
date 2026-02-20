@@ -1,0 +1,85 @@
+<div class="calculator-card">
+    <div class="method-selector">
+        <button id="btnGraham" class="active" onclick="setMethod('graham')">Método Graham</button>
+        <button id="btnBazin" onclick="setMethod('bazin')">Método Bazin</button>
+    </div>
+
+    <div class="inputs-grid">
+        <div id="field-vpa" class="input-field">
+            <label>VPA (Valor Patrimonial por Ação):</label>
+            <input type="number" id="vpa" value="10.00" step="0.01">
+        </div>
+        <div id="field-lpa" class="input-field">
+            <label>LPA (Lucro por Ação):</label>
+            <input type="number" id="lpa" value="1.00" step="0.01">
+        </div>
+        
+        <div id="field-dpa" class="input-field" style="display:none;">
+            <label>Dividendo Anual (DPA):</label>
+            <input type="number" id="dpa" value="0.60" step="0.01">
+        </div>
+
+        <div class="input-field">
+            <label>Cotação Atual (R$):</label>
+            <input type="number" id="cotacao" value="12.00" step="0.01">
+        </div>
+    </div>
+
+    <div id="justoResult" class="result-box"></div>
+</div>
+
+<style>
+    .calculator-card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #eee; }
+    .method-selector { display: flex; gap: 10px; margin-bottom: 2rem; }
+    .method-selector button { flex: 1; padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; cursor: pointer; background: #f9fafb; font-weight: bold; }
+    .method-selector button.active { background: #7c3aed; color: white; border-color: #7c3aed; }
+    .inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .input-field label { display: block; font-weight: bold; margin-bottom: 0.5rem; color: #374151; }
+    .input-field input { width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; }
+    .result-box { background: #f5f3ff; padding: 1.5rem; border-radius: 10px; text-align: center; border-left: 5px solid #7c3aed; }
+    @media (max-width: 600px) { .inputs-grid { grid-template-columns: 1fr; } }
+</style>
+
+<script is:inline>
+  let currentMethod = 'graham';
+
+  function setMethod(method) {
+      currentMethod = method;
+      document.getElementById('btnGraham').className = method === 'graham' ? 'active' : '';
+      document.getElementById('btnBazin').className = method === 'bazin' ? 'active' : '';
+      document.getElementById('field-vpa').style.display = method === 'graham' ? 'block' : 'none';
+      document.getElementById('field-lpa').style.display = method === 'graham' ? 'block' : 'none';
+      document.getElementById('field-dpa').style.display = method === 'bazin' ? 'block' : 'none';
+      calcular();
+  }
+
+  function calcular() {
+      const vpa = parseFloat(document.getElementById('vpa').value) || 0;
+      const lpa = parseFloat(document.getElementById('lpa').value) || 0;
+      const dpa = parseFloat(document.getElementById('dpa').value) || 0;
+      const cotacao = parseFloat(document.getElementById('cotacao').value) || 0;
+      let precoJusto = 0;
+
+      if (currentMethod === 'graham') {
+          // Fórmula de Graham: Raiz(22.5 * VPA * LPA)
+          const produto = 22.5 * vpa * lpa;
+          precoJusto = produto > 0 ? Math.sqrt(produto) : 0;
+      } else {
+          // Fórmula de Bazin: DPA / 0.06
+          precoJusto = dpa / 0.06;
+      }
+
+      const margem = precoJusto > 0 ? ((precoJusto / cotacao) - 1) * 100 : 0;
+      const corMargem = margem >= 0 ? '#059669' : '#dc2626';
+
+      document.getElementById('justoResult').innerHTML = `
+          <h3 style="margin-top:0;">Preço Justo Estimado: R$ ${precoJusto.toFixed(2)}</h3>
+          <p style="font-size: 1.2rem;">Potencial: <strong style="color: ${corMargem};">${margem.toFixed(2)}%</strong></p>
+          <small>${margem >= 0 ? 'Ativo com margem de segurança' : 'Ativo acima do preço justo'}</small>
+      `;
+  }
+
+  const ids = ['vpa', 'lpa', 'dpa', 'cotacao'];
+  ids.forEach(id => document.getElementById(id).addEventListener('input', calcular));
+  calcular();
+</script>

@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+import CalculadoraPrecoJusto from '../../components/ferramentas/CalculadoraPrecoJusto.astro';
+import ConteudoPrecoJusto from '../../components/ferramentas/ConteudoPrecoJusto.astro';
+
+const pageTitle = "Calculadora de Preço Justo: Graham e Bazin (Ações e FIIs)";
+const pageDescription = "Calcule o valor intrínseco de ações e FIIs usando as fórmulas de Benjamin Graham e Décio Bazin. Descubra a margem de segurança antes de investir.";
+
+const faqData = [
+  {
+    question: "O que é o Preço Justo de Graham?",
+    answer: "É uma fórmula que busca o valor intrínseco de uma ação considerando seu lucro (LPA) e valor patrimonial (VPA), com um limite multiplicador de 22,5."
+  },
+  {
+    question: "Como funciona o método de Bazin?",
+    answer: "O método de Décio Bazin foca em dividendos, estabelecendo que o preço justo é o dividendo anual pago dividido por 0,06 (exigindo 6% de yield)."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+
+    <div class="tool-page-wrapper">
+        <div class="header-section">
+            <div class="intro-seo">
+                <h1>Calculadora de Preço Justo</h1>
+                <p>
+                    Utilize os métodos mais consagrados do mercado financeiro para avaliar se um ativo está com 
+                    <strong>margem de segurança</strong> ou se está caro demais.
+                </p>
+            </div>
+        </div>
+
+        <CalculadoraPrecoJusto />
+        <ConteudoPrecoJusto />
+    </div>
+</Layout>
+
+<style>
+    .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+    .header-section { text-align: center; margin-bottom: 3rem; }
+    .header-section h1 { font-size: 2.5rem; color: #111827; margin-bottom: 1rem; }
+    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
+</style>

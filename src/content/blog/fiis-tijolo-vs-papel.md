@@ -108,5 +108,8 @@ Entender a diferença entre "Tijolo" e "Papel" é o primeiro passo para investir
 
 Uma carteira equilibrada, com um pouco dos dois, é o caminho mais sólido para construir sua renda passiva mensal.
 
+
+>Após analisar os fundamentos, é hora de descobrir se o preço está atrativo. [Acesse nossa Calculadora de Preço Justo (Graham e Bazin)](https://investilize.com.br/ferramentas/calculadora-preco-justo/)
+
 ---
 *Aviso: Este texto tem objetivos puramente informativos e educacionais e não representa uma recomendação de compra ou venda de qualquer ativo. A decisão de realizar ou não o investimento cabe exclusivamente ao investidor.*

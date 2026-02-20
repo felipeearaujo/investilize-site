@@ -9,6 +9,8 @@ heroImage: '~/assets/blog/emergencia.webp'
 
 Uma reserva de emergência é um valor muito importante para sua segurança financeira. Esse recurso deve ser de fácil acesso para cobrir despesas não planejadas, como questões de saúde, desemprego, etc. Ter um valor poupado evita que você precise recorrer a empréstimos em momentos de vulnerabilidade.
 
+>**Não fique apenas na teoria**. [Calcule agora o valor da sua reserva ideal com nossa ferramenta gratuita](https://investilize.com.br/ferramentas/calculadora-reserva-emergencia/).
+
 ## O que É (e o que NÃO É) uma Emergência?
 
 Um dos maiores desafios de ter uma reserva de emergência é resistir à tentação de usá-la. Muitos confundem um "imprevisto" com uma "oportunidade" ou um simples "desejo".
