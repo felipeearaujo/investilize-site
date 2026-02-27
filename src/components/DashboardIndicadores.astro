@@ -1,0 +1,87 @@
+---
+// src/components/DashboardIndicadores.astro
+import dados from '../data/bacen.json';
+
+const selic = dados?.selic || "11.25";
+const ipca = dados?.ipca || "4.50";
+
+// Cálculo técnico (Equação de Fisher) para o Administrador
+const i = parseFloat(selic) / 100;
+const I = parseFloat(ipca) / 100;
+const ganhoReal = (((1 + i) / (1 + I)) - 1) * 100;
+---
+
+<section class="dashboard-compacto">
+    <div class="indicador-item">
+        <span class="label">Selic Meta</span>
+        <span class="valor">{selic}%</span>
+    </div>
+    
+    <div class="divisor"></div>
+
+    <div class="indicador-item">
+        <span class="label">IPCA (12m)</span>
+        <span class="valor">{ipca}%</span>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="indicador-item destaque">
+        <span class="label">Ganho Real</span>
+        <span class="valor">{ganhoReal.toFixed(2)}%</span>
+    </div>
+</section>
+
+<style>
+    .dashboard-compacto {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: linear-gradient(90deg, #7c3aed 0%, #5b21b6 100%);
+        padding: 0.75rem 1.5rem; /* Altura reduzida significativamente */
+        border-radius: 12px;
+        color: white;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
+        margin: 1rem 0;
+    }
+
+    .indicador-item {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Alinhamento horizontal para economizar altura */
+    }
+
+    .label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #ddd6fe;
+        white-space: nowrap;
+    }
+
+    .valor {
+        font-size: 1.25rem; /* Fonte menor e mais equilibrada */
+        font-weight: 800;
+    }
+
+    .divisor {
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .destaque .valor {
+        color: #60a5fa; /* Azul para destacar o lucro real */
+    }
+
+    /* Responsividade para telas pequenas */
+    @media (max-width: 600px) {
+        .dashboard-compacto {
+            flex-direction: column;
+            gap: 10px;
+            padding: 1rem;
+        }
+        .divisor { display: none; }
+        .indicador-item { width: 100%; justify-content: space-between; }
+    }
+</style>
