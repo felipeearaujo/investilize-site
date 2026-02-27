@@ -6,7 +6,7 @@ const selicAtual = indicadores?.selic || "11.25";
 
 <div class="tool-page">
     <div class="calculator-container">
-        <p class="subtitle">Simule seu imposto mensal e veja o custo do atraso:</p>
+        <p class="subtitle">Simule seu imposto mensal e veja o impacto de atrasos com a Selic atual:</p>
         
         <div class="grid-inputs">
             <div class="input-group">
@@ -57,16 +57,26 @@ const selicAtual = indicadores?.selic || "11.25";
 </div>
 
 <style>
-    .tool-page { width: 100%; font-family: sans-serif; }
-    .subtitle { text-align: center; margin-bottom: 25px; color: #666; }
+    /* Padronização com a Paleta Roxo Investilize */
+    :root {
+        --primary-purple: #7c3aed;
+        --primary-hover: #6d28d9;
+        --bg-purple-light: #f5f3ff;
+        --danger-deep: #881337;
+        --danger-bg: #fff1f2;
+    }
+
+    .tool-page { width: 100%; font-family: inherit; }
+    .subtitle { text-align: center; margin-bottom: 25px; color: #6b7280; }
 
     .calculator-container {
         background-color: white;
         padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(124, 58, 237, 0.08);
+        border: 1px solid #e5e7eb;
     }
+
     .grid-inputs {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -75,31 +85,39 @@ const selicAtual = indicadores?.selic || "11.25";
     }
     @media (max-width: 600px) { .grid-inputs { grid-template-columns: 1fr; } }
     
-    .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
-    .input-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
-    .input-disabled { background: #f1f5f9; cursor: not-allowed; color: #64748b; }
+    .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #1f2937; }
+    .input-group input { 
+        width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; 
+        transition: border-color 0.2s;
+    }
+    .input-group input:focus { outline: none; border-color: var(--primary-purple); ring: 2px solid var(--bg-purple-light); }
+    
+    .input-disabled { background: #f9fafb; cursor: not-allowed; color: #9ca3af; }
     
     button { 
-        width: 100%; padding: 15px; background-color: #f97316; color: white; 
-        border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; 
-        transition: background 0.2s;
+        width: 100%; padding: 15px; background-color: var(--primary-purple); color: white; 
+        border: none; border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer; 
+        transition: all 0.2s;
     }
-    button:hover { background-color: #ea580c; }
+    button:hover { background-color: var(--primary-hover); transform: translateY(-1px); }
 
-    #ir-result-container { margin-top: 25px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #2563eb; }
-    .res-title { font-size: 1.1rem; font-weight: bold; color: #1e293b; margin-bottom: 10px; }
-    .res-val { color: #ea580c; font-size: 1.4rem; font-weight: 800; }
+    #ir-result-container { 
+        margin-top: 25px; padding: 20px; background: var(--bg-purple-light); 
+        border-radius: 12px; border-left: 4px solid var(--primary-purple); 
+    }
+    .res-title { font-size: 1.1rem; font-weight: bold; color: #1e293b; margin-bottom: 12px; }
+    .res-val { color: var(--primary-purple); font-size: 1.5rem; font-weight: 800; }
 
-    /* Estilos do Alerta de Multa */
+    /* Estilos do Alerta de Multa (Bordô para harmonizar com roxo) */
     .penalty-card {
         margin-top: 25px;
-        background: #fff1f2;
+        background: var(--danger-bg);
         border: 1px solid #fecaca;
         border-radius: 12px;
         overflow: hidden;
     }
     .penalty-header {
-        background: #e11d48;
+        background: var(--danger-deep);
         color: white;
         padding: 10px 16px;
         display: flex;
@@ -107,8 +125,8 @@ const selicAtual = indicadores?.selic || "11.25";
         gap: 8px;
         font-weight: bold;
     }
-    .penalty-body { padding: 20px; color: #9f1239; }
-    .penalty-value { font-size: 2rem; font-weight: 900; margin: 10px 0; }
+    .penalty-body { padding: 20px; color: var(--danger-deep); }
+    .penalty-value { font-size: 2rem; font-weight: 900; margin: 10px 0; color: var(--danger-deep); }
     .penalty-details { list-style: none; padding: 0; font-size: 0.9rem; margin: 15px 0; border-top: 1px solid #fecaca; padding-top: 10px; }
     .penalty-details li { display: flex; justify-content: space-between; margin-bottom: 5px; }
     
@@ -132,7 +150,7 @@ const selicAtual = indicadores?.selic || "11.25";
 
             if (rendaBruta <= 0) return;
 
-            // 1. Cálculo IR
+            // 1. Cálculo IR (Tabela 2025/2026)
             const base = Math.max(0, rendaBruta - (numDep * 189.59) - outrasDeducoes);
             const tabela = [
                 { limite: 2259.20, aliq: 0, ded: 0 },
@@ -153,11 +171,11 @@ const selicAtual = indicadores?.selic || "11.25";
 
             // 3. Renderizar Resultados
             document.getElementById('ir-result-container').innerHTML = `
-                <div class="res-title">Resultado do Cálculo:</div>
+                <div class="res-title">Resumo da Simulação:</div>
                 <div style="display: grid; gap: 5px;">
-                    <div>Imposto Mensal: <span class="res-val">${format(imposto)}</span></div>
+                    <div>Imposto Devido: <span class="res-val">${format(imposto)}</span></div>
                     <div>Alíquota Efetiva: <strong>${aliqEfetiva}%</strong></div>
-                    <div style="color: #059669;">Renda Líquida: <strong>${format(rendaLiquida)}</strong></div>
+                    <div style="color: #059669;">Renda após IR: <strong>${format(rendaLiquida)}</strong></div>
                 </div>
             `;
 
@@ -171,22 +189,27 @@ const selicAtual = indicadores?.selic || "11.25";
                 penaltyAlert.style.display = 'none';
             }
 
-            // 4. Gráfico
+            // 4. Gráfico (Roxo e Verde)
             if (irChart) irChart.destroy();
             irChart = new Chart(chartCanvas, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Renda Líquida', 'Imposto de Renda'],
+                    labels: ['Renda Disponível', 'Imposto de Renda'],
                     datasets: [{
                         data: [rendaLiquida, imposto],
-                        backgroundColor: ['#059669', '#ea580c'],
+                        backgroundColor: ['#7c3aed', '#ddd6fe'], // Roxo e Roxo Claro
                         borderWidth: 0
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { position: 'bottom' } }
+                    plugins: { 
+                        legend: { 
+                            position: 'bottom',
+                            labels: { color: '#4b5563', font: { weight: '600' } }
+                        } 
+                    }
                 }
             });
         });

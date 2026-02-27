@@ -1,0 +1,70 @@
+---
+import ipcaData from '../../data/ipca_historico.json';
+const datasDisponiveis = Object.keys(ipcaData).reverse(); // Mais recentes primeiro
+---
+
+<div class="tool-card">
+    <h3 class="tool-title">Calculadora de Poder de Compra</h3>
+    <p class="tool-desc">Quanto R$ 100,00 do passado valeriam hoje?</p>
+
+    <div class="input-row">
+        <div class="field">
+            <label>Valor Original (R$)</label>
+            <input type="number" id="valor-orig" value="100" />
+        </div>
+        <div class="field">
+            <label>Mês/Ano Inicial</label>
+            <select id="data-ini">
+                {datasDisponiveis.map(d => <option value={d}>{d}</option>)}
+            </select>
+        </div>
+    </div>
+
+    <button id="btn-calc-poder">Calcular Perda Inflacionária</button>
+
+    <div id="res-poder" class="result-box" style="display: none;">
+        <div class="main-res">Para ter o mesmo poder de compra hoje, você precisaria de: <br/> <strong id="val-corrigido">R$ 0,00</strong></div>
+        <p class="perda-info">A inflação acumulada no período foi de <span id="perc-inflacao">0%</span>.</p>
+    </div>
+</div>
+
+<script is:inline define:vars={{ ipcaData }}>
+    const btn = document.getElementById('btn-calc-poder');
+    btn.addEventListener('click', () => {
+        const valorIni = parseFloat(document.getElementById('valor-orig').value);
+        const dataIni = document.getElementById('data-ini').value;
+        
+        // Lógica de cálculo acumulado
+        const chaves = Object.keys(ipcaData);
+        const indexInicio = chaves.indexOf(dataIni);
+        
+        let fatorAcumulado = 1;
+        for (let i = indexInicio; i < chaves.length; i++) {
+            fatorAcumulado *= (1 + (ipcaData[chaves[i]] / 100));
+        }
+
+        const valorFinal = valorIni * fatorAcumulado;
+        const inflacaoPerc = (fatorAcumulado - 1) * 100;
+
+        const format = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        document.getElementById('res-poder').style.display = 'block';
+        document.getElementById('val-corrigido').innerText = format(valorFinal);
+        document.getElementById('perc-inflacao').innerText = inflacaoPerc.toFixed(2) + '%';
+    });
+</script>
+
+<style>
+    .tool-card { background: white; padding: 2rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; }
+    .tool-title { color: #7c3aed; margin-bottom: 0.5rem; }
+    .tool-desc { color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    label { display: block; font-size: 0.8rem; font-weight: 700; color: #4b5563; margin-bottom: 5px; }
+    input, select { width: 100%; padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
+    button { width: 100%; padding: 12px; background: #7c3aed; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+    button:hover { background: #6d28d9; }
+    .result-box { margin-top: 1.5rem; padding: 1rem; background: #f5f3ff; border-radius: 12px; border-left: 4px solid #7c3aed; }
+    .main-res { font-size: 1.1rem; color: #1e293b; line-height: 1.4; }
+    #val-corrigido { color: #7c3aed; font-size: 1.5rem; display: block; margin-top: 5px; }
+    .perda-info { font-size: 0.85rem; color: #6b7280; margin-top: 10px; }
+</style>

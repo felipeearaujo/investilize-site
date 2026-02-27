@@ -1,0 +1,90 @@
+---
+// 1. Importar todas as peças necessárias
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Importamos os componentes específicos da ferramenta
+import PoderCompra from '../../components/ferramentas/PoderCompra.astro';
+// Note: Você precisará criar o componente ConteudoPoderCompra.astro para o texto educativo
+import ConteudoPoderCompra from '../../components/ferramentas/ConteudoPoderCompra.astro';
+
+// 2. Definir o título e a descrição para o SEO
+const pageTitle = "Calculadora de Poder de Compra: O Impacto da Inflação (IPCA)";
+const pageDescription = "Descubra quanto seu dinheiro perdeu de valor ao longo do tempo. Converta valores do passado para hoje utilizando dados oficiais do IPCA vindos do Banco Central.";
+
+// 3. Dados do FAQ (Schema) - Focados em Inflação e Administração
+const dadosFaq = [
+  {
+    question: "O que é o poder de compra?",
+    answer: "É a capacidade de adquirir bens e serviços com uma determinada quantidade de moeda. Quando a inflação sobe, o poder de compra diminui, pois os preços aumentam e a mesma quantia de dinheiro compra menos coisas."
+  },
+  {
+    question: "Como o IPCA é usado nesta calculadora?",
+    answer: "Utilizamos o IPCA (Índice Nacional de Preços ao Consumidor Amplo) fornecido pelo Banco Central. A calculadora aplica a variação mensal acumulada desse índice para corrigir o valor nominal de uma data passada para o valor real atual."
+  },
+  {
+    question: "O que significa 'valor nominal' vs 'valor real'?",
+    answer: "O valor nominal é o número impresso na nota ou no contrato. O valor real é esse mesmo montante ajustado pela inflação, refletindo o que aquele dinheiro realmente consegue comprar em diferentes períodos."
+  }
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <BaseHead title={pageTitle} description={pageDescription} />
+        <FaqSchema faqList={dadosFaq} />
+        
+        <style>
+            /* Padronização de layout do Investilize */
+            main {
+                width: 960px;
+                max-width: calc(100% - 2em);
+                margin: 0 auto;
+                padding: 3em 1em;
+            }
+            
+            h1 {
+                text-align: center;
+                color: #111827;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .spacer {
+                margin-bottom: 4rem;
+            }
+
+            .intro-text {
+                text-align: center; 
+                color: #4b5563; 
+                margin-bottom: 2rem;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Breadcrumbs />
+            
+            <h1>{pageTitle}</h1>
+            <p class="intro-text">
+                {pageDescription}
+            </p>
+
+            <PoderCompra />
+            
+            <div class="spacer"></div>
+
+            <ConteudoPoderCompra />
+            
+        </main>
+        <Footer />
+    </body>
+</html>

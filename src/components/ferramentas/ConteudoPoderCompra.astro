@@ -1,0 +1,76 @@
+---
+/* Conteúdo técnico e educativo para a Calculadora de Poder de Compra */
+---
+
+<article class="conteudo-tecnico">
+    <section>
+        <h2>O Valor do Dinheiro no Tempo</h2>
+        <p>
+            O conceito de <strong>valor do dinheiro no tempo</strong> é um dos pilares da gestão financeira. 
+            R$ 100,00 hoje não possuem o mesmo valor que R$ 100,00 há dez anos, pois o poder de compra da moeda é dinâmico e 
+            diretamente impactado pelos índices inflacionários.
+        </p>
+    </section>
+
+    <section class="analise-economica">
+        <h3>Entendendo o IPCA</h3>
+        <p>
+            Esta ferramenta utiliza o <strong>IPCA (Índice Nacional de Preços ao Consumidor Amplo)</strong>, o indicador oficial 
+            utilizado pelo Banco Central do Brasil para monitorar a meta de inflação. Ele mede a variação de preços de uma 
+            cesta de produtos e serviços consumidos pelas famílias brasileiras.
+        </p>
+        
+        <div class="destaque-box">
+            <strong>Valor Nominal vs. Valor Real:</strong> O valor nominal é o número que vemos na nota. O valor real é a 
+            capacidade efetiva de compra desse dinheiro após o ajuste pela inflação.
+        </div>
+    </section>
+
+    <section class="matematica-financeira">
+        <h3>A Metodologia do Cálculo</h3>
+        <p>
+            Para realizar a conversão, a calculadora aplica a variação acumulada do índice mês a mês sobre o montante original. 
+            A fórmula matemática básica para o cálculo do valor atualizado é:
+        </p>
+        
+        <div class="formula">
+            {`$$V_{final} = V_{inicial} \times \prod_{i=1}^{n} (1 + i_t)$$`}
+        </div>
+
+        <p>
+            Onde $i_t$ representa a variação do IPCA em cada mês do período selecionado. O resultado demonstra quanto dinheiro 
+            seria necessário hoje para adquirir a mesma cesta de bens que o valor original comprava no passado.
+        </p>
+    </section>
+</article>
+
+<style>
+    .conteudo-tecnico {
+        line-height: 1.8;
+        color: #374151;
+        font-size: 1.05rem;
+    }
+    h2, h3 {
+        color: #111827;
+        margin-top: 2.5rem;
+        border-bottom: 2px solid #f5f3ff;
+        padding-bottom: 0.5rem;
+    }
+    .destaque-box {
+        background-color: #f5f3ff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 5px solid #7c3aed;
+        margin: 2rem 0;
+        color: #4c1d95;
+    }
+    .formula {
+        background: #1e293b;
+        color: #f8fafc;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+</style>
