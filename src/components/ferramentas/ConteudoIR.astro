@@ -1,0 +1,50 @@
+---
+// src/components/ferramentas/ConteudoIR.astro
+// src/pages/ferramentas/calculadora-ir-mensal.astro
+import MyImage from '../../components/MyImage.astro';
+import comparativoImg from '../../assets/comparativo-bacen.png';
+---
+<article class="seo-content">
+    <hr class="divider" />
+    <h2>Como é feito o cálculo do Imposto de Renda Mensal?</h2>
+    <p>
+        O cálculo utiliza a <strong>tabela progressiva</strong> da Receita Federal. Isso significa que quanto maior a sua renda, maior a alíquota aplicada. No entanto, o imposto não incide sobre o valor total, mas sim sobre faixas de rendimento, com uma parcela a deduzir em cada uma delas.
+    </p>
+
+    <h3>Deduções Permitidas no Cálculo Mensal</h3>
+    <ul class="custom-list">
+        <li><strong>Dependentes:</strong> Valor fixo por dependente (R$ 189,59).</li>
+        <li><strong>Previdência Oficial (INSS):</strong> O valor descontado do salário ou pago como autônomo.</li>
+        <li><strong>Pensão Alimentícia:</strong> Valores pagos em cumprimento de decisão judicial.</li>
+    </ul>
+
+    <h3>O que é a Alíquota Efetiva?</h3>
+    <p>
+        Diferente da alíquota da sua faixa (ex: 27,5%), a <strong>alíquota efetiva</strong> mostra a porcentagem real que sai do seu bolso em relação ao seu rendimento bruto, após todos os descontos e faixas de isenção.
+    </p>
+</article>
+
+<section class="mt-12 text-center">
+    <h2 class="text-xl font-bold mb-6">Contexto Econômico: Selic vs Inflação</h2>
+    <p class="max-w-2xl mx-auto mb-8 text-gray-600">
+        Entender a relação entre a taxa básica de juros e o IPCA é fundamental para calcular o 
+        rendimento real dos seus investimentos após o desconto do Imposto de Renda.
+    </p>
+    
+    <div class="bg-slate-900 p-4 rounded-2xl shadow-2xl inline-block">
+        <MyImage 
+            src={comparativoImg} 
+            alt="Gráfico comparativo Selic e IPCA últimos 12 meses" 
+            class="rounded-lg"
+        />
+    </div>
+</section>
+
+<style>
+    .seo-content { line-height: 1.8; color: #374151; max-width: 800px; margin: 40px auto; }
+    .divider { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
+    h2 { color: #111827; font-size: 1.8rem; margin-top: 2em; }
+    h3 { margin-top: 1.5em; color: #1f2937; font-size: 1.3rem; border-left: 4px solid #f97316; padding-left: 15px; }
+    .custom-list { padding-left: 20px; margin: 1rem 0; }
+    .custom-list li { margin-bottom: 8px; }
+</style>

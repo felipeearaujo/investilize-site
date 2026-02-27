@@ -1,0 +1,38 @@
+---
+// 1. Importa os dados oficiais sincronizados pelo seu script Python
+import indicadores from '../../data/bacen.json';
+const selicAtual = indicadores?.selic || "11.25";
+import AlertaMulta from '../../components/ferramentas/AlertaMulta.astro';
+import Layout from '../../layouts/BlogPost.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+import CalculadoraIRMensal from '../../components/ferramentas/CalculadoraIRMensal.astro';
+import ConteudoIR from '../../components/ferramentas/ConteudoIR.astro';
+
+const pageTitle = "Calculadora de Imposto de Renda Mensal 2026: Tabela Progressiva";
+const pageDescription = "Simule seu imposto mensal (Carnê-Leão) com nossa calculadora. Calcule o valor do seu DARF baseado na tabela progressiva de 2026.";
+
+const faqData = [
+    { question: "O que é a base de cálculo do IR?", answer: "É o seu rendimento bruto menos as deduções legais (como dependentes e INSS)." },
+    { question: "Quando devo pagar o DARF?", answer: "Até o último dia útil do mês seguinte ao recebimento do rendimento." }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <FaqSchema faqList={faqData} />
+    
+    <div class="tool-wrapper" style="max-width: 960px; margin: 0 auto; padding: 2rem 1rem;">
+        <h1 style="text-align: center; margin-bottom: 0.5rem;">Calculadora de Imposto de Renda Mensal</h1>
+        
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+            <span style="background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; border: 1px solid #e2e8f0;">
+                <span style="color: #10b981;">●</span> Dados Oficiais: Selic em <strong>{selicAtual}%</strong>
+            </span>
+        </div>
+
+        <CalculadoraIRMensal />
+        
+        <div style="margin-top: 3rem;">
+            <ConteudoIR />
+        </div>
+    </div>
+</Layout>

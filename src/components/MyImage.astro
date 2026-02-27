@@ -1,42 +1,34 @@
-{/* src/components/MyImage.astro */}
 ---
-// 1. Importa o componente Image original do Astro e os tipos necessários.
+// src/components/MyImage.astro
 import { Image } from 'astro:assets';
-import type { LocalImageProps, RemoteImageProps } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
-// 2. Define que o seu componente aceita as mesmas props que o componente Image original.
-type Props = LocalImageProps | RemoteImageProps;
+interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  quality?: number | string;
+  format?: string;
+  loading?: "eager" | "lazy";
+  decoding?: "async" | "sync" | "auto";
+}
 
-// 3. Separa a prop `class` das outras props para podermos manipulá-la.
 const { class: className, ...restOfProps } = Astro.props;
 
-
-// --- ÁREA DE PERSONALIZAÇÃO ---
-// É aqui que você adiciona sua lógica e seus valores padrão.
-
-// Exemplo A: Adicionar classes CSS padrão a todas as imagens.
-// Útil para estilização com Bootstrap, Tailwind, ou seu próprio CSS.
+// Definições padrão do Investilize
 const defaultClasses = "img-fluid shadow-sm";
-
-restOfProps.loading ??= 'eager';
-
-// Exemplo C: Adicionar `decoding="async"` por padrão.
-// Ajuda o navegador a renderizar a página de forma mais eficiente.
-restOfProps.decoding ??= 'async';
-
-// --- FIM DA ÁREA DE PERSONALIZAÇÃO ---
-
-
-// 4. Combina as classes padrão com qualquer classe que for passada para o componente.
 const combinedClasses = `${defaultClasses} ${className || ''}`.trim();
+
+// Valores padrão para performance
+const loading = restOfProps.loading || 'eager';
+const decoding = restOfProps.decoding || 'async';
 ---
 
-<!-- 5. Renderiza o componente <Image /> original do Astro, passando:
-  - As classes combinadas.
-  - O resto das props (incluindo as que modificamos, como `loading`).
-  Isso garante que ele continue funcionando exatamente como o original, mas com os seus padrões aplicados.
--->
 <Image 
   class={combinedClasses}
+  loading={loading}
+  decoding={decoding}
   {...restOfProps} 
 />

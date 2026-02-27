@@ -1,0 +1,191 @@
+---
+// Componente de Calculadora de IR Mensal - Padronizado para Investilize
+---
+
+<div class="calculator-container">
+    <div class="calculator-card">
+        <div class="card-header">
+            <h3>Simulador de Imposto Mensal</h3>
+            <p>Tabela Progressiva 2026</p>
+        </div>
+
+        <div class="card-body">
+            <div class="inputs-grid">
+                <div class="input-field">
+                    <label>Rendimento Bruto (R$)</label>
+                    <input type="number" x-model.number="renda" placeholder="Ex: 5000" />
+                </div>
+                <div class="input-field">
+                    <label>Dependentes</label>
+                    <input type="number" x-model.number="dependentes" value="0" />
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-main">
+                    <span class="result-label">Imposto a Pagar</span>
+                    <div class="result-value" x-text="formatar(impostoFinal)">R$ 0,00</div>
+                </div>
+                <div class="result-details">
+                    <div class="detail-item">
+                        <span>Alíquota Efetiva:</span>
+                        <strong x-text="aliquotaEfetiva + '%'">0%</strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>Base de Cálculo:</span>
+                        <strong x-text="formatar(baseCalculo)">R$ 0,00</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="seo-content">
+        <hr class="divider" />
+        <h2>Como é feito o cálculo do Imposto de Renda Mensal?</h2>
+        <p>
+            O cálculo utiliza a <strong>tabela progressiva</strong>. Isso significa que quanto maior a sua renda, maior a alíquota aplicada. No entanto, o imposto não incide sobre o valor total, mas sim sobre faixas de rendimento, com uma parcela a deduzir em cada uma delas.
+        </p>
+
+        <h3>Deduções Permitidas no Cálculo Mensal</h3>
+        <ul class="custom-list">
+            <li><strong>Dependentes:</strong> Valor fixo por dependente (R$ 189,59).</li>
+            <li><strong>Previdência Oficial (INSS):</strong> O valor descontado do salário ou pago como autônomo.</li>
+            <li><strong>Pensão Alimentícia:</strong> Valores pagos em cumprimento de decisão judicial.</li>
+        </ul>
+
+        <h3>O que é a Alíquota Efetiva?</h3>
+        <p>
+            Diferente da alíquota da sua faixa (ex: 27,5%), a <strong>alíquota efetiva</strong> mostra a porcentagem real que sai do seu bolso em relação ao seu rendimento bruto, após todos os descontos e faixas de isenção.
+        </p>
+    </article>
+</div>
+
+<script is:inline>
+    function calculadoraIR() {
+        return {
+            renda: 3000,
+            dependentes: 0,
+            tabela: [
+                { limite: 2259.20, aliquota: 0, deducao: 0 },
+                { limite: 2826.65, aliquota: 0.075, deducao: 169.44 },
+                { limite: 3751.05, aliquota: 0.15, deducao: 381.44 },
+                { limite: 4664.68, aliquota: 0.225, deducao: 662.77 },
+                { limite: Infinity, aliquota: 0.275, deducao: 896.00 }
+            ],
+            get baseCalculo() {
+                return Math.max(0, this.renda - (this.dependentes * 189.59));
+            },
+            get impostoFinal() {
+                const base = this.baseCalculo;
+                const faixa = this.tabela.find(f => base <= f.limite) || this.tabela[this.tabela.length - 1];
+                return Math.max(0, (base * faixa.aliquota) - faixa.deducao);
+            },
+            get aliquotaEfetiva() {
+                return this.renda > 0 ? ((this.impostoFinal / this.renda) * 100).toFixed(2) : 0;
+            },
+            formatar(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+        }
+    }
+
+    // Inicialização segura para o Astro
+    document.addEventListener('astro:page-load', () => {
+        if (typeof Alpine !== 'undefined') { Alpine.start(); }
+    });
+</script>
+
+<style>
+    /* Estilos da Calculadora */
+    .calculator-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .calculator-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+        overflow: hidden;
+    }
+    .card-header {
+        background: #111827; /* Dark Slate do seu site */
+        padding: 2rem;
+        color: white;
+        text-align: center;
+    }
+    .card-header h3 { margin: 0; font-size: 1.5rem; color: #fff; }
+    .card-header p { margin: 5px 0 0; opacity: 0.7; font-size: 0.9rem; }
+    
+    .card-body { padding: 2rem; }
+    
+    .inputs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .input-field label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #374151;
+    }
+    .input-field input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+    .input-field input:focus {
+        border-color: #7c3aed; /* Roxo padrão */
+        outline: none;
+    }
+
+    .result-section {
+        background: #fff7ed; /* Orange Tint */
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 1px solid #ffedd5;
+    }
+    .result-main { text-align: center; margin-bottom: 1rem; }
+    .result-label { color: #c2410c; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+    .result-value { font-size: 2.5rem; font-weight: 900; color: #111827; }
+    
+    .result-details {
+        border-top: 1px solid #ffedd5;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    .detail-item { text-align: center; font-size: 0.9rem; }
+    .detail-item span { display: block; color: #6b7280; }
+    .detail-item strong { color: #111827; font-size: 1.1rem; }
+
+    /* Estilos do Conteúdo SEO */
+    .seo-content {
+        line-height: 1.8;
+        color: #374151;
+        margin-top: 4rem;
+        text-align: left;
+    }
+    .divider { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
+    .seo-content h2 { color: #111827; margin-top: 2em; font-size: 1.8rem; font-weight: bold; }
+    .seo-content h3 { 
+        margin-top: 1.5em; 
+        color: #1f2937; 
+        font-size: 1.3rem; 
+        border-left: 4px solid #f97316; 
+        padding-left: 15px; 
+        font-weight: bold; 
+    }
+    .custom-list { padding-left: 20px; margin: 1rem 0; list-style-type: disc; }
+    .custom-list li { margin-bottom: 8px; }
+
+    @media (max-width: 600px) {
+        .inputs-grid { grid-template-columns: 1fr; }
+        .result-value { font-size: 1.8rem; }
+    }
+</style>

@@ -1,0 +1,80 @@
+---
+// src/components/ferramentas/AlertaMulta.astro
+const { impostoDevido, selic } = Astro.props;
+
+// Convertemos para número caso venha como string
+const valorImposto = parseFloat(impostoDevido) || 0;
+const taxaSelic = parseFloat(selic) || 11.25;
+
+// Cálculos base (Exemplo para 30 dias de atraso)
+const multaMaxima = valorImposto * 0.20; // 20% de limite
+const jurosEstimados = valorImposto * ((taxaSelic / 12 / 100) + 0.01);
+const totalComAtraso = valorImposto + multaMaxima + jurosEstimados;
+
+const formato = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+---
+
+<div class="alerta-multa">
+    <div class="alerta-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span>Atenção: Custo do Atraso</span>
+    </div>
+    
+    <div class="alerta-body">
+        <p>Se você atrasar o pagamento deste DARF por mais de 60 dias, o valor pode subir para:</p>
+        <div class="valor-estimado">{formato.format(totalComAtraso)}</div>
+        
+        <ul class="detalhes-multa">
+            <li><strong>Multa (20%):</strong> {formato.format(multaMaxima)}</li>
+            <li><strong>Juros (Selic + 1%):</strong> {formato.format(jurosEstimados)}</li>
+        </ul>
+        <small>*Estimativa baseada na Selic atual de {taxaSelic}% ao ano.</small>
+    </div>
+</div>
+
+<style>
+    .alerta-multa {
+        margin-top: 2rem;
+        background: #fef2f2;
+        border: 1px solid #fee2e2;
+        border-radius: 12px;
+        overflow: hidden;
+        font-size: 0.95rem;
+    }
+    .alerta-header {
+        background: #ef4444;
+        color: white;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: bold;
+    }
+    .alerta-body {
+        padding: 16px;
+        color: #991b1b;
+    }
+    .valor-estimado {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 10px 0;
+    }
+    .detalhes-multa {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+        font-size: 0.85rem;
+        border-top: 1px solid #fecaca;
+        padding-top: 10px;
+    }
+    .detalhes-multa li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+    }
+    small {
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.8;
+    }
+</style>

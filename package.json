@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "python scripts/fetch_bacen.py && astro dev",
+    "build": "python scripts/fetch_bacen.py && python scripts/gerar_grafico_comparativo.py && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:full": "python scripts/fetch_bacen.py && python scripts/gerar_grafico_comparativo.py && astro build"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.11",
