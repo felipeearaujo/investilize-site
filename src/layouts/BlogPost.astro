@@ -9,18 +9,25 @@ import ArticleSchema from '../components/ArticleSchema.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import FaqSchema from '../components/FaqSchema.astro';
 
+// 1. IMPORTAÇÃO DOS DADOS DO BACEN
+import indicadores from '../data/bacen.json';
+
 type Props = CollectionEntry<'blog'>['data'];
 
-// ADICIONEI 'heroImageAlt' AQUI NA LISTA DE PROPS
 const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageAlt } = Astro.props;
+
+// 2. LÓGICA DE SUBSTITUIÇÃO DINÂMICA
+const selic = indicadores?.selic || "13.25";
+const dynamicTitle = title.replace('{selicAtual}', selic);
+const dynamicDescription = description.replace('{selicAtual}', selic);
 ---
 
 <html lang="pt-br">
     <head>
-        <BaseHead title={title} description={description} />       
+        <BaseHead title={dynamicTitle} description={dynamicDescription} />       
         <ArticleSchema
-            title={title}
-            description={description}
+            title={dynamicTitle}
+            description={dynamicDescription}
             publishDate={pubDate}
             imagePath={heroImage}
         />
@@ -94,8 +101,7 @@ const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageA
                         width={1020}
                         height={510}
                         src={heroImage}
-                        /* AQUI ESTÁ A CORREÇÃO DO ALT TEXT */
-                        alt={heroImageAlt || title}
+                        alt={heroImageAlt || dynamicTitle}
                         sizes="(max-width: 720px) 100vw, 720px"
                     />}
                 </div>
@@ -113,7 +119,7 @@ const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageA
                                 </div>
                             )}
                         </div>
-                        <h1>{title}</h1>
+                        <h1>{dynamicTitle}</h1>
                         <hr />
                     </div>
                     <slot />

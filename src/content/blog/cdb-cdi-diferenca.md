@@ -1,5 +1,6 @@
 ---
-title: 'CDB vs. CDI: O Que é, Qual a Diferença e Como Render Mais (Guia 2025)'
+layout: "../../layouts/BlogPost.astro"
+title: 'CDB vs CDI em 2026: Qual rende mais com a Selic a {selicAtual}%?'
 description: 'Entenda a diferença entre CDB (investimento) e CDI (taxa). Saiba como escolher o melhor CDB, o que significa "render 100% do CDI" e a segurança do FGC.'
 author: 'Felipe'
 pubDate: '2025-09-09'
@@ -73,6 +74,23 @@ Se a Selic está a **10,50% ao ano** e você aplica R$ 1.000,00 em um **CDB a 10
 * **Pós-fixado:** Como mencionado, o rendimento acompanha um indicador da economia, sendo o mais comum o CDI. O investidor só saberá o valor exato do seu ganho no momento do resgate.
 * **Prefixado:** A taxa de juros é definida no momento da aplicação. Desta forma, o investidor sabe exatamente qual será o valor a ser resgatado no vencimento (ex: 12% ao ano).
 * **Híbrido:** Combina uma parte prefixada com uma parte pós-fixada, geralmente atrelada a um índice de inflação como o IPCA (ex: IPCA + 6% ao ano).
+
+<div style="background-color: #f5f3ff; border: 2px solid #ddd6fe; border-radius: 16px; padding: 25px; margin: 30px 0; display: flex; align-items: center; gap: 20px;">
+    <div style="background-color: #7c3aed; color: white; min-width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+        📉
+    </div>
+    <div style="flex: 1;">
+        <h4 style="margin: 0 0 5px 0; color: #1e293b; font-size: 1.1rem; font-weight: 700;">
+            O rendimento do CDB é real ou nominal?
+        </h4>
+        <p style="margin: 0; color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
+            Não deixe a inflação "comer" seu lucro. Descubra agora quanto seu dinheiro perdeu de valor ao longo dos anos.
+        </p>
+        <a href="/ferramentas/poder-de-compra/" style="display: inline-block; margin-top: 12px; color: #7c3aed; font-weight: 700; text-decoration: none; border-bottom: 2px solid #7c3aed; transition: 0.3s;">
+            Calcular Poder de Compra Atualizado &rarr;
+        </a>
+    </div>
+</div>
 
 ## Como Escolher o Melhor CDB: Um Checklist
 
