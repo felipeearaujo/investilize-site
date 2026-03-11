@@ -1,0 +1,74 @@
+---
+// src/components/DicaFinanceira.astro
+---
+
+<div class="dica-container">
+    <p class="dica-label">Dica de Gestão Financeira:</p>
+    <p class="dica-description">
+        Antes de investir, simule o impacto das taxas e impostos no seu lucro final.
+    </p>
+    <div class="dica-actions">
+        <a href="/ferramentas/calculadora-ir-mensal/" class="dica-link">Simular IR 2026 →</a>
+        <span class="dica-divider">|</span>
+        <a href="/ferramentas/poder- de-compra/" class="dica-link">Ver Poder de Compra →</a>
+    </div>
+</div>
+
+<style>
+    .dica-container {
+        background-color: #f5f3ff;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        margin: 2.5rem 0;
+        border: 1px solid #ddd6fe;
+        box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.05);
+    }
+
+    .dica-label {
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 1.1rem;
+    }
+
+    .dica-description {
+        margin: 0 0 16px 0;
+        font-size: 0.95rem;
+        color: #4b5563;
+        line-height: 1.5;
+    }
+
+    .dica-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .dica-link {
+        color: #7c3aed;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+        border-bottom: 2px solid transparent;
+    }
+
+    .dica-link:hover {
+        color: #6d28d9;
+        border-bottom-color: #7c3aed;
+    }
+
+    .dica-divider {
+        color: #ddd6fe;
+        user-select: none;
+    }
+
+    /* Ajuste para dispositivos móveis */
+    @media (max-width: 480px) {
+        .dica-divider { display: none; }
+        .dica-actions { flex-direction: column; gap: 10px; }
+    }
+</style>

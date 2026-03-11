@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: 'CDB vs CDI em 2026: Qual rende mais com a Selic a {selicAtual}%?'
-description: 'Entenda a diferença entre CDB (investimento) e CDI (taxa). Saiba como escolher o melhor CDB, o que significa "render 100% do CDI" e a segurança do FGC.'
+title: "CDB vs CDI em 2026: Qual rende mais com a Selic a {selicAtual}%?"
+description: "Entenda a diferença entre CDB e CDI com a taxa Selic atual."
 author: 'Felipe'
 pubDate: '2025-09-09'
 tags: ['Renda Fixa', 'CDB', 'Investimentos', 'CDI', 'iniciantes', 'reserva de emergencia', 'certificado de depósito bancário']
@@ -111,6 +111,16 @@ Por conta dessa liquidez, CDBs que rendem 100% do CDI são a opção preferida p
 
 Os CDBs são protegidos pelo Fundo Garantidor de Crédito (FGC), que assegura ao investidor até R$ 250 mil por CPF por instituição, caso o banco emissor quebre. Isso torna o CDB um dos investimentos mais seguros do mercado.
 
+<div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 12px; padding: 25px; margin: 30px 0; text-align: center;">
+<p style="margin: 0 0 10px 0; font-weight: 700; color: #1e293b; font-size: 1.1rem;">🚀 Quer simular seu lucro real?</p>
+<p style="margin: 0 0 15px 0; font-size: 0.95rem; color: #4b5563;">Não faça contas de cabeça. Use nosso comparador que já desconta o IR automaticamente.</p>
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="/ferramentas/comparador-renda-fixa/" style="color: #7c3aed; text-decoration: none; font-weight: 700;">Simular CDB vs LCI →</a>
+<span style="color: #ddd6fe;">|</span>
+<a href="/ferramentas/poder-de-compra/" style="color: #7c3aed; text-decoration: none; font-weight: 700;">Ver Poder de Compra →</a>
+</div>
+</div>
+
 ### 4. Imposto de Renda (A Tabela Regressiva)
 
 A tributação sobre os rendimentos do CDB segue a tabela regressiva do Imposto de Renda. Ou seja, quanto mais tempo o recurso ficar investido, menor será a alíquota do IR, paga *apenas sobre o lucro*:
@@ -146,3 +156,40 @@ Para entender a fundo, veja nosso [**Guia Completo sobre LCI e LCA**](https://in
 A principal diferença que o investidor precisa saber é que o CDB é um produto financeiro onde ele pode aplicar o seu dinheiro, enquanto o CDI é a taxa de referência, que na maioria das vezes determinará o quanto seu dinheiro vai render.
 
 "Agora que você sabe a diferença entre CDB e CDI, [calcule sua reserva de emergência](https://investilize.com.br/ferramentas/calculadora-reserva-emergencia) e saiba quanto investir hoje mesmo."
+
+<DicaFinanceira />
+
+<div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 30px; margin-top: 40px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);">
+    <h3 style="color: #7c3aed; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+        ✅ Resumo para o Investidor
+    </h3>
+    <ul style="list-style: none; padding: 0; margin: 20px 0; color: #4b5563; line-height: 1.6;">
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+            <span style="color: #7c3aed;">•</span>
+            <span><strong>CDB é o produto:</strong> Você empresta dinheiro ao banco em troca de juros.</span>
+        </li>
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+            <span style="color: #7c3aed;">•</span>
+            <span><strong>CDI é a régua:</strong> É a taxa de referência que define quanto o seu CDB vai render.</span>
+        </li>
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+            <span style="color: #7c3aed;">•</span>
+            <span><strong>Segurança:</strong> Investimentos em CDB possuem a garantia do FGC até R$ 250 mil.</span>
+        </li>
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+            <span style="color: #7c3aed;">•</span>
+            <span><strong>Imposto:</strong> O IR é regressivo; quanto mais tempo investido, menor a alíquota (mínimo de 15%).</span>
+        </li>
+    </ul>
+<div style="background-color: #f5f3ff; border-radius: 12px; padding: 20px; text-align: center; margin: 20px 0;">
+<p style="margin: 0 0 10px 0; font-weight: 600; color: #1e293b;">Dica de Gestão Financeira:</p>
+<p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #6b7280;">
+Antes de investir, simule o impacto das taxas e impostos no seu lucro final.
+</p>
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+<a href="/ferramentas/calculadora-ir-mensal/" style="color: #7c3aed; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Simular IR 2026 →</a>
+<span style="color: #ddd6fe;">|</span>
+<a href="/ferramentas/poder-de-compra/" style="color: #7c3aed; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Ver Poder de Compra →</a>
+</div>
+</div>
+</div>
