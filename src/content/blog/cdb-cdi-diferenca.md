@@ -18,14 +18,14 @@ faqList:
 
 Qual a diferença entre CDB e CDI? Embora pareçam iguais, o CDB é o investimento (onde você põe o dinheiro) e o CDI é a taxa de juros (que define o rendimento). Entender essa relação é essencial para saber se seu dinheiro está rendendo mais que a poupança. Neste guia de 2025, explicaremos tudo sobre como calcular e render mais.
 
-<div style="background-color: #f3f4f6; border-left: 4px solid #7c3aed; padding: 15px; margin: 20px 0;">
+<div style="background-color: #f3f4f6; border-left: 4px solid #0167c2; padding: 15px; margin: 20px 0;">
     <p style="margin: 0; font-weight: bold; color: #374151;">
         🚀 Está na dúvida de qual rende mais?
     </p>
     <p style="margin: 5px 0;">
         Não faça contas de cabeça! Use nosso simulador gratuito que desconta o Imposto de Renda automaticamente.
     </p>
-    <a href="/ferramentas/comparador-renda-fixa/" style="display: inline-block; background-color: #7c3aed; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px;">
+    <a href="/ferramentas/comparador-renda-fixa/" style="display: inline-block; background-color: #0167c2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px;">
         Usar Comparador CDB vs LCI Grátis
     </a>
 </div>
@@ -76,7 +76,7 @@ Se a Selic está a **10,50% ao ano** e você aplica R$ 1.000,00 em um **CDB a 10
 * **Híbrido:** Combina uma parte prefixada com uma parte pós-fixada, geralmente atrelada a um índice de inflação como o IPCA (ex: IPCA + 6% ao ano).
 
 <div style="background-color: #f5f3ff; border: 2px solid #ddd6fe; border-radius: 16px; padding: 25px; margin: 30px 0; display: flex; align-items: center; gap: 20px;">
-    <div style="background-color: #7c3aed; color: white; min-width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+    <div style="background-color: #0167c2; color: white; min-width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px;">
         📉
     </div>
     <div style="flex: 1;">
@@ -86,7 +86,7 @@ Se a Selic está a **10,50% ao ano** e você aplica R$ 1.000,00 em um **CDB a 10
         <p style="margin: 0; color: #4b5563; font-size: 0.95rem; line-height: 1.5;">
             Não deixe a inflação "comer" seu lucro. Descubra agora quanto seu dinheiro perdeu de valor ao longo dos anos.
         </p>
-        <a href="/ferramentas/poder-de-compra/" style="display: inline-block; margin-top: 12px; color: #7c3aed; font-weight: 700; text-decoration: none; border-bottom: 2px solid #7c3aed; transition: 0.3s;">
+        <a href="/ferramentas/poder-de-compra/" style="display: inline-block; margin-top: 12px; color: #0167c2; font-weight: 700; text-decoration: none; border-bottom: 2px solid #0167c2; transition: 0.3s;">
             Calcular Poder de Compra Atualizado &rarr;
         </a>
     </div>
@@ -115,9 +115,9 @@ Os CDBs são protegidos pelo Fundo Garantidor de Crédito (FGC), que assegura ao
 <p style="margin: 0 0 10px 0; font-weight: 700; color: #1e293b; font-size: 1.1rem;">🚀 Quer simular seu lucro real?</p>
 <p style="margin: 0 0 15px 0; font-size: 0.95rem; color: #4b5563;">Não faça contas de cabeça. Use nosso comparador que já desconta o IR automaticamente.</p>
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-<a href="/ferramentas/comparador-renda-fixa/" style="color: #7c3aed; text-decoration: none; font-weight: 700;">Simular CDB vs LCI →</a>
+<a href="/ferramentas/comparador-renda-fixa/" style="color: #0167c2; text-decoration: none; font-weight: 700;">Simular CDB vs LCI →</a>
 <span style="color: #ddd6fe;">|</span>
-<a href="/ferramentas/poder-de-compra/" style="color: #7c3aed; text-decoration: none; font-weight: 700;">Ver Poder de Compra →</a>
+<a href="/ferramentas/poder-de-compra/" style="color: #0167c2; text-decoration: none; font-weight: 700;">Ver Poder de Compra →</a>
 </div>
 </div>
 
@@ -160,24 +160,24 @@ A principal diferença que o investidor precisa saber é que o CDB é um produto
 <DicaFinanceira />
 
 <div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 30px; margin-top: 40px; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.05);">
-    <h3 style="color: #7c3aed; margin-top: 0; display: flex; align-items: center; gap: 10px;">
+    <h3 style="color: #0167c2; margin-top: 0; display: flex; align-items: center; gap: 10px;">
         ✅ Resumo para o Investidor
     </h3>
     <ul style="list-style: none; padding: 0; margin: 20px 0; color: #4b5563; line-height: 1.6;">
         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
-            <span style="color: #7c3aed;">•</span>
+            <span style="color: #0167c2;">•</span>
             <span><strong>CDB é o produto:</strong> Você empresta dinheiro ao banco em troca de juros.</span>
         </li>
         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
-            <span style="color: #7c3aed;">•</span>
+            <span style="color: #0167c2;">•</span>
             <span><strong>CDI é a régua:</strong> É a taxa de referência que define quanto o seu CDB vai render.</span>
         </li>
         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
-            <span style="color: #7c3aed;">•</span>
+            <span style="color: #0167c2;">•</span>
             <span><strong>Segurança:</strong> Investimentos em CDB possuem a garantia do FGC até R$ 250 mil.</span>
         </li>
         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
-            <span style="color: #7c3aed;">•</span>
+            <span style="color: #0167c2;">•</span>
             <span><strong>Imposto:</strong> O IR é regressivo; quanto mais tempo investido, menor a alíquota (mínimo de 15%).</span>
         </li>
     </ul>
@@ -187,9 +187,9 @@ A principal diferença que o investidor precisa saber é que o CDB é um produto
 Antes de investir, simule o impacto das taxas e impostos no seu lucro final.
 </p>
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-<a href="/ferramentas/calculadora-ir-mensal/" style="color: #7c3aed; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Simular IR 2026 →</a>
+<a href="/ferramentas/calculadora-ir-mensal/" style="color: #0167c2; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Simular IR 2026 →</a>
 <span style="color: #ddd6fe;">|</span>
-<a href="/ferramentas/poder-de-compra/" style="color: #7c3aed; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Ver Poder de Compra →</a>
+<a href="/ferramentas/poder-de-compra/" style="color: #0167c2; text-decoration: none; font-weight: 700; font-size: 0.9rem;">Ver Poder de Compra →</a>
 </div>
 </div>
 </div>

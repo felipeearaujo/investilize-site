@@ -34,16 +34,20 @@ const ganhoReal = (((1 + i) / (1 + I)) - 1) * 100;
 
 <style>
     .dashboard-compacto {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background: linear-gradient(90deg, #7c3aed 0%, #5b21b6 100%);
-        padding: 0.75rem 1.5rem; /* Altura reduzida significativamente */
-        border-radius: 12px;
-        color: white;
-        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);
-        margin: 1rem 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* Degradê do Azul Royal para o Azul Marinho */
+    background: linear-gradient(90deg, #0167c2 0%, #003d6b 100%);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    color: white;
+    /* Sombra agora em tom azulado para harmonizar */
+    box-shadow: 0 4px 15px rgba(0, 61, 107, 0.25);
+    margin: 1rem 0;
+    /* Borda sutil para dar acabamento premium */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
     .indicador-item {
         display: flex;

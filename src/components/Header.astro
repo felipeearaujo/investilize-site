@@ -2,7 +2,7 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
-import logo from 'src/assets/logo.png';
+import logo from 'src/assets/logo.svg';
 ---
 
 <header>
@@ -44,7 +44,8 @@ import logo from 'src/assets/logo.png';
         margin: 0;
         padding: 0 1em;
         background: white;
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        /* Sombra leve ajustada para o tom Marinho */
+        box-shadow: 0 2px 8px rgba(0, 61, 107, 0.08); 
         position: relative;
         z-index: 1000;
     }
@@ -59,38 +60,42 @@ import logo from 'src/assets/logo.png';
         align-items: center;
     }
 
-    /* --- ESTILO DOS LINKS (HeaderLink e tags 'a') --- */
+    /* --- ESTILO DOS LINKS --- */
     nav a {
         padding: 1em 0.5em;
-        color: var(--black);
+        /* Alterado para Azul Marinho */
+        color: #003d6b; 
         border-bottom: 4px solid transparent;
         text-decoration: none;
         display: inline-block;
+        font-weight: 600;
     }
     
     nav a.active {
         text-decoration: none;
-        border-bottom-color: var(--accent);
+        /* Alterado para Azul Royal */
+        border-bottom-color: #0167c2; 
     }
 
-    /* --- ESTILO DO GATILHO DO MENU (CLONE DO LINK) --- */
+    /* --- ESTILO DO GATILHO DO MENU --- */
     .menu-trigger {
         padding: 1em 0.5em;
-        color: var(--black);
+        /* Alterado para Azul Marinho */
+        color: #003d6b; 
         border-bottom: 4px solid transparent;
-        
         display: flex;
         align-items: center;
         gap: 4px;
         cursor: pointer;
-        font-weight: inherit;
+        font-weight: 600;
         user-select: none;
     }
 
     .menu-trigger:hover,
     .dropdown-wrapper:hover .menu-trigger {
-        border-bottom-color: var(--accent);
-        color: rgb(var(--black)); 
+        /* Alterado para Verde Médio (Destaque de Sucesso) */
+        border-bottom-color: #4bac40;
+        color: #0167c2; 
     }
 
     /* --- DROPDOWN LÓGICA --- */
@@ -109,7 +114,7 @@ import logo from 'src/assets/logo.png';
         transform: translateX(-50%);
         background-color: white;
         min-width: 240px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 16px rgba(0, 61, 107, 0.15);
         border-radius: 8px;
         padding: 8px 0;
         z-index: 1001;
@@ -119,15 +124,17 @@ import logo from 'src/assets/logo.png';
     .dropdown-menu a {
         display: block;
         padding: 10px 16px;
-        color: #374151;
+        /* Texto das ferramentas em Marinho */
+        color: #003d6b; 
         border-bottom: none;
         font-size: 0.95rem;
         text-align: left;
     }
 
     .dropdown-menu a:hover {
-        background-color: #f3f4f6;
-        color: #7c3aed;
+        /* Fundo suave e texto em Verde no hover */
+        background-color: #f8fafc;
+        color: #4bac40; 
     }
 
     .dropdown-wrapper:hover .dropdown-menu {

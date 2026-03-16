@@ -92,13 +92,27 @@ const posts = (await getCollection('blog')).sort(
     <style>
         /* Variáveis de Cor - Padronização Roxo */
         :root {
-            --primary: #7c3aed;
-            --primary-hover: #6d28d9;
-            --primary-light: #f5f3ff;
-            --text-main: #111827;
-            --text-muted: #4b5563;
-            --bg-light: #f9fafb;
-        }
+    /* Cor principal: Azul Royal (Confiança) */
+    --primary: #0167c2;
+    
+    /* Hover: Azul Marinho (Autoridade) */
+    --primary-hover: #003d6b;
+    
+    /* Fundo de destaque: Um azul bem suave para não cansar a vista */
+    --primary-light: #eef6fc;
+    
+    /* Texto Principal: Marinho quase preto para leitura perfeita */
+    --text-main: #001a2e;
+    
+    /* Texto Secundário: Cinza azulado */
+    --text-muted: #475569;
+    
+    /* Fundo das áreas de cálculo: Branco gelo profissional */
+    --bg-light: #f8fafc;
+
+    /* DICA: Adicione essa variável para os botões de "Calcular" ou "Resultado" */
+    --success: #4bac40; /* Verde Médio (Lucro) */
+}
 
         /* Hero Section */
         .hero-section {

@@ -58,7 +58,7 @@ Para tomar a melhor decisão, analise três pilares fundamentais:
 <style>
     .cta-block {
         background-color: #f3f4f6;
-        border-left: 5px solid #7c3aed;
+        border-left: 5px solid #0167c2;
         padding: 20px 25px;
         margin: 30px 0;
         border-radius: 8px;
@@ -69,7 +69,7 @@ Para tomar a melhor decisão, analise três pilares fundamentais:
     }
     .cta-button {
         display: inline-block;
-        background-color: #7c3aed;
+        background-color: #0167c2;
         color: white;
         padding: 12px 20px;
         border-radius: 5px;
