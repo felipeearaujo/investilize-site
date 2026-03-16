@@ -1,0 +1,54 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+import Taxometro from '../../components/ferramentas/Taxometro.astro';
+import ConteudoTaxometro from '../../components/ferramentas/ConteudoTaxometro.astro';
+
+const pageTitle = "Taxômetro Investilize: Taxas do Tesouro Direto Hoje";
+const pageDescription = "Acompanhe as taxas e preços dos títulos públicos em tempo real. Entenda a marcação a mercado e como os juros impactam sua rentabilidade.";
+
+const dadosFaq = [
+  {
+    question: "O que é o Taxômetro?",
+    answer: "É uma ferramenta de monitoramento que exibe as taxas de rendimento e os preços dos títulos do Tesouro Direto atualizados conforme o mercado secundário da B3."
+  },
+  {
+    question: "Por que as taxas mudam durante o dia?",
+    answer: "As taxas variam devido à marcação a mercado, refletindo as expectativas do mercado financeiro sobre inflação, Selic e risco Brasil."
+  }
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <BaseHead title={pageTitle} description={pageDescription} />
+        <FaqSchema faqList={dadosFaq} />
+        <style>
+            main { width: 960px; max-width: calc(100% - 2em); margin: 0 auto; padding: 3em 1em; }
+            h1 { text-align: center; color: #003d6b; font-size: 2.5rem; margin-bottom: 1rem; }
+            .intro-text { text-align: center; color: #4b5563; margin-bottom: 2rem; max-width: 700px; margin: 0 auto; }
+            .spacer { margin-bottom: 4rem; }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Breadcrumbs />
+            <h1>{pageTitle}</h1>
+            <p class="intro-text">
+                Consulte as taxas atuais e a variação diária dos principais títulos do Tesouro Nacional com dados oficiais.
+            </p>
+
+            <Taxometro />
+            <div class="spacer"></div>
+            <ConteudoTaxometro />
+        </main>
+        <Footer />
+    </body>
+</html>

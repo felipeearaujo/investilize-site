@@ -1,0 +1,148 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const pageTitle = "Central de Ferramentas | Investilize";
+
+const categorias = [
+  {
+    nome: "Mercado e Indicadores",
+    items: [
+      { titulo: "Taxômetro Tesouro", desc: "Taxas e preços dos títulos públicos hoje.", href: "/ferramentas/Taxometro", icon: "📊" },
+      { titulo: "Cotações", desc: "Acompanhe o preço das principais ações da B3.", href: "/ferramentas/cotacao-acoes", icon: "📈" },
+      { titulo: "Conversor de Moedas", desc: "Cotações de câmbio em tempo real.", href: "/ferramentas/conversor-de-moedas", icon: "💱" },
+    ]
+  },
+  {
+    nome: "Planejamento e Decisão",
+    items: [
+      { titulo: "Tesouro vs. Bancão", desc: "Selic ou CDB? Veja qual rende mais.", href: "/ferramentas/tesouro-vs-bancao", icon: "🏦" },
+      { titulo: "Juros Compostos", desc: "Projete o crescimento do seu patrimônio.", href: "/ferramentas/juros-compostos", icon: "🚀" },
+      { titulo: "Poder de Compra", desc: "O impacto da inflação no seu dinheiro.", href: "/ferramentas/poder-de-compra", icon: "📉" },
+    ]
+  }
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <BaseHead title={pageTitle} description="Central de ferramentas financeiras." />
+</head>
+<body>
+    <Header />
+    <main class="hub-main">
+        <div class="container">
+            <Breadcrumbs />
+            <div class="hub-header">
+                <h1>Central de Ferramentas</h1>
+                <p>Simuladores técnicos para investidores que buscam decisões baseadas em dados.</p>
+            </div>
+
+            {categorias.map(cat => (
+                <section class="categoria-section">
+                    <h2 class="categoria-nome">{cat.nome}</h2>
+                    <div class="grid-ferramentas">
+                        {cat.items.map(item => (
+                            <a href={item.href} class="card-ferramenta">
+                                <span class="card-icon">{item.icon}</span>
+                                <div class="card-body">
+                                    <h3>{item.titulo}</h3>
+                                    <p>{item.desc}</p>
+                                    <span class="btn-text">Acessar ferramenta →</span>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            ))}
+        </div>
+    </main>
+    <Footer />
+
+    <style is:global>
+        /* Definição de cores de segurança dentro da página */
+        :root {
+            --primary: #0167c2;
+            --primary-hover: #003d6b;
+            --text-main: #001a2e;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+        }
+
+        .hub-main {
+            background-color: var(--bg-light);
+            padding: 4rem 0;
+            min-height: 80vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .hub-header { text-align: center; margin-bottom: 4rem; }
+        .hub-header h1 { color: var(--text-main); font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; }
+        .hub-header p { color: var(--text-muted); font-size: 1.2rem; }
+
+        .categoria-section { margin-bottom: 4rem; }
+        .categoria-nome { 
+            color: var(--text-main); 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            border-bottom: 2px solid #e2e8f0; 
+            padding-bottom: 0.5rem; 
+            margin-bottom: 2rem; 
+        }
+
+        .grid-ferramentas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card-ferramenta {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-ferramenta:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 61, 107, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            background: var(--primary-light, #f0f7ff);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .card-body h3 { color: var(--text-main); margin: 0; font-size: 1.2rem; font-weight: 700; }
+        .card-body p { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1rem; line-height: 1.5; }
+        .btn-text { color: var(--primary); font-weight: 700; font-size: 0.85rem; }
+
+        @media (max-width: 720px) {
+            .hub-header h1 { font-size: 2rem; }
+            .grid-ferramentas { grid-template-columns: 1fr; }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<div class="tool-card">
+    <h3 class="tool-title">Calculadora de Ganho Real</h3>
+    <p class="tool-desc">Aplique a Equação de Fisher para descobrir o seu lucro real.</p>
+
+    <div class="input-grid">
+        <div class="field">
+            <label>Taxa Nominal (% ao ano)</label>
+            <input type="number" id="taxa-nominal" value="12.5" step="0.01" />
+            <small>A taxa que o banco prometeu.</small>
+        </div>
+        <div class="field">
+            <label>Inflação / IPCA Est. (% ao ano)</label>
+            <input type="number" id="taxa-inflacao" value="4.5" step="0.01" />
+            <small>Use a meta ou o boletim Focus.</small>
+        </div>
+    </div>
+
+    <button id="btn-calc-real">Calcular Rentabilidade Real</button>
+
+    <div id="res-real" class="result-box" style="display: none;">
+        <div class="main-res">
+            A sua Taxa de Juro Real é de: <br/>
+            <strong id="val-taxa-real">0,00%</strong>
+        </div>
+        <p class="feedback-msg" id="msg-feedback"></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('btn-calc-real').addEventListener('click', () => {
+        const nominal = parseFloat(document.getElementById('taxa-nominal').value) / 100;
+        const inflacao = parseFloat(document.getElementById('taxa-inflacao').value) / 100;
+
+        // Equação de Fisher: (1 + r) = (1 + i) / (1 + p)
+        const taxaReal = ((1 + nominal) / (1 + inflacao)) - 1;
+        const taxaRealPerc = taxaReal * 100;
+
+        document.getElementById('res-real').style.display = 'block';
+        document.getElementById('val-taxa-real').innerText = taxaRealPerc.toFixed(2).replace('.', ',') + '%';
+
+        const msg = document.getElementById('msg-feedback');
+        if (taxaRealPerc > 0) {
+            msg.innerHTML = "🟢 <strong>Parabéns!</strong> O seu investimento está a ganhar da inflação e a aumentar o seu poder de compra.";
+            msg.style.color = "#4bac40";
+        } else {
+            msg.innerHTML = "🔴 <strong>Atenção:</strong> O seu rendimento está abaixo da inflação. Está a perder poder de compra.";
+            msg.style.color = "#0167c2";
+        }
+    });
+</script>
+
+<style>
+    .tool-card { background: white; padding: 2.5rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    .tool-title { color: #003d6b; margin: 0; }
+    .tool-desc { color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 2rem; }
+    .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    label { display: block; font-size: 0.85rem; font-weight: 700; color: #374151; margin-bottom: 8px; }
+    input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1.1rem; }
+    small { color: #9ca3af; font-size: 0.75rem; }
+    button { width: 100%; padding: 16px; background: #003d6b; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
+    .result-box { margin-top: 2rem; padding: 2rem; background: #f8fafc; border-radius: 12px; text-align: center; }
+    .main-res { font-size: 1.1rem; color: #1e293b; margin-bottom: 1rem; }
+    #val-taxa-real { font-size: 2.5rem; color: #003d6b; display: block; margin-top: 10px; }
+    .feedback-msg { font-size: 0.95rem; margin-top: 1.5rem; }
+</style>

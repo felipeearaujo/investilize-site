@@ -1,0 +1,96 @@
+<div class="tool-card">
+    <h3 class="tool-title">Simulador: Tesouro vs. Bancão</h3>
+    <p class="tool-desc">Compare um CDB (pós-fixado) com o Tesouro Selic.</p>
+
+    <div class="input-grid">
+        <div class="field">
+            <label>Valor a Investir (R$)</label>
+            <input type="number" id="valor-inv" value="1000" />
+        </div>
+        <div class="field">
+            <label>Prazo (meses)</label>
+            <input type="number" id="prazo-meses" value="12" />
+        </div>
+        <div class="field">
+            <label>Rendimento do CDB (% do CDI)</label>
+            <input type="number" id="cdb-perc" value="100" />
+        </div>
+        <div class="field">
+            <label>Taxa Selic/CDI Atual (% a.a.)</label>
+            <input type="number" id="taxa-atual" value="11.75" />
+        </div>
+    </div>
+
+    <button id="btn-comparar">Comparar Rentabilidade</button>
+
+    <div id="res-comparativo" class="result-box" style="display: none;">
+        <div class="res-item">
+            <span>Resultado no <strong>Tesouro Selic</strong>:</span>
+            <strong id="res-tesouro">R$ 0,00</strong>
+        </div>
+        <div class="res-item">
+            <span>Resultado no <strong>CDB do Banco</strong>:</span>
+            <strong id="res-banco">R$ 0,00</strong>
+        </div>
+        <div id="vencedor-msg" class="vencedor-badge"></div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('btn-comparar').addEventListener('click', () => {
+        const valor = parseFloat(document.getElementById('valor-inv').value);
+        const meses = parseInt(document.getElementById('prazo-meses').value);
+        const cdbPerc = parseFloat(document.getElementById('cdb-perc').value) / 100;
+        const selicAnual = parseFloat(document.getElementById('taxa-atual').value) / 100;
+        
+        const diasAnos = 365;
+        const diasInvestidos = meses * 30;
+
+        // Tabela Regressiva IR
+        let ir = 0.225;
+        if (diasInvestidos > 720) ir = 0.15;
+        else if (diasInvestidos > 360) ir = 0.175;
+        else if (diasInvestidos > 180) ir = 0.20;
+
+        // Cálculo Tesouro Selic (Simplificado com taxa B3 de 0.20%)
+        const rendTesouroBruto = valor * Math.pow((1 + selicAnual), (meses/12)) - valor;
+        const taxaB3 = (valor > 10000) ? (valor * 0.002 * (meses/12)) : 0; // Isenção até 10k
+        const rendTesouroLiquido = (rendTesouroBruto * (1 - ir)) - taxaB3;
+        
+        // Cálculo CDB
+        const taxaCDB = selicAnual * cdbPerc;
+        const rendCDBBruto = valor * Math.pow((1 + taxaCDB), (meses/12)) - valor;
+        const rendCDBLiquido = rendCDBBruto * (1 - ir);
+
+        const format = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        document.getElementById('res-comparativo').style.display = 'block';
+        document.getElementById('res-tesouro').innerText = format(valor + rendTesouroLiquido);
+        document.getElementById('res-banco').innerText = format(valor + rendCDBLiquido);
+
+        const msg = document.getElementById('vencedor-msg');
+        if (rendTesouroLiquido > rendCDBLiquido) {
+            msg.innerText = "🏆 O Tesouro Selic é mais vantajoso!";
+            msg.style.backgroundColor = "#eefceb";
+            msg.style.color = "#4bac40";
+        } else {
+            msg.innerText = "🏦 O CDB do Banco é mais vantajoso!";
+            msg.style.backgroundColor = "#eef6fc";
+            msg.style.color = "#0167c2";
+        }
+    });
+</script>
+
+<style>
+    .tool-card { background: white; padding: 2.5rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .tool-title { color: #003d6b; margin-bottom: 0.5rem; }
+    .tool-desc { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
+    .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    label { display: block; font-size: 0.85rem; font-weight: 700; color: #374151; margin-bottom: 8px; }
+    input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; }
+    button { width: 100%; padding: 15px; background: #003d6b; color: white; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+    button:hover { background: #0167c2; }
+    .result-box { margin-top: 2rem; padding: 1.5rem; background: #f9fafb; border-radius: 12px; }
+    .res-item { display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1rem; }
+    .vencedor-badge { text-align: center; padding: 1rem; border-radius: 8px; font-weight: 800; margin-top: 1rem; }
+</style>

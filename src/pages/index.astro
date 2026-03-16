@@ -6,11 +6,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 import DashboardIndicadores from '../components/DashboardIndicadores.astro';
 import { getCollection } from 'astro:content';
 
-const pageTitle = "Investilize | Seu Portal Financeiro e Administrativo";
-const pageDescription = "Ferramentas financeiras, calculadoras de IR e artigos técnicos para ajudar você a tomar decisões inteligentes com seu dinheiro.";
+const pageTitle = "Investilize | Inteligência Financeira e Gestão de Ativos";
+const pageDescription = "Ferramentas de autoridade baseadas em dados oficiais. Calcule ganho real, compare CDBs com Tesouro e monitore as taxas do mercado hoje.";
 
+// Busca os 3 posts mais recentes (provavelmente os de Tesouro e IR que criámos)
 const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 3);
 ---
 
@@ -18,57 +19,62 @@ const posts = (await getCollection('blog')).sort(
 <html lang="pt-BR">
 <head>
     <BaseHead title={pageTitle} description={pageDescription} />
-    </head>
+</head>
 <body>
     <Header />
     <main>
         <section class="hero-section">
             <div class="hero-content">
-                <h1 class="hero-title">Educação Financeira com Autoridade</h1>
-                <p class="hero-subtitle">Dados oficiais do Banco Central e ferramentas precisas para sua gestão pessoal e profissional.</p>
+                <h1 class="hero-title">Decisões Financeiras Baseadas em Dados</h1>
+                <p class="hero-subtitle">Utilize simuladores técnicos e dados oficiais do Banco Central para proteger o seu poder de compra e maximizar a sua rentabilidade.</p>
                 <div class="hero-actions">
-                    <a href="/ferramentas/juros-compostos/" class="hero-button">Calcular Investimentos</a>
-                    <a href="/ferramentas/calculadora-ir-mensal/" class="hero-button secondary">Simular IR 2026</a>
+                    <a href="/ferramentas/Taxometro/" class="hero-button">📊 Ver Taxas Hoje</a>
+                    <a href="/ferramentas/tesouro-vs-bancao/" class="hero-button secondary">🏦 Tesouro vs. Bancão</a>
                 </div>
             </div>
         </section>
 
-        <div class="dashboard-wrapper" style="max-width: 900px; margin: -1.5rem auto 2rem; padding: 0 1rem;">
+        <div class="dashboard-wrapper">
             <DashboardIndicadores />
         </div>
 
         <section class="features-section">
-            <h2 class="section-title">Ferramentas de Precisão</h2>
-            <div class="features-grid">
-                <a href="/ferramentas/calculadora-ir-mensal/" class="feature-card">
-                    <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" /></svg>
-                    </div>
-                    <h3>Imposto de Renda</h3>
-                    <p>Calcule seu IR mensal (Carnê-Leão) e veja o impacto da Selic em caso de atraso.</p>
-                </a>
+            <div class="container">
+                <h2 class="section-title">Ferramentas de Autoridade</h2>
+                <div class="features-grid">
+                    <a href="/ferramentas/taxometro/" class="feature-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0h-10.5" /></svg>
+                        </div>
+                        <h3>Taxômetro Tesouro</h3>
+                        <p>Acompanhe preços e taxas dos títulos públicos em tempo real com variação das últimas 24h.</p>
+                    </a>
 
-                <a href="/ferramentas/juros-compostos/" class="feature-card">
-                    <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm3.75-3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm3-3h.008v.008h-.008v-.008Zm-9-3h.008v.008H8.25v-.008Zm3 0h.008v.008h-.008v-.008ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
-                    </div>
-                    <h3>Juros Compostos</h3>
-                    <p>Projete o crescimento do seu patrimônio com aportes mensais e taxas customizadas.</p>
-                </a>
+                    <a href="/ferramentas/taxa-real/" class="feature-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.5 4.5L21.75 7.5M21.75 12V7.5H17.25" /></svg>
+                        </div>
+                        <h3>Ganho Real (Fisher)</h3>
+                        <p>Descubra quanto o seu dinheiro realmente rende acima da inflação utilizando a Equação de Fisher.</p>
+                    </a>
 
-                <a href="/ferramentas/conversor-de-moedas/" class="feature-card">
-                    <div class="icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-2.25-2.226-2.25-4.154 0-1.928.984-3.597 2.5-4.596" /></svg>
-                    </div>
-                    <h3>Conversor de Moedas</h3>
-                    <p>Cotações em tempo real para planejar suas viagens ou investimentos internacionais.</p>
-                </a>
+                    <a href="/ferramentas/poder-de-compra/" class="feature-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-2.25-2.226-2.25-4.154 0-1.928.984-3.597 2.5-4.596" /></svg>
+                        </div>
+                        <h3>Poder de Compra</h3>
+                        <p>Veja o impacto histórico do IPCA no seu património e converta valores do passado para hoje.</p>
+                    </a>
+                </div>
+                <div class="all-tools-link">
+                    <a href="/ferramentas/">Ver todas as ferramentas e simuladores →</a>
+                </div>
             </div>
         </section>
 
         <section class="posts-section">
-            <h2 class="section-title">Últimos Artigos</h2>
             <div class="posts-wrapper">
+                <h2 class="section-title">Análise Técnica e Insights</h2>
                 <ul class="posts-grid">
                     {posts.map(post => (
                         <li class="post-card">
@@ -90,114 +96,93 @@ const posts = (await getCollection('blog')).sort(
     <Footer />
 
     <style>
-        /* Variáveis de Cor - Padronização Roxo */
         :root {
-    /* Cor principal: Azul Royal (Confiança) */
-    --primary: #0167c2;
-    
-    /* Hover: Azul Marinho (Autoridade) */
-    --primary-hover: #003d6b;
-    
-    /* Fundo de destaque: Um azul bem suave para não cansar a vista */
-    --primary-light: #eef6fc;
-    
-    /* Texto Principal: Marinho quase preto para leitura perfeita */
-    --text-main: #001a2e;
-    
-    /* Texto Secundário: Cinza azulado */
-    --text-muted: #475569;
-    
-    /* Fundo das áreas de cálculo: Branco gelo profissional */
-    --bg-light: #f8fafc;
+            --primary: #0167c2;
+            --primary-hover: #003d6b;
+            --primary-light: #eef6fc;
+            --text-main: #001a2e;
+            --text-muted: #475569;
+            --bg-light: #f8fafc;
+            --success: #4bac40;
+        }
 
-    /* DICA: Adicione essa variável para os botões de "Calcular" ou "Resultado" */
-    --success: #4bac40; /* Verde Médio (Lucro) */
-}
-
-        /* Hero Section */
         .hero-section {
             text-align: center;
-            padding: 5rem 1.5rem;
-            background-color: var(--bg-light);
-            border-bottom: 1px solid #e5e7eb;
+            padding: 6rem 1.5rem 8rem;
+            background: linear-gradient(to bottom, var(--primary-light), white);
         }
-        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero-content { max-width: 850px; margin: 0 auto; }
         .hero-title { font-size: 3.5rem; font-weight: 800; color: var(--text-main); line-height: 1.1; margin-bottom: 1.5rem; }
-        .hero-subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; }
-        .hero-actions { display: flex; gap: 1rem; justify-content: center; }
+        .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6; }
+        .hero-actions { display: flex; gap: 1.2rem; justify-content: center; }
         
         .hero-button {
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.2rem;
             background-color: var(--primary);
             color: white;
-            font-weight: 600;
-            border-radius: 10px;
+            font-weight: 700;
+            border-radius: 12px;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .hero-button:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
+        .hero-button:hover { background-color: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,61,107,0.15); }
         .hero-button.secondary { background-color: white; color: var(--primary); border: 2px solid var(--primary); }
         .hero-button.secondary:hover { background-color: var(--primary-light); }
 
-        /* Dashboard Wrapper */
-        .dashboard-wrapper { max-width: 1000px; margin: -2rem auto 3rem; padding: 0 1.5rem; position: relative; z-index: 10; }
+        .dashboard-wrapper { max-width: 1000px; margin: -5rem auto 4rem; padding: 0 1.5rem; position: relative; z-index: 10; }
 
-        /* Features Section */
         .features-section { padding: 4rem 1.5rem; }
-        .section-title { text-align: center; font-size: 2.2rem; font-weight: 700; margin-bottom: 3rem; color: var(--text-main); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.4rem; font-weight: 800; margin-bottom: 3.5rem; color: var(--text-main); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
         
         .feature-card {
             background: white;
             padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
             text-decoration: none;
             color: inherit;
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
-        .feature-card:hover { border-color: var(--primary); box-shadow: 0 20px 25px -5px rgba(124, 58, 237, 0.1); transform: translateY(-5px); }
+        .feature-card:hover { border-color: var(--primary); transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 61, 107, 0.08); }
         
         .icon-wrapper {
             background-color: var(--primary-light);
-            padding: 0.8rem;
-            border-radius: 12px;
+            padding: 1rem;
+            border-radius: 14px;
             display: inline-block;
             margin-bottom: 1.5rem;
             color: var(--primary);
         }
         .icon-wrapper svg { width: 2.5rem; height: 2.5rem; }
-        .feature-card h3 { font-size: 1.4rem; margin-bottom: 0.8rem; color: var(--text-main); }
-        .feature-card p { color: var(--text-muted); line-height: 1.6; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
+        .feature-card p { color: var(--text-muted); line-height: 1.7; font-size: 1rem; }
 
-        /* Posts Section */
-        .posts-section { padding: 5rem 1.5rem; background-color: var(--bg-light); }
+        .all-tools-link { text-align: center; margin-top: 3.5rem; }
+        .all-tools-link a { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.1rem; }
+
+        .posts-section { padding: 6rem 1.5rem; background-color: var(--bg-light); }
         .posts-wrapper { max-width: 1100px; margin: 0 auto; }
-        .posts-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .posts-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
         
-        .post-card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .post-card:hover { transform: scale(1.02); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-        .post-card a { display: block; padding: 2rem; text-decoration: none; color: inherit; }
-        .post-title { font-size: 1.3rem; color: var(--text-main); margin-bottom: 0.5rem; transition: 0.2s; }
+        .post-card { background: white; border-radius: 20px; overflow: hidden; transition: 0.3s; border: 1px solid #e2e8f0; }
+        .post-card:hover { transform: scale(1.02); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+        .post-card a { display: block; padding: 2.5rem; text-decoration: none; color: inherit; }
+        .post-title { font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 700; line-height: 1.3; }
         .post-card:hover .post-title { color: var(--primary); }
-        .post-date { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem; }
-        .post-description { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.5; }
-        .read-more { font-weight: 700; color: var(--primary); font-size: 0.9rem; }
+        .post-date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .post-description { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6; }
+        .read-more { font-weight: 800; color: var(--primary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
         .all-posts-link { text-align: center; margin-top: 4rem; }
-        .all-posts-link a { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.2rem; border-bottom: 2px solid transparent; transition: 0.2s; }
-        .all-posts-link a:hover { border-bottom-color: var(--primary); }
+        .all-posts-link a { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.2rem; }
 
-        /* Responsividade */
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
+            .hero-title { font-size: 2.6rem; }
             .hero-actions { flex-direction: column; }
-            .hero-button { width: 100%; }
+            .hero-button { width: 100%; text-align: center; }
+            .dashboard-wrapper { margin-top: -3rem; }
         }
     </style>
 </body>

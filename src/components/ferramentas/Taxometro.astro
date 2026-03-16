@@ -1,0 +1,60 @@
+---
+const taxas = [
+  { titulo: "Tesouro Selic 2029", taxa: "11,75% + 0,15%", var: "0.02", tipo: "up" },
+  { titulo: "Tesouro IPCA+ 2035", taxa: "6,24%", var: "0.05", tipo: "down" },
+  { titulo: "Tesouro Prefixado 2031", taxa: "12,10%", var: "0.12", tipo: "up" },
+  { titulo: "Tesouro RendA+ 2060", taxa: "6,35%", var: "0", tipo: "neutral" },
+];
+---
+
+<div class="tool-card">
+    <div class="tool-header">
+        <h3 class="tool-title">Dashboard de Taxas</h3>
+        <span class="status-live">● LIVE</span>
+    </div>
+    <p class="tool-desc">Variação das taxas nas últimas 24 horas</p>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>TÍTULO</th>
+                    <th>TAXA ATUAL</th>
+                    <th style="text-align: right;">VAR. 24H</th>
+                </tr>
+            </thead>
+            <tbody>
+                {taxas.map((t) => (
+                    <tr>
+                        <td class="nome">{t.titulo}</td>
+                        <td class="valor">{t.taxa}</td>
+                        <td class={`var ${t.tipo}`}>
+                            {t.tipo === 'up' ? '▲' : t.tipo === 'down' ? '▼' : '▬'} {t.var}%
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .tool-card { background: white; padding: 2rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .tool-header { display: flex; justify-content: space-between; align-items: center; }
+    .tool-title { color: #003d6b; margin: 0; }
+    .tool-desc { color: #6b7280; font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 1.5rem; }
+    .status-live { color: #4bac40; font-weight: 800; font-size: 0.8rem; animation: pulse 2s infinite; }
+    
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; font-size: 0.75rem; color: #9ca3af; padding-bottom: 10px; border-bottom: 1px solid #f3f4f6; }
+    td { padding: 1.25rem 0; border-bottom: 1px solid #f3f4f6; }
+    
+    .nome { font-weight: 700; color: #1f2937; }
+    .valor { font-family: monospace; font-weight: 600; color: #111827; }
+    .var { text-align: right; font-weight: 800; }
+    .up { color: #4bac40; }
+    .down { color: #0167c2; }
+    .neutral { color: #9ca3af; }
+
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+</style>

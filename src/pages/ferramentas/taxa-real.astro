@@ -1,0 +1,54 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+import CalculadoraTaxaReal from '../../components/ferramentas/CalculadoraTaxaReal.astro';
+import ConteudoTaxaReal from '../../components/ferramentas/ConteudoTaxaReal.astro';
+
+const pageTitle = "Calculadora de Taxa Real: Ganho acima da Inflação | Investilize";
+const pageDescription = "Calcule quanto o seu investimento rende de facto. Utilize a Equação de Fisher para descobrir a sua rentabilidade real após descontar o IPCA.";
+
+const dadosFaq = [
+  {
+    question: "O que é taxa de juro real?",
+    answer: "A taxa real é o rendimento de um investimento após descontar a inflação do período. É ela que determina o aumento real do seu poder de compra."
+  },
+  {
+    question: "Como calcular a taxa real?",
+    answer: "O cálculo não é uma subtração simples. Utiliza-se a Equação de Fisher: (1 + Taxa Nominal) / (1 + Inflação) - 1."
+  }
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <BaseHead title={pageTitle} description={pageDescription} />
+        <FaqSchema faqList={dadosFaq} />
+        <style>
+            main { width: 960px; max-width: calc(100% - 2em); margin: 0 auto; padding: 3em 1em; }
+            h1 { text-align: center; color: #003d6b; font-size: 2.5rem; margin-bottom: 1rem; }
+            .intro-text { text-align: center; color: #4b5563; margin-bottom: 2rem; max-width: 700px; margin: 0 auto; }
+            .spacer { margin-bottom: 4rem; }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Breadcrumbs />
+            <h1>{pageTitle}</h1>
+            <p class="intro-text">
+                Não se deixe enganar pelos números brutos. Descubra quanto o seu património está a crescer acima da inflação.
+            </p>
+
+            <CalculadoraTaxaReal />
+            <div class="spacer"></div>
+            <ConteudoTaxaReal />
+        </main>
+        <Footer />
+    </body>
+</html>

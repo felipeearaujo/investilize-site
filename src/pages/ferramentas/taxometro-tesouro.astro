@@ -1,0 +1,61 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
+
+// Componentes específicos da ferramenta
+import Taxometro from '../../components/ferramentas/Taxometro.astro';
+import ConteudoTaxometro from '../../components/ferramentas/ConteudoTaxometro.astro';
+
+const pageTitle = "Taxómetro Tesouro Direto: Taxas e Preços em Tempo Real";
+const pageDescription = "Monitorize as taxas do Tesouro Direto hoje. Entenda a marcação a mercado e veja a variação dos títulos públicos em tempo real.";
+
+const dadosFaq = [
+  {
+    question: "O que é o Taxómetro Investilize?",
+    answer: "É uma ferramenta de monitorização em tempo real das taxas e preços dos títulos do Tesouro Direto, extraídos diretamente dos dados oficiais da B3 e do Banco Central."
+  },
+  {
+    question: "Por que as taxas do Tesouro mudam diariamente?",
+    answer: "As taxas variam conforme a marcação a mercado, refletindo as expectativas dos investidores sobre a inflação, a taxa Selic e o risco fiscal do país."
+  }
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <BaseHead title={pageTitle} description={pageDescription} />
+        <FaqSchema faqList={dadosFaq} />
+        <style>
+            main {
+                width: 960px;
+                max-width: calc(100% - 2em);
+                margin: 0 auto;
+                padding: 3em 1em;
+            }
+            h1 { text-align: center; color: #111827; font-size: 2.5rem; margin-bottom: 1rem; }
+            .intro-text { text-align: center; color: #4b5563; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+            .spacer { margin-bottom: 4rem; }
+        </style>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Breadcrumbs />
+            <h1>{pageTitle}</h1>
+            <p class="intro-text">
+                Acompanhe a variação das taxas dos títulos públicos e entenda como o cenário económico impacta a rentabilidade da sua carteira de renda fixa.
+            </p>
+
+            <Taxometro />
+
+            <div class="spacer"></div>
+
+            <ConteudoTaxometro />
+        </main>
+        <Footer />
+    </body>
+</html>
