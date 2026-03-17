@@ -3,12 +3,15 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Petrobras retoma 100% da produção em duas áreas na Bacia de Campos"
 description: "A retomada total da produção na Bacia de Campos reforça o compromisso da Petrobras com a eficiência operacional em seus campos maduros. Para o investi..."
 pubDate: "2026-03-17"
+heroImage: ""
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobras-volta-ter-100-em-areas-na-bacia-de-campos"
 ---
 
 <div class="analise-investilize">
     <strong>Análise Técnica:</strong> A retomada total da produção na Bacia de Campos reforça o compromisso da Petrobras com a eficiência operacional em seus campos maduros. Para o investidor de PETR4, isso se traduz em maior geração de caixa e solidez na tese de dividendos, mostrando que a companhia segue otimizando sua capacidade de entrega mesmo fora do pré-sal. É a gestão de ativos garantindo fôlego para os resultados trimestrais.
 </div>
+
+
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobras-volta-ter-100-em-areas-na-bacia-de-campos">
                     <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
