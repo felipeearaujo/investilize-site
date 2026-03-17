@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<html lang="pt-BR">
+    <head>
+        <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <article>
+                <header class="news-header">
+                    <span class="category">Economia Nacional</span>
+                    <h1>{frontmatter.title}</h1>
+                    <p class="source-credit">Fonte: Agência Brasil | Publicado em {frontmatter.pubDate}</p>
+                </header>
+                
+                <div class="content">
+                    <slot /> </div>
+
+                <footer class="news-footer">
+                    <p><em>Este conteúdo foi republicado via Agência Brasil sob licença Creative Commons. <a href={frontmatter.originalUrl} target="_blank">Ver original.</a></em></p>
+                </footer>
+            </article>
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style>
+    /* Estilo mais "jornalístico" e limpo */
+    .news-header { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+    .category { color: #4bac40; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; }
+    .source-credit { color: #64748b; font-size: 0.9rem; font-style: italic; }
+    .news-footer { margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; }
+</style>
