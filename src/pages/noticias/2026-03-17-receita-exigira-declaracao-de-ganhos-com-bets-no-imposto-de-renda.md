@@ -1,0 +1,71 @@
+---
+layout: "../../layouts/NoticiaLayout.astro"
+title: "Receita exigirá declaração de ganhos com bets no Imposto de Renda"
+description: "A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do Velho Oeste das Bets no Brasil. Para o investidor, isso r..."
+pubDate: "2026-03-17"
+heroImage: "https://imagens.ebc.com.br/foCfLHj2gObESxyQPJTgAfQ8mug=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=rj8FXCJr"
+originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda"
+---
+
+<div class="analise-investilize">
+    <strong>Análise Técnica:</strong> A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do 'Velho Oeste' das Bets no Brasil. Para o investidor, isso reforça a necessidade de organização patrimonial e clareza sobre a origem dos rendimentos. Sob a ótica da Administração Pública, é um passo decisivo para a formalização de um mercado bilionário, garantindo que a base tributária acompanhe as mudanças no comportamento de consumo e entretenimento do brasileiro. A conformidade agora é a regra do jogo.
+</div>
+
+<img src="https://imagens.ebc.com.br/foCfLHj2gObESxyQPJTgAfQ8mug=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=rj8FXCJr" alt="Destaque" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
+
+<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda">
+                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
+				</a></p>O contribuinte terá de informar ao Fisco os ganhos obtidos em 2025 com apostas esportivas e plataformas de jogos online, conhecidas como “bets”, que deverão ser declarados no Imposto de Renda Pessoa Física (IRPF) de 2026. Além dos prêmios recebidos, os contribuintes também precisarão informar os saldos mantidos nas contas dessas plataformas no fim do ano passado.<img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682142&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682142&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+
+<p><strong>De acordo com o Fisco, a obrigação vale para quem recebeu mais de R$ 28.467,20 em prêmios ao longo de 2025 em apostas de quota fixa, modalidade que inclui as plataformas digitais de apostas e algumas loterias.</strong></p>
+
+<p><h3>Notícias relacionadas:</h3><ul><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/irpf-2026-tera-restituicao-automatica-para-pequenos-contribuintes">IRPF 2026 terá restituição automática para pequenos contribuintes.</a></li><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/entenda-mudancas-na-declaracao-do-imposto-de-renda-deste-ano">Entenda as mudanças na declaração do Imposto de Renda deste ano.</a></li><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/prazo-para-enviar-declaracao-do-ir-comeca-na-proxima-segunda">Prazo para enviar declaração do IR começa na próxima segunda.</a></li></ul>Segundo o supervisor do Imposto de Renda da Receita, José Carlos da Fonseca, os apostadores devem apurar os ganhos e registrar as informações na declaração anual.</p>
+
+<blockquote>
+<p>“Essas pessoas apuram e pagam o imposto conforme está na lei. Agora, elas precisam informar esse rendimento na declaração. Trata-se de um ganho tributável”, explicou.</p>
+</blockquote>
+
+<h2>Campo específico</h2>
+
+<p><strong>A Receita também criou campos específicos no sistema da declaração para informar os rendimentos obtidos em plataformas de apostas.</strong></p>
+
+<p>Os valores devem ser registrados de duas formas:</p>
+
+<p>- ganhos com apostas, informados como rendimento tributável;</p>
+
+<p>- saldo mantido nas contas das plataformas, declarado na ficha de “Bens e Direitos”.</p>
+
+<p><strong>O saldo existente em 31 de dezembro de 2025 precisa ser informado quando ultrapassar R$ 5 mil.</strong></p>
+
+<p>Para facilitar o preenchimento, as plataformas devem oferecer ao usuário um documento chamado “ComprovaBet”, que reúne o histórico de movimentações e prêmios obtidos ao longo do ano.</p>
+
+<h2>Tributação</h2>
+
+<p><strong>Segundo as regras atuais, o imposto incide sobre o ganho líquido anual, ou seja, a diferença entre o total de prêmios recebidos e o valor gasto nas apostas.</strong></p>
+
+<p>Caso o lucro anual ultrapasse R$ 28.467,20, o valor excedente será tributado com alíquota de 15%.</p>
+
+<h2>Mudanças</h2>
+
+<p><strong>A declaração dos ganhos com bets é uma das principais mudanças na declaração deste ano. As outras novidades são as seguintes:</strong></p>
+
+<p>- declaração pré-preenchida ampliada: o sistema terá mais dados automáticos, facilitando o envio das informações;</p>
+
+<p>- restituições em quatro lotes: o pagamento das restituições será feito em quatro lotes, e não mais em cinco como em anos anteriores;</p>
+
+<p>- restituição automática para pequenos contribuintes: quem teve pequenos valores de IR retidos na fonte e não fizerem a declaração receberão automaticamente a restituição num lote especial, em 15 de julho;</p>
+
+<p>- nome social: contribuintes poderão informar nome social diretamente na declaração.</p>
+
+<h2>Prazo da declaração</h2>
+
+<p><strong>O prazo de envio da declaração do IR 2026 será de 23 de março a 29 de maio. O programa para preenchimento poderá ser baixado pelos contribuintes a partir de sexta-feira (20), apenas para preenchimento, com as transmissões começando na segunda-feira (23) às 8h.</strong></p>
+
+<p>Quem entregar a declaração após o prazo estará sujeito a multa mínima de R$ 165,74, podendo chegar a 20% do imposto devido.</p>
+
+<p>A Receita Federal estima receber cerca de 44 milhões de declarações do Imposto de Renda em 2026.</p>
+
+<p>Assim como em anos anteriores, quem enviar a declaração mais cedo e sem pendências tende a receber a restituição primeiro.</p>
+
+---
+*Conteúdo original: Agência Brasil.*
