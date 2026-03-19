@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "CDB vs CDI em 2026: Qual rende mais com a Selic a {selicAtual}%?"
-description: "Entenda a diferença entre CDB e CDI com a taxa Selic atual."
+title: "CDB vs CDI: Qual a Diferença e Qual Rende Mais em 2026?"
+description: "CDB é o investimento, CDI é a taxa. Descubra como escolher o melhor CDB que paga 110% do CDI e saia da poupança. Simulador gratuito incluso."
 author: 'Felipe'
 pubDate: '2025-09-09'
 tags: ['Renda Fixa', 'CDB', 'Investimentos', 'CDI', 'iniciantes', 'reserva de emergencia', 'certificado de depósito bancário']
@@ -30,7 +30,7 @@ Qual a diferença entre CDB e CDI? Embora pareçam iguais, o CDB é o investimen
     </a>
 </div>
 
-## Resumo da Diferença: CDB vs. CDI
+## ## Qual a Diferença entre CDB e CDI?
 
 Para nunca mais confundir, veja esta tabela comparativa:
 
