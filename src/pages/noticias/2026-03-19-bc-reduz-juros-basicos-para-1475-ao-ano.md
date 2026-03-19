@@ -47,6 +47,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bc-reduz
 
 <p>A taxa básica de juros é usada nas negociações de títulos públicos no Sistema Especial de Liquidação e Custódia (Selic) e serve de referência para as demais taxas de juros da economia. Ao reajustá-la para cima, o Banco Central segura o excesso de demanda que pressiona os preços, porque juros mais altos encarecem o crédito e estimulam a poupança.</p>
 
-<p>Ao reduzir os juros básicos, o Copom barateia o crédito e incentiva a produção e o consumo, mas enfraquece o controle da inflação. Para cortar a Selic, a autoridade monetária precisa estar segura de que os preços estão sob controle e não correm risco de subir..</p>
+<p>Ao reduzir os juros básicos, o Copom barateia o crédito e incentiva a produção e o consumo, mas enfraquece o controle da inflação. Para cortar a Selic, a autoridade monetária precisa estar segura de que os preços estão sob controle e não correm risco de subir.</p>
 ---
 *Conteúdo original: Agência Brasil.*

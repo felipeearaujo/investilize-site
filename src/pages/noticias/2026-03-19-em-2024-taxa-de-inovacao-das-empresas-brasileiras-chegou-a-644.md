@@ -37,7 +37,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/em-2024-
 
 <p><strong>As empresas inovadoras utilizaram mais apoio público em 2024 (38,6%) na comparação com 2023 (36,3%). O instrumento de apoio público proporcionalmente mais utilizado em 2024 foi o Incentivo fiscal à pesquisa e desenvolvimento e inovação tecnológica (28,9%).</strong></p>
 
-<p>Segundo a Pintec, a expectativa. de 96,4% das empresas inovadoras para 2025 é elevar ou manter os gastos com P&amp;D.</p>
+<p>Segundo a Pintec, a expectativa de 96,4% das empresas inovadoras para 2025 é elevar ou manter os gastos com P&amp;D.</p>
 
 <p>&nbsp;</p>
 ---
