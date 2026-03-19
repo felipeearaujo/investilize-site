@@ -4,8 +4,10 @@ import FaqSchema from '../../components/FaqSchema.astro';
 import CalculadoraPrecoJusto from '../../components/ferramentas/CalculadoraPrecoJusto.astro';
 import ConteudoPrecoJusto from '../../components/ferramentas/ConteudoPrecoJusto.astro';
 
-const pageTitle = "Calculadora de Preço Justo: Graham e Bazin (Ações e FIIs)";
-const pageDescription = "Calcule o valor intrínseco de ações e FIIs usando as fórmulas de Benjamin Graham e Décio Bazin. Descubra a margem de segurança antes de investir.";
+// OTIMIZAÇÃO 1: Título focado nas palavras-chave de alto CTR (Bazin/Graham)
+const pageTitle = "Calculadora Preço Justo: Método Bazin e Fórmula de Graham";
+// OTIMIZAÇÃO 2: Descrição mais persuasiva (CTA)
+const pageDescription = "Simule o preço justo de ações e FIIs. Use a Calculadora do Método Bazin (Teto de Preço) e Fórmula de Graham. Ferramenta gratuita com margem de segurança.";
 
 const faqData = [
   {
@@ -25,10 +27,10 @@ const faqData = [
     <div class="tool-page-wrapper">
         <div class="header-section">
             <div class="intro-seo">
-                <h1>Calculadora de Preço Justo</h1>
+                <!-- OTIMIZAÇÃO 3: H1 explícito sobre o que a ferramenta faz -->
+                <h1>Calculadora de Preço Justo: Bazin e Graham</h1>
                 <p>
-                    Utilize os métodos mais consagrados do mercado financeiro para avaliar se um ativo está com 
-                    <strong>margem de segurança</strong> ou se está caro demais.
+                    Descubra se uma ação está barata ou cara. Calcule o <strong>Valor Intrínseco</strong> pela fórmula de Graham ou o <strong>Teto de Preço</strong> pelo método Bazin de forma rápida e gratuita.
                 </p>
             </div>
         </div>
@@ -41,6 +43,7 @@ const faqData = [
 <style>
     .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
     .header-section { text-align: center; margin-bottom: 3rem; }
-    .header-section h1 { font-size: 2.5rem; color: #111827; margin-bottom: 1rem; }
+    /* Aumentei levemente o tamanho do H1 para dar mais destaque */
+    .header-section h1 { font-size: 2.8rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
     .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
 </style>

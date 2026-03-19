@@ -1,43 +1,137 @@
 <div class="calculator-card">
     <div class="method-selector">
-        <button id="btnGraham" class="active" onclick="setMethod('graham')">Método Graham</button>
-        <button id="btnBazin" onclick="setMethod('bazin')">Método Bazin</button>
+        <button id="btnGraham" class="active" onclick="setMethod('graham')">
+            <span class="method-icon">📈</span> Método Graham
+        </button>
+        <button id="btnBazin" onclick="setMethod('bazin')">
+            <span class="method-icon">💰</span> Método Bazin
+        </button>
+    </div>
+
+    <!-- NOVO: Caixa de explicação dinâmica (Ótimo para SEO) -->
+    <div id="method-info" class="method-info-box">
+        <p id="method-description">A Fórmula de Graham busca o valor intrínseco da ação baseada no VPA (Patrimônio) e LPA (Lucro). Ideal para value investing.</p>
     </div>
 
     <div class="inputs-grid">
         <div id="field-vpa" class="input-field">
-            <label>VPA (Valor Patrimonial por Ação):</label>
-            <input type="number" id="vpa" value="10.00" step="0.01">
+            <label>VPA (Valor Patrimonial):</label>
+            <input type="number" id="vpa" placeholder="Ex: 25.50" step="0.01">
         </div>
         <div id="field-lpa" class="input-field">
             <label>LPA (Lucro por Ação):</label>
-            <input type="number" id="lpa" value="1.00" step="0.01">
+            <input type="number" id="lpa" placeholder="Ex: 4.20" step="0.01">
         </div>
         
         <div id="field-dpa" class="input-field" style="display:none;">
             <label>Dividendo Anual (DPA):</label>
-            <input type="number" id="dpa" value="0.60" step="0.01">
+            <input type="number" id="dpa" placeholder="Ex: 1.50" step="0.01">
         </div>
 
         <div class="input-field">
             <label>Cotação Atual (R$):</label>
-            <input type="number" id="cotacao" value="12.00" step="0.01">
+            <input type="number" id="cotacao" placeholder="Ex: 35.00" step="0.01">
         </div>
     </div>
 
-    <div id="justoResult" class="result-box"></div>
+    <div id="justoResult" class="result-box">
+        <p style="color: #6b7280;">Preencha os campos acima para calcular.</p>
+    </div>
 </div>
 
 <style>
-    .calculator-card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #eee; }
-    .method-selector { display: flex; gap: 10px; margin-bottom: 2rem; }
-    .method-selector button { flex: 1; padding: 10px; border: 1px solid #e5e7eb; border-radius: 8px; cursor: pointer; background: #f9fafb; font-weight: bold; }
-    .method-selector button.active { background: #0167c2; color: white; border-color: #0167c2; }
-    .inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-    .input-field label { display: block; font-weight: bold; margin-bottom: 0.5rem; color: #374151; }
-    .input-field input { width: 100%; padding: 0.75rem; border: 2px solid #e5e7eb; border-radius: 8px; }
-    .result-box { background: #f5f3ff; padding: 1.5rem; border-radius: 10px; text-align: center; border-left: 5px solid #0167c2; }
-    @media (max-width: 600px) { .inputs-grid { grid-template-columns: 1fr; } }
+    .calculator-card { 
+        background: #fff; 
+        padding: 2rem; 
+        border-radius: 16px; 
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+        border: 1px solid #e5e7eb; 
+        margin-top: 20px;
+    }
+    .method-selector { 
+        display: flex; 
+        gap: 10px; 
+        margin-bottom: 1.5rem; 
+        border-bottom: 2px solid #f3f4f6;
+        padding-bottom: 10px;
+    }
+    .method-selector button { 
+        flex: 1; 
+        padding: 12px; 
+        border: 2px solid #e5e7eb; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        background: #fff; 
+        font-weight: 600; 
+        color: #4b5563;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+    .method-selector button:hover {
+        border-color: #0167c2;
+        color: #0167c2;
+    }
+    .method-selector button.active { 
+        background: #0167c2; 
+        color: white; 
+        border-color: #0167c2; 
+        box-shadow: 0 4px 10px rgba(1, 103, 194, 0.2);
+    }
+    
+    /* Caixa de info */
+    .method-info-box {
+        background-color: #f8fafc;
+        border-left: 4px solid #0167c2;
+        padding: 12px 15px;
+        margin-bottom: 1.5rem;
+        border-radius: 0 8px 8px 0;
+    }
+    .method-info-box p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #334155;
+        line-height: 1.5;
+    }
+
+    .inputs-grid { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 1.5rem; 
+        margin-bottom: 2rem; 
+    }
+    .input-field label { 
+        display: block; 
+        font-weight: 600; 
+        margin-bottom: 0.5rem; 
+        color: #374151;
+        font-size: 0.95rem;
+    }
+    .input-field input { 
+        width: 100%; 
+        padding: 0.85rem; 
+        border: 2px solid #e5e7eb; 
+        border-radius: 8px; 
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+    .input-field input:focus {
+        outline: none;
+        border-color: #0167c2;
+    }
+    .result-box { 
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); 
+        padding: 1.5rem; 
+        border-radius: 10px; 
+        text-align: center; 
+        border: 1px solid #bae6fd;
+    }
+    @media (max-width: 600px) { 
+        .inputs-grid { grid-template-columns: 1fr; }
+        .method-selector { flex-direction: column; }
+    }
 </style>
 
 <script is:inline>
@@ -45,11 +139,24 @@
 
   function setMethod(method) {
       currentMethod = method;
+      
+      // Toggle botões
       document.getElementById('btnGraham').className = method === 'graham' ? 'active' : '';
       document.getElementById('btnBazin').className = method === 'bazin' ? 'active' : '';
+      
+      // Toggle campos
       document.getElementById('field-vpa').style.display = method === 'graham' ? 'block' : 'none';
       document.getElementById('field-lpa').style.display = method === 'graham' ? 'block' : 'none';
       document.getElementById('field-dpa').style.display = method === 'bazin' ? 'block' : 'none';
+
+      // NOVO: Toggle Texto Explicativo (SEO Content)
+      const desc = document.getElementById('method-description');
+      if(method === 'graham') {
+          desc.innerHTML = "<strong>Fórmula de Graham:</strong> √(22.5 × VPA × LPA). Ideal para encontrar ações subvalorizadas com base no patrimônio e lucro.";
+      } else {
+          desc.innerHTML = "<strong>Método Bazin (Teto de Preço):</strong> Dividendo Anual ÷ 0.06. Assume uma rentabilidade desejada de 6% ao ano em dividendos.";
+      }
+
       calcular();
   }
 
@@ -61,25 +168,33 @@
       let precoJusto = 0;
 
       if (currentMethod === 'graham') {
-          // Fórmula de Graham: Raiz(22.5 * VPA * LPA)
           const produto = 22.5 * vpa * lpa;
           precoJusto = produto > 0 ? Math.sqrt(produto) : 0;
       } else {
-          // Fórmula de Bazin: DPA / 0.06
+          // Fixa a taxa em 6% (padrão Bazin), mas poderia ser um campo se desejado
           precoJusto = dpa / 0.06;
       }
 
-      const margem = precoJusto > 0 ? ((precoJusto / cotacao) - 1) * 100 : 0;
+      // Cálculo de Upside
+      const margem = precoJusto > 0 && cotacao > 0 ? ((precoJusto / cotacao) - 1) * 100 : 0;
       const corMargem = margem >= 0 ? '#059669' : '#dc2626';
+      const textoMargem = margem >= 0 ? 'Upside (Potencial de Alta)' : 'Downside (Sobrevalorizado)';
 
-      document.getElementById('justoResult').innerHTML = `
-          <h3 style="margin-top:0;">Preço Justo Estimado: R$ ${precoJusto.toFixed(2)}</h3>
-          <p style="font-size: 1.2rem;">Potencial: <strong style="color: ${corMargem};">${margem.toFixed(2)}%</strong></p>
-          <small>${margem >= 0 ? 'Ativo com margem de segurança' : 'Ativo acima do preço justo'}</small>
-      `;
+      if(precoJusto > 0) {
+          document.getElementById('justoResult').innerHTML = `
+              <h3 style="margin-top:0; font-size: 1.5rem;">Preço Justo: R$ ${precoJusto.toFixed(2)}</h3>
+              <p style="font-size: 1.1rem; margin-bottom: 5px;">${textoMargem}: <strong style="color: ${corMargem};">${margem.toFixed(2)}%</strong></p>
+              <small style="color: #64748b;">Cotação atual: R$ ${cotacao.toFixed(2)}</small>
+          `;
+      } else {
+           document.getElementById('justoResult').innerHTML = `<p style="color: #6b7280;">Aguardando dados válidos...</p>`;
+      }
   }
 
+  // Listeners
   const ids = ['vpa', 'lpa', 'dpa', 'cotacao'];
   ids.forEach(id => document.getElementById(id).addEventListener('input', calcular));
-  calcular();
+  
+  // Init
+  setMethod('graham');
 </script>
