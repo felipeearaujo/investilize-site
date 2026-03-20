@@ -1,7 +1,8 @@
 ---
+// src/pages/ferramentas/juros-compostos.astro
 import Layout from '../../layouts/BlogPost.astro';
 import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astro';
-import TextoJurosCompostos from '../../components/ferramentas/TextoJurosCompostos.astro'; // NOME ALTERADO
+import TextoJurosCompostos from '../../components/ferramentas/TextoJurosCompostos.astro';
 
 const pageTitle = "Calculadora de Juros Compostos com Aportes Mensais";
 const pageDescription = "Simule o poder dos juros compostos com aportes mensais. Veja quanto seu investimento pode render no longo prazo e planeje sua independência financeira.";
@@ -20,7 +21,6 @@ const pageDescription = "Simule o poder dos juros compostos com aportes mensais.
         </div>
 
         <CalculadoraJuros />
-        <!-- Componente com nome corrigido -->
         <TextoJurosCompostos />
     </div>
 </Layout>
