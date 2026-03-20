@@ -1,4 +1,12 @@
 # public/robots.txt
-User-agent: *
+User-Agent: *
 Allow: /
+
+# Bloqueia pastas técnicas e de sistema
+Disallow: /_astro/
+Disallow: /api/  # Bloqueia a API de cotação que deu erro
+
+# Bloqueia arquivos de imagem baixáveis (evita que a logo apareça no Google Imagens ocupando espaço)
+Disallow: /*.png$ Disallow: /*.jpg$ 
+# Sitemap (importante para ajudar o Google)
 Sitemap: https://investilize.com.br/sitemap-index.xml

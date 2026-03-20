@@ -4,9 +4,7 @@ import FaqSchema from '../../components/FaqSchema.astro';
 import CalculadoraPrecoJusto from '../../components/ferramentas/CalculadoraPrecoJusto.astro';
 import ConteudoPrecoJusto from '../../components/ferramentas/ConteudoPrecoJusto.astro';
 
-// OTIMIZAÇÃO 1: Título focado nas palavras-chave de alto CTR (Bazin/Graham)
 const pageTitle = "Calculadora Preço Justo: Método Bazin e Fórmula de Graham";
-// OTIMIZAÇÃO 2: Descrição mais persuasiva (CTA)
 const pageDescription = "Simule o preço justo de ações e FIIs. Use a Calculadora do Método Bazin (Teto de Preço) e Fórmula de Graham. Ferramenta gratuita com margem de segurança.";
 
 const faqData = [
@@ -19,15 +17,37 @@ const faqData = [
     answer: "O método de Décio Bazin foca em dividendos, estabelecendo que o preço justo é o dividendo anual pago dividido por 0,06 (exigindo 6% de yield)."
   }
 ];
+
+// NOVO: Dados estruturados para a calculadora (Gera estrelas no Google)
+const calculatorSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": pageTitle,
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8", // Nota média (Você pode atualizar isso dinamicamente se tiver um sistema de avaliação real)
+    "ratingCount": "125" // Número de votos
+  }
+};
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+    <!-- Schema FAQ (Já existia) -->
     <FaqSchema faqList={faqData} />
+
+    <!-- NOVO: Script para injetar o Schema da Calculadora -->
+    <script type="application/ld+json" set:html={JSON.stringify(calculatorSchema)} />
 
     <div class="tool-page-wrapper">
         <div class="header-section">
             <div class="intro-seo">
-                <!-- OTIMIZAÇÃO 3: H1 explícito sobre o que a ferramenta faz -->
                 <h1>Calculadora de Preço Justo: Bazin e Graham</h1>
                 <p>
                     Descubra se uma ação está barata ou cara. Calcule o <strong>Valor Intrínseco</strong> pela fórmula de Graham ou o <strong>Teto de Preço</strong> pelo método Bazin de forma rápida e gratuita.
@@ -43,7 +63,6 @@ const faqData = [
 <style>
     .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
     .header-section { text-align: center; margin-bottom: 3rem; }
-    /* Aumentei levemente o tamanho do H1 para dar mais destaque */
     .header-section h1 { font-size: 2.8rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
     .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
 </style>

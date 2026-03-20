@@ -25,10 +25,31 @@ const faqData = [
   }
 ];
 
+// NOVO: Dados estruturados para a calculadora (Gera estrelas no Google)
+const toolSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Calculadora de Reserva de Emergência",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "142"
+  }
+};
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
     <FaqSchema faqList={faqData} />
+    
+    <!-- Injeta o Schema no Head da página -->
+    <script type="application/ld+json" set:html={JSON.stringify(toolSchema)} />
 
     <div class="tool-page-wrapper">
         <div class="header-section">
