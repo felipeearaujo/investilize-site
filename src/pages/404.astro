@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+
+const pageTitle = "Página não encontrada (Erro 404)";
+const pageDescription = "A página que você procura não existe ou foi movida. Volte para a página inicial ou acesse nossas ferramentas financeiras gratuitas.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1>Ops! Página não encontrada</h1>
+        <p class="error-message">
+            Parece que a página que você está procurando foi movida, renomeada ou não existe mais. 
+            Não se preocupe, podemos te ajudar a voltar aos trilhos.
+        </p>
+
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">
+                ← Voltar para a Home
+            </a>
+            <a href="/ferramentas/independenciafinanceira/" class="btn btn-secondary">
+                Simular Independência Financeira
+            </a>
+        </div>
+
+        <div class="suggestions">
+            <h3>Links Úteis:</h3>
+            <ul>
+                <li><a href="/blog/cdb-cdi-diferenca/">Entender CDB vs CDI</a></li>
+                <li><a href="/ferramentas/calculadora-preco-justo/">Calcular Preço Justo de Ações</a></li>
+                <li><a href="/blog/reserva-emergencia/">Montar Reserva de Emergência</a></li>
+            </ul>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    .error-container {
+        text-align: center;
+        padding: 4rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .error-code {
+        font-size: 8rem;
+        font-weight: 900;
+        color: #e5e7eb;
+        line-height: 1;
+        margin-bottom: 1rem;
+        user-select: none;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #111827;
+        margin-bottom: 1rem;
+    }
+    .error-message {
+        font-size: 1.2rem;
+        color: #6b7280;
+        margin-bottom: 2.5rem;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .action-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+    }
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+    .btn-primary {
+        background-color: #0167c2;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: #01549f;
+    }
+    .btn-secondary {
+        background-color: #f3f4f6;
+        color: #111827;
+        border: 1px solid #d1d5db;
+    }
+    .btn-secondary:hover {
+        background-color: #e5e7eb;
+    }
+    .suggestions {
+        background-color: #f9fafb;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+    }
+    .suggestions h3 {
+        margin-top: 0;
+        color: #374151;
+        font-size: 1.1rem;
+    }
+    .suggestions ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .suggestions a {
+        color: #0167c2;
+        text-decoration: none;
+    }
+    .suggestions a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        .error-code { font-size: 5rem; }
+        h1 { font-size: 1.8rem; }
+    }
+</style>
