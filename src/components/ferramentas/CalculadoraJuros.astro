@@ -1,34 +1,186 @@
 ---
-import Layout from '../../layouts/BlogPost.astro';
-import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astro';
-import TextoJurosCompostos from '../../components/ferramentas/TextoJurosCompostos.astro';
-
-// PIVOT DE SEO: Foco em "Aportes Mensais" para fugir da concorrência genérica
-const pageTitle = "Calculadora de Juros Compostos com Aportes Mensais";
-const pageDescription = "Simule o poder dos juros compostos com aportes mensais. Veja quanto seu investimento pode render no longo prazo e planeje sua independência financeira.";
+// src/components/ferramentas/CalculadoraJuros.astro
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-    <div class="tool-page-wrapper">
-        <div class="header-section">
-            <div class="intro-seo">
-                <!-- H1 focado na funcionalidade principal -->
-                <h1>Calculadora de Juros Compostos com Aportes Mensais</h1>
-                <p>
-                    Descubra como pequenos aportes mensais podem se transformar em um grande patrimônio. 
-                    Use a simulação abaixo para ver a mágica dos juros compostos agindo sobre seu capital inicial.
-                </p>
-            </div>
-        </div>
-
-        <CalculadoraJuros />
-        <TextoJurosCompostos />
+<div class="calculator-container">
+  <div class="input-grid">
+    <div class="input-group">
+      <label for="valor-inicial">Valor Inicial (R$)</label>
+      <input type="number" id="valor-inicial" value="1000" step="100" min="0">
     </div>
-</Layout>
+    
+    <div class="input-group">
+      <label for="aporte-mensal">Aporte Mensal (R$)</label>
+      <input type="number" id="aporte-mensal" value="500" step="50" min="0">
+    </div>
+
+    <div class="input-group">
+      <label for="taxa-juros">Taxa de Juros Anual (%)</label>
+      <input type="number" id="taxa-juros" value="10" step="0.1" min="0">
+    </div>
+
+    <div class="input-group">
+      <label for="periodo-anos">Período (Anos)</label>
+      <input type="number" id="periodo-anos" value="10" step="1" min="1">
+    </div>
+  </div>
+
+  <button id="btn-calcular" class="btn-primary">Calcular Rendimento</button>
+
+  <div id="resultado-box" class="resultado-container hidden">
+    <div class="resultado-item">
+      <span>Valor Total Final</span>
+      <h3 id="res-total" class="highlight">R$ 0,00</h3>
+    </div>
+    <div class="resultado-detalhes">
+      <div class="detalhe">
+        <span>Valor Investido:</span>
+        <strong id="res-investido">R$ 0,00</strong>
+      </div>
+      <div class="detalhe">
+        <span>Total em Juros:</span>
+        <strong id="res-juros" class="juros-text">R$ 0,00</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function calcularJuros() {
+    const valorInicial = parseFloat(document.getElementById('valor-inicial').value) || 0;
+    const aporteMensal = parseFloat(document.getElementById('aporte-mensal').value) || 0;
+    const taxaAnual = parseFloat(document.getElementById('taxa-juros').value) || 0;
+    const anos = parseInt(document.getElementById('periodo-anos').value) || 0;
+
+    const meses = anos * 12;
+    const taxaMensal = Math.pow(1 + (taxaAnual / 100), 1 / 12) - 1;
+
+    let montante = valorInicial;
+    let totalInvestido = valorInicial + (aporteMensal * meses);
+
+    for (let i = 0; i < meses; i++) {
+      montante = montante * (1 + taxaMensal) + aporteMensal;
+    }
+
+    const totalJuros = montante - totalInvestido;
+
+    const formatarBRL = (valor) => {
+      return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    };
+
+    document.getElementById('res-total').innerText = formatarBRL(montante);
+    document.getElementById('res-investido').innerText = formatarBRL(totalInvestido);
+    document.getElementById('res-juros').innerText = formatarBRL(totalJuros);
+    
+    document.getElementById('resultado-box').classList.remove('hidden');
+  }
+
+  // Adiciona o evento de clique ao botão assim que o componente carregar
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('btn-calcular');
+    if (btn) btn.addEventListener('click', calcularJuros);
+  });
+</script>
 
 <style>
-    .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
-    .header-section { text-align: center; margin-bottom: 3rem; }
-    .header-section h1 { font-size: 2.5rem; color: #111827; margin-bottom: 1rem; }
-    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
+  .calculator-container {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    font-family: sans-serif;
+  }
+  .input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 600px) {
+    .input-grid { grid-template-columns: 1fr; }
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .input-group label {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .input-group input {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .input-group input:focus {
+    border-color: #0167c2;
+  }
+  .btn-primary {
+    width: 100%;
+    background-color: #0167c2;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: #01529b;
+  }
+  .resultado-container {
+    margin-top: 2rem;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #0167c2;
+  }
+  .resultado-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .resultado-item span {
+    font-size: 1rem;
+    color: #64748b;
+  }
+  .highlight {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin: 0.5rem 0 0 0;
+  }
+  .resultado-detalhes {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+  }
+  .detalhe {
+    display: flex;
+    flex-direction: column;
+  }
+  .detalhe span {
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+  .detalhe strong {
+    font-size: 1.1rem;
+    color: #334155;
+  }
+  .juros-text {
+    color: #16a34a !important; /* Verde para destacar o ganho */
+  }
+  .hidden {
+    display: none;
+  }
 </style>
