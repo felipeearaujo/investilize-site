@@ -1,0 +1,32 @@
+# ==============================================================================
+# CONFIGURAÇÕES DE REDIRECIONAMENTO (SEO & HTTPS)
+# Resolve os erros de "Redirect" no Google Search Console
+# ==============================================================================
+
+# 1. Redireciona HTTP + WWW para HTTPS sem WWW
+[[redirects]]
+  from = "http://www.investilize.com.br/*"
+  to = "https://investilize.com.br/:splat"
+  status = 301
+  force = true
+
+# 2. Redireciona HTTPS + WWW para HTTPS sem WWW
+[[redirects]]
+  from = "https://www.investilize.com.br/*"
+  to = "https://investilize.com.br/:splat"
+  status = 301
+  force = true
+
+# 3. Redireciona HTTP sem WWW para HTTPS sem WWW
+[[redirects]]
+  from = "http://investilize.com.br/*"
+  to = "https://investilize.com.br/:splat"
+  status = 301
+  force = true
+
+# ==============================================================================
+# CONFIGURAÇÕES DE BUILD (ASTRO)
+# ==============================================================================
+[build]
+  command = "npm run build"
+  publish = "dist"

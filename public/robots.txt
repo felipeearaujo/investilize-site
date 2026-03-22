@@ -2,11 +2,14 @@
 User-Agent: *
 Allow: /
 
-# Bloqueia pastas técnicas e de sistema
-Disallow: /_astro/
-Disallow: /api/  # Bloqueia a API de cotação que deu erro
+# Bloqueia a API de cotação que deu erro
+Disallow: /api/  
 
-# Bloqueia arquivos de imagem baixáveis (evita que a logo apareça no Google Imagens ocupando espaço)
-Disallow: /*.png$ Disallow: /*.jpg$ 
+# Bloqueia arquivos de imagem baixáveis para não indexar no Google Imagens
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.svg$
+
 # Sitemap (importante para ajudar o Google)
 Sitemap: https://investilize.com.br/sitemap-index.xml
