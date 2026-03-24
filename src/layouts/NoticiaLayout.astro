@@ -1,15 +1,54 @@
 ---
+import { SEO } from "astro-seo";
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { frontmatter } = Astro.props;
+
+// Configuração da URL Canônica para SEO (Evita punição por conteúdo duplicado)
+const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 ---
 
 <html lang="pt-BR">
     <head>
+        <SEO
+            title={frontmatter.title}
+            description={frontmatter.description}
+            canonical={canonicalURL}
+            openGraph={{
+                basic: {
+                    title: frontmatter.title,
+                    type: "article",
+                    image: frontmatter.heroImage,
+                },
+                article: {
+                    publishedTime: frontmatter.pubDate,
+                    authors: ["Investilize"],
+                    section: "Economia"
+                },
+                optional: {
+                    description: frontmatter.description,
+                    siteName: "Investilize",
+                }
+            }}
+            twitter={{
+                card: "summary_large_image",
+                site: "@investilize",
+                creator: "@felipearaujo",
+                title: frontmatter.title,
+                description: frontmatter.description,
+                image: frontmatter.heroImage,
+            }}
+            extend={{
+                meta: [
+                    { name: "author", content: "Agência Brasil" },
+                    { name: "publish_date", content: frontmatter.pubDate },
+                ],
+            }}
+        />
+        
         <BaseHead title={frontmatter.title} description={frontmatter.description} />
-        <meta name="author" content="Agência Brasil">
     </head>
     <body>
         <Header />
@@ -22,10 +61,11 @@ const { frontmatter } = Astro.props;
                 </header>
                 
                 <div class="content">
-                    <slot /> </div>
+                    <slot /> 
+                </div>
 
                 <footer class="news-footer">
-                    <p><em>Este conteúdo foi republicado via Agência Brasil sob licença Creative Commons. <a href={frontmatter.originalUrl} target="_blank">Ver original.</a></em></p>
+                    <p><em>Este conteúdo foi republicado via Agência Brasil sob licença Creative Commons. <a href={frontmatter.originalUrl} target="_blank" rel="noopener noreferrer">Ver original.</a></em></p>
                 </footer>
             </article>
         </main>
@@ -34,9 +74,10 @@ const { frontmatter } = Astro.props;
 </html>
 
 <style>
-    /* Estilo mais "jornalístico" e limpo */
+    /* Estilo jornalístico e limpo */
     .news-header { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
     .category { color: #4bac40; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; }
     .source-credit { color: #64748b; font-size: 0.9rem; font-style: italic; }
     .news-footer { margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; }
+    .content { line-height: 1.6; color: #334155; }
 </style>

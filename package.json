@@ -16,6 +16,7 @@
     "@astrojs/rss": "^4.0.13",
     "@astrojs/sitemap": "^3.6.0",
     "astro": "^5.15.9",
+    "astro-seo": "^1.1.0",
     "chart.js": "^4.5.1",
     "sharp": "^0.34.2"
   }

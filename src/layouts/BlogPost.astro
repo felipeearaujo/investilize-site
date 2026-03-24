@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { SEO } from "astro-seo";
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -17,19 +18,52 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageAlt } = Astro.props;
 
 // 2. LÓGICA DE SUBSTITUIÇÃO DINÂMICA
-const selic = indicadores?.selic || "13.25";
+const selic = indicadores?.selic || "14.75";
 const dynamicTitle = title.replace('{selicAtual}', selic);
 const dynamicDescription = description.replace('{selicAtual}', selic);
+
+// 3. URL CANÔNICA
+const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
+
+// 4. TRATAMENTO DA IMAGEM (Astro Assets pode retornar objeto ou string)
+const resolvedImage = typeof heroImage === 'string' ? heroImage : heroImage?.src;
 ---
 
 <html lang="pt-br">
     <head>
+        <SEO
+            title={dynamicTitle}
+            description={dynamicDescription}
+            canonical={canonicalURL}
+            openGraph={{
+                basic: {
+                    title: dynamicTitle,
+                    type: "article",
+                    image: resolvedImage,
+                },
+                article: {
+                    publishedTime: pubDate.toISOString(),
+                    modifiedTime: updatedDate?.toISOString(),
+                    authors: ["Investilize"],
+                    tags: ["Investimentos", "Finanças", "Educação Financeira"]
+                }
+            }}
+            twitter={{
+                card: "summary_large_image",
+                site: "@investilize",
+                title: dynamicTitle,
+                description: dynamicDescription,
+                image: resolvedImage,
+            }}
+        />
+
         <BaseHead title={dynamicTitle} description={dynamicDescription} />       
+        
         <ArticleSchema
             title={dynamicTitle}
             description={dynamicDescription}
             publishDate={pubDate}
-            imagePath={heroImage}
+            imagePath={resolvedImage}
         />
 
         {faqList && <FaqSchema faqList={faqList} />}
@@ -40,24 +74,13 @@ const dynamicDescription = description.replace('{selicAtual}', selic);
           "@type": "Organization",
           "name": "Investilize",
           "url": "https://investilize.com.br/",
-          "logo": "https://investilize.com.br/logo.png",
-          "sameAs": [
-            "https://www.instagram.com/seu_perfil_aqui",
-            "https://www.facebook.com/sua_pagina_aqui",
-            "https://www.linkedin.com/company/seu_perfil_aqui"
-          ]
+          "logo": "https://investilize.com.br/logo.png"
         }
         </script>
 
         <style>
-            main {
-                width: calc(100% - 2em);
-                max-width: 100%;
-                margin: 0;
-            }
-            .hero-image {
-                width: 100%;
-            }
+            main { width: calc(100% - 2em); max-width: 100%; margin: 0; }
+            .hero-image { width: 100%; }
             .hero-image img {
                 display: block;
                 margin: 0 auto;
@@ -73,22 +96,10 @@ const dynamicDescription = description.replace('{selicAtual}', selic);
                 padding: 1em;
                 color: rgb(var(--gray-dark));
             }
-            .title {
-                margin-bottom: 1em;
-                padding: 1em 0;
-                text-align: center;
-                line-height: 1;
-            }
-            .title h1 {
-                margin: 0 0 0.5em 0;
-            }
-            .date {
-                margin-bottom: 0.5em;
-                color: rgb(var(--gray));
-            }
-            .last-updated-on {
-                font-style: italic;
-            }
+            .title { margin-bottom: 1em; padding: 1em 0; text-align: center; line-height: 1; }
+            .title h1 { margin: 0 0 0.5em 0; }
+            .date { margin-bottom: 0.5em; color: rgb(var(--gray)); }
+            .last-updated-on { font-style: italic; }
         </style>
     </head>
 
@@ -109,10 +120,7 @@ const dynamicDescription = description.replace('{selicAtual}', selic);
                     <Breadcrumbs />
                     <div class="title">
                         <div class="date">
-                            {pubDate && (
-                                <FormattedDate date={pubDate} />
-                            )}
-                            
+                            {pubDate && <FormattedDate date={pubDate} />}
                             {updatedDate && (
                                 <div class="last-updated-on">
                                     Atualizado em <FormattedDate date={updatedDate} />
