@@ -6,8 +6,12 @@ import Footer from '../components/Footer.astro';
 
 const { frontmatter } = Astro.props;
 
-// Configuração da URL Canônica para SEO (Evita punição por conteúdo duplicado)
+// 1. Configuração da URL Canônica
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
+
+// 2. TRATAMENTO DE SEGURANÇA PARA A DATA (Evita o erro toISOString)
+const safeDate = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
+const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOString() : undefined;
 ---
 
 <html lang="pt-BR">
@@ -23,7 +27,8 @@ const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").t
                     image: frontmatter.heroImage,
                 },
                 article: {
-                    publishedTime: frontmatter.pubDate,
+                    // Usa a data tratada com segurança
+                    publishedTime: isoPubDate,
                     authors: ["Investilize"],
                     section: "Economia"
                 },
@@ -43,7 +48,7 @@ const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").t
             extend={{
                 meta: [
                     { name: "author", content: "Agência Brasil" },
-                    { name: "publish_date", content: frontmatter.pubDate },
+                    { name: "publish_date", content: frontmatter.pubDate || "" },
                 ],
             }}
         />

@@ -19,14 +19,18 @@ const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageA
 
 // 2. LÓGICA DE SUBSTITUIÇÃO DINÂMICA
 const selic = indicadores?.selic || "14.75";
-const dynamicTitle = title.replace('{selicAtual}', selic);
-const dynamicDescription = description.replace('{selicAtual}', selic);
+const dynamicTitle = title ? title.replace('{selicAtual}', selic) : "";
+const dynamicDescription = description ? description.replace('{selicAtual}', selic) : "";
 
 // 3. URL CANÔNICA
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 
-// 4. TRATAMENTO DA IMAGEM (Astro Assets pode retornar objeto ou string)
+// 4. TRATAMENTO DA IMAGEM
 const resolvedImage = typeof heroImage === 'string' ? heroImage : heroImage?.src;
+
+// 5. TRATAMENTO DE DATAS PARA O SEO (Prevenção de erro undefined)
+const isoPubDate = pubDate instanceof Date ? pubDate.toISOString() : undefined;
+const isoUpdateDate = updatedDate instanceof Date ? updatedDate.toISOString() : undefined;
 ---
 
 <html lang="pt-br">
@@ -42,8 +46,8 @@ const resolvedImage = typeof heroImage === 'string' ? heroImage : heroImage?.src
                     image: resolvedImage,
                 },
                 article: {
-                    publishedTime: pubDate.toISOString(),
-                    modifiedTime: updatedDate?.toISOString(),
+                    publishedTime: isoPubDate,
+                    modifiedTime: isoUpdateDate,
                     authors: ["Investilize"],
                     tags: ["Investimentos", "Finanças", "Educação Financeira"]
                 }
@@ -57,7 +61,7 @@ const resolvedImage = typeof heroImage === 'string' ? heroImage : heroImage?.src
             }}
         />
 
-        <BaseHead title={dynamicTitle} description={dynamicDescription} />       
+        <BaseHead title={dynamicTitle} description={dynamicDescription} />        
         
         <ArticleSchema
             title={dynamicTitle}
