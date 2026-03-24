@@ -17,16 +17,16 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, faqList, heroImageAlt } = Astro.props;
 
-// 2. LÓGICA DE SUBSTITUIÇÃO DINÂMICA
+// 2. LÓGICA DE SUBSTITUIÇÃO DINÂMICA (Com Fallback para evitar erro de título vazio)
 const selic = indicadores?.selic || "14.75";
-const dynamicTitle = title ? title.replace('{selicAtual}', selic) : "";
-const dynamicDescription = description ? description.replace('{selicAtual}', selic) : "";
+const dynamicTitle = title ? title.replace('{selicAtual}', selic) : "Investilize";
+const dynamicDescription = description ? description.replace('{selicAtual}', selic) : "Educação Financeira e Investimentos";
 
 // 3. URL CANÔNICA
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 
-// 4. TRATAMENTO DA IMAGEM
-const resolvedImage = typeof heroImage === 'string' ? heroImage : heroImage?.src;
+// 4. TRATAMENTO DA IMAGEM (Com Fallback obrigatório para o OpenGraph)
+const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.src) || "https://investilize.com.br/logo.png";
 
 // 5. TRATAMENTO DE DATAS PARA O SEO (Prevenção de erro undefined)
 const isoPubDate = pubDate instanceof Date ? pubDate.toISOString() : undefined;

@@ -12,28 +12,32 @@ const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").t
 // 2. TRATAMENTO DE SEGURANÇA PARA A DATA (Evita o erro toISOString)
 const safeDate = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
 const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOString() : undefined;
+
+// 3. FALLBACKS OBRIGATÓRIOS PARA O ASTRO-SEO (Evita erro de build na Netlify)
+const safeTitle = frontmatter.title || "Notícias de Economia | Investilize";
+const safeDescription = frontmatter.description || "Acompanhe as últimas atualizações sobre economia, finanças e mercado financeiro.";
+const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png";
 ---
 
 <html lang="pt-BR">
     <head>
         <SEO
-            title={frontmatter.title}
-            description={frontmatter.description}
+            title={safeTitle}
+            description={safeDescription}
             canonical={canonicalURL}
             openGraph={{
                 basic: {
-                    title: frontmatter.title,
+                    title: safeTitle,
                     type: "article",
-                    image: frontmatter.heroImage,
+                    image: safeImage,
                 },
                 article: {
-                    // Usa a data tratada com segurança
                     publishedTime: isoPubDate,
                     authors: ["Investilize"],
                     section: "Economia"
                 },
                 optional: {
-                    description: frontmatter.description,
+                    description: safeDescription,
                     siteName: "Investilize",
                 }
             }}
@@ -41,9 +45,9 @@ const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOStri
                 card: "summary_large_image",
                 site: "@investilize",
                 creator: "@felipearaujo",
-                title: frontmatter.title,
-                description: frontmatter.description,
-                image: frontmatter.heroImage,
+                title: safeTitle,
+                description: safeDescription,
+                image: safeImage,
             }}
             extend={{
                 meta: [
@@ -53,7 +57,7 @@ const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOStri
             }}
         />
         
-        <BaseHead title={frontmatter.title} description={frontmatter.description} />
+        <BaseHead title={safeTitle} description={safeDescription} />
     </head>
     <body>
         <Header />
