@@ -3,6 +3,7 @@ layout: '../../layouts/NoticiaLayout.astro'
 title: 'Receita encurta prazo para entregar declaração do IRPF 2026'
 description: 'A redução no prazo para a entrega do IRPF 2026 coloca uma pressão extra na organização do contribuinte. Veja as novas regras e limites.'
 pubDate: '2026-03-17'
+heroImage: "https://imagens.ebc.com.br/lLv-xkAc-G4FNOeXQCakk_MqUcI=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=vmQkVnqN"
 originalUrl: 'https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-encurta-prazo-para-entregar-declaracao-do-irpf-2026'
 ---
 

@@ -24,7 +24,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/em-2024-
 <p>Segundo o analista da Pintec, Flávio Peixoto, essa queda pode ser atribuída à conjuntura econômica.</p>
 
 <blockquote>
-<p>“2021 foi um ano muito atípico de pós-pandemia. As atividades produtivas e inovativas estavam bastante represadas. Nos três últimos anos as atividades ficaram mais estáveis. A taxa de investimentos também caiu e houve alta da [taxa de juros, a Selic](https://investilize.com.br/ferramentas/Taxometro)”, disse o analista.</p>
+<p>“2021 foi um ano muito atípico de pós-pandemia. As atividades produtivas e inovativas estavam bastante represadas. Nos três últimos anos as atividades ficaram mais estáveis. A taxa de investimentos também caiu e houve alta da <a href="https://investilize.com.br/ferramentas/Taxometro">taxa de juros, a Selic</a>, disse o analista.</p>
 </blockquote>
 
 <p>O <strong>setor de fabricação de produtos químicos (84,5%) liderou o <em>ranking</em> de inovação entre as atividades industriais, seguido por fabricação de máquinas, aparelhos e materiais elétricos (82,1%) e fabricação de móveis (77,1%). Fabricação de produtos do fumo (29,8%) foi o setor menos inovador.</strong></p>

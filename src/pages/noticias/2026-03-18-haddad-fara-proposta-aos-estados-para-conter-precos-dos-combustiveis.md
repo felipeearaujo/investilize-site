@@ -13,8 +13,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-f
     Sob o prisma da Administração Pública, o desafio reside em harmonizar a necessidade de alívio no bolso do consumidor com a manutenção da arrecadação estadual de ICMS. O mercado monitora agora se a solução será estrutural ou apenas um paliativo fiscal, o que ditará as expectativas para os juros e o consumo no curto prazo. Para entender como o cenário de juros afeta seus títulos, veja o nosso <a href="/ferramentas/Taxometro">Taxômetro do Tesouro Direto</a>.
 </div>
 
-<img src="https://imagens.ebc.com.br/IskngAoz8RNzPMqSmPPTfSy2yvM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/12/lula-combustiveis-bdm-mc_abr_12032026-17.jpg?itok=QA4x8kbW" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
-
 <p style="text-align: center;">
     <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-fara-proposta-aos-estados-para-conter-precos-dos-combustiveis">
         <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
