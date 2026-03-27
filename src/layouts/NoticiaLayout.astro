@@ -72,7 +72,14 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
                 </header>
                 
                 {frontmatter.heroImage && (
-                    
+                    <div class="imagem-destaque">
+                        <img 
+                            src={frontmatter.heroImage} 
+                            alt={safeTitle} 
+                            referrerpolicy="no-referrer"
+                            loading="lazy"
+                        />
+                    </div>
                 )}
 
                 <div class="content">
@@ -106,8 +113,11 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     }
     
-    /* Oculta a primeira imagem que vem do Markdown para evitar duplicação com o heroImage */
-.content img:first-of-type {
-    display: none;
-}
+    /* CORREÇÃO: Usando :global() para afetar o conteúdo do <slot />.
+      Oculta a imagem se ela vier solta ou dentro do primeiro parágrafo do Markdown 
+    */
+    .content > :global(img:first-child),
+    .content :global(p:first-of-type img) {
+        display: none !important;
+    }
 </style>
