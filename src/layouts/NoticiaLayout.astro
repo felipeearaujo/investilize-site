@@ -21,6 +21,8 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
 
 <html lang="pt-BR">
     <head>
+        <meta name="referrer" content="no-referrer">
+
         <SEO
             title={safeTitle}
             description={safeDescription}
@@ -69,6 +71,17 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
                     <p class="source-credit">Fonte: Agência Brasil | Publicado em {frontmatter.pubDate}</p>
                 </header>
                 
+                {frontmatter.heroImage && (
+                    <div class="imagem-destaque">
+                        <img 
+                            src={frontmatter.heroImage} 
+                            alt={safeTitle} 
+                            referrerpolicy="no-referrer"
+                            loading="lazy"
+                        />
+                    </div>
+                )}
+
                 <div class="content">
                     <slot /> 
                 </div>
@@ -89,4 +102,14 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
     .source-credit { color: #64748b; font-size: 0.9rem; font-style: italic; }
     .news-footer { margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; font-size: 0.85rem; }
     .content { line-height: 1.6; color: #334155; }
+    
+    /* 🚀 Estilos para a nova imagem de destaque */
+    .imagem-destaque { margin-bottom: 2rem; width: 100%; }
+    .imagem-destaque img { 
+        width: 100%; 
+        max-height: 500px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
 </style>
