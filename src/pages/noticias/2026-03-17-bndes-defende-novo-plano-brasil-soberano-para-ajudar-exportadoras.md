@@ -11,7 +11,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-de
     <strong>Análise Técnica:</strong> O BNDES retoma o protagonismo na política industrial com o Plano Brasil Soberano, focando no fortalecimento das exportadoras nacionais. Para o investidor, o suporte estatal a setores estratégicos pode reduzir o custo de capital e impulsionar a competitividade global das 'blue chips' brasileiras. É a gestão pública atuando como braço financeiro do desenvolvimento econômico, buscando mitigar riscos externos e consolidar a soberania produtiva do país. Olho vivo no impacto dessas linhas de crédito nos resultados das grandes companhias nos próximos trimestres.
 </div>
 
-<img src="https://imagens.ebc.com.br/LI3IIdO3leh2iZuI-iOdf_9kMJM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/17/toms0431.jpg?itok=vZs_W1q8" alt="Destaque" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-defende-novo-plano-brasil-soberano-para-ajudar-exportadoras">
                     <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />

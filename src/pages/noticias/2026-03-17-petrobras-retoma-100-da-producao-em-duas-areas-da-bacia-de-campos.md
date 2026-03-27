@@ -11,7 +11,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobra
     <strong>Análise Técnica:</strong> A retomada total da produção em áreas da Bacia de Campos reafirma a capacidade da Petrobras em otimizar seus campos maduros. Para o investidor, isso sinaliza maior geração de caixa e eficiência operacional, garantindo que a companhia mantenha sua solidez mesmo em ativos que não fazem parte do pré-sal. É a gestão técnica assegurando que cada barril contribua para a tese de dividendos e para a robustez do setor energético nacional
 </div>
 
-<img src="https://imagens.ebc.com.br/Uq04bnInsrWFGNpo6h6x5ThmPyg=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/plataforma_semi-submersivel_p-20_bacia_de_campos_petroleo_do_brasil_petrobras_0.jpg?itok=dZ5mrAGP" alt="Destaque" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobras-volta-ter-100-em-areas-da-bacia-de-campos">
                     <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />

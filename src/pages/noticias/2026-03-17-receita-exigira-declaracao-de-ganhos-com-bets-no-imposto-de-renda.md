@@ -11,8 +11,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-
     <strong>Análise Técnica Investilize:</strong> A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do 'Velho Oeste' das Bets no Brasil. Para o investidor, isso reforça a necessidade de organização patrimonial e clareza sobre a origem dos rendimentos. Sob a ótica da Administração Pública, é um passo decisivo para a formalização de um mercado bilionário, garantindo que a base tributária acompanhe as mudanças no comportamento de consumo e entretenimento do brasileiro — entenda como a variação de preços afeta seu bolso na nossa <a href="/ferramentas/poder-de-compra">Calculadora de Poder de Compra</a>. A conformidade agora é a regra do jogo. Para comparar o retorno desses prêmios com investimentos seguros, consulte o nosso <a href="/ferramentas/Taxometro">Taxômetro do Tesouro Direto</a>.
 </div>
 
-<img src="https://imagens.ebc.com.br/foCfLHj2gObESxyQPJTgAfQ8mug=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=rj8FXCJr" alt="Destaque" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
-
 <p style="text-align: center;">
     <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda">
         <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />

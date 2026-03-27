@@ -11,7 +11,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-ma
     <strong>Análise Técnica:</strong> O planejamento de investimentos da indústria é um termômetro vital para o PIB. Com pouco mais de 50% das empresas planejando investir, percebemos uma cautela que reflete o cenário de juros e a expectativa por reformas estruturais. Para o investidor, isso acende um alerta sobre o crescimento de longo prazo do setor produtivo.
 </div>
 
-<img src="https://imagens.ebc.com.br/z8UqFzvU7cEXjxNKADGAOayqu2w=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/usina_siderurgica_mascara_de_protecao_industria.jpg?itok=deUnUjde" alt="Notícia" style="border-radius:12px; width:100%; margin-bottom:20px;"/>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-mais-da-metade-das-industrias-planeja-investir-em-2026">
                     <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
