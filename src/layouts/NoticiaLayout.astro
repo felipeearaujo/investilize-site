@@ -112,4 +112,9 @@ const safeImage = frontmatter.heroImage || "https://investilize.com.br/logo.png"
         border-radius: 8px; 
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     }
+    
+    /* Oculta a primeira imagem que vem do Markdown para evitar duplicação com o heroImage */
+.content img:first-of-type {
+    display: none;
+}
 </style>
