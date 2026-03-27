@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Governo propõe subsídio de R$ 1,20 ao diesel após impasse do ICMS"
 description: "Essa proposta de um subsídio de R$ 1,20 no diesel é o tipo de medida que, no Brasil, soa como um déjà vu de gestão de crise, tentando equilibrar o c..."
 pubDate: "2026-03-25"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif"
+heroImage: "https://imagens.ebc.com.br/w-PX93pHUE13LPphXKriVW_6sN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/02/0d4a9336.jpg?itok=MEif4KJO"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/governo-propoe-subsidio-de-r-120-ao-diesel-apos-impasse-do-icms"
 ---
 

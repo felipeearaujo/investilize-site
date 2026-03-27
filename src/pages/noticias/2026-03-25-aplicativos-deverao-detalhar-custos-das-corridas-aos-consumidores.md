@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Aplicativos deverão detalhar custos das corridas aos consumidores"
 description: "Essa medida é um passo importante para abrir a caixa-preta dos algoritmos de transporte individual por aplicativo. Para o passageiro, é o fim daquel..."
 pubDate: "2026-03-25"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif"
+heroImage: "https://imagens.ebc.com.br/lviWPDNkFMJMeZjsiBTNxmX0kVk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/img_2501.jpg?itok=BK0MJ75O"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores"
 ---
 
