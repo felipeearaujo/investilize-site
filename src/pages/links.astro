@@ -1,0 +1,101 @@
+---
+// src/pages/links.astro
+const links = [
+  { title: "📊 Acessar o Portal Investilize", url: "https://investilize.com.br" },
+  { title: "📈 Guia: Como Começar a Investir", url: "https://investilize.com.br/guia-iniciante" },
+  { title: "💰 Melhores Rendas Fixas de 2026", url: "https://investilize.com.br/renda-fixa" },
+  { title: "📱 Canal no Telegram", url: "https://t.me/seu_canal" },
+];
+---
+
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Investilize | Links</title>
+    <style>
+      :root {
+        --verde-claro: #44a542;
+        --verde-escuro: #096e4e;
+        --azul-claro: #0267c3;
+        --azul-escuro: #003d6a;
+        --fundo: #f8fafc;
+      }
+
+      body {
+        background-color: var(--fundo);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+        background: linear-gradient(90deg, var(--verde-escuro), var(--azul-escuro));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .bio {
+        color: #64748b;
+        font-size: 1rem;
+        margin-bottom: 35px;
+      }
+
+      .link-card {
+        display: block;
+        background-color: #ffffff;
+        color: var(--azul-escuro);
+        padding: 18px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        border-radius: 12px;
+        border: 2px solid transparent;
+        font-weight: 600;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .link-card:hover {
+        border-color: var(--verde-claro);
+        color: var(--verde-escuro);
+        transform: scale(1.02);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer {
+        margin-top: 40px;
+        font-size: 0.8rem;
+        color: var(--azul-escuro);
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">Investilize</div>
+      <p class="bio">Inteligência financeira para o seu patrimônio 🚀</p>
+      
+      {links.map((link) => (
+        <a href={link.url} class="link-card">
+          {link.title}
+        </a>
+      ))}
+
+      <div class="footer">
+        © 2026 Investilize - Todos os direitos reservados.
+      </div>
+    </div>
+  </body>
+</html>
