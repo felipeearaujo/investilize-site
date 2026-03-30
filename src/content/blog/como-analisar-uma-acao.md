@@ -4,7 +4,7 @@ title: 'Como Analisar Ações: O Passo a Passo para Iniciantes (2026)'
 description: 'Aprenda a analisar uma ação em 3 etapas simples. Entenda P/L, P/VP e Dividend Yield e descubra se uma ação está cara ou barata hoje.'
 pubDate: '2026-03-18'
 author: 'Felipe'
-heroImage: '~/assets/blog/analise-de-acoes.webp'
+heroImage: '~/assets/blog/analise-de-acoes.png'
 faqList:
   - question: "Como saber se uma ação está barata?"
     answer: "Compare o preço atual com o Valor Patrimonial (P/VP). Se o P/VP for menor que 1, a ação está sendo negociada abaixo do valor de seus bens. Também é fundamental comparar o P/L com a média do setor."

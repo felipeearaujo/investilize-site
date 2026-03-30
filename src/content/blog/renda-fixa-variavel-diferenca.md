@@ -4,7 +4,7 @@ description: 'Entenda a distinção fundamental entre Renda Fixa e Renda Variáv
 author: 'Felipe'
 pubDate: '2026-03-18'
 tags: ['Renda Fixa', 'Renda Variável', 'Investimentos', 'IRPF 2026']
-heroImage: '~/assets/blog/rendafxv.webp'
+heroImage: '~/assets/blog/rendafxv.png'
 ---
 
 A diferença fundamental entre Renda Fixa e Renda Variável reside na previsibilidade do retorno do investimento. Em 2026, com o aumento das buscas por temas como o **Imposto de Renda (IRPF 2026)** e novos ativos como o **LFTB11**, entender esta distinção é vital para a saúde do seu património. 
