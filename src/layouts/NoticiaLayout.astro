@@ -7,19 +7,21 @@ import Footer from '../components/Footer.astro';
 const { frontmatter } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 
-// 1. Títulos e Descrições seguros
+// 1. Títulos e Descrições (Sincronizados)
 const title = frontmatter.title || "Notícias | Investilize";
 const description = frontmatter.description || "Acompanhe as últimas notícias.";
 
-// 2. LIMPEZA PROFUNDA DA IMAGEM
-let heroImage = frontmatter.heroImage || "";
+// 2. Tratamento de Datas (Necessário para o build passar)
+const safeDate = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
+const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOString() : undefined;
 
-// Se a imagem contém "http" em qualquer lugar, pegamos apenas o link real
+// 3. LIMPEZA PROFUNDA DA IMAGEM
+let heroImage = frontmatter.heroImage || "";
 if (heroImage.includes("http")) {
     heroImage = heroImage.substring(heroImage.indexOf("http"));
 }
 
-const safeImage = heroImage && !heroImage.includes("loading") 
+const safeImage = (heroImage && !heroImage.includes("loading")) 
     ? heroImage 
     : "https://investilize.com.br/logo.png";
 ---
@@ -36,7 +38,7 @@ const safeImage = heroImage && !heroImage.includes("loading")
       canonical={canonicalURL}
       openGraph={{
         basic: {
-          title: safeTitle,
+          title: title, // Corrigido de safeTitle para title
           type: "article",
           image: safeImage,
           url: canonicalURL
@@ -49,7 +51,7 @@ const safeImage = heroImage && !heroImage.includes("loading")
       }}
       twitter={{
         card: "summary_large_image",
-        title: safeTitle,
+        title: title, // Corrigido de safeTitle para title
         image: safeImage
       }}
     />
@@ -58,9 +60,8 @@ const safeImage = heroImage && !heroImage.includes("loading")
     {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
-      "headline": safeTitle,
+      "headline": frontmatter.title, 
       "image": [safeImage],
-      "datePublished": isoPubDate,
       "author": { "@type": "Organization", "name": "Agência Brasil" }
     }
     </script>
@@ -72,8 +73,7 @@ const safeImage = heroImage && !heroImage.includes("loading")
         <article>
             <header class="news-header">
                 <span class="category">Economia Nacional</span>
-                <h1>{safeTitle}</h1>
-                <p class="source-credit">
+                <h1>{title}</h1> <p class="source-credit">
                     Fonte: Agência Brasil | Publicado em {safeDate?.toLocaleDateString("pt-BR")}
                 </p>
             </header>
@@ -82,7 +82,7 @@ const safeImage = heroImage && !heroImage.includes("loading")
                 <div class="imagem-destaque">
                     <img 
                         src={safeImage} 
-                        alt={safeTitle} 
+                        alt={title} 
                         referrerpolicy="no-referrer"
                         loading="eager" 
                         decoding="async"
@@ -111,7 +111,6 @@ const safeImage = heroImage && !heroImage.includes("loading")
     .source-credit { color: #64748b; font-size: .9rem; font-style: italic; }
     .news-footer { margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; }
     .content { line-height: 1.6; color: #334155; }
-
     .imagem-destaque { margin-bottom: 2rem; width: 100%; }
     .imagem-destaque img { 
         width: 100%; 
@@ -120,9 +119,6 @@ const safeImage = heroImage && !heroImage.includes("loading")
         border-radius: 8px; 
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
     }
-
-    /* Ocultar apenas imagens duplicadas que venham soltas no início do markdown */
-    /* Isso evita esconder a imagem dentro da div de análise técnica */
     .content > :global(img:first-child) {
         display: none !important;
     }
