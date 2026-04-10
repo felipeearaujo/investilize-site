@@ -3,11 +3,11 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Poupança tem retirada líquida de R$ 11,1 bilhões em março"
 description: "A retirada líquida de R$ 11,1 bilhões da caderneta de poupança em março indica que muitos brasileiros continuam retirando recursos dessa aplicação tra..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif"
+heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/h23n_0bfQZfJZuOywZokzWyJYJs=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moeda_dinheiro_mcajr_2904223675.jpg?itok=lBuQHeSN"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/poupanca-tem-retirada-liquida-de-r-111-bilhoes-em-marco"
 ---
 
-<img src="https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+<img src="https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/h23n_0bfQZfJZuOywZokzWyJYJs=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moeda_dinheiro_mcajr_2904223675.jpg?itok=lBuQHeSN" style="width:100%; border-radius:12px; margin-bottom:20px;" />
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A retirada líquida de R$ 11,1 bilhões da caderneta de poupança em março indica que muitos brasileiros continuam retirando recursos dessa aplicação tradicional para direcioná-los a outras finalidades ou investimentos. Os dados divulgados pelo Banco Central do Brasil mostram que o volume de saques superou os depósitos no período, refletindo tanto a necessidade de parte das famílias de utilizar suas reservas financeiras quanto a busca por aplicações que ofereçam maior rentabilidade. Em um cenário de juros ainda elevados, outras alternativas de investimento, como títulos de renda fixa e CDBs, acabam se tornando mais atrativas do que a poupança, que possui rendimento limitado. Dessa forma, muitos investidores optam por migrar seus recursos para produtos que acompanham mais de perto a taxa básica de juros da economia.
 Assim, o resultado de março reforça uma tendência observada nos últimos anos: embora continue sendo uma das aplicações mais populares do país, principalmente pela simplicidade e liquidez, a poupança vem perdendo espaço para opções de investimento que oferecem retornos mais competitivos, especialmente em períodos de taxas de juros mais altas.</div>

@@ -3,11 +3,11 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Inflação oficial chega a 0,88% em março, diz IBGE"
 description: "A alta de 0,88% da inflação em março, medida pelo Instituto Brasileiro de Geografia e Estatística (IBGE) por meio do Índice Nacional de Preços ao Cons..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif"
+heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/5W_COwMnanxLkJBKQ5aZIBNVHWM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/06/onibus_tarifa_08.jpg?itok=A0rphr2v"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/inflacao-oficial-chega-088-em-marco-diz-ibge"
 ---
 
-<img src="https://investilize.com.br/sites/default/files/thumbnails/image/loading_v2.gif" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+<img src="https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/5W_COwMnanxLkJBKQ5aZIBNVHWM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/06/onibus_tarifa_08.jpg?itok=A0rphr2v" style="width:100%; border-radius:12px; margin-bottom:20px;" />
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A alta de 0,88% da inflação em março, medida pelo Instituto Brasileiro de Geografia e Estatística (IBGE) por meio do Índice Nacional de Preços ao Consumidor Amplo (IPCA), indica que o custo de vida dos brasileiros voltou a subir com mais intensidade no mês. O resultado foi influenciado principalmente pelo aumento nos preços de transportes e alimentos, itens que têm peso significativo no orçamento das famílias. Esse movimento mostra que, mesmo com a inflação anual ainda dentro do intervalo da meta definida pelo Banco Central do Brasil, há pressões importantes em produtos e serviços essenciais do dia a dia. Na prática, quando combustíveis e alimentos ficam mais caros, o impacto é sentido de forma imediata pela população, especialmente pelas famílias de renda mais baixa. Por isso, resultados como o de março acendem um sinal de atenção para a política econômica, já que a inflação persistente pode reduzir o poder de compra e dificultar o planejamento financeiro das famílias. Assim, o comportamento dos preços nos próximos meses será determinante para avaliar se essa alta foi pontual ou se pode indicar uma tendência de maior pressão inflacionária ao longo do ano.</div>
 
