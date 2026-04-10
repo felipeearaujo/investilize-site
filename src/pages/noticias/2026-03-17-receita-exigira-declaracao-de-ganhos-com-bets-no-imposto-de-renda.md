@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Receita exigirá declaração de ganhos com bets no Imposto de Renda"
 description: "A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do Velho Oeste das Bets no Brasil. Veja como declarar e o impacto nos seus ganhos."
 pubDate: "2026-03-17"
-heroImage: "https://imagens.ebc.com.br/foCfLHj2gObESxyQPJTgAfQ8mug=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=rj8FXCJr"
+heroImage: "/images/noticias/2026-03-17-receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda"
 ---
 
@@ -13,7 +13,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-
 
 <p style="text-align: center;">
     <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda">
-        <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
+        
     </a>
 </p>
 

@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "BNDES defende novo Plano Brasil Soberano para ajudar exportadoras"
 description: "O BNDES retoma o protagonismo na política industrial com o Plano Brasil Soberano, focando no fortalecimento das exportadoras nacionais. Para o investi..."
 pubDate: "2026-03-17"
-heroImage: "https://imagens.ebc.com.br/LI3IIdO3leh2iZuI-iOdf_9kMJM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/17/toms0431.jpg?itok=vZs_W1q8"
+heroImage: "/images/noticias/2026-03-17-bndes-defende-novo-plano-brasil-soberano-para-ajudar-exportadoras.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-defende-novo-plano-brasil-soberano-para-ajudar-exportadoras"
 ---
 
@@ -13,8 +13,8 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-de
 
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-defende-novo-plano-brasil-soberano-para-ajudar-exportadoras">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>O presidente do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes">BNDES</a>), Aloizio Mercadante, defendeu, nesta terça-feira (17), que o país tenha um novo Plano Brasil Soberano de ajuda a exportadores prejudicados por tarifas americanas.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682244&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682244&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>O presidente do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes">BNDES</a>), Aloizio Mercadante, defendeu, nesta terça-feira (17), que o país tenha um novo Plano Brasil Soberano de ajuda a exportadores prejudicados por tarifas americanas.</strong></p>
 
 <p>A ajuda, na visão de Mercadante, teria espaço também para setores com déficits comerciais (importações maiores que exportações), estratégicos e os afetados por reflexos de guerras.</p>
 

@@ -2,14 +2,14 @@
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Em 2024, taxa de inovação das empresas brasileiras chegou a 64,4%"
 pubDate: "2026-03-19"
-heroImage: "https://imagens.ebc.com.br/y5Xr08-oUS6laRLEm1tjC0j6Gys=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/coronavirus_industria_automobilistica_fabrica2005200369.jpg?itok=uh0IOVz1"
+heroImage: "/images/noticias/2026-03-19-em-2024-taxa-de-inovacao-das-empresas-brasileiras-chegou-a-644.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/em-2024-taxa-de-inovacao-das-empresas-brasileiras-chegou-644"
 ---
 <div class="analise-investilize"><strong>Análise Técnica:</strong> O dado de que, em 2024, a taxa de inovação das empresas brasileiras alcançou 64,4% revela um movimento importante de adaptação e modernização no ambiente corporativo do país. Esse número indica que uma parcela significativa das empresas está buscando novas soluções, seja por meio da adoção de tecnologias, melhoria de processos ou criação de novos produtos e serviços. Esse avanço pode estar diretamente ligado à necessidade de se manter competitivo em um mercado cada vez mais dinâmico e digital, além da pressão por eficiência e redução de custos. No entanto, é importante analisar também a profundidade dessa inovação, já que nem toda mudança representa, de fato, uma transformação estrutural. Muitas vezes, as empresas inovam de forma incremental, o que ainda é positivo, mas não necessariamente suficiente para impulsionar ganhos mais robustos de produtividade e <a href="https://investilize.com.br/ferramentas/taxa-real">ganho real</a> no longo prazo. Ainda assim, o crescimento da taxa demonstra um cenário promissor e reforça a importância de políticas públicas, <a href="https://investilize.com.br/blog/qual-a-diferenca-entre-renda-fixa-e-renda-variavel">investimentos</a> e incentivo à pesquisa e desenvolvimento para consolidar esse avanço no Brasil.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/em-2024-taxa-de-inovacao-das-empresas-brasileiras-chegou-644">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-                    </a></p><strong>Em 2024, o Brasil tinha 10.165 empresas com 100 ou mais pessoas ocupadas nas Indústrias extrativas e de transformação. Desse total, 64,4% introduziram algum produto novo ou substancialmente aprimorado e/ou incorporaram algum processo de negócios novo ou aprimorado para uma ou mais de suas funções de negócios.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682352&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682352&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+                    </a></p><strong>Em 2024, o Brasil tinha 10.165 empresas com 100 ou mais pessoas ocupadas nas Indústrias extrativas e de transformação. Desse total, 64,4% introduziram algum produto novo ou substancialmente aprimorado e/ou incorporaram algum processo de negócios novo ou aprimorado para uma ou mais de suas funções de negócios.</strong></p>
 
 <p>Esse resultado correspondeu a uma redução de 0,2 ponto percentual da taxa de inovação em relação ao ano de 2023 (64,6%), representando a terceira queda consecutiva desse indicador desde 2021, quando foi 70,5%.</p>
 

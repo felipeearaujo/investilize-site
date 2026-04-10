@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Declaração do Imposto de Renda 2026 já pode ser enviada"
 description: "O Leão acabou de abrir a jaula e a temporada de prestação de contas com a Receita Federal começou oficialmente nesta segunda-feira, 23 de março de 2..."
 pubDate: "2026-03-23"
-heroImage: "https://imagens.ebc.com.br/foCfLHj2gObESxyQPJTgAfQ8mug=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/16/whatsapp_image_2026-03-16_at_16.06.333.jpg?itok=rj8FXCJr"
+heroImage: "/images/noticias/2026-03-23-declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada"
 ---
 
@@ -15,8 +15,8 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 </div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p>Os contribuintes podem acertar as contas com o Leão. Começa às 8h desta segunda-feira (23) o envio da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025).<img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1683056&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1683056&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p>Os contribuintes podem acertar as contas com o Leão. Começa às 8h desta segunda-feira (23) o envio da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025).</p>
 
 <p><strong>O prazo de entrega vai até 29 de maio, às 29h59min59s. Neste ano, o Fisco espera receber cerca de 44 milhões de declarações.</strong></p>
 

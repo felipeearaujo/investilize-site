@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Haddad fará proposta aos estados para conter preços dos combustíveis"
 description: "A proposta do ministro Haddad para coordenar com os estados a contenção dos preços dos combustíveis toca no coração do pacto federativo brasileiro. Pa..."
 pubDate: "2026-03-18"
-heroImage: "https://imagens.ebc.com.br/IskngAoz8RNzPMqSmPPTfSy2yvM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/12/lula-combustiveis-bdm-mc_abr_12032026-17.jpg?itok=QA4x8kbW"
+heroImage: "/images/noticias/2026-03-18-haddad-fara-proposta-aos-estados-para-conter-precos-dos-combustiveis.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-fara-proposta-aos-estados-para-conter-precos-dos-combustiveis"
 ---
 
@@ -15,7 +15,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-f
 
 <p style="text-align: center;">
     <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-fara-proposta-aos-estados-para-conter-precos-dos-combustiveis">
-        <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
+        
     </a>
 </p>
 

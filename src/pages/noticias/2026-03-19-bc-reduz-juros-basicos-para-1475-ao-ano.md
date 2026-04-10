@@ -2,14 +2,14 @@
 layout: "../../layouts/NoticiaLayout.astro"
 title: "BC reduz juros básicos para 14,75% ao ano"
 pubDate: "2026-03-19"
-heroImage: "https://imagens.ebc.com.br/z4c7-lnW6k3esrloybgha_eHwfk=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/20231025_144352.jpg?itok=d40dDGk-"
+heroImage: "/images/noticias/2026-03-19-bc-reduz-juros-basicos-para-1475-ao-ano.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bc-reduz-juros-basicos-para-1475-ao-ano"
 ---
 <div class="analise-investilize"><strong>Análise Técnica:</strong> O Banco Central acaba de reduzir a <a href="https://investilize.com.br/ferramentas/Taxometro">taxa Selic</a> para 14,75% ao ano, um movimento que marca o início de uma transição importante para quem está decidindo entre <a href="https://investilize.com.br/blog/qual-a-diferenca-entre-renda-fixa-e-renda-variavel">Renda Fixa e Renda Variável</a> em 2026. Mesmo com essa queda, o cenário ainda é extremamente favorável para o investidor, já que a inflação permanece controlada na casa dos 3,81%, o que garante um <a href="https://investilize.com.br/ferramentas/taxa-real">ganho real</a> que ainda é um dos maiores do mundo. No entanto, o investidor precisa entender que o período de rentabilidade máxima nos títulos pós-fixados está começando a dar sinais de cansaço, tornando o momento ideal para considerar ativos prefixados ou atrelados ao IPCA, travando taxas altas antes que novos cortes aconteçam. Por outro lado, a renda variável recebe essa notícia como um combustível, pois juros menores reduzem o custo das dívidas das empresas e estimulam o consumo, o que tende a valorizar as ações e os fundos imobiliários no médio prazo. Em resumo, o segredo para este novo ciclo é diversificar com inteligência para capturar tanto o fôlego que a renda fixa ainda oferece quanto o potencial de alta que a bolsa de valores começa a desenhar.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bc-reduz-juros-basicos-para-1475-ao-ano">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-                    </a></p>Apesar das tensões em torno da guerra no Oriente Médio, <strong>o Banco Central (BC) cortou os juros pela primeira vez em quase dois anos.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682494&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682494&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+                    </a></p>Apesar das tensões em torno da guerra no Oriente Médio, <strong>o Banco Central (BC) cortou os juros pela primeira vez em quase dois anos.</strong></p>
 
 <p>Por unanimidade,<strong> o Comitê de Política Monetária (Copom) reduziu a Taxa Selic, juros básicos da economia, em 0,25 ponto percentual, para 14,75% ao ano</strong>. A decisão era <a href="https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml/”https:/agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-estima-reducao-da-selic-em-025-ponto-esta-semana”" target="_blank">esperada pelo mercado financeiro</a>.</p>
 

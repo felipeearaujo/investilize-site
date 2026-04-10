@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Governo propõe subsídio de R$ 1,20 ao diesel após impasse do ICMS"
 description: "Essa proposta de um subsídio de R$ 1,20 no diesel é o tipo de medida que, no Brasil, soa como um déjà vu de gestão de crise, tentando equilibrar o c..."
 pubDate: "2026-03-25"
-heroImage: "https://imagens.ebc.com.br/w-PX93pHUE13LPphXKriVW_6sN0=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2024/09/02/0d4a9336.jpg?itok=MEif4KJO"
+heroImage: "/images/noticias/2026-03-25-governo-propoe-subsidio-de-r-120-ao-diesel-apos-impasse-do-icms.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/governo-propoe-subsidio-de-r-120-ao-diesel-apos-impasse-do-icms"
 ---
 
@@ -12,8 +12,8 @@ A estratégia parece ser uma tentativa de "comprar tempo" enquanto uma solução
 No fim das contas, a medida é um alívio tático para o bolso do consumidor no curto prazo, mas que deixa uma conta salgada para o Tesouro Nacional lá na frente. É o clássico equilíbrio na corda bamba entre a estabilidade política e a responsabilidade fiscal.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/governo-propoe-subsidio-de-r-120-ao-diesel-apos-impasse-do-icms">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>A equipe econômica apresentou uma nova proposta aos estados para conter a alta do diesel após resistência dos governadores em zerar o Imposto sobre a Circulação de Mercadorias e Serviços (ICMS) sobre a importação do combustível, anunciou nesta terça-feira (24) o ministro da Fazenda, Dario Durigan.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1683377&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1683377&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>A equipe econômica apresentou uma nova proposta aos estados para conter a alta do diesel após resistência dos governadores em zerar o Imposto sobre a Circulação de Mercadorias e Serviços (ICMS) sobre a importação do combustível, anunciou nesta terça-feira (24) o ministro da Fazenda, Dario Durigan.</strong></p>
 
 <p>A alternativa, apresentada prevê uma subvenção de R$ 1,20 por litro de diesel importado, dividida entre União e estados.</p>
 

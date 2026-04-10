@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Aplicativos deverão detalhar custos das corridas aos consumidores"
 description: "Essa medida é um passo importante para abrir a caixa-preta dos algoritmos de transporte individual por aplicativo. Para o passageiro, é o fim daquel..."
 pubDate: "2026-03-25"
-heroImage: "https://imagens.ebc.com.br/lviWPDNkFMJMeZjsiBTNxmX0kVk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/img_2501.jpg?itok=BK0MJ75O"
+heroImage: "/images/noticias/2026-03-25-aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores"
 ---
 
@@ -12,8 +12,8 @@ Pelo lado das empresas, essa regra deve gerar um desconforto estratégico. Com o
 No entanto, o desafio será a execução: como apresentar esses dados sem poluir a interface do aplicativo ou tornar a experiência de compra confusa? Além disso, existe o risco de as empresas tentarem "maquiar" custos sob nomenclaturas genéricas para evitar críticas. De qualquer forma, é uma vitória para o consumidor consciente, que ganha o direito de saber se o seu "luxo" de pedir um carro está sendo construído sobre uma base de divisão equilibrada ou se está apenas inflando as margens de lucro das gigantes de tecnologia.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>O Ministério da Justiça e Segurança Pública (MJSP) determinou que as empresas de aplicativos de entrega e de transporte informem o quanto do preço final pago é da plataforma digital e o quanto é da remuneração de entregadores ou de motoristas.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1683430&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1683430&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>O Ministério da Justiça e Segurança Pública (MJSP) determinou que as empresas de aplicativos de entrega e de transporte informem o quanto do preço final pago é da plataforma digital e o quanto é da remuneração de entregadores ou de motoristas.</strong></p>
 
 <p>A portaria com a obrigação será publicada nesta quarta-feira (25) no Diário Oficial da União.</p>
 

@@ -3,17 +3,17 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Mercado eleva previsão da inflação para 4,31% este ano"
 description: "A elevação da previsão da inflação para 4,31% neste ano indica que o mercado financeiro continua atento às pressões sobre os preços na economia brasil..."
 pubDate: "2026-03-31"
-heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moedadinheiro_jfcrz_abr_1701220042_1.jpg?itok=yiqyIHGI"
+heroImage: "/images/noticias/2026-03-31-mercado-eleva-previsao-da-inflacao-para-431-este-ano.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-eleva-previsao-da-inflacao-para-431-este-ano"
 ---
 
-<img src="https://investilize.com.brhttps://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moedadinheiro_jfcrz_abr_1701220042_1.jpg?itok=yiqyIHGI" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A elevação da previsão da inflação para 4,31% neste ano indica que o mercado financeiro continua atento às pressões sobre os preços na economia brasileira. Embora o índice ainda esteja dentro do intervalo da meta estabelecida pelo Banco Central, o aumento nas projeções mostra que há preocupação com fatores como custos de produção, preço de combustíveis, alimentos e oscilações no cenário internacional. Quando as expectativas de inflação sobem, isso também influencia decisões de política monetária, já que o Banco Central pode manter uma postura mais cautelosa em relação à redução dos juros. Para consumidores e empresas, esse cenário reforça a necessidade de planejamento financeiro, pois a inflação mais alta reduz o poder de compra da população e pode afetar o ritmo de crescimento da economia.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-eleva-previsao-da-inflacao-para-431-este-ano">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p>A previsão do mercado financeiro para o Índice Nacional de Preços ao Consumidor Amplo (IPCA), referência oficial da inflação no país, <strong>passou de 4,17% para 4,31% este ano</strong>. <img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1684171&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1684171&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p>A previsão do mercado financeiro para o Índice Nacional de Preços ao Consumidor Amplo (IPCA), referência oficial da inflação no país, <strong>passou de 4,17% para 4,31% este ano</strong>. </p>
 
 <p>A estimativa está no Boletim Focus desta segunda-feira (30), pesquisa divulgada semanalmente pelo Banco Central (BC) com a expectativa de instituições financeiras para os principais indicadores econômicos.</p>
 

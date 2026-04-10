@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Pouco mais da metade das indústrias planeja investir em 2026"
 description: "O planejamento de investimentos da indústria é um termômetro vital para o PIB. Com pouco mais de 50% das empresas planejando investir, percebemos uma ..."
 pubDate: "2026-03-17"
-heroImage: "https://imagens.ebc.com.br/z8UqFzvU7cEXjxNKADGAOayqu2w=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/usina_siderurgica_mascara_de_protecao_industria.jpg?itok=deUnUjde"
+heroImage: "/images/noticias/2026-03-17-pouco-mais-da-metade-das-industrias-planeja-investir-em-2026.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-mais-da-metade-das-industrias-planeja-investir-em-2026"
 ---
 
@@ -13,8 +13,8 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-ma
 
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-mais-da-metade-das-industrias-planeja-investir-em-2026">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p>Um total de 56% dos empresários industriais pretende investir em 2026, o que mostra queda em relação aos 72% que investiram recursos no ano passado. É o que aponta a pesquisa Investimentos na Indústria 2025-2026, divulgada nesta terça-feira (17) pela Confederação Nacional da Indústria (CNI).<img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682143&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682143&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p>Um total de 56% dos empresários industriais pretende investir em 2026, o que mostra queda em relação aos 72% que investiram recursos no ano passado. É o que aponta a pesquisa Investimentos na Indústria 2025-2026, divulgada nesta terça-feira (17) pela Confederação Nacional da Indústria (CNI).</p>
 
 <p><strong>Segundo o levantamento, 56% das empresas do setor planejam realizar investimentos neste ano. Desse total, 62% dos aportes darão continuidade a projetos já em andamento, enquanto 31% representam novas iniciativas.</strong></p>
 

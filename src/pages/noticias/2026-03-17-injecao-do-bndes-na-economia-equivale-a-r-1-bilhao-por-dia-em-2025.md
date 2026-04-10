@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Injeção do BNDES na economia equivale a R$ 1 bilhão por dia em 2025"
 description: "A marca de R$ 1 bilhão injetado diariamente pelo BNDES em 2025 consolida o papel do banco como o principal indutor do crescimento econômico nacional. ..."
 pubDate: "2026-03-17"
-heroImage: "https://imagens.ebc.com.br/9PqtpWnTdk1rbBcUhcX-W06RCS4=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/02/25/_rbr6623.jpg?itok=2Twkr0BW"
+heroImage: "/images/noticias/2026-03-17-injecao-do-bndes-na-economia-equivale-a-r-1-bilhao-por-dia-em-2025.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/injecao-do-bndes-na-economia-equivale-r-1-bilhao-por-dia-em-2025"
 ---
 
@@ -12,8 +12,8 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/injecao-
 </div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/injecao-do-bndes-na-economia-equivale-r-1-bilhao-por-dia-em-2025">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p>A injeção de recursos do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes" target="_blank">BNDES</a>) na economia brasileira equivaleu, em média, a R$ 1 bilhão por dia. <strong>Em todo o ano de 2025, o fomento às atividades econômicas por meio financiamentos e garantias de crédito somou o recorde de R$ 366 bilhões.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682233&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682233&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p>A injeção de recursos do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes" target="_blank">BNDES</a>) na economia brasileira equivaleu, em média, a R$ 1 bilhão por dia. <strong>Em todo o ano de 2025, o fomento às atividades econômicas por meio financiamentos e garantias de crédito somou o recorde de R$ 366 bilhões.</strong></p>
 
 <p><strong>O resultado representa crescimento de 32% em relação a 2024. O montante é 140% acima do registrado em 2022, último ano da gestão anterior do BNDES, sob o governo Jair Bolsonaro.</strong></p>
 

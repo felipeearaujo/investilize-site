@@ -3,17 +3,17 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Petróleo pressiona e “inflação do aluguel” da FGV fecha março em 0,52%"
 description: "A alta do petróleo voltou a influenciar indicadores importantes da economia brasileira, refletindo diretamente na chamada “inflação do aluguel”, medid..."
 pubDate: "2026-03-31"
-heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/imoveis.jpg?itok=o8os4O89"
+heroImage: "/images/noticias/2026-03-31-petroleo-pressiona-e-inflacao-do-aluguel-da-fgv-fecha-marco-em-052.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petroleo-pressiona-e-inflacao-do-aluguel-da-fgv-fecha-marco-em-052"
 ---
 
-<img src="https://investilize.com.brhttps://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/imoveis.jpg?itok=o8os4O89" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A alta do petróleo voltou a influenciar indicadores importantes da economia brasileira, refletindo diretamente na chamada “inflação do aluguel”, medida pelo IGP-M da Fundação Getulio Vargas. O índice registrou avanço de 0,52% em março, pressionado principalmente pelo aumento dos preços no atacado, que costuma reagir rapidamente às variações das commodities, como o petróleo. Esse movimento mostra como fatores internacionais ainda têm forte impacto na economia doméstica, já que a valorização do petróleo encarece combustíveis, transporte e diversos custos de produção. Como o IGP-M é amplamente utilizado para reajustar contratos de aluguel, esse resultado também pode afetar diretamente o bolso de inquilinos e empresas que possuem contratos indexados ao indicador. Dessa forma, mesmo uma alta moderada no índice merece atenção, pois sinaliza pressões de custo que podem se espalhar por outros setores da economia.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petroleo-pressiona-e-inflacao-do-aluguel-da-fgv-fecha-marco-em-052">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>O <a href="https://agenciabrasil.ebc.com.br/tags/igp-m" target="_blank">Índice Geral de Preços – Mercado</a> (IGP-M), também conhecido como “inflação do aluguel”, sentiu a pressão de produtos agropecuários e derivados do petróleo e fechou o mês de março em 0,52%, o que representa uma reversão em relação ao 0,73% de fevereiro.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1684166&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1684166&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>O <a href="https://agenciabrasil.ebc.com.br/tags/igp-m" target="_blank">Índice Geral de Preços – Mercado</a> (IGP-M), também conhecido como “inflação do aluguel”, sentiu a pressão de produtos agropecuários e derivados do petróleo e fechou o mês de março em 0,52%, o que representa uma reversão em relação ao 0,73% de fevereiro.</strong></p>
 
 <p>Com o resultado conhecido nesta segunda-feira (30), o <strong>IGP-M acumula deflação de 1,83% em 12 meses, ou seja, na média, os preços recuaram.</strong> Os <a href="https://portalibre.fgv.br/system/files/divulgacao/noticias/mat-complementar/2026-03/IGP-M_FGV_press%20release_Mar26.pdf" target="_blank">dados são do Instituto Brasileiro de Economia (Ibre) da Fundação Getulio Vargas (FGV)</a>. </p>
 

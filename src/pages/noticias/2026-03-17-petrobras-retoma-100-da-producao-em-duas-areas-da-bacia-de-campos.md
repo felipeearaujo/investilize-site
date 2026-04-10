@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Petrobras retoma 100% da produção em duas áreas da Bacia de Campos"
 description: "A retomada total da produção em áreas da Bacia de Campos reafirma a capacidade da Petrobras em otimizar seus campos maduros. Para o investidor, isso s..."
 pubDate: "2026-03-17"
-heroImage: "https://imagens.ebc.com.br/Uq04bnInsrWFGNpo6h6x5ThmPyg=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/plataforma_semi-submersivel_p-20_bacia_de_campos_petroleo_do_brasil_petrobras_0.jpg?itok=dZ5mrAGP"
+heroImage: "/images/noticias/2026-03-17-petrobras-retoma-100-da-producao-em-duas-areas-da-bacia-de-campos.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobras-volta-ter-100-em-areas-da-bacia-de-campos"
 ---
 
@@ -13,8 +13,8 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobra
 
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petrobras-volta-ter-100-em-areas-da-bacia-de-campos">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>A Petrobras vai recomprar 50% de participação dos campos de petróleo Tartaruga Verde e Espadarte – Módulo III, na Bacia de Campos, litoral do Sudeste. Com o anúncio, a estatal brasileira volta a ser 100% dona dos campos, que tinham sido vendidos em 2019, durante o governo de Jair Bolsonaro.</strong><img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1682182&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1682182&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>A Petrobras vai recomprar 50% de participação dos campos de petróleo Tartaruga Verde e Espadarte – Módulo III, na Bacia de Campos, litoral do Sudeste. Com o anúncio, a estatal brasileira volta a ser 100% dona dos campos, que tinham sido vendidos em 2019, durante o governo de Jair Bolsonaro.</strong></p>
 
 <p>A transação será de US$ 450 milhões (equivalente a R$ 2,3 bilhão). A vendedora é a Petronas, petrolífera estatal da Malásia. O <a href="https://api.mziq.com/mzfilemanager/v2/d/25fdf098-34f5-4608-b7fa-17d60b2de47d/07c80750-22db-647c-df79-8713810e5932?origin=2" target="_blank">comunicado da Petrobras sobre a aquisição</a> foi divulgado na noite de segunda-feira (16).</p>
 

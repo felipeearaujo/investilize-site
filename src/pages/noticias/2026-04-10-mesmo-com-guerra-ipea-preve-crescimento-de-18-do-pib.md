@@ -3,18 +3,18 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Mesmo com guerra, Ipea prevê crescimento de 1,8% do PIB"
 description: "A previsão de crescimento de 1,8% do Produto Interno Bruto (PIB) para o Brasil, divulgada pelo Instituto de Pesquisa Econômica Aplicada, mostra que a ..."
 pubDate: "2026-04-10"
-heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210412_0.jpg?itok=pEt_terf"
+heroImage: "/images/noticias/2026-04-10-mesmo-com-guerra-ipea-preve-crescimento-de-18-do-pib.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/mesmo-com-guerra-ipea-preve-crescimento-de-18-do-pib"
 ---
 
-<img src="https://investilize.com.brhttps://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210412_0.jpg?itok=pEt_terf" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A previsão de crescimento de 1,8% do Produto Interno Bruto (PIB) para o Brasil, divulgada pelo Instituto de Pesquisa Econômica Aplicada, mostra que a economia brasileira pode manter um ritmo moderado de expansão mesmo diante de um cenário internacional marcado por conflitos e instabilidade. Em um contexto global de tensões geopolíticas e incertezas nos mercados, a estimativa indica certa resiliência da atividade econômica nacional, especialmente sustentada pela demanda interna.Esse crescimento esperado está ligado principalmente ao consumo das famílias e à manutenção de alguns estímulos econômicos internos, que ajudam a movimentar setores importantes da economia. No entanto, o cenário externo continua sendo um fator de risco, já que conflitos internacionais podem impactar preços de commodities, energia e cadeias de suprimento, influenciando diretamente o desempenho econômico dos países.
  Dessa forma, embora a projeção aponte para crescimento, o ritmo ainda é considerado moderado e dependente da evolução do cenário internacional. A economia brasileira demonstra capacidade de adaptação, mas seguirá sensível às turbulências externas e às condições do mercado global ao longo do ano.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/mesmo-com-guerra-ipea-preve-crescimento-de-18-do-pib">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p>A economia brasileira vai crescer 1,8% neste ano. A previsão é do Instituto de Pesquisa Econômica Aplicada (Ipea), órgão ligado ao Ministério do Planejamento e Orçamento (MPO).<img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1685418&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1685418&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p>A economia brasileira vai crescer 1,8% neste ano. A previsão é do Instituto de Pesquisa Econômica Aplicada (Ipea), órgão ligado ao Ministério do Planejamento e Orçamento (MPO).</p>
 
 <p><strong>A previsão positiva da taxa do Produto Interno Bruto (PIB, soma  dos bens e serviços produzidos no país) não ignora a guerra iniciada em 28 de fevereiro pelos Estados Unidos e por Israel contra o Irã, em consequência das incertezas provocadas e o decorrente aumento do preço internacional do petróleo.</strong></p>
 

@@ -3,17 +3,17 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Juros do cartão de crédito pesam mais para famílias em fevereiro"
 description: "O aumento dos juros do cartão de crédito em fevereiro evidencia uma realidade que já pesa no bolso de muitas famílias brasileiras- o custo cada vez ma..."
 pubDate: "2026-03-31"
-heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/compra_online2411203173.jpg?itok=r3FUuIhM"
+heroImage: "/images/noticias/2026-03-31-juros-do-cartao-de-credito-pesam-mais-para-familias-em-fevereiro.jpg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do-cartao-de-credito-pesam-mais-para-familias-em-fevereiro"
 ---
 
-<img src="https://investilize.com.brhttps://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/compra_online2411203173.jpg?itok=r3FUuIhM" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> O aumento dos juros do cartão de crédito em fevereiro evidencia uma realidade que já pesa no bolso de muitas famílias brasileiras: o custo cada vez mais alto do crédito. Quando a renda não acompanha o aumento das despesas, muitos consumidores recorrem ao cartão para equilibrar o orçamento, mas acabam entrando no rotativo, que possui algumas das taxas de juros mais altas do mercado. O resultado é um ciclo perigoso de endividamento, em que a dívida cresce rapidamente e compromete uma parcela maior da renda familiar. Essa situação reforça a importância de políticas que reduzam o custo do crédito e ampliem a educação financeira da população, além de destacar a necessidade de planejamento por parte dos consumidores. Sem mudanças estruturais e mais acesso a crédito com taxas menores, o cartão de crédito continuará sendo um dos principais fatores de pressão sobre o orçamento das famílias no país.</div>
 
 <p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do-cartao-de-credito-pesam-mais-para-familias-em-fevereiro">
-                    <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
-				</a></p><strong>A taxa média de juros cobrada pelos bancos subiu para as famílias em fevereiro, com o cartão de crédito rotativo pesando mais no bolso.</strong> De acordo com as<a href="https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito" target="_blank"> Estatísticas Monetárias e de Crédito</a>, divulgadas nesta segunda-feira (30) pelo Banco Central (BC), a taxa média das concessões de crédito livre para pessoas físicas teve alta de 1 ponto percentual (p.p.) no mês e de 5,4 p.p. em 12 meses, chegando a 62% ao ano.<img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1684162&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1684162&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
+                    
+				</a></p><strong>A taxa média de juros cobrada pelos bancos subiu para as famílias em fevereiro, com o cartão de crédito rotativo pesando mais no bolso.</strong> De acordo com as<a href="https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito" target="_blank"> Estatísticas Monetárias e de Crédito</a>, divulgadas nesta segunda-feira (30) pelo Banco Central (BC), a taxa média das concessões de crédito livre para pessoas físicas teve alta de 1 ponto percentual (p.p.) no mês e de 5,4 p.p. em 12 meses, chegando a 62% ao ano.</p>
 
 <p>O destaque em fevereiro foi o avanço de 11,4 p.p. na taxa do cartão de crédito rotativo, chegando a 435,9% ao ano. A modalidade é uma das mais altas do mercado.</p>
 
