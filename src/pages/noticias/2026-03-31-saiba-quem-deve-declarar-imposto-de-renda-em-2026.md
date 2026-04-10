@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Saiba quem deve declarar Imposto de Renda em 2026"
 description: "A declaração do Imposto de Renda em 2026, referente aos rendimentos recebidos em 2025, é uma obrigação que exige atenção de milhões de brasileiros. A ..."
 pubDate: "2026-03-31"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/S3fd6jEK0d6ZSzbjvjsO5L8w07M=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/11/01_ir_2026_duvidas_card_horizontal.jpg?itok=IrAb7FIP"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/11/01_ir_2026_duvidas_card_horizontal.jpg?itok=IrAb7FIP"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-quem-deve-declarar-imposto-de-renda-em-2026"
 ---
 

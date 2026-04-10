@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Receita recebe mais de 10 milhões de declarações do Imposto de Renda"
 description: "O fato de a Receita Federal do Brasil já ter recebido mais de 10 milhões de declarações do Imposto de Renda Pessoa Física (IRPF) demonstra que muitos ..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/P5IXJFq59p5M82CANbb0TlmUmkk=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/24/_mg_6804.jpg?itok=LGjlhiiJ"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/03/24/_mg_6804.jpg?itok=LGjlhiiJ"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/receita-recebe-mais-de-10-milhoes-de-declaracoes-do-ir"
 ---
 

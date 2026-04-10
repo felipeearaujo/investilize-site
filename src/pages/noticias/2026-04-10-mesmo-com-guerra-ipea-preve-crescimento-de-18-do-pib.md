@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Mesmo com guerra, Ipea prevê crescimento de 1,8% do PIB"
 description: "A previsão de crescimento de 1,8% do Produto Interno Bruto (PIB) para o Brasil, divulgada pelo Instituto de Pesquisa Econômica Aplicada, mostra que a ..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/5ACOjU0BmGT_Z-dyrOe8MeNxubI=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210412_0.jpg?itok=pEt_terf"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/economia_1609210412_0.jpg?itok=pEt_terf"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/mesmo-com-guerra-ipea-preve-crescimento-de-18-do-pib"
 ---
 

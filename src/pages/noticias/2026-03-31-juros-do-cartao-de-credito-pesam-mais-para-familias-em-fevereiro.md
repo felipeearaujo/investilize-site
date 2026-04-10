@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Juros do cartão de crédito pesam mais para famílias em fevereiro"
 description: "O aumento dos juros do cartão de crédito em fevereiro evidencia uma realidade que já pesa no bolso de muitas famílias brasileiras- o custo cada vez ma..."
 pubDate: "2026-03-31"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/Gor3qR1fF6JLar_wF8PyAHwQ0ww=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/compra_online2411203173.jpg?itok=r3FUuIhM"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/compra_online2411203173.jpg?itok=r3FUuIhM"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do-cartao-de-credito-pesam-mais-para-familias-em-fevereiro"
 ---
 

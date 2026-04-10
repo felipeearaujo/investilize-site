@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Poupança tem retirada líquida de R$ 11,1 bilhões em março"
 description: "A retirada líquida de R$ 11,1 bilhões da caderneta de poupança em março indica que muitos brasileiros continuam retirando recursos dessa aplicação tra..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/h23n_0bfQZfJZuOywZokzWyJYJs=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moeda_dinheiro_mcajr_2904223675.jpg?itok=lBuQHeSN"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moeda_dinheiro_mcajr_2904223675.jpg?itok=lBuQHeSN"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/poupanca-tem-retirada-liquida-de-r-111-bilhoes-em-marco"
 ---
 

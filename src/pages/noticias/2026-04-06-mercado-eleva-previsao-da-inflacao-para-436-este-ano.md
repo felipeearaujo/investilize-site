@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Mercado eleva previsão da inflação para 4,36% este ano"
 description: "A elevação da previsão da inflação para 4,36% neste ano sinaliza que o mercado financeiro passou a enxergar um cenário um pouco mais pressionado para ..."
 pubDate: "2026-04-06"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/zntjC7vTOHczDY0NTC9sK_wYVKM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/10/inflacion11.jpg?itok=jRbcHnVg"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/10/inflacion11.jpg?itok=jRbcHnVg"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/mercado-eleva-previsao-da-inflacao-para-436-este-ano"
 ---
 

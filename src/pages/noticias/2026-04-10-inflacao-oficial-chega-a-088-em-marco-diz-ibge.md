@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Inflação oficial chega a 0,88% em março, diz IBGE"
 description: "A alta de 0,88% da inflação em março, medida pelo Instituto Brasileiro de Geografia e Estatística (IBGE) por meio do Índice Nacional de Preços ao Cons..."
 pubDate: "2026-04-10"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/5W_COwMnanxLkJBKQ5aZIBNVHWM=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/06/onibus_tarifa_08.jpg?itok=A0rphr2v"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/01/06/onibus_tarifa_08.jpg?itok=A0rphr2v"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/inflacao-oficial-chega-088-em-marco-diz-ibge"
 ---
 

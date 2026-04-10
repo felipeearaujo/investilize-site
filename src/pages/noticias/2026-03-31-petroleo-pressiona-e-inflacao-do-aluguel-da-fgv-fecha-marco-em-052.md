@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Petróleo pressiona e “inflação do aluguel” da FGV fecha março em 0,52%"
 description: "A alta do petróleo voltou a influenciar indicadores importantes da economia brasileira, refletindo diretamente na chamada “inflação do aluguel”, medid..."
 pubDate: "2026-03-31"
-heroImage: "https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/zw8Q94qOi0V7Xs00iguIyCcJzdk=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/imoveis.jpg?itok=o8os4O89"
+heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/atoms/image/imoveis.jpg?itok=o8os4O89"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petroleo-pressiona-e-inflacao-do-aluguel-da-fgv-fecha-marco-em-052"
 ---
 
