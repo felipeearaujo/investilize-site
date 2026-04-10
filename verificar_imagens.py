@@ -1,43 +1,20 @@
-import os
 import requests
 from bs4 import BeautifulSoup
+import os
+import re
 
-PASTA = "src/pages/noticias"
+pasta = "src/pages/noticias"
 
-def pegar_imagem_real(url):
-
+def pegar_imagem(url):
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        r = requests.get(url, timeout=10)
         soup = BeautifulSoup(r.text, "html.parser")
 
-        # 1️⃣ OG IMAGE
-        og = soup.find("meta", property="og:image")
-        if og and og.get("content"):
-            return og.get("content")
+        # procurar og:image
+        tag = soup.find("meta", property="og:image")
 
-        # 2️⃣ TWITTER IMAGE
-        tw = soup.find("meta", attrs={"name": "twitter:image"})
-        if tw and tw.get("content"):
-            return tw.get("content")
-
-        # 3️⃣ IMAGEM DO ARTIGO
-        imgs = soup.select("article img, main img")
-
-        for img in imgs:
-            src = (
-                img.get("data-src")
-                or img.get("data-echo")
-                or img.get("data-original")
-                or img.get("src")
-            )
-
-            if not src:
-                continue
-
-            if "loading" in src or ".gif" in src:
-                continue
-
-            return src
+        if tag:
+            return tag.get("content")
 
     except Exception as e:
         print("Erro ao acessar:", url)
@@ -45,44 +22,42 @@ def pegar_imagem_real(url):
     return None
 
 
-for root, dirs, files in os.walk(PASTA):
+for root, dirs, files in os.walk(pasta):
 
     for file in files:
 
-        if not file.endswith(".md"):
-            continue
+        if file.endswith(".md"):
 
-        caminho = os.path.join(root, file)
+            caminho = os.path.join(root, file)
 
-        with open(caminho, "r", encoding="utf-8") as f:
-            conteudo = f.read()
+            with open(caminho, "r", encoding="utf-8") as f:
+                conteudo = f.read()
 
-        if "loading_v2.gif" not in conteudo:
-            continue
+            if "loading_v2.gif" in conteudo:
 
-        print("Corrigindo:", file)
+                print("Corrigindo:", file)
 
-        # procurar originalUrl
-        url = None
+                # encontrar url original
+                match = re.search(r'originalUrl:\s*"([^"]+)"', conteudo)
 
-        for linha in conteudo.split("\n"):
-            if "originalUrl:" in linha:
-                url = linha.replace("originalUrl:", "").strip().replace('"', '').replace("'", "")
-                break
+                if match:
 
-        if not url:
-            print("URL original não encontrada")
-            continue
+                    url = match.group(1)
 
-        imagem = pegar_imagem_real(url)
+                    imagem = pegar_imagem(url)
 
-        if not imagem:
-            print("Imagem não encontrada:", url)
-            continue
+                    if imagem:
 
-        conteudo_novo = conteudo.replace("loading_v2.gif", imagem)
+                        conteudo = conteudo.replace(
+                            "loading_v2.gif",
+                            imagem
+                        )
 
-        with open(caminho, "w", encoding="utf-8") as f:
-            f.write(conteudo_novo)
+                        with open(caminho, "w", encoding="utf-8") as f:
+                            f.write(conteudo)
 
-        print("Imagem corrigida:", imagem)
+                        print("Imagem corrigida:", imagem)
+
+                    else:
+
+                        print("Imagem não encontrada:", url)
