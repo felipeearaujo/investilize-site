@@ -11,21 +11,29 @@ const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").t
 
 // tratamento seguro da data
 const safeDate = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
-const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOString() : undefined;
+const isoPubDate = (safeDate && !isNaN(safeDate.getTime()))
+  ? safeDate.toISOString()
+  : undefined;
 
-// fallbacks obrigatórios
-const safeTitle = frontmatter.title || "Notícias de Economia | Investilize";
+// título seguro
+const safeTitle =
+  frontmatter.title || "Notícias de Economia | Investilize";
 
+// descrição segura
 const safeDescription =
   frontmatter.description ||
   "Acompanhe as últimas atualizações sobre economia, finanças e mercado financeiro.";
 
-// proteção contra loading_v2.gif e placeholders
+// tratamento da imagem
+const heroImage = frontmatter.heroImage || "";
+
 const safeImage =
-  frontmatter.heroImage &&
-  !frontmatter.heroImage.includes("loading") &&
-  !frontmatter.heroImage.includes(".gif")
-    ? frontmatter.heroImage
+  heroImage &&
+  !heroImage.includes("loading") &&
+  !heroImage.includes(".gif")
+    ? heroImage.startsWith("http")
+        ? heroImage
+        : `https://investilize.com.br${heroImage}`
     : "https://investilize.com.br/logo.png";
 ---
 
@@ -33,6 +41,8 @@ const safeImage =
 <head>
 
 <meta name="referrer" content="no-referrer">
+
+<BaseHead />
 
 <SEO
   title={safeTitle}
@@ -76,7 +86,29 @@ const safeImage =
   }}
 />
 
-<BaseHead title={safeTitle} description={safeDescription} />
+<!-- Schema.org para Google Notícias -->
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: safeTitle,
+  image: [safeImage],
+  datePublished: isoPubDate,
+  author: {
+    "@type": "Organization",
+    name: "Agência Brasil"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Investilize",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://investilize.com.br/logo.png"
+    }
+  },
+  mainEntityOfPage: canonicalURL
+})}
+</script>
 
 </head>
 
@@ -95,7 +127,7 @@ const safeImage =
 <h1>{safeTitle}</h1>
 
 <p class="source-credit">
-Fonte: Agência Brasil | Publicado em {frontmatter.pubDate}
+Fonte: Agência Brasil | Publicado em {safeDate?.toLocaleDateString("pt-BR")}
 </p>
 
 </header>
