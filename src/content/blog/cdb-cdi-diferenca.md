@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "CDB vs CDI: Qual a Diferença e Qual Rende Mais em 2026?"
-description: "CDB é o investimento, CDI é a taxa. Descubra como escolher o melhor CDB (Nubank, Banco do Brasil, PagBank) e use nosso simulador CDB gratuito."
+title: "CDB ou CDI: Qual a Diferença e Onde Investir em 2026? | Investilize"
+description: "Descubra a diferença real entre CDB e CDI. Entenda de forma simples qual rende mais e como escolher a melhor opção para a sua carteira de investimentos"
 author: 'Felipe'
 pubDate: '2026-03-26'
 updatedDate: '2026-03-26'

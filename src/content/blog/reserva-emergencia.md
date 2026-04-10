@@ -1,10 +1,10 @@
 ---
-title: 'Reserva de Emergência: Como Fazer, Calcular e Onde Deixar o Dinheiro'
-description: 'Aprenda a montar sua reserva de emergência passo a passo. Saiba quanto guardar (CLT ou Autônomo) e descubra se CDB, Tesouro Selic ou Poupança são as melhores opções para seu dinheiro hoje.'
+title: 'Reserva de Emergência: Quanto Juntar e Onde Guardar?'
+description: 'Não sabe por onde começar? Descubra o valor ideal da reserva de emergência para o seu perfil e veja as melhores opções seguras de renda fixa'
 author: 'Felipe'
 pubDate: '2025-08-18'
 tags: ['Renda Fixa', 'Renda Variável', 'Investimentos', 'reserva de emergencia','cdb', 'nubank']
-heroImage: '~/assets/blog/emergencia.webp'
+heroImage: '~/assets/blog/emergencia.png'
 ---
 
 Uma reserva de emergência é o alicerce da sua vida financeira. É um valor separado para cobrir despesas inesperadas, como problemas de saúde ou perda de emprego, impedindo que você precise recorrer a empréstimos predatórios em momentos de crise.
