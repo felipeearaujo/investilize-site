@@ -7,7 +7,7 @@ heroImage: "https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/imag
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-eleva-previsao-da-inflacao-para-431-este-ano"
 ---
 
-<img src="https://investilize.com.br/sites/default/files/thumbnails/image/https://imagens.ebc.com.br/Mi5rc12DrPsPjas08Do4bMH40kc=/1600x800/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moedadinheiro_jfcrz_abr_1701220042_1.jpg?itok=yiqyIHGI" style="width:100%; border-radius:12px; margin-bottom:20px;" />
+<img src="https://investilize.com.brhttps://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/real_moedadinheiro_jfcrz_abr_1701220042_1.jpg?itok=yiqyIHGI" style="width:100%; border-radius:12px; margin-bottom:20px;" />
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A elevação da previsão da inflação para 4,31% neste ano indica que o mercado financeiro continua atento às pressões sobre os preços na economia brasileira. Embora o índice ainda esteja dentro do intervalo da meta estabelecida pelo Banco Central, o aumento nas projeções mostra que há preocupação com fatores como custos de produção, preço de combustíveis, alimentos e oscilações no cenário internacional. Quando as expectativas de inflação sobem, isso também influencia decisões de política monetária, já que o Banco Central pode manter uma postura mais cautelosa em relação à redução dos juros. Para consumidores e empresas, esse cenário reforça a necessidade de planejamento financeiro, pois a inflação mais alta reduz o poder de compra da população e pode afetar o ritmo de crescimento da economia.</div>
 
