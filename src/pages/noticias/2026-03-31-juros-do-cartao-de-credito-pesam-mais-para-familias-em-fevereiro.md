@@ -8,12 +8,9 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> O aumento dos juros do cartão de crédito em fevereiro evidencia uma realidade que já pesa no bolso de muitas famílias brasileiras: o custo cada vez mais alto do crédito. Quando a renda não acompanha o aumento das despesas, muitos consumidores recorrem ao cartão para equilibrar o orçamento, mas acabam entrando no rotativo, que possui algumas das taxas de juros mais altas do mercado. O resultado é um ciclo perigoso de endividamento, em que a dívida cresce rapidamente e compromete uma parcela maior da renda familiar. Essa situação reforça a importância de políticas que reduzam o custo do crédito e ampliem a educação financeira da população, além de destacar a necessidade de planejamento por parte dos consumidores. Sem mudanças estruturais e mais acesso a crédito com taxas menores, o cartão de crédito continuará sendo um dos principais fatores de pressão sobre o orçamento das famílias no país.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do-cartao-de-credito-pesam-mais-para-familias-em-fevereiro">
-                    
-				</a></p><strong>A taxa média de juros cobrada pelos bancos subiu para as famílias em fevereiro, com o cartão de crédito rotativo pesando mais no bolso.</strong> De acordo com as<a href="https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito" target="_blank"> Estatísticas Monetárias e de Crédito</a>, divulgadas nesta segunda-feira (30) pelo Banco Central (BC), a taxa média das concessões de crédito livre para pessoas físicas teve alta de 1 ponto percentual (p.p.) no mês e de 5,4 p.p. em 12 meses, chegando a 62% ao ano.</p>
+<p><strong>A taxa média de juros cobrada pelos bancos subiu para as famílias em fevereiro, com o cartão de crédito rotativo pesando mais no bolso.</strong> De acordo com as<a href="https://www.bcb.gov.br/estatisticas/estatisticasmonetariascredito" target="_blank"> Estatísticas Monetárias e de Crédito</a>, divulgadas nesta segunda-feira (30) pelo Banco Central (BC), a taxa média das concessões de crédito livre para pessoas físicas teve alta de 1 ponto percentual (p.p.) no mês e de 5,4 p.p. em 12 meses, chegando a 62% ao ano.</p>
 
 <p>O destaque em fevereiro foi o avanço de 11,4 p.p. na taxa do cartão de crédito rotativo, chegando a 435,9% ao ano. A modalidade é uma das mais altas do mercado.</p>
 
@@ -21,7 +18,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/juros-do
 
 <p>Nos 12 meses encerrados em fevereiro, os juros do cartão de crédito rotativo tiveram recuo de 16,7 p.p. para as famílias. O crédito rotativo dura 30 dias e é tomado pelo consumidor quando paga menos que o valor integral da fatura do cartão de crédito. Ou seja, contrai um empréstimo e começa a pagar juros sobre o valor que não conseguiu quitar.</p>
 
-<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <p>Após os 30 dias, as instituições financeiras parcelam a dívida do cartão de crédito. Neste caso do cartão parcelado, os juros subiram 5,3 p.p. no mês e 16,9 p.p. pp em 12 meses, indo para 200,2% ao ano.</p>
 

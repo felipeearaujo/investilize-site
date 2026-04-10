@@ -13,11 +13,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-f
     Sob o prisma da Administração Pública, o desafio reside em harmonizar a necessidade de alívio no bolso do consumidor com a manutenção da arrecadação estadual de ICMS. O mercado monitora agora se a solução será estrutural ou apenas um paliativo fiscal, o que ditará as expectativas para os juros e o consumo no curto prazo. Para entender como o cenário de juros afeta seus títulos, veja o nosso <a href="/ferramentas/Taxometro">Taxômetro do Tesouro Direto</a>.
 </div>
 
-<p style="text-align: center;">
-    <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/haddad-fara-proposta-aos-estados-para-conter-precos-dos-combustiveis">
-        
-    </a>
-</p>
 
 O ministro da Fazenda, Fernando Haddad, disse, nesta quarta-feira (18), que o governo federal apresentará proposta aos estados para alterar a incidência do Imposto sobre Circulação de Mercadorias e Serviços (ICMS) sobre os combustíveis. A medida é uma tentativa de conter a pressão nos preços, impulsionada pelo conflito no Oriente Médio, e de evitar uma possível greve dos caminhoneiros após a alta do diesel.
 
@@ -42,7 +37,7 @@ Para entender como a inflação e esses impostos corroem seus ganhos, utilize no
 
 <strong>Ainda assim, os estados rejeitam baixar o imposto e dizem que a experiência mostra que <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-03/estados-dizem-que-baixar-imposto-nao-deixa-combustivel-mais-barato" target="_blank">reduções tributárias</a> sobre combustíveis não costumam ser repassadas ao consumidor final. </strong> Em nota publicada nessa terça-feira (17), o Comitê Nacional de Secretários de Fazenda, Finanças, Receita ou Tributação dos Estados e do Distrito Federal (Comsefaz), que reúne secretários de Fazenda estaduais, afirmou que esse tipo de medida gera uma perda dupla à população, porque o preço do combustível não baixa, mas há perda de dinheiro para políticas públicas.
 
-<p><a href="https://whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <h2>Fiscalização</h2>
 

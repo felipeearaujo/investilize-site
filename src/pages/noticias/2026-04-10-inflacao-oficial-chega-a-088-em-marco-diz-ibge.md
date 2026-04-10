@@ -8,12 +8,9 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/inflacao
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A alta de 0,88% da inflação em março, medida pelo Instituto Brasileiro de Geografia e Estatística (IBGE) por meio do Índice Nacional de Preços ao Consumidor Amplo (IPCA), indica que o custo de vida dos brasileiros voltou a subir com mais intensidade no mês. O resultado foi influenciado principalmente pelo aumento nos preços de transportes e alimentos, itens que têm peso significativo no orçamento das famílias. Esse movimento mostra que, mesmo com a inflação anual ainda dentro do intervalo da meta definida pelo Banco Central do Brasil, há pressões importantes em produtos e serviços essenciais do dia a dia. Na prática, quando combustíveis e alimentos ficam mais caros, o impacto é sentido de forma imediata pela população, especialmente pelas famílias de renda mais baixa. Por isso, resultados como o de março acendem um sinal de atenção para a política econômica, já que a inflação persistente pode reduzir o poder de compra e dificultar o planejamento financeiro das famílias. Assim, o comportamento dos preços nos próximos meses será determinante para avaliar se essa alta foi pontual ou se pode indicar uma tendência de maior pressão inflacionária ao longo do ano.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/inflacao-oficial-chega-088-em-marco-diz-ibge">
-                    
-				</a></p><strong>A inflação oficial, medida pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), atingiu 0,88%. Resultado foi 0,18 ponto percentual (p.p) mais alto que em fevereiro, quando foi registrado 0,70%. O avanço foi puxado pelos preços dos grupos transportes e alimentação e bebidas.</strong> <strong>Juntos responderam por 76% do IPCA do mês.</strong></p>
+<p><strong>A inflação oficial, medida pelo Índice Nacional de Preços ao Consumidor Amplo (IPCA), atingiu 0,88%. Resultado foi 0,18 ponto percentual (p.p) mais alto que em fevereiro, quando foi registrado 0,70%. O avanço foi puxado pelos preços dos grupos transportes e alimentação e bebidas.</strong> <strong>Juntos responderam por 76% do IPCA do mês.</strong></p>
 
 <p>No ano, o IPCA acumula avanço de 1,92% e, nos últimos 12 meses, de 4,14%. <strong>O percentual está acima dos 3,81% atingidos nos 12 meses imediatamente anteriores. Em março do ano passado, o IPCA registrou 0,56%.</strong></p>
 

@@ -8,12 +8,9 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A elevação da previsão da inflação para 4,31% neste ano indica que o mercado financeiro continua atento às pressões sobre os preços na economia brasileira. Embora o índice ainda esteja dentro do intervalo da meta estabelecida pelo Banco Central, o aumento nas projeções mostra que há preocupação com fatores como custos de produção, preço de combustíveis, alimentos e oscilações no cenário internacional. Quando as expectativas de inflação sobem, isso também influencia decisões de política monetária, já que o Banco Central pode manter uma postura mais cautelosa em relação à redução dos juros. Para consumidores e empresas, esse cenário reforça a necessidade de planejamento financeiro, pois a inflação mais alta reduz o poder de compra da população e pode afetar o ritmo de crescimento da economia.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-eleva-previsao-da-inflacao-para-431-este-ano">
-                    
-				</a></p>A previsão do mercado financeiro para o Índice Nacional de Preços ao Consumidor Amplo (IPCA), referência oficial da inflação no país, <strong>passou de 4,17% para 4,31% este ano</strong>. </p>
+<p>A previsão do mercado financeiro para o Índice Nacional de Preços ao Consumidor Amplo (IPCA), referência oficial da inflação no país, <strong>passou de 4,17% para 4,31% este ano</strong>. </p>
 
 <p>A estimativa está no Boletim Focus desta segunda-feira (30), pesquisa divulgada semanalmente pelo Banco Central (BC) com a expectativa de instituições financeiras para os principais indicadores econômicos.</p>
 
@@ -21,7 +18,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/mercado-
 
 <p>Estabelecida pelo Conselho Monetário Nacional (CMN), a meta é de 3%, com intervalo de tolerância de 1,5 ponto percentual para cima ou para baixo. Ou seja, o limite inferior é 1,5% e o superior, 4,5%.<br />
 <br />
-<a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil</strong> no WhatsApp</a></p>
+<a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil</strong> no WhatsApp
 
 <p>Em fevereiro, a alta dos preços em transportes e educação fez a <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/inflacao-oficial-recua-para-381-com-variacao-de-07-em-fevereiro" target="_blank">inflação oficial do mês fechar em 0,7%</a>, uma aceleração diante do registrado em janeiro, 0,33%. </p>
 

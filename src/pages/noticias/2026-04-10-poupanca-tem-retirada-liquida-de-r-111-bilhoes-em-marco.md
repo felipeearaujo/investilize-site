@@ -8,13 +8,10 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/poupanca
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A retirada líquida de R$ 11,1 bilhões da caderneta de poupança em março indica que muitos brasileiros continuam retirando recursos dessa aplicação tradicional para direcioná-los a outras finalidades ou investimentos. Os dados divulgados pelo Banco Central do Brasil mostram que o volume de saques superou os depósitos no período, refletindo tanto a necessidade de parte das famílias de utilizar suas reservas financeiras quanto a busca por aplicações que ofereçam maior rentabilidade. Em um cenário de juros ainda elevados, outras alternativas de investimento, como títulos de renda fixa e CDBs, acabam se tornando mais atrativas do que a poupança, que possui rendimento limitado. Dessa forma, muitos investidores optam por migrar seus recursos para produtos que acompanham mais de perto a taxa básica de juros da economia.
 Assim, o resultado de março reforça uma tendência observada nos últimos anos: embora continue sendo uma das aplicações mais populares do país, principalmente pela simplicidade e liquidez, a poupança vem perdendo espaço para opções de investimento que oferecem retornos mais competitivos, especialmente em períodos de taxas de juros mais altas.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/poupanca-tem-retirada-liquida-de-r-111-bilhoes-em-marco">
-                    
-				</a></p>O saldo da aplicação na caderneta de poupança caiu em março deste ano, com registro de mais saques do que depósitos. As saídas superaram as entradas em R$ 11,1 bilhões, de acordo com relatório divulgado nesta quinta-feira (9) pelo Banco Central (BC).</p>
+<p>O saldo da aplicação na caderneta de poupança caiu em março deste ano, com registro de mais saques do que depósitos. As saídas superaram as entradas em R$ 11,1 bilhões, de acordo com relatório divulgado nesta quinta-feira (9) pelo Banco Central (BC).</p>
 
 <p><strong>No mês passado, foram aplicados R$ 369,6 bilhões, contra saques da ordem de R$ 380,7 bilhões. Os rendimentos creditados nas contas de poupança somaram R$ 6,3 bilhões. O saldo da poupança é de quase R$ 1 trilhão.</strong></p>
 
@@ -22,7 +19,7 @@ Assim, o resultado de março reforça uma tendência observada nos últimos anos
 
 <p><strong>No primeiro trimestre desde ano, a caderneta já acumula R$ 41,2 bilhões em retiradas líquidas</strong>. Entre as razões para os saques está a manutenção da Selic – a taxa básica de juros – em alta, o que estimula a aplicação em investimentos com melhor desempenho.</p>
 
-<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <p>Na última reunião, no mês passado, o Comitê de Política Monetária (Copom) do BC começou a reduzir a Selic, com um <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bc-reduz-juros-basicos-para-1475-ao-ano" target="_blank">corte de 0,25 ponto percentual</a> ao ano. Entretanto, com as tensões causadas pela guerra no Oriente Médio, a autoridade monetária não descarta <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/ata-do-copom-bc-nao-indica-mais-cortes-na-taxa-de-juros" target="_blank">rever o ciclo de baixa</a>, caso seja necessário.</p>
 

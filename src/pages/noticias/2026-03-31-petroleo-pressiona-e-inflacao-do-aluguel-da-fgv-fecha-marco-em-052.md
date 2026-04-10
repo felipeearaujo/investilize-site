@@ -8,18 +8,15 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petroleo
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A alta do petróleo voltou a influenciar indicadores importantes da economia brasileira, refletindo diretamente na chamada “inflação do aluguel”, medida pelo IGP-M da Fundação Getulio Vargas. O índice registrou avanço de 0,52% em março, pressionado principalmente pelo aumento dos preços no atacado, que costuma reagir rapidamente às variações das commodities, como o petróleo. Esse movimento mostra como fatores internacionais ainda têm forte impacto na economia doméstica, já que a valorização do petróleo encarece combustíveis, transporte e diversos custos de produção. Como o IGP-M é amplamente utilizado para reajustar contratos de aluguel, esse resultado também pode afetar diretamente o bolso de inquilinos e empresas que possuem contratos indexados ao indicador. Dessa forma, mesmo uma alta moderada no índice merece atenção, pois sinaliza pressões de custo que podem se espalhar por outros setores da economia.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/petroleo-pressiona-e-inflacao-do-aluguel-da-fgv-fecha-marco-em-052">
-                    
-				</a></p><strong>O <a href="https://agenciabrasil.ebc.com.br/tags/igp-m" target="_blank">Índice Geral de Preços – Mercado</a> (IGP-M), também conhecido como “inflação do aluguel”, sentiu a pressão de produtos agropecuários e derivados do petróleo e fechou o mês de março em 0,52%, o que representa uma reversão em relação ao 0,73% de fevereiro.</strong></p>
+<p><strong>O <a href="https://agenciabrasil.ebc.com.br/tags/igp-m" target="_blank">Índice Geral de Preços – Mercado</a> (IGP-M), também conhecido como “inflação do aluguel”, sentiu a pressão de produtos agropecuários e derivados do petróleo e fechou o mês de março em 0,52%, o que representa uma reversão em relação ao 0,73% de fevereiro.</strong></p>
 
 <p>Com o resultado conhecido nesta segunda-feira (30), o <strong>IGP-M acumula deflação de 1,83% em 12 meses, ou seja, na média, os preços recuaram.</strong> Os <a href="https://portalibre.fgv.br/system/files/divulgacao/noticias/mat-complementar/2026-03/IGP-M_FGV_press%20release_Mar26.pdf" target="_blank">dados são do Instituto Brasileiro de Economia (Ibre) da Fundação Getulio Vargas (FGV)</a>. </p>
 
 <p><h3>Notícias relacionadas:</h3><ul><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-01/inflacao-do-aluguel-sobe-041-em-janeiro-mas-tem-queda-em-um-ano">Inflação do aluguel sobe 0,41% em janeiro, mas tem queda em um ano.</a></li><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2025-06/inflacao-do-aluguel-igp-m-recua-167-em-junho-o-menor-em-dois-anos"> Inflação do aluguel: IGP-M recua 1,67% em junho, o menor em dois anos.</a></li><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2025-02/igp-m-registra-inflacao-de-844-em-12-meses">IGP-M registra inflação de 8,44% em 12 meses.</a></li></ul>Nos últimos 12 meses, metade dos resultados foram positivos e metade negativos. Em março de 2025, havia ficado em -0,34%.</p>
 
-<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <h2>Atacado</h2>
 

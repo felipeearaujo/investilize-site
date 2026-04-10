@@ -11,10 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-ma
     <strong>Análise Técnica:</strong> O planejamento de investimentos da indústria é um termômetro vital para o PIB. Com pouco mais de 50% das empresas planejando investir, percebemos uma cautela que reflete o cenário de juros e a expectativa por reformas estruturais. Para o investidor, isso acende um alerta sobre o crescimento de longo prazo do setor produtivo.
 </div>
 
-
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/pouco-mais-da-metade-das-industrias-planeja-investir-em-2026">
-                    
-				</a></p>Um total de 56% dos empresários industriais pretende investir em 2026, o que mostra queda em relação aos 72% que investiram recursos no ano passado. É o que aponta a pesquisa Investimentos na Indústria 2025-2026, divulgada nesta terça-feira (17) pela Confederação Nacional da Indústria (CNI).</p>
+<p>Um total de 56% dos empresários industriais pretende investir em 2026, o que mostra queda em relação aos 72% que investiram recursos no ano passado. É o que aponta a pesquisa Investimentos na Indústria 2025-2026, divulgada nesta terça-feira (17) pela Confederação Nacional da Indústria (CNI).</p>
 
 <p><strong>Segundo o levantamento, 56% das empresas do setor planejam realizar investimentos neste ano. Desse total, 62% dos aportes darão continuidade a projetos já em andamento, enquanto 31% representam novas iniciativas.</strong></p>
 

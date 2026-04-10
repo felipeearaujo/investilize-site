@@ -11,9 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/inss-sus
     <strong>Análise Técnica:</strong> A suspensão de novos empréstimos do C6 Consig pelo INSS é um lembrete amargo de que o crescimento acelerado no crédito não pode atropelar a conformidade e o respeito ao consumidor. Para o aposentado, é um sinal de proteção; para o investidor, é um caso clássico de risco regulatório que pode impactar os resultados operacionais. No competitivo mercado de consignados, a ética na venda e a segurança dos dados tornaram-se ativos tão valiosos quanto o próprio capital.
 </div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/inss-suspende-novos-emprestimos-consignados-do-c6-consig-aposentados">
-                    
-				</a></p><strong>O Instituto Nacional do Seguro Social (INSS) suspendeu a oferta de novos empréstimos consignados pelo banco C6 Consig a aposentados e pensionistas do Regime Geral da Previdência Social.</strong> O C6 Consig é administrado pela holding N7, que também controla o C6 Bank.</p>
+<p><strong>O Instituto Nacional do Seguro Social (INSS) suspendeu a oferta de novos empréstimos consignados pelo banco C6 Consig a aposentados e pensionistas do Regime Geral da Previdência Social.</strong> O C6 Consig é administrado pela holding N7, que também controla o C6 Bank.</p>
 
 <p><strong>As operações anteriormente autorizadas foram suspensas <a href="https://in.gov.br/web/dou/-/despacho-decisorio-pres/inss-n-47-de-16-de-marco-de-2026-693112872" target="_blank">por meio de um despach</a>o publicado no <em>Diário Oficial da União</em> desta terça-feira (17).</strong></p>
 

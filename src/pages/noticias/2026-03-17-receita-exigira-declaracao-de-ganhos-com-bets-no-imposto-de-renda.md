@@ -11,11 +11,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-
     <strong>Análise Técnica Investilize:</strong> A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do 'Velho Oeste' das Bets no Brasil. Para o investidor, isso reforça a necessidade de organização patrimonial e clareza sobre a origem dos rendimentos. Sob a ótica da Administração Pública, é um passo decisivo para a formalização de um mercado bilionário, garantindo que a base tributária acompanhe as mudanças no comportamento de consumo e entretenimento do brasileiro — entenda como a variação de preços afeta seu bolso na nossa <a href="/ferramentas/poder-de-compra">Calculadora de Poder de Compra</a>. A conformidade agora é a regra do jogo. Para comparar o retorno desses prêmios com investimentos seguros, consulte o nosso <a href="/ferramentas/Taxometro">Taxômetro do Tesouro Direto</a>.
 </div>
 
-<p style="text-align: center;">
-    <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda">
-        
-    </a>
-</p>
 
 O contribuinte terá de informar ao Fisco os ganhos obtidos em 2025 com apostas esportivas e plataformas de jogos online, conhecidas como “bets”, que deverão ser declarados no Imposto de Renda Pessoa Física (IRPF) de 2026. Além dos prêmios recebidos, os contribuintes também precisarão informar os saldos mantidos nas contas dessas plataformas no fim do ano passado.
 

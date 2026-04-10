@@ -11,9 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/injecao-
     <strong>Análise Técnica:</strong> A marca de R$ 1 bilhão injetado diariamente pelo BNDES em 2025 consolida o papel do banco como o principal indutor do crescimento econômico nacional. Para o investidor, esse fluxo massivo de capital em setores como infraestrutura, saneamento e transição energética cria um ambiente de oportunidades em empresas que orbitam esses projetos. Do ponto de vista da gestão pública, o desafio é garantir que essa liquidez se transforme em produtividade real e desenvolvimento sustentável, mantendo o equilíbrio fiscal. É o fomento estatal atuando como o grande motor da economia real neste ano.
 </div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/injecao-do-bndes-na-economia-equivale-r-1-bilhao-por-dia-em-2025">
-                    
-				</a></p>A injeção de recursos do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes" target="_blank">BNDES</a>) na economia brasileira equivaleu, em média, a R$ 1 bilhão por dia. <strong>Em todo o ano de 2025, o fomento às atividades econômicas por meio financiamentos e garantias de crédito somou o recorde de R$ 366 bilhões.</strong></p>
+<p>A injeção de recursos do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes" target="_blank">BNDES</a>) na economia brasileira equivaleu, em média, a R$ 1 bilhão por dia. <strong>Em todo o ano de 2025, o fomento às atividades econômicas por meio financiamentos e garantias de crédito somou o recorde de R$ 366 bilhões.</strong></p>
 
 <p><strong>O resultado representa crescimento de 32% em relação a 2024. O montante é 140% acima do registrado em 2022, último ano da gestão anterior do BNDES, sob o governo Jair Bolsonaro.</strong></p>
 

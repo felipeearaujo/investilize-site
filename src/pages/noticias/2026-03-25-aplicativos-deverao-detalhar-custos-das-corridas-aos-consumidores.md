@@ -11,9 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicati
 Pelo lado das empresas, essa regra deve gerar um desconforto estratégico. Com os dados expostos, a comparação entre as plataformas deixa de ser apenas sobre o "preço final" e passa a ser sobre a ética da divisão. Se uma empresa retém 40% de uma corrida e a concorrente retém 25%, o usuário (e principalmente o motorista) tem em mãos um argumento poderoso para migrar de plataforma. Isso pode gerar uma pressão competitiva saudável para que as taxas de intermediação sejam mais justas, já que a reputação das marcas passará a estar diretamente atrelada à percepção de "justiça" na remuneração de quem está ao volante.
 No entanto, o desafio será a execução: como apresentar esses dados sem poluir a interface do aplicativo ou tornar a experiência de compra confusa? Além disso, existe o risco de as empresas tentarem "maquiar" custos sob nomenclaturas genéricas para evitar críticas. De qualquer forma, é uma vitória para o consumidor consciente, que ganha o direito de saber se o seu "luxo" de pedir um carro está sendo construído sobre uma base de divisão equilibrada ou se está apenas inflando as margens de lucro das gigantes de tecnologia.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores">
-                    
-				</a></p><strong>O Ministério da Justiça e Segurança Pública (MJSP) determinou que as empresas de aplicativos de entrega e de transporte informem o quanto do preço final pago é da plataforma digital e o quanto é da remuneração de entregadores ou de motoristas.</strong></p>
+<p><strong>O Ministério da Justiça e Segurança Pública (MJSP) determinou que as empresas de aplicativos de entrega e de transporte informem o quanto do preço final pago é da plataforma digital e o quanto é da remuneração de entregadores ou de motoristas.</strong></p>
 
 <p>A portaria com a obrigação será publicada nesta quarta-feira (25) no Diário Oficial da União.</p>
 

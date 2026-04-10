@@ -11,9 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/governo-
 A estratégia parece ser uma tentativa de "comprar tempo" enquanto uma solução estrutural para a paridade de preços ou para a reforma tributária não se consolida. O problema é que subsídios são remédios viciantes; uma vez concedidos, retirá-los sem causar uma convulsão social ou greves de caminhoneiros é uma tarefa hercúlea. Além disso, há um contraponto ambiental e de mercado: enquanto o mundo discute a transição energética, injetar bilhões para baratear um combustível fóssil pode ser visto como um retrocesso estratégico, além de gerar incertezas para os investidores da Petrobras, que sempre ficam de orelha em pé quando o governo decide intervir diretamente no balanço de preços para fins sociais.
 No fim das contas, a medida é um alívio tático para o bolso do consumidor no curto prazo, mas que deixa uma conta salgada para o Tesouro Nacional lá na frente. É o clássico equilíbrio na corda bamba entre a estabilidade política e a responsabilidade fiscal.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/governo-propoe-subsidio-de-r-120-ao-diesel-apos-impasse-do-icms">
-                    
-				</a></p><strong>A equipe econômica apresentou uma nova proposta aos estados para conter a alta do diesel após resistência dos governadores em zerar o Imposto sobre a Circulação de Mercadorias e Serviços (ICMS) sobre a importação do combustível, anunciou nesta terça-feira (24) o ministro da Fazenda, Dario Durigan.</strong></p>
+<p><strong>A equipe econômica apresentou uma nova proposta aos estados para conter a alta do diesel após resistência dos governadores em zerar o Imposto sobre a Circulação de Mercadorias e Serviços (ICMS) sobre a importação do combustível, anunciou nesta terça-feira (24) o ministro da Fazenda, Dario Durigan.</strong></p>
 
 <p>A alternativa, apresentada prevê uma subvenção de R$ 1,20 por litro de diesel importado, dividida entre União e estados.</p>
 
@@ -27,7 +25,7 @@ No fim das contas, a medida é um alívio tático para o bolso do consumidor no 
 <p>"Essa linha dá uma resposta mais rápida às consequências da guerra, o efeito é mais célere, e não exige uma renúncia fiscal de ICMS, podemos ter essa contraproposta, por meio de subvenções, com efeitos mais rápidos", disse Durigan a jornalistas.</p>
 </blockquote>
 
-<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://www.whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">&gt;&gt; Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <h2>Medida temporária</h2>
 

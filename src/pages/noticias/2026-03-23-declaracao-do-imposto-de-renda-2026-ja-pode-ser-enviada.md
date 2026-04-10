@@ -7,16 +7,13 @@ heroImage: "/images/noticias/2026-03-23-declaracao-do-imposto-de-renda-2026-ja-p
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada"
 ---
 
-
 <div class="analise-investilize" style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;">
     <strong>Análise Técnica:</strong> O "Leão" acabou de abrir a jaula e a temporada de prestação de contas com a Receita Federal começou oficialmente nesta segunda-feira, 23 de março de 2026. Para este ano, a Receita espera receber cerca de 44 milhões de declarações, e a grande novidade é que o prazo está um pouco mais apertado: as transmissões devem ser feitas até o dia 29 de maio. Estão obrigados a declarar os cidadãos que receberam rendimentos tributáveis acima de R$ 35.584,00 ao longo de 2025, um valor atualizado que reflete os ajustes recentes na tabela progressiva. É importante notar que, embora muito se fale sobre a isenção para quem ganha até R$ 5 mil, essa regra completa só terá pleno efeito na declaração de 2027; para agora, o que vale é o cálculo sobre o que foi recebido no ano passado. Para tirar dúvidas detalhadas, consulte nosso <a href="https://investilize.com.br/blog/imposto-de-renda-2026-quem-deve-declarar" style="color:#0167c2; font-weight:bold;">Guia Completo: Quem deve declarar o IR 2026</a>.
 
 O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, que já está disponível desde o primeiro dia e é a aposta do governo para reduzir erros e a temida malha fina. Além disso, a Receita incluiu campos inéditos, como a identificação de raça e cor (de preenchimento opcional) e uma ficha específica para ganhos com apostas esportivas, as populares "bets", refletindo a nova regulamentação do setor no Brasil. Outro ponto de atenção é a estratégia de restituição: este ano teremos apenas quatro lotes (entre maio e agosto), e o Fisco pretende quitar 80% das devoluções logo nos dois primeiros meses. Por isso, a combinação de entrega antecipada, uso da declaração pré-preenchida e opção por receber via Pix continua sendo o "caminho das pedras" para quem quer ver o dinheiro de volta na conta o quanto antes e evitar o estresse de última hora. Para calcular o impacto do leão no seu bolso o ano todo, utilize nossa <a href="https://investilize.com.br/ferramentas/calculadora-ir-mensal" style="color:#0167c2; font-weight:bold;">Calculadora de IR Mensal</a>.
 </div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada">
-                    
-				</a></p>Os contribuintes podem acertar as contas com o Leão. Começa às 8h desta segunda-feira (23) o envio da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025).</p>
+<p>Os contribuintes podem acertar as contas com o Leão. Começa às 8h desta segunda-feira (23) o envio da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025).</p>
 
 <p><strong>O prazo de entrega vai até 29 de maio, às 29h59min59s. Neste ano, o Fisco espera receber cerca de 44 milhões de declarações.</strong></p>
 

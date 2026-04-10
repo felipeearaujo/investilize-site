@@ -36,7 +36,7 @@ Com o adiamento do início do prazo, <strong>o programa gerador da declaração 
 
 Quem perder o prazo estará sujeito a multa de 1% ao mês sobre o imposto devido de 2025, mesmo que o tributo já tenha sido quitado. A penalidade tem valor mínimo de R$ 165,74 e pode chegar a 20% do imposto devido, segundo a Receita.
 
-<p><a href="https://whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">>> Siga o canal da <strong>Agência Brasil </strong>no WhatsApp</a></p>
+<p><a href="https://whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">>> Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <h2>Quem deve declarar</h2>
 

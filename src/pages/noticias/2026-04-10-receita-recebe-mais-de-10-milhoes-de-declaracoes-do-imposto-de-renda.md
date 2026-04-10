@@ -8,13 +8,10 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/receita-
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> O fato de a Receita Federal do Brasil já ter recebido mais de 10 milhões de declarações do Imposto de Renda Pessoa Física (IRPF) demonstra que muitos contribuintes estão se antecipando para cumprir a obrigação fiscal dentro do prazo. Esse movimento inicial costuma ocorrer principalmente entre pessoas que desejam receber a restituição mais cedo, já que a ordem de entrega da declaração é um dos critérios considerados para o pagamento dos lotes de restituição. Por outro lado, o grande volume de declarações enviadas nas primeiras semanas também revela o avanço do uso de ferramentas digitais e da declaração pré-preenchida, que tornam o processo mais rápido e simples para o contribuinte. Mesmo assim, especialistas recomendam atenção no preenchimento das informações, especialmente em relação a rendimentos, despesas médicas e dados bancários, para evitar erros que possam levar a declaração à malha fina.
 Assim, o número expressivo de declarações já enviadas mostra não apenas o cumprimento da obrigação tributária por parte da população, mas também uma maior familiaridade dos contribuintes com os sistemas digitais da Receita Federal, que vêm facilitando o envio das informações fiscais ao longo dos últimos anos.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/receita-recebe-mais-de-10-milhoes-de-declaracoes-do-ir">
-                    
-				</a></p><strong>Mais de 10 milhões de contribuintes acertaram as contas com o Leão em 17 dias de entrega da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025). Até as 18h29 desta quinta-feira (9), 10.028.171 documentos foram enviados.</strong></p>
+<p><strong>Mais de 10 milhões de contribuintes acertaram as contas com o Leão em 17 dias de entrega da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025). Até as 18h29 desta quinta-feira (9), 10.028.171 documentos foram enviados.</strong></p>
 
 <p><strong>O número equivale a 22,8% do total de declarações previstas para este ano. </strong>Em 2026, o Fisco espera receber 44 milhões de declarações.</p>
 

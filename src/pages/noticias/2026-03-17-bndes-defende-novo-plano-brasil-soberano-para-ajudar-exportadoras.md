@@ -11,10 +11,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-de
     <strong>Análise Técnica:</strong> O BNDES retoma o protagonismo na política industrial com o Plano Brasil Soberano, focando no fortalecimento das exportadoras nacionais. Para o investidor, o suporte estatal a setores estratégicos pode reduzir o custo de capital e impulsionar a competitividade global das 'blue chips' brasileiras. É a gestão pública atuando como braço financeiro do desenvolvimento econômico, buscando mitigar riscos externos e consolidar a soberania produtiva do país. Olho vivo no impacto dessas linhas de crédito nos resultados das grandes companhias nos próximos trimestres.
 </div>
 
-
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/bndes-defende-novo-plano-brasil-soberano-para-ajudar-exportadoras">
-                    
-				</a></p><strong>O presidente do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes">BNDES</a>), Aloizio Mercadante, defendeu, nesta terça-feira (17), que o país tenha um novo Plano Brasil Soberano de ajuda a exportadores prejudicados por tarifas americanas.</strong></p>
+<p><strong>O presidente do Banco Nacional de Desenvolvimento Econômico e Social (<a href="https://agenciabrasil.ebc.com.br/tags/bndes">BNDES</a>), Aloizio Mercadante, defendeu, nesta terça-feira (17), que o país tenha um novo Plano Brasil Soberano de ajuda a exportadores prejudicados por tarifas americanas.</strong></p>
 
 <p>A ajuda, na visão de Mercadante, teria espaço também para setores com déficits comerciais (importações maiores que exportações), estratégicos e os afetados por reflexos de guerras.</p>
 

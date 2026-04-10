@@ -8,12 +8,9 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-qu
 ---
 
 
-
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> A declaração do Imposto de Renda em 2026, referente aos rendimentos recebidos em 2025, é uma obrigação que exige atenção de milhões de brasileiros. A cada ano, a Receita Federal atualiza os critérios que determinam quem precisa prestar contas ao Fisco, e entender essas regras é fundamental para evitar multas ou problemas com o CPF. De modo geral, devem declarar as pessoas que tiveram rendimentos tributáveis acima do limite estabelecido pela Receita, além daqueles que receberam valores elevados em rendimentos isentos, realizaram operações na bolsa de valores, venderam bens com lucro ou possuíam patrimônio acima do limite definido. Também entram nessa lista contribuintes com atividade rural significativa, quem passou a residir no Brasil durante o ano ou possui investimentos no exterior. Embora muitos vejam a declaração como uma tarefa burocrática, ela também pode representar uma oportunidade de restituição para quem pagou imposto a mais ao longo do ano. Por isso, a organização de documentos, como informes de rendimento, comprovantes de despesas médicas e educacionais, é essencial para facilitar o preenchimento e evitar erros. Ficar atento aos prazos definidos pela Receita Federal também é indispensável, já que o atraso na entrega pode gerar multa e outras complicações fiscais. Assim, mais do que uma obrigação anual, a declaração do Imposto de Renda é um momento importante para que o contribuinte organize sua vida financeira e mantenha sua situação regular perante o Fisco.</div>
 
-<p><p style="text-align: center;"><a class="" href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-quem-deve-declarar-imposto-de-renda-em-2026">
-                    
-				</a></p>O prazo para entrega da declaração do Imposto de Renda para pessoas físicas já iniciou. E é claro que algumas questões começam a aparecer. Uma das primeiras é: <strong>quem precisa declarar o imposto de renda? </strong>A série <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/series/tira-duvidas-do-ir-2026" target="_blank"><strong>Tira-Dúvidas do IR</strong></a>, produzida pela <strong>Radioagência Nacional</strong>, responde para você.</p>
+<p>O prazo para entrega da declaração do Imposto de Renda para pessoas físicas já iniciou. E é claro que algumas questões começam a aparecer. Uma das primeiras é: <strong>quem precisa declarar o imposto de renda? </strong>A série <a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/series/tira-duvidas-do-ir-2026" target="_blank"><strong>Tira-Dúvidas do IR</strong></a>, produzida pela <strong>Radioagência Nacional</strong>, responde para você.</p>
 
 <p>A resposta passa por diversos critérios que envolvem ganhos, patrimônio e gastos no ano de 2025. A instrução normativa da Receita Federal lista <strong>12 critérios que podem definir a obrigatoriedade na hora de declarar.</strong></p>
 
@@ -50,7 +47,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-qu
         </div>
     </div>
 </div>
-
 
 <!-- END scald=457101 --></div><div class="dnd-caption-wrapper">
 <div class="meta"><br />
@@ -92,7 +88,6 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-qu
         </div>
     </div>
 </div>
-
 
 <!-- END scald=457560 --></div><div class="dnd-caption-wrapper">
 <div class="meta"><br />
