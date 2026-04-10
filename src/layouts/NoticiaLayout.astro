@@ -17,16 +17,21 @@ const safeTitle = frontmatter.title || "Notícias de Economia | Investilize";
 const safeDescription = frontmatter.description || "Acompanhe as últimas atualizações sobre economia e mercado.";
 
 // Melhoria na lógica da imagem:
-const rawImage = frontmatter.heroImage || "";
-const isGif = rawImage.includes(".gif") || rawImage.includes("loading");
+const heroImage = frontmatter.heroImage || "";
 
 let safeImage = "https://investilize.com.br/logo.png";
 
-if (rawImage && !isGif) {
-    if (rawImage.startsWith("http")) {
-        safeImage = rawImage;
+if (heroImage && !heroImage.includes("loading") && !heroImage.includes(".gif")) {
+    // Se a URL contiver "https://" no meio (caso do link aninhado da EBC)
+    if (heroImage.includes("https://") || heroImage.includes("http://")) {
+        // Pega a partir do primeiro "http" que encontrar
+        const trueUrl = heroImage.substring(heroImage.indexOf("http"));
+        safeImage = trueUrl;
     } else {
-        safeImage = `https://investilize.com.br${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+        // Se for um link relativo normal do seu site
+        safeImage = heroImage.startsWith("/") 
+            ? `https://investilize.com.br${heroImage}` 
+            : `https://investilize.com.br/${heroImage}`;
     }
 }
 ---
