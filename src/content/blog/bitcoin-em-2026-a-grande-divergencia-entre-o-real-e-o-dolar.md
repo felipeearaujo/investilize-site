@@ -21,7 +21,7 @@ Se você tem acompanhado o mercado financeiro neste mês de abril de 2026, certa
 
 No texto anterior, mencionamos que o preço do Bitcoin em Reais (BTC/BRL) pode enganar. A "Armadilha Cambial" ocorre devido a um fenômeno simples, mas devastador para o bolso de quem não entende de matemática financeira. A relação de preço pode ser expressa pela fórmula:
 
-$$P_{BRL} = P_{USD} \times C_{USD/BRL}$$
+Fórmula: Preço (BRL) = Preço (USD) × Câmbio (USD/BRL)
 
 Onde $P$ representa o preço e $C$ a cotação cambial. Imagine o seguinte cenário realista de 2026:
 
