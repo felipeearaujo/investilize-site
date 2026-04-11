@@ -4,20 +4,20 @@
 
 <div class="painel-cripto">
     <div class="cabecalho-painel">
-        <h2>ðŸ“Š Radar Cripto: Maiores MovimentaÃ§Ãµes</h2>
-        <span id="status-atualizacao" class="status-badge">ðŸŸ¢ Atualizando...</span>
+        <h2>? Radar Cripto: Maiores Movimentações</h2>
+        <span id="status-atualizacao" class="status-badge">? Atualizando...</span>
     </div>
 
     <div class="grid-colunas">
         <div class="coluna altas">
-            <h3 class="titulo-coluna text-green">ðŸš€ Maiores Altas (24h)</h3>
+            <h3 class="titulo-coluna text-green">? Maiores Altas (24h)</h3>
             <ul id="lista-cripto-altas" class="lista-ativos">
                 <li class="carregando">Buscando dados no mercado...</li>
             </ul>
         </div>
 
         <div class="coluna baixas">
-            <h3 class="titulo-coluna text-red">ðŸ“‰ Maiores Quedas (24h)</h3>
+            <h3 class="titulo-coluna text-red">? Maiores Quedas (24h)</h3>
             <ul id="lista-cripto-quedas" class="lista-ativos">
                 <li class="carregando">Buscando dados no mercado...</li>
             </ul>
@@ -32,17 +32,17 @@
         const listaQuedas = document.getElementById('lista-cripto-quedas');
 
         try {
-            statusBadge.textContent = "ðŸ”„ Atualizando...";
+            statusBadge.textContent = "? Atualizando...";
             statusBadge.style.color = "#eab308"; // Amarelo
 
-            // Busca as top 100 moedas em BRL. A API pÃºblica da CoinGecko tem limite de ~10 a 30 requisiÃ§Ãµes por minuto.
+            // Busca as top 100 moedas em BRL.
             const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=100&page=1&sparkline=false');
             
             if (!response.ok) throw new Error("Erro na API da CoinGecko");
             
             const moedas = await response.json();
 
-            // Filtra moedas que nÃ£o tem variaÃ§Ã£o registrada e ordena pela variaÃ§Ã£o de 24h
+            // Filtra moedas que não tem variação registrada e ordena pela variação de 24h
             const moedasValidas = moedas.filter(m => m.price_change_percentage_24h !== null);
             const moedasOrdenadas = moedasValidas.sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h);
 
@@ -50,13 +50,13 @@
             const top5Altas = moedasOrdenadas.slice(0, 5);
             const top5Quedas = moedasOrdenadas.slice(-5).reverse();
 
-            // FunÃ§Ã£o para montar o HTML de cada linha
+            // Função para montar o HTML de cada linha (AGORA SEM IMAGENS)
             const criarLinhaMoeda = (moeda) => {
                 const isPositivo = moeda.price_change_percentage_24h > 0;
                 const corClasse = isPositivo ? 'text-green' : 'text-red';
                 const sinal = isPositivo ? '+' : '';
                 
-                // Formata o preÃ§o (se for muito barato, mostra mais casas decimais)
+                // Formata o preço (se for muito barato, mostra mais casas decimais)
                 const precoFormatado = moeda.current_price < 1 
                     ? moeda.current_price.toFixed(4) 
                     : moeda.current_price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -64,7 +64,6 @@
                 return `
                     <li class="item-moeda">
                         <div class="moeda-info">
-                            <img src="${moeda.image}" alt="${moeda.name}" class="moeda-icone" loading="lazy" />
                             <span class="moeda-sigla">${moeda.symbol.toUpperCase()}</span>
                         </div>
                         <span class="moeda-preco">R$ ${precoFormatado}</span>
@@ -79,25 +78,25 @@
 
             // Atualiza o status com a hora exata
             const horaAtual = new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            statusBadge.textContent = `ðŸŸ¢ Atualizado Ã s ${horaAtual}`;
+            statusBadge.textContent = `? Atualizado às ${horaAtual}`;
             statusBadge.style.color = "#22c55e"; // Verde
 
         } catch (error) {
             console.error("Falha ao atualizar radar cripto:", error);
-            statusBadge.textContent = "ðŸ”´ Erro de conexÃ£o";
+            statusBadge.textContent = "? Erro de conexão";
             statusBadge.style.color = "#ef4444"; // Vermelho
         }
     }
 
-    // Executa imediatamente ao carregar a pÃ¡gina
+    // Executa imediatamente ao carregar a página
     atualizarRadarCripto();
 
-    // Atualiza os dados a cada 60 segundos (seguro para nÃ£o bloquear a API gratuita)
+    // Atualiza os dados a cada 60 segundos
     setInterval(atualizarRadarCripto, 60000);
 </script>
 
 <style>
-    /* EstilizaÃ§Ã£o limpa e moderna para combinar com o Investilize */
+    /* Estilização limpa e moderna para combinar com o Investilize */
     .painel-cripto {
         background: #ffffff;
         border: 1px solid #e2e8f0;
@@ -178,15 +177,10 @@
     .moeda-info {
         display: flex;
         align-items: center;
-        gap: 8px;
         width: 30%;
     }
 
-    .moeda-icone {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-    }
+    /* CSS do ícone removido */
 
     .moeda-sigla {
         font-weight: 600;
