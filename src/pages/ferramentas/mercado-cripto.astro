@@ -1,0 +1,147 @@
+---
+import { SEO } from "astro-seo";
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AltasEBaixasCripto from '../../components/AltasEBaixasCripto.astro';
+
+// Configurações de SEO
+const title = "Cotação de Criptomoedas ao Vivo: Maiores Altas e Quedas | Investilize";
+const description = "Acompanhe a cotação do Bitcoin e Ethereum em tempo real. Veja o nosso painel atualizado com as criptomoedas que mais subiram e caíram nas últimas 24 horas.";
+const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
+const safeImage = "https://investilize.com.br/images/capa-ferramenta-cripto.png"; // Substitua pela sua imagem real
+---
+
+<html lang="pt-BR">
+    <head>
+        <meta name="referrer" content="no-referrer">
+
+        <SEO
+            title={title}
+            description={description}
+            canonical={canonicalURL}
+            openGraph={{
+                basic: {
+                    title: title,
+                    type: "website",
+                    image: safeImage,
+                },
+                optional: {
+                    description: description,
+                    siteName: "Investilize",
+                }
+            }}
+            twitter={{
+                card: "summary_large_image",
+                site: "@investilize",
+                creator: "@felipearaujo",
+                title: title,
+                description: description,
+                image: safeImage,
+            }}
+        />
+        
+        <BaseHead title={title} description={description} />
+    </head>
+    <body>
+        <Header />
+        
+        <main class="container-ferramenta">
+            <article>
+                <header class="tool-header">
+                    <span class="category">Ferramenta Gratuita</span>
+                    <h1>Mercado Cripto ao Vivo: Maiores Altas e Quedas</h1>
+                    <p class="subtitle">Acompanhe a movimentação das 100 maiores moedas digitais em tempo real. Descubra quais ativos estão dominando o mercado nas últimas 24 horas.</p>
+                </header>
+                
+                <AltasEBaixasCripto />
+
+                <div class="content-seo mt-12">
+                    <h2>Como funciona o mercado de criptomoedas?</h2>
+                    <p>Diferente da Bolsa de Valores (B3) que tem horário de abertura e fechamento, o mercado de criptoativos (como Bitcoin, Ethereum e Solana) funciona 24 horas por dia, 7 dias por semana. Isso significa que as cotações não param de se mover, gerando oportunidades e riscos a todo instante.</p>
+                    
+                    <p>O painel acima monitora o volume financeiro global e filtra automaticamente as moedas que sofreram as maiores valorizações (🚀) e desvalorizações (📉) no período exato de 24 horas.</p>
+
+                    <h2>Atenção ao Risco (Volatilidade)</h2>
+                    <p>É comum ver moedas subindo 20%, 50% ou até 100% em um único dia. No entanto, o efeito contrário também é verdadeiro. Criptomoedas são ativos de altíssimo risco e extrema volatilidade.</p>
+                    <p>Antes de investir, garanta que sua <a href="/financas-pessoais/reserva-de-emergencia">Reserva de Emergência</a> está consolidada em investimentos seguros de renda fixa, e utilize apenas o capital que você aceita correr riscos para alocar em moedas digitais.</p>
+                </div>
+            </article>
+        </main>
+
+        <Footer />
+        
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O mercado de criptomoedas fecha aos finais de semana?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Diferente do mercado de ações tradicional, o mercado de criptomoedas é descentralizado e funciona ininterruptamente, 24 horas por dia, todos os dias do ano."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "É seguro investir nas moedas que mais subiram hoje?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nem sempre. Comprar um ativo apenas porque ele subiu muito nas últimas 24 horas pode fazer com que você compre no 'topo' do preço. Sempre estude os fundamentos do projeto antes de investir."
+              }
+            }
+          ]
+        }
+        </script>
+    </body>
+</html>
+
+<style>
+    .container-ferramenta {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    .tool-header {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .category {
+        color: #f59e0b; /* Cor de destaque */
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+    }
+    .tool-header h1 {
+        font-size: 2.5rem;
+        color: #1e293b;
+        margin: 0.5rem 0;
+        line-height: 1.2;
+    }
+    .subtitle {
+        color: #64748b;
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .content-seo {
+        line-height: 1.7;
+        color: #334155;
+    }
+    .content-seo h2 {
+        color: #0f172a;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    .content-seo a {
+        color: #2563eb;
+        text-decoration: underline;
+    }
+    .mt-12 {
+        margin-top: 3rem;
+    }
+</style>
