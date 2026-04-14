@@ -1,0 +1,134 @@
+---
+// src/pages/termos-de-uso.astro
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Termos de Uso";
+const pageDescription = "Leia os termos e condições de uso do site Investilize.";
+---
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+</head>
+
+<body>
+    <Header />
+
+    <main class="legal-container">
+        <h1 class="legal-title">Termos de Uso</h1>
+
+        <div class="legal-content">
+
+            <p>Ao acessar o site <strong>Investilize</strong> (https://investilize.com.br), você concorda com os termos e condições descritos neste documento. Caso não concorde com qualquer parte destes termos, recomendamos que não utilize este site.</p>
+
+            <h2>1. Finalidade do Site</h2>
+            <p>O Investilize é um site de caráter informativo e educacional, voltado à divulgação de conteúdos sobre finanças, investimentos e economia.</p>
+            <p>As informações disponibilizadas não constituem aconselhamento financeiro, jurídico ou profissional.</p>
+
+            <h2>2. Responsabilidade do Usuário</h2>
+            <p>O usuário é responsável pelo uso das informações disponibilizadas no site.</p>
+            <p>Recomendamos que decisões financeiras sejam tomadas com base em análise própria ou com o auxílio de profissionais qualificados.</p>
+
+            <h2>3. Limitação de Responsabilidade</h2>
+            <p>O Investilize não se responsabiliza por quaisquer perdas, danos ou prejuízos decorrentes do uso das informações publicadas.</p>
+            <p>O uso do site é de inteira responsabilidade do usuário.</p>
+
+            <h2>4. Propriedade Intelectual</h2>
+            <p>Todo o conteúdo original deste site, incluindo textos, imagens, gráficos e logotipos, é protegido por direitos autorais.</p>
+            <p>É proibida a reprodução, distribuição ou modificação sem autorização prévia.</p>
+
+            <h2>5. Uso de Conteúdo de Terceiros</h2>
+            <p>O Investilize pode reproduzir conteúdos de fontes públicas e institucionais, como a Agência Brasil, sempre com a devida atribuição de autoria e indicação da fonte original.</p>
+
+            <p>Os direitos sobre esses conteúdos pertencem aos seus respectivos autores e veículos de origem.</p>
+
+            <p>O site não se responsabiliza por alterações, atualizações ou precisão das informações fornecidas por terceiros.</p>
+
+            <h2>6. Publicidade e Monetização</h2>
+            <p>Este site utiliza serviços de publicidade de terceiros, incluindo o Ezoic, para exibição de anúncios.</p>
+
+            <p>Esses serviços podem utilizar cookies, pixels e outras tecnologias para coletar informações sobre a navegação do usuário e exibir anúncios personalizados.</p>
+
+            <p>Ao utilizar o site, o usuário concorda com a exibição de anúncios e com o uso dessas tecnologias.</p>
+
+            <h2>7. Cookies</h2>
+            <p>O site utiliza cookies para melhorar a experiência do usuário, analisar o tráfego e personalizar conteúdo.</p>
+
+            <p>O usuário pode desativar os cookies nas configurações do navegador, ciente de que isso pode afetar funcionalidades do site.</p>
+
+            <h2>8. Links Externos</h2>
+            <p>O Investilize pode conter links para sites externos. Não temos controle sobre o conteúdo e as políticas desses sites e não nos responsabilizamos por eles.</p>
+
+            <h2>9. Conduta do Usuário</h2>
+            <p>O usuário concorda em não:</p>
+            <ul>
+                <li>Utilizar o site para atividades ilegais</li>
+                <li>Tentar acessar áreas restritas ou comprometer a segurança do site</li>
+                <li>Distribuir conteúdo malicioso ou prejudicial</li>
+            </ul>
+
+            <h2>10. Privacidade</h2>
+            <p>O uso deste site também está sujeito à nossa Política de Privacidade.</p>
+
+            <h2>11. Modificações</h2>
+            <p>Estes Termos de Uso podem ser alterados a qualquer momento, sem aviso prévio.</p>
+            <p>Recomendamos que o usuário revise este documento periodicamente.</p>
+
+            <h2>12. Contato</h2>
+            <p>Para dúvidas ou solicitações, acesse:</p>
+            <p><a href="https://investilize.com.br/contato/">https://investilize.com.br/contato/</a></p>
+
+            <p><strong>Última atualização:</strong> Abril de 2026</p>
+
+        </div>
+    </main>
+
+    <Footer />
+
+    <style>
+        .legal-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .legal-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #003d6b;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .legal-content :global(h2) {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            color: #003d6b;
+        }
+
+        .legal-content :global(p),
+        .legal-content :global(li) {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+
+        .legal-content :global(a) {
+            color: #0167c2;
+            font-weight: 600;
+        }
+
+        .legal-content :global(a):hover {
+            text-decoration: underline;
+        }
+    </style>
+
+</body>
+</html>

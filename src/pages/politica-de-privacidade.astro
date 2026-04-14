@@ -1,32 +1,84 @@
 ---
-// Ficheiro: src/pages/politica-de-privacidade.astro
+// src/pages/politica-de-privacidade.astro
 
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const pageTitle = "Política de Privacidade";
-const pageDescription = "Entenda como os seus dados são recolhidos e utilizados no nosso site. A sua privacidade é importante para nós.";
+const pageDescription = "Saiba como coletamos, usamos e protegemos seus dados no Investilize.";
 ---
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
     <BaseHead title={pageTitle} description={pageDescription} />
 </head>
+
 <body>
     <Header />
+
     <main class="legal-container">
-        
         <h1 class="legal-title">Política de Privacidade</h1>
-        
+
         <div class="legal-content">
-            <p><strong></strong></p>
-            <p><h2><span style="color: rgb(68, 68, 68);"></span></h2><p><span style="color: rgb(68, 68, 68);">A sua privacidade é importante para nós. É política do INVESTILIZE respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="investilize.com.br">INVESTILIZE</a>, e outros sites que possuímos e operamos.</span></p><p><span style="color: rgb(68, 68, 68);">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</span></p><p><span style="color: rgb(68, 68, 68);">Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</span></p><p><span style="color: rgb(68, 68, 68);">Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</span></p><p><span style="color: rgb(68, 68, 68);">O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas&nbsp;</span><a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" style="background-color: transparent; color: rgb(68, 68, 68);">políticas de privacidade</a><span style="color: rgb(68, 68, 68);">.</span></p><p><span style="color: rgb(68, 68, 68);">Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</span></p><p><span style="color: rgb(68, 68, 68);">O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</span></p><p><span style="color: rgb(68, 68, 68);"><ul><li><span style="color: rgb(68, 68, 68);">O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</span></li><li><span style="color: rgb(68, 68, 68);">Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</span></li><li><span style="color: rgb(68, 68, 68);">Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.</span></li><li><span style="color: rgb(68, 68, 68);">Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.</span></li></ul><p><br></p></span></p><h3><span style="color: rgb(68, 68, 68);">Compromisso do Usuário</span></h3><p><span style="color: rgb(68, 68, 68);">O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o INVESTILIZE oferece no site e com caráter enunciativo, mas não limitativo:</span></p><ul><li><span style="color: rgb(68, 68, 68);">A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</span></li><li><span style="color: rgb(68, 68, 68);">B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</span></li><li><span style="color: rgb(68, 68, 68);">C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do INVESTILIZE, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</span></li></ul><h3><span style="color: rgb(68, 68, 68);">Mais informações</span></h3><p><span style="color: rgb(68, 68, 68);">Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</span></p><p><span style="color: rgb(68, 68, 68);">Esta política é efetiva a partir de&nbsp;7 July 2025 14:03</span></p></p>
-            
+
+            <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como o site <strong>Investilize</strong> coleta, utiliza e protege as informações dos usuários.</p>
+
+            <p>Ao acessar o site https://investilize.com.br, você concorda com os termos descritos nesta política.</p>
+
+            <h2>1. Coleta de Informações</h2>
+            <p>Podemos coletar informações fornecidas voluntariamente pelo usuário, como nome e e-mail, além de dados enviados por formulários.</p>
+            <p>Também coletamos automaticamente informações como endereço IP, tipo de navegador, páginas acessadas e tempo de navegação.</p>
+
+            <h2>2. Uso das Informações</h2>
+            <p>As informações coletadas podem ser utilizadas para:</p>
+            <ul>
+                <li>Melhorar a experiência do usuário</li>
+                <li>Personalizar conteúdo</li>
+                <li>Responder solicitações</li>
+                <li>Exibir anúncios relevantes</li>
+            </ul>
+
+            <h2>3. Cookies</h2>
+            <p>Utilizamos cookies para armazenar preferências do usuário, analisar comportamento de navegação e personalizar conteúdo e anúncios.</p>
+            <p>Você pode desativar os cookies no seu navegador, mas isso pode afetar o funcionamento do site.</p>
+
+            <h2>4. Publicidade e Parceiros</h2>
+            <p>Utilizamos serviços de terceiros para exibição de anúncios, incluindo o Ezoic. Esses serviços podem usar cookies, pixels e scripts para coletar dados e exibir anúncios personalizados.</p>
+
+            <p>O Ezoic pode trabalhar com parceiros, incluindo o Google, para otimização e personalização de anúncios.</p>
+
+            <p>Para mais informações, acesse:</p>
+            <p><a href="https://g.ezoic.net/privacy/investilize.com.br" target="_blank">https://g.ezoic.net/privacy/investilize.com.br</a></p>
+
+            <h2>5. Compartilhamento de Dados</h2>
+            <p>Não vendemos ou alugamos dados pessoais. Podemos compartilhar informações apenas quando exigido por lei ou com parceiros de publicidade.</p>
+
+            <h2>6. Links Externos</h2>
+            <p>Nosso site pode conter links para outros sites. Não nos responsabilizamos pelas políticas desses sites.</p>
+
+            <h2>7. Segurança</h2>
+            <p>Adotamos medidas para proteger seus dados, mas não podemos garantir segurança absoluta.</p>
+
+            <h2>8. Direitos do Usuário</h2>
+            <p>O usuário pode solicitar acesso, correção ou exclusão de seus dados através da página de contato.</p>
+
+            <h2>9. Consentimento</h2>
+            <p>Ao utilizar o site, você concorda com esta política.</p>
+
+            <h2>10. Alterações</h2>
+            <p>Esta política pode ser atualizada a qualquer momento sem aviso prévio.</p>
+
+            <h2>11. Contato</h2>
+            <p>Para dúvidas, acesse:</p>
+            <p><a href="https://investilize.com.br/contato/">https://investilize.com.br/contato/</a></p>
+
+            <p><strong>Última atualização:</strong> Abril de 2026</p>
+
         </div>
-        
     </main>
+
     <Footer />
 
     <style>
@@ -36,42 +88,39 @@ const pageDescription = "Entenda como os seus dados são recolhidos e utilizados
             padding: 2rem;
             background-color: white;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
+
         .legal-title {
             font-size: 2.5rem;
             font-weight: 800;
-            /* Alterado para Azul Marinho Profundo */
-            color: #003d6b; 
+            color: #003d6b;
             text-align: center;
             margin-bottom: 2rem;
         }
-        /* Estilos para o conteúdo legal */
+
         .legal-content :global(h2) {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.4rem;
             margin-top: 2rem;
-            margin-bottom: 1rem;
-            /* Alterado para Azul Marinho para manter autoridade */
-            color: #003d6b; 
+            color: #003d6b;
         }
-         .legal-content :global(p),
-         .legal-content :global(li) {
+
+        .legal-content :global(p),
+        .legal-content :global(li) {
             font-size: 1rem;
-            line-height: 1.75;
-            /* Cinza azulado escuro para leitura confortável e séria */
-            color: #1e293b; 
-            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: #1e293b;
         }
-         .legal-content :global(a) {
-            /* Alterado de Roxo para Azul Royal */
-            color: #0167c2; 
+
+        .legal-content :global(a) {
+            color: #0167c2;
             font-weight: 600;
         }
+
         .legal-content :global(a):hover {
-            color: #003d6b;
             text-decoration: underline;
         }
     </style>
+
 </body>
 </html>
