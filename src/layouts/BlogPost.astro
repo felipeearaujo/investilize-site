@@ -35,15 +35,14 @@ const isoUpdateDate = updatedDate instanceof Date ? updatedDate.toISOString() : 
 
 <html lang="pt-br">
     <head>
+    <!-- CMP -->
     <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-	<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-    
-    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-	<script>
-    	window.ezstandalone = window.ezstandalone || {};
-    	ezstandalone.cmd = ezstandalone.cmd || [];
-	</script>
-	<script src="//ezoicanalytics.com/analytics.js"></script>
+    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+
+    <!-- Ezoic -->
+    <script async src="https://go.ezoic.net/ezoic/ezoic.js"></script>
+
+    <!-- SEO -->
         <SEO
             title={dynamicTitle}
             description={dynamicDescription}
