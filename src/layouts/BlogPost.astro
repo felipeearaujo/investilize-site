@@ -29,10 +29,17 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
 <html lang="pt-br">
     <head>
     	<meta name="ezoic-site-verification" content="FEJWdNWd8kM54jgA3UKlWa7Q7OJipi" />
-        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
 
-        <script async src="https://go.ezoic.net/ezoic/ezoic.js"></script>
+      <!-- CMP -->
+      <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+      <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+
+      <!-- EZOIC CORRETO -->
+      <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+      <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+      </script>
 
         <BaseHead title={dynamicTitle} description={dynamicDescription} image={resolvedImage} />        
         
@@ -119,5 +126,10 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
             </article>
         </main>
         <Footer />
+          <script>
+          ezstandalone.cmd.push(function () {
+              ezstandalone.showAds(100, 101, 102, 103);
+          });
+          </script>
     </body>
 </html>
