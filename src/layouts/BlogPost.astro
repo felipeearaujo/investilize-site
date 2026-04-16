@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { SEO } from "astro-seo";
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -22,54 +21,19 @@ const selic = indicadores?.selic || "14.75";
 const dynamicTitle = title ? title.replace('{selicAtual}', selic) : "Investilize";
 const dynamicDescription = description ? description.replace('{selicAtual}', selic) : "Educação Financeira e Investimentos";
 
-// 3. URL CANÔNICA
-const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
-
-// 4. TRATAMENTO DA IMAGEM (Com Fallback obrigatório para o OpenGraph)
+// 3. TRATAMENTO DA IMAGEM
 const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.src) || "https://investilize.com.br/logo.png";
 
-// 5. TRATAMENTO DE DATAS PARA O SEO (Prevenção de erro undefined)
-const isoPubDate = pubDate instanceof Date ? pubDate.toISOString() : undefined;
-const isoUpdateDate = updatedDate instanceof Date ? updatedDate.toISOString() : undefined;
 ---
 
 <html lang="pt-br">
     <head>
-    <!-- CMP -->
-    <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-    <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
 
-    <!-- Ezoic -->
-    <script async src="https://go.ezoic.net/ezoic/ezoic.js"></script>
+        <script async src="https://go.ezoic.net/ezoic/ezoic.js"></script>
 
-    <!-- SEO -->
-        <SEO
-            title={dynamicTitle}
-            description={dynamicDescription}
-            canonical={canonicalURL}
-            openGraph={{
-                basic: {
-                    title: dynamicTitle,
-                    type: "article",
-                    image: resolvedImage,
-                },
-                article: {
-                    publishedTime: isoPubDate,
-                    modifiedTime: isoUpdateDate,
-                    authors: ["Investilize"],
-                    tags: ["Investimentos", "Finanças", "Educação Financeira"]
-                }
-            }}
-            twitter={{
-                card: "summary_large_image",
-                site: "@investilize",
-                title: dynamicTitle,
-                description: dynamicDescription,
-                image: resolvedImage,
-            }}
-        />
-
-        <BaseHead title={dynamicTitle} description={dynamicDescription} />        
+        <BaseHead title={dynamicTitle} description={dynamicDescription} image={resolvedImage} />        
         
         <ArticleSchema
             title={dynamicTitle}

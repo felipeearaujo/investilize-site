@@ -1,5 +1,5 @@
 ---
-title: "Tesouro Selic 2028 Sumiu? Entenda a mudança nos títulos e onde investir agora"
+title: "Tesouro Selic 2028 Sumiu? Entenda o Motivo"
 description: "Procurou o Tesouro Selic 2028 e não o encontrou? Explicamos a renovação dos títulos do Governo e qual a melhor opção para a sua reserva com a taxa em {selicAtual}%."
 author: 'Felipe'
 pubDate: "2026-03-12"
