@@ -1,10 +1,9 @@
 ---
-layout: "../../layouts/NoticiaLayout.astro"
 title: "PIS/Pasep 2026: Calendário, Quem Tem Direito e Valor do Abono"
 description: "Confira o calendário do PIS/Pasep 2026 (ano-base 2024). Veja se você está entre os elegíveis, entenda como é feito o cálculo do valor e consulte o seu benefício."
 pubDate: "2026-04-27"
 author: "Felipe"
-heroImage: "images/noticias/pis-pasep-2026-calendario.png"
+heroImage: "~/assets/blog/pis-pasep-2026-calendario.png"
 faqList:
   - question: "Qual o valor do PIS/Pasep 2026?"
     answer: "O valor do abono equivale a 1/12 do salário mínimo (R$ 1.621,00) por mês trabalhado em 2024, limitado ao teto de R$ 1.621,00 para quem trabalhou o ano todo."
