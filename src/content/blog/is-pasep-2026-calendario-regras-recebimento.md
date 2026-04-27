@@ -65,11 +65,11 @@ Os créditos são liberados conforme o mês de nascimento do beneficiário. Quem
 
 A consulta é rápida e 100% digital. Verifique se o dinheiro já está disponível:
 
-1.  **Pela Carteira de Trabalho Digital:** Abra o aplicativo ou site e busque a opção "Insalubridade, Periculosidade e PIS".
-2.  **Portal Gov.br:** Acesse com seu CPF e senha na página de serviços do governo.
+1.  [Pela Carteira de Trabalho Digital](https://www.gov.br/pt-br/temas/carteira-de-trabalho-digital):"Abra o aplicativo ou site e busque a opção "Insalubridade, Periculosidade e PIS".
+2.  [Portal Gov.br](https://www.gov.br/pt-br): Acesse com seu CPF e senha na página de serviços do governo.
 3.  **Apps das Bancos:**
-    *   **PIS (Caixa):** Use o app **Caixa Tem**.
-    *   **PASEP (Banco do Brasil):** Use o app do Banco do Brasil.
+    *   **PIS (Caixa):** Use o app [Caixa Tem](https://play.google.com/store/apps/details?id=br.gov.caixa.tem&hl=pt_BR).
+    *   **PASEP (Banco do Brasil):** [Use o app do Banco do Brasil](https://play.google.com/store/apps/details?id=br.com.bb.android&hl=pt_BR).
 
 *Se você cumpre os requisitos mas o benefício não aparece, entre em contato com o RH da sua empresa para verificar se os dados foram enviados corretamente na RAIS/eSocial.*
 
