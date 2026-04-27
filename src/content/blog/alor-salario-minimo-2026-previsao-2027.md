@@ -25,7 +25,7 @@ A seguir, detalhamos o cenário atual, as diferenças regionais (como o **salár
 
 Muitos brasileiros buscam por "**salário mínimo 2026 quanto aumentou**" para entender o impacto no orçamento. O valor de R$ 1.621,00 reflete a política de valorização adotada pelo governo, que considera a inflação do período anterior (INPC) e o crescimento do PIB.
 
-Esta mudança altera diretamente a **tabela do INSS** e o teto para o recebimento do **PIS/PASEP**, garantindo que os benefícios sociais acompanhem a nova realidade econômica.
+Esta mudança altera diretamente a [tabela do INSS](https://www.gov.br/inss/pt-br/assuntos/com-reajuste-de-3-9-teto-do-inss-chega-a-r-8-475-55-em-2026) e o teto para o recebimento do **PIS/PASEP**, garantindo que os benefícios sociais acompanhem a nova realidade econômica.
 
 <div style="background-color: #e0f2fe; border: 1px solid #bae6fd; border-radius: 8px; padding: 20px; margin: 25px 0; text-align: center;">
     <h3 style="margin-top: 0; color: #0369a1; font-size: 1.5rem;">Salário Mínimo 2026</h3>
