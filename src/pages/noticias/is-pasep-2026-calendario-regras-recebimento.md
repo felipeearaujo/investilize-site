@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/NoticiaLayout.astro"
 title: "PIS/Pasep 2026: Calendário, Quem Tem Direito e Valor do Abono"
 description: "Confira o calendário do PIS/Pasep 2026 (ano-base 2024). Veja se você está entre os elegíveis, entenda como é feito o cálculo do valor e consulte o seu benefício."
 pubDate: "2026-04-27"
