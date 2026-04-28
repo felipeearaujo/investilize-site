@@ -61,7 +61,7 @@ As Blue Chips devem ocupar a "base" da pirâmide da sua carteira de investimento
 
 No entanto, saber que BBAS3, VALE3 e PETR4 pagam dividendos não é o suficiente. Você precisa saber *quando* esses pagamentos ocorrerão e como programar sua vida financeira em torno desses fluxos de caixa.
 
-**No próximo artigo da nossa trilha, vamos mergulhar na Agenda de Dividendos. Como funciona a data "Com", a data "Ex" e como planejar o recebimento de proventos para viver de renda?**
+[No próximo artigo da nossa trilha, vamos mergulhar na Agenda de Dividendos. Como funciona a data "Com", a data "Ex" e como planejar o recebimento de proventos para viver de renda?](https://investilize.com.br/blog/agenda-dividendos-2026/)
 
 ---
 *Aviso: Este texto tem caráter meramente informativo e não constitui recomendação de compra ou venda de ativos. Ações de variável não possuem garantia de rendimento. Invista com consciência e análise fundamentalista.*
