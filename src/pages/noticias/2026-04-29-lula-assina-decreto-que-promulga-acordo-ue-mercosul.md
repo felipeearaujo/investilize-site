@@ -3,7 +3,7 @@ layout: "../../layouts/NoticiaLayout.astro"
 title: "Lula assina decreto que promulga acordo UE-Mercosul"
 description: "A assinatura do decreto pelo Luiz Inácio Lula da Silva que promulga o acordo entre União Europeia e Mercosul representa um passo relevante na tentativ..."
 pubDate: "2026-04-29"
-heroImage: "/images/noticias/2026-04-29-lula-assina-decreto-que-promulga-acordo-ue-mercosul.jpg"
+heroImage: "/images/noticias/2026-04-29-lula-assina-decreto-que-promulga-acordo-ue-mercosul.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/lula-assina-decreto-que-promulga-acordo-ue-mercosul"
 ---
 
