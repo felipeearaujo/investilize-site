@@ -69,7 +69,7 @@ Dominar o Valuation é o que separa o "apostador" do "investidor". Com os concei
 
 Mas fechar o negócio na bolsa não é o fim da jornada. Assim que você começa a lucrar, entra em cena o nosso velho conhecido: o Leão. Saber gerenciar seus impostos é tão importante quanto acertar o ativo.
 
-[No próximo artigo da nossa trilha, vamos falar sobre Imposto de Renda. Como declarar seus ganhos em renda variável, o que fazer com dividendos isentos e como evitar cair na malha fina por um erro de preenchimento?](https://investilize.com.br/blog/imposto-renda-acoes-2026/)
+[No próximo artigo da nossa trilha, vamos falar sobre Imposto de Renda. Como declarar seus ganhos em renda variável, o que fazer com dividendos isentos e como evitar cair na malha fina por um erro de preenchimento?](https://investilize.com.br/blog/imposto-de-renda-acoes-2026/)
 
 ---
 *Aviso: Este texto utiliza dados de mercado de abril de 2026 e tem caráter meramente informativo. Valuation envolve projeções subjetivas e premissas que podem não se concretizar. Investir em ações envolve riscos de perda de capital.*

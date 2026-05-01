@@ -68,7 +68,7 @@ Dominar o Imposto de Renda é o que separa o investidor amador do profissional d
 
 [Agora que sua carteira de Blue Chips](https://investilize.com.br/blog/blue-chips-porque-dominam-a-b3/) está montada, seus dividendos estão declarados e você sabe como precificar ativos, você tem uma base sólida em Renda Variável. Mas o mercado financeiro vai muito além de comprar ações individuais de empresas como Vale ou Petrobras.
 
-**No último artigo da nossa trilha inicial, vamos descobrir como ir além e diversificar de verdade. Vamos falar sobre FIIs, Fiagros e ETFs modernos (como SNAG11, COIN11) e como eles completam sua estratégia de investimentos em 2026.**
+[No último artigo da nossa trilha inicial, vamos descobrir como ir além e diversificar de verdade. Vamos falar sobre FIIs, Fiagros e ETFs modernos (como SNAG11, COIN11) e como eles completam sua estratégia de investimentos em 2026.](https://investilize.com.br/blog/diversificacao-fiis-etfs/
 
 ---
 *Aviso: Este texto tem fins meramente informativos e educativos. As regras de tributação no Brasil são dinâmicas e podem sofrer alterações legislativas. Consulte sempre um contador especializado em renda variável para auxiliar na elaboração da sua declaração anual.*
