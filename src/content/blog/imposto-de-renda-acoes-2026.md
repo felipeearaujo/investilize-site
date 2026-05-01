@@ -25,24 +25,24 @@ O primeiro erro do iniciante é tratar todo dinheiro que entra na conta vindo da
 
 ### A. Dividendos (Isentos)
 No Brasil, os dividendos pagos por empresas que pagam Imposto de Renda (Lucro Real ou Lucro Presumido) são isentos de IR para a Pessoa Física.
-*   **Onde declarar:** Aba "Rendimentos Isentos e Não Tributáveis".
-*   **Código:** 09 (Lucros e dividendos recebidos).
-*   **Atenção:** Embora você não pague IR na declaração anual, você deve informar o valor recebido, pois a Receita Federal cruza esses dados com os informes enviados pelas empresas (FIIs e S.A.s).
+* **Onde declarar:** Aba "Rendimentos Isentos e Não Tributáveis".
+* **Código:** 09 (Lucros e dividendos recebidos).
+* **Atenção:** Embora você não pague IR na declaração anual, você deve informar o valor recebido, pois a Receita Federal cruza esses dados com os informes enviados pelas empresas (FIIs e S.A.s).
 
 ### B. Juros sobre Capital Próprio (JCP)
 Algumas empresas optam por pagar JCP em vez de dividendos. Para a empresa, isso é vantajoso fiscalmente (pois reduz o lucro tributável). Para você, a regra muda.
-*   **Tributação:** Sofre retenção de **15% de Imposto de Renda direto na fonte**. O valor que cai na sua conta já é o valor líquido.
-*   **Onde declarar:** Aba "Rendimentos Sujeitos à Tributação Exclusiva/Definitiva".
-*   **Código:** 10 (Juros sobre capital próprio).
-*   **Ganho Fiscal:** Você pode deduzir o valor do imposto retido (esses 15%) do IRPF a pagar ou a restituir, pois é considerado um antecipação do seu imposto devido.
+* **Tributação:** Sofre retenção de **15% de Imposto de Renda direto na fonte**. O valor que cai na sua conta já é o valor líquido.
+* **Onde declarar:** Aba "Rendimentos Sujeitos à Tributação Exclusiva/Definitiva".
+* **Código:** 10 (Juros sobre capital próprio).
+* **Ganho Fiscal:** Você pode deduzir o valor do imposto retido (esses 15%) do IRPF a pagar ou a restituir, pois é considerado um antecipação do seu imposto devido.
 
 ### C. Ganhos de Capital (Venda de Ações)
 Aqui reside a maior confusão. Se você vendeu ações e teve lucro, o regime tributário depende do volume vendido.
-*   **Regra de Isenção:** Vendas de ações no mercado à vista (swing trade) totalizando até **R$ 20.000,00** no mês são isentas de IR.
-    *   *Exemplo:* Você vendeu R$ 5.000 no dia 10 e R$ 15.000 no dia 25. Total R$ 20.000. Se teve lucro, não paga IR. Se ultrapassou R$ 20.001, paga IR sobre todo o lucro do mês.
-*   **Alíquota:** 15% sobre o lucro (Preço de Venda - Preço de Compra - Taxas).
-*   **Onde declarar (se isento):** Aba "Rendimentos Isentos e Não Tributáveis", Código 20 (Ganhos líquidos em operações no mercado à vista de ações...).
-*   **Onde declarar (se tributado):** Aba "Ganhos de Capital".
+* **Regra de Isenção:** Vendas de ações no mercado à vista (swing trade) totalizando até **R$ 20.000,00** no mês são isentas de IR.
+    * *Exemplo:* Você vendeu R$ 5.000 no dia 10 e R$ 15.000 no dia 25. Total R$ 20.000. Se teve lucro, não paga IR. Se ultrapassou R$ 20.001, paga IR sobre todo o lucro do mês.
+* **Alíquota:** 15% sobre o lucro (Preço de Venda - Preço de Compra - Taxas).
+* **Onde declarar (se isento):** Aba "Rendimentos Isentos e Não Tributáveis", Código 20 (Ganhos líquidos em operações no mercado à vista de ações...).
+* **Onde declarar (se tributado):** Aba "Ganhos de Capital".
 
 ## 2. A Mágica de Compensar Prejuízos
 
@@ -68,7 +68,7 @@ Dominar o Imposto de Renda é o que separa o investidor amador do profissional d
 
 [Agora que sua carteira de Blue Chips](https://investilize.com.br/blog/blue-chips-porque-dominam-a-b3/) está montada, seus dividendos estão declarados e você sabe como precificar ativos, você tem uma base sólida em Renda Variável. Mas o mercado financeiro vai muito além de comprar ações individuais de empresas como Vale ou Petrobras.
 
-[No último artigo da nossa trilha inicial, vamos descobrir como ir além e diversificar de verdade. Vamos falar sobre FIIs, Fiagros e ETFs modernos (como SNAG11, COIN11) e como eles completam sua estratégia de investimentos em 2026.](https://investilize.com.br/blog/diversificacao-fiis-etfs/
+[No último artigo da nossa trilha inicial, vamos descobrir como ir além e diversificar de verdade. Vamos falar sobre FIIs, Fiagros e ETFs modernos (como SNAG11, COIN11) e como eles completam sua estratégia de investimentos em 2026.](https://investilize.com.br/blog/diversificacao-fiis-etfs/)
 
 ---
 *Aviso: Este texto tem fins meramente informativos e educativos. As regras de tributação no Brasil são dinâmicas e podem sofrer alterações legislativas. Consulte sempre um contador especializado em renda variável para auxiliar na elaboração da sua declaração anual.*

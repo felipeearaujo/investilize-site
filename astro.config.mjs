@@ -8,22 +8,20 @@ import partytown from '@astrojs/partytown';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://investilize.com.br',
-  
-  // ✅ NOVO: Garante que o sitemap e os canonicals sempre tenham a barra final, alinhando com a Netlify
+
+  // ✅ Mantém a barra final em todos os links para alinhar com a Netlify
   trailingSlash: 'always',
 
-  // ✅ CORREÇÃO FINAL: Usando a estrutura de objeto com 'entrypoint'
   image: {
     service: {
-      entrypoint: 'astro/assets/services/sharp' 
+      entrypoint: 'astro/assets/services/sharp'
     }
   },
 
   integrations: [mdx(), sitemap(), partytown()],
 
-  // ✅ NOVO: Redirecionamento 301 para corrigir o erro de digitação da URL
+  // ✅ CORREÇÃO: Apenas uma rota de redirecionamento para evitar colisão
   redirects: {
-    '/blog/renda-fix-veriavel-diferenca': { status: 301, destination: '/blog/renda-fixa-variavel-diferenca/' },
     '/blog/renda-fix-veriavel-diferenca/': { status: 301, destination: '/blog/renda-fixa-variavel-diferenca/' },
   },
 
