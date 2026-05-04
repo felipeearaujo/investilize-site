@@ -123,7 +123,7 @@ A escolha ideal entre Renda Fixa ou Renda Variável depende diretamente do seu p
 ### 🔜 Próximo Passo: Dia 2 da Trilha
 Agora que você já entendeu a diferença entre as duas modalidades e sabe o poder da segurança, é hora de agir. **Para onde deve ir o seu dinheiro que não pode ficar parado de jeito nenhum?** No **Dia 2 da nossa trilha**, vamos desvendar o **Tesouro Selic** e mostrar o passo a passo para construir a sua reserva de emergência sem correr riscos.
 
-👉 **[Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência em 2026](/blog/tesouro-selic-reserva-emergencia)**
+👉 **[Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência em 2026](https://investilize.com.br/blog/reserva-emergencia/)**
 
 <script type="application/ld+json">
 {`
