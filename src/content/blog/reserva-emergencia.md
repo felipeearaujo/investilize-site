@@ -8,7 +8,7 @@ tags: ['Renda Fixa', 'Tesouro Direto', 'Investimentos', 'reserva de emergencia',
 heroImage: '~/assets/blog/emergencia.png'
 ---
 
-> 🗺️ **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
+>  **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
 > * [Dia 1: Renda Fixa vs. Renda Variável: Por onde começar?](/blog/renda-fixa-variavel-diferenca)
 > * **Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência** (Você está aqui)
 > * [Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancário](/blog/cdb-lci-lca-como-escolher)
@@ -117,7 +117,7 @@ Liquidez diária significa que você pode resgatar o dinheiro a qualquer momento
 
 ---
 
-### 🔜 Próximo Passo: Dia 3 da Trilha
+###  Próximo Passo: Dia 3 da Trilha
 Você já blindou as suas finanças montando a reserva de emergência no Tesouro Selic. Agora, é hora de fazer o seu dinheiro render ainda mais com outros títulos de Renda Fixa. No **Dia 3 da nossa trilha**, vamos analisar **CDB, LCI e LCA** para você aprender a escolher o melhor título bancário.
 
 👉 **[Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancário](/blog/cdb-lci-lca-como-escolher)**

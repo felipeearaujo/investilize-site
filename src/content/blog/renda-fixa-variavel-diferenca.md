@@ -7,7 +7,6 @@ updatedDate: '2026-05-04'
 tags: ['Renda Fixa', 'Renda Variável', 'IRPF 2026', 'Investimentos']
 heroImage: '~/assets/blog/renda-fixa-renda-variavel.png'
 ---
-import TaxaReal from '../../components/ferramentas/CalculadoraTaxaReal.astro'
 
 > 🗺️ **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
 > * **Dia 1: Renda Fixa vs. Renda Variável: Por onde começar?** (Você está aqui)
@@ -36,9 +35,7 @@ A renda fixa funciona, basicamente, como um empréstimo. Você cede seu dinheiro
 * **Híbrida:** Combina uma parte fixa com a variação da inflação (IPCA). Essencial para proteger o seu **poder de compra** no longo prazo contra variações do mercado.
 * **Renda Fixa Internacional:** Uma grande tendência em 2026 é o **ETF de renda fixa americana**, uma alternativa inteligente para quem busca diversificação em dólar.
 
-> **Dica de Ouro:** Para saber quanto você vai ganhar de verdade, descontando a inflação, utilize nossa **Calculadora de Taxa Real:**
-
-<TaxaReal />
+> **Dica de Ouro:** Para saber quanto você vai ganhar de verdade, descontando a inflação, utilize nossa [Calculadora de Taxa Real:](https://investilize.com.br/ferramentas/taxa-real/)
 
 Para planejar seus próximos aportes, use nosso [Simulador de Investimentos](https://investilize.com.br/ferramentas/investimentos/).
 
