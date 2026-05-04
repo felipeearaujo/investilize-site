@@ -1,0 +1,189 @@
+---
+// src/components/QuizFinanceiro.astro
+---
+
+<div class="quiz-card" id="quiz-container">
+    <div id="quiz-intro">
+        <h3>🌡️ Termômetro Financeiro</h3>
+        <p>Descubra em 30 segundos qual é o seu nível atual e receba uma recomendação personalizada.</p>
+        <button id="start-btn">Começar Teste</button>
+    </div>
+
+    <div id="quiz-questions" class="hidden">
+        <div class="progress-bar"><div id="progress"></div></div>
+        <h4 id="question-text">Pergunta aqui?</h4>
+        <div id="options-container">
+            </div>
+    </div>
+
+    <div id="quiz-result" class="hidden">
+        <h3>Seu Perfil: <span id="result-title">...</span></h3>
+        <p id="result-text">...</p>
+        <a href="#" id="result-link" class="cta-button">Ver Minha Recomendação</a>
+        <button id="restart-btn" class="secondary">Refazer Teste</button>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            q: "Como você termina o mês financeiramente?",
+            options: [
+                { text: "No vermelho (contas atrasadas)", points: 1 },
+                { text: "No zero a zero (não sobra nada)", points: 2 },
+                { text: "Sobra dinheiro e eu guardo", points: 3 }
+            ]
+        },
+        {
+            q: "Você possui uma reserva de emergência?",
+            options: [
+                { text: "Não sei o que é isso", points: 1 },
+                { text: "Estou começando a montar", points: 2 },
+                { text: "Sim, tenho 6 meses de gastos", points: 3 }
+            ]
+        },
+        {
+            q: "Qual seu conhecimento sobre investimentos?",
+            options: [
+                { text: "Nenhum, deixo na poupança", points: 1 },
+                { text: "Entendo o básico de Renda Fixa", points: 2 },
+                { text: "Já invisto em ações ou FIIs", points: 3 }
+            ]
+        }
+    ];
+
+    let currentStep = 0;
+    let totalPoints = 0;
+
+    const introDiv = document.getElementById('quiz-intro');
+    const questionsDiv = document.getElementById('quiz-questions');
+    const resultDiv = document.getElementById('quiz-result');
+    const questionText = document.getElementById('question-text');
+    const optionsContainer = document.getElementById('options-container');
+    const progress = document.getElementById('progress');
+
+    document.getElementById('start-btn').addEventListener('click', startQuiz);
+    document.getElementById('restart-btn').addEventListener('click', startQuiz);
+
+    function startQuiz() {
+        currentStep = 0;
+        totalPoints = 0;
+        introDiv.classList.add('hidden');
+        resultDiv.classList.add('hidden');
+        questionsDiv.classList.remove('hidden');
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const q = questions[currentStep];
+        questionText.innerText = q.q;
+        optionsContainer.innerHTML = '';
+        progress.style.width = `${((currentStep) / questions.length) * 100}%`;
+
+        q.options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.innerText = opt.text;
+            btn.classList.add('option-btn');
+            btn.onclick = () => handleAnswer(opt.points);
+            optionsContainer.appendChild(btn);
+        });
+    }
+
+    function handleAnswer(points) {
+        totalPoints += points;
+        currentStep++;
+        if (currentStep < questions.length) {
+            showQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        questionsDiv.classList.add('hidden');
+        resultDiv.classList.remove('hidden');
+        
+        const title = document.getElementById('result-title');
+        const text = document.getElementById('result-text');
+        const link = document.getElementById('result-link') as HTMLAnchorElement;
+
+        if (totalPoints <= 4) {
+            title.innerText = "Saindo do Sufoco";
+            text.innerText = "Seu foco agora deve ser organizar as dívidas e o orçamento doméstico.";
+            link.href = "/blog/saindo-das-dividas/"; // Ajuste o link
+        } else if (totalPoints <= 7) {
+            title.innerText = "Organizador Iniciante";
+            text.innerText = "Você já tem controle, agora é hora de montar sua reserva de emergência.";
+            link.href = "/blog/reserva-de-emergencia-guia/"; // Ajuste o link
+        } else {
+            title.innerText = "Investidor Estrategista";
+            text.innerText = "Excelente! Você está pronto para diversificar sua carteira.";
+            link.href = "/blog/melhores-investimentos-2026/"; // Ajuste o link
+        }
+    }
+</script>
+
+<style>
+    .quiz-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 20px;
+        border: 2px solid #e2e8f0;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        max-width: 500px;
+        margin: 2rem auto;
+        text-align: center;
+        font-family: system-ui, sans-serif;
+    }
+    h3 { color: #003d6b; margin-top: 0; }
+    .hidden { display: none; }
+    
+    button {
+        background: #003d6b;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover { background: #0167c2; }
+    
+    .option-btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+        background: #f8fafc;
+        color: #334155;
+        border: 1px solid #e2e8f0;
+        text-align: left;
+        border-radius: 10px;
+    }
+    .option-btn:hover { background: #e2e8f0; color: #003d6b; }
+    
+    .progress-bar {
+        background: #e2e8f0;
+        height: 8px;
+        border-radius: 4px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+    }
+    #progress {
+        background: #ffcc00;
+        height: 100%;
+        width: 0;
+        transition: 0.3s;
+    }
+    .cta-button {
+        display: inline-block;
+        background: #ffcc00;
+        color: #003d6b;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+    .secondary { background: transparent; color: #64748b; font-size: 0.8rem; margin-top: 1rem; }
+</style>

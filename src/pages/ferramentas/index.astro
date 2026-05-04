@@ -4,23 +4,42 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const pageTitle = "Central de Ferramentas | Investilize";
+const pageTitle = "Central de Ferramentas Financeiras | Investilize";
+const pageDescription = "Simuladores técnicos e calculadoras para ajudar você a investir com inteligência e segurança.";
 
 const categorias = [
   {
-    nome: "Mercado e Indicadores",
+    nome: "Mercado e Renda Fixa",
     items: [
-      { titulo: "Taxômetro Tesouro", desc: "Taxas e preços dos títulos públicos hoje.", href: "/ferramentas/Taxometro", icon: "📊" },
-      { titulo: "Cotações", desc: "Acompanhe o preço das principais ações da B3.", href: "/ferramentas/cotacao-acoes", icon: "📈" },
-      { titulo: "Conversor de Moedas", desc: "Cotações de câmbio em tempo real.", href: "/ferramentas/conversor-de-moedas", icon: "💱" },
+      { titulo: "Taxômetro Tesouro", desc: "Taxas e preços dos títulos públicos atualizados.", href: "/ferramentas/taxometro/", icon: "📊" },
+      { titulo: "Tesouro vs. Bancão", desc: "Compare o rendimento do Tesouro com o CDB do seu banco.", href: "/ferramentas/tesouro-vs-bancao/", icon: "🏦" },
+      { titulo: "Comparador de Ativos", desc: "Compare diferentes títulos de Renda Fixa (LCI, LCA, CDB).", href: "/ferramentas/comparador-renda-fixa/", icon: "⚖️" },
+      { titulo: "Calculadora Taxa Real", desc: "Descubra quanto seu dinheiro rende acima da inflação.", href: "/ferramentas/taxa-real/", icon: "📈" },
     ]
   },
   {
-    nome: "Planejamento e Decisão",
+    nome: "Ações e Renda Variável",
     items: [
-      { titulo: "Tesouro vs. Bancão", desc: "Selic ou CDB? Veja qual rende mais.", href: "/ferramentas/tesouro-vs-bancao", icon: "🏦" },
-      { titulo: "Juros Compostos", desc: "Projete o crescimento do seu patrimônio.", href: "/ferramentas/juros-compostos", icon: "🚀" },
-      { titulo: "Poder de Compra", desc: "O impacto da inflação no seu dinheiro.", href: "/ferramentas/poder-de-compra", icon: "📉" },
+      { titulo: "Preço Justo (Graham)", desc: "Calcule o valor intrínseco de ações pelo método Graham.", href: "/ferramentas/calculadora-preco-justo/", icon: "📉" },
+      { titulo: "Cotações B3", desc: "Acompanhe o preço das principais ações em tempo real.", href: "/ferramentas/cotacao-acoes/", icon: "💹" },
+    ]
+  },
+  {
+    nome: "Planejamento e Reserva",
+    items: [
+      { titulo: "Reserva de Emergência", desc: "Saiba exatamente quanto você precisa para sua segurança.", href: "/ferramentas/reserva-emergencia/", icon: "🛡️" },
+      { titulo: "Independência Financeira", desc: "Descubra quanto falta para você viver de renda.", href: "/ferramentas/independencia-financeira/", icon: "🏝️" },
+      { titulo: "Juros Compostos", desc: "Projete o crescimento do seu patrimônio no longo prazo.", href: "/ferramentas/juros-compostos/", icon: "🚀" },
+      { titulo: "Poder de Compra", desc: "Veja o impacto real da inflação no seu bolso.", href: "/ferramentas/poder-de-compra/", icon: "💸" },
+      { titulo: "Perfil do Investidor", desc: "Descubra se você é conservador, moderado ou arrojado.", href: "/ferramentas/simulador-perfil/", icon: "👤" },
+    ]
+  },
+  {
+    nome: "Impostos e Utilitários",
+    items: [
+      { titulo: "Calculadora IR Mensal", desc: "Apuração mensal de imposto para investidores.", href: "/ferramentas/calculadora-ir-mensal/", icon: "📑" },
+      { titulo: "Alerta de Multas", desc: "Evite multas por atraso na declaração e pagamentos.", href: "/ferramentas/alerta-multa/", icon: "⚠️" },
+      { titulo: "Conversor de Moedas", desc: "Câmbio comercial e turismo em tempo real.", href: "/ferramentas/conversor-de-moedas/", icon: "💱" },
     ]
   }
 ];
@@ -30,7 +49,7 @@ const categorias = [
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
-    <BaseHead title={pageTitle} description="Central de ferramentas financeiras." />
+    <BaseHead title={pageTitle} description={pageDescription} />
 </head>
 <body>
     <Header />
@@ -39,7 +58,7 @@ const categorias = [
             <Breadcrumbs />
             <div class="hub-header">
                 <h1>Central de Ferramentas</h1>
-                <p>Simuladores técnicos para investidores que buscam decisões baseadas em dados.</p>
+                <p>Simuladores técnicos baseados em dados reais para sua tomada de decisão.</p>
             </div>
 
             {categorias.map(cat => (
@@ -52,7 +71,7 @@ const categorias = [
                                 <div class="card-body">
                                     <h3>{item.titulo}</h3>
                                     <p>{item.desc}</p>
-                                    <span class="btn-text">Acessar ferramenta →</span>
+                                    <span class="btn-text">Acessar simulador →</span>
                                 </div>
                             </a>
                         ))}
@@ -64,84 +83,151 @@ const categorias = [
     <Footer />
 
     <style is:global>
-        /* Definição de cores de segurança dentro da página */
         :root {
             --primary: #0167c2;
-            --primary-hover: #003d6b;
-            --text-main: #001a2e;
+            --navy: #003d6b;
+            --text-main: #0f172a;
             --text-muted: #475569;
             --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
         }
 
+        /* 1. RESET E LARGURA TOTAL */
         .hub-main {
+            width: 100% !important;
+            max-width: 100% !important;
             background-color: var(--bg-light);
             padding: 4rem 0;
             min-height: 80vh;
+            display: block; /* Garante o fluxo vertical */
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px !important;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        .hub-header { text-align: center; margin-bottom: 4rem; }
-        .hub-header h1 { color: var(--text-main); font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; }
-        .hub-header p { color: var(--text-muted); font-size: 1.2rem; }
+        .hub-header { text-align: center; margin-bottom: 5rem; }
+        .hub-header h1 { 
+            color: var(--navy); 
+            font-size: 3rem; 
+            font-weight: 900; 
+            margin-bottom: 1.2rem;
+            text-decoration: none !important;
+        }
+        .hub-header p { color: var(--text-muted); font-size: 1.25rem; max-width: 700px; margin: 0 auto; }
 
-        .categoria-section { margin-bottom: 4rem; }
-        .categoria-nome { 
-            color: var(--text-main); 
-            font-size: 1.5rem; 
-            font-weight: 700; 
-            border-bottom: 2px solid #e2e8f0; 
-            padding-bottom: 0.5rem; 
-            margin-bottom: 2rem; 
+        /* 2. EVITANDO SOBREPOSIÇÃO */
+        .categoria-section { 
+            margin-bottom: 5rem; 
+            display: block;
+            position: relative;
+            clear: both;
         }
 
+        .categoria-nome { 
+            color: var(--navy); 
+            font-size: 1.75rem; 
+            font-weight: 800; 
+            border-bottom: 3px solid #cbd5e1; 
+            padding-bottom: 0.75rem; 
+            margin-bottom: 2.5rem; 
+            display: inline-block;
+        }
+
+        /* 3. GRID DE 3 COLUNAS NO DESKTOP */
         .grid-ferramentas {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2rem;
+            align-items: stretch;
         }
 
+        @media (min-width: 1024px) {
+            .grid-ferramentas {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+
+        /* 4. DESIGN DOS CARDS (SEM SUBLINHADO E COM PADDING) */
         .card-ferramenta {
             background: white;
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid #e2e8f0;
-            text-decoration: none;
+            padding: 8.5px; 
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            text-decoration: none !important; 
             display: flex;
-            align-items: flex-start;
-            gap: 1.2rem;
-            transition: all 0.3s ease;
+            flex-direction: column;
+            gap: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            height: 100%;
+            position: relative;
+        }
+
+        .card-ferramenta *, 
+        .card-ferramenta:hover *, 
+        .card-ferramenta:active * {
+            text-decoration: none !important; 
         }
 
         .card-ferramenta:hover {
             border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 61, 107, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 30px -10px rgba(0, 61, 107, 0.15);
+            z-index: 2;
         }
 
         .card-icon {
-            font-size: 2rem;
-            background: var(--primary-light, #f0f7ff);
-            width: 60px;
-            height: 60px;
+            font-size: 2.5rem;
+            background: #f0f7ff;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
-            flex-shrink: 0;
+            border-radius: 18px;
+            transition: 0.3s;
         }
 
-        .card-body h3 { color: var(--text-main); margin: 0; font-size: 1.2rem; font-weight: 700; }
-        .card-body p { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0 1rem; line-height: 1.5; }
-        .btn-text { color: var(--primary); font-weight: 700; font-size: 0.85rem; }
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
+        .card-body h3 { 
+            color: var(--navy); 
+            margin: 0 0 0.75rem 0; 
+            font-size: 1.4rem; 
+            font-weight: 800;
+        }
+        
+        .card-body p { 
+            color: var(--text-muted); 
+            font-size: 1.05rem; 
+            margin: 0; 
+            line-height: 1.6;
+        }
+
+        .btn-text { 
+            margin-top: auto; /* Empurra para o fundo do card */
+            padding-top: 2rem;
+            color: var(--primary); 
+            font-weight: 700; 
+            font-size: 0.95rem; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 5. RESPONSIVIDADE */
         @media (max-width: 720px) {
-            .hub-header h1 { font-size: 2rem; }
+            .hub-header h1 { font-size: 2.3rem; }
             .grid-ferramentas { grid-template-columns: 1fr; }
+            .container { padding: 0 1rem; }
+            .hub-main { padding: 2rem 0; }
         }
     </style>
 </body>

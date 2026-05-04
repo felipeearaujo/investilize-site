@@ -14,6 +14,14 @@ faqList:
   - question: "Qual título substitui o Tesouro Selic 2028?"
     answer: "Para prazos curtos, o Tesouro Selic 2026 é o sucessor direto. Para prazos mais longos, o Tesouro Selic 2029 é a opção atual com a taxa de {selicAtual}%."
 ---
+import Taxometro from '../../components/ferramentas/Taxometro.astro';
+import indicadores from '../../data/bacen.json';
+
+export const selicAtual = indicadores?.selic || "13.25%";
+
+O Tesouro Selic 2028 foi retirado para novas compras, mas o rendimento atual da Selic em **{selicAtual}** continua sendo um ponto chave...
+
+<Taxometro />
 
 Abriu o portal do **Tesouro Direto** ou a aplicação da sua corretora e apanhou um susto: o **Tesouro Selic 2028**, um dos títulos mais populares, simplesmente não está mais lá para compra. 
 

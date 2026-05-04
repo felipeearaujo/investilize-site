@@ -5,11 +5,11 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import DashboardIndicadores from '../components/DashboardIndicadores.astro';
 import { getCollection } from 'astro:content';
+import QuizFinanceiro from '../components/quiz-financeiro.astro';
 
-const pageTitle = "Investilize | Inteligência Financeira e Gestão de Ativos";
-const pageDescription = "Ferramentas de autoridade baseadas em dados oficiais. Calcule ganho real, compare CDBs com Tesouro e monitore as taxas do mercado hoje.";
+const pageTitle = "Investilize | Inteligência Financeira";
+const pageDescription = "Ferramentas de autoridade baseadas em dados oficiais. Calcule ganho real e monitore as taxas do mercado.";
 
-// Busca os 3 posts mais recentes (provavelmente os de Tesouro e IR que criámos)
 const posts = (await getCollection('blog')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 3);
@@ -22,167 +22,291 @@ const posts = (await getCollection('blog')).sort(
 </head>
 <body>
     <Header />
-    <main>
+
+    <main class="home-main"> 
         <section class="hero-section">
-            <div class="hero-content">
+            <div class="container-inner">
                 <h1 class="hero-title">Decisões Financeiras Baseadas em Dados</h1>
-                <p class="hero-subtitle">Utilize simuladores técnicos e dados oficiais do Banco Central para proteger o seu poder de compra e maximizar a sua rentabilidade.</p>
+                <p class="hero-subtitle">Simuladores técnicos e dados oficiais para proteger o seu patrimônio.</p>
                 <div class="hero-actions">
                     <a href="/ferramentas/taxometro/" class="hero-button">📊 Ver Taxas Hoje</a>
-                    <a href="/ferramentas/tesouro-vs-bancao/" class="hero-button secondary">🏦 Tesouro vs. Bancão</a>
+                    <a href="/ferramentas/tesouro-vs-bancao/" class="hero-button secondary">🏦 Selic vs. CDB</a>
                 </div>
             </div>
         </section>
 
         <div class="dashboard-wrapper">
             <DashboardIndicadores />
+            <QuizFinanceiro />
         </div>
+        
+        <section class="trilhas-section">
+            <div class="container-inner">
+                <div class="trilhas-header">
+                    <span class="badge">Educação Financeira</span>
+                    <h2 class="section-title">Como o Investilize ajuda você hoje?</h2>
+                </div>
+
+                <div class="trilhas-grid">
+                    <div class="trilha-card nivel-1">
+                        <div class="trilha-badge">Nível 1</div>
+                        <div class="trilha-icon">🛡️</div>
+                        <h3>Sair do Sufoco</h3>
+                        <p>Para quem precisa quitar dívidas e montar a primeira reserva.</p>
+                        <ul class="trilha-links">
+                            <li><a href="/blog/como-sair-das-dividas/">Guia de Dívidas →</a></li>
+                            <li><a href="/ferramentas/reserva-emergencia/">Cálculo de Reserva →</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="trilha-card nivel-2">
+                        <div class="trilha-badge">Nível 2</div>
+                        <div class="trilha-icon">📈</div>
+                        <h3>Patrimônio</h3>
+                        <p>Rentabilidade real e comparação de ativos de Renda Fixa.</p>
+                        <ul class="trilha-links">
+                            <li><a href="/ferramentas/taxometro/">Taxômetro Tesouro →</a></li>
+                            <li><a href="/ferramentas/tesouro-vs-bancao/">Tesouro vs. Bancão →</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="trilha-card nivel-3">
+                        <div class="trilha-badge">Nível 3</div>
+                        <div class="trilha-icon">💎</div>
+                        <h3>Estratégias</h3>
+                        <p>Análise de Preço Justo de ações para o longo prazo.</p>
+                        <ul class="trilha-links">
+                            <li><a href="/ferramentas/calculadora-preco-justo/">Preço Justo →</a></li>
+                            <li><a href="/ferramentas/independencia-financeira/">Simulador de Renda →</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="features-section">
-            <div class="container">
+            <div class="container-inner">
                 <h2 class="section-title">Ferramentas de Autoridade</h2>
                 <div class="features-grid">
                     <a href="/ferramentas/taxometro/" class="feature-card">
-                        <div class="icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0h-10.5" /></svg>
-                        </div>
+                        <div class="icon-wrapper">📊</div>
                         <h3>Taxômetro Tesouro</h3>
-                        <p>Acompanhe preços e taxas dos títulos públicos em tempo real com variação das últimas 24h.</p>
+                        <p>Preços e taxas dos títulos públicos em tempo real.</p>
+                        <span class="card-btn">Acessar simulador →</span>
                     </a>
 
                     <a href="/ferramentas/taxa-real/" class="feature-card">
-                        <div class="icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.5 4.5L21.75 7.5M21.75 12V7.5H17.25" /></svg>
-                        </div>
+                        <div class="icon-wrapper">📈</div>
                         <h3>Ganho Real (Fisher)</h3>
-                        <p>Descubra quanto o seu dinheiro realmente rende acima da inflação utilizando a Equação de Fisher.</p>
+                        <p>Descubra quanto o seu dinheiro realmente rende hoje.</p>
+                        <span class="card-btn">Calcular taxa →</span>
                     </a>
 
                     <a href="/ferramentas/poder-de-compra/" class="feature-card">
-                        <div class="icon-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-2.25-2.226-2.25-4.154 0-1.928.984-3.597 2.5-4.596" /></svg>
-                        </div>
+                        <div class="icon-wrapper">💸</div>
                         <h3>Poder de Compra</h3>
-                        <p>Veja o impacto histórico do IPCA no seu património e converta valores do passado para hoje.</p>
+                        <p>O impacto histórico do IPCA no seu dinheiro.</p>
+                        <span class="card-btn">Ver impacto →</span>
                     </a>
-                </div>
-                <div class="all-tools-link">
-                    <a href="/ferramentas/">Ver todas as ferramentas e simuladores →</a>
                 </div>
             </div>
         </section>
 
         <section class="posts-section">
-            <div class="posts-wrapper">
+            <div class="container-inner">
                 <h2 class="section-title">Análise Técnica e Insights</h2>
                 <ul class="posts-grid">
-                    {posts.map(post => (
-                        <li class="post-card">
-                            <a href={`/blog/${post.id}/`}>
-                                <h3 class="post-title">{post.data.title}</h3>
-                                <p class="post-date"><FormattedDate date={post.data.pubDate} /></p>
-                                <p class="post-description">{post.data.description}</p>
-                                <span class="read-more">Ler Artigo Completo &rarr;</span>
-                            </a>
-                        </li>
-                    ))}
+                    {posts.map(post => {
+                        const cleanSlug = post.id.replace(/\.[^/.]+$/, "");
+                        return (
+                            <li class="post-card">
+                                <a href={`/blog/${cleanSlug}/`}>
+                                    <h3 class="post-title">{post.data.title}</h3>
+                                    <p class="post-date"><FormattedDate date={post.data.pubDate} /></p>
+                                    <p class="post-description">{post.data.description}</p>
+                                    <span class="read-more">Ler Artigo Completo &rarr;</span>
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
-                <div class="all-posts-link">
-                    <a href="/blog/">Acessar o Blog Completo</a>
-                </div>
             </div>
         </section>
     </main>
+            <section class="transparency-section">
+            <div class="container-inner">
+                <div class="transparency-content">
+                    <div class="transparency-text">
+                        <span class="lock-icon"></span>
+                        <p>
+                            <strong>Dados auditados:</strong> Nossas ferramentas utilizam parâmetros oficiais do 
+                            <strong>Banco Central (Bacen)</strong>, <strong>CVM</strong> e <strong>Tesouro Nacional</strong> 
+                            para garantir que os cálculos reflitam a real economia brasileira hoje.
+                        </p>
+                    </div>
+                    <div class="logos-grid">
+                        <img src="/logos/bacen.svg" alt="Banco Central do Brasil" title="Dados via API Bacen" class="gray-logo" />
+                        <img src="/logos/tesouro.svg" alt="Tesouro Nacional" title="Taxas do Tesouro Direto" class="gray-logo" />
+                        <img src="/logos/b3.svg" alt="B3 - Bolsa Brasil Balcão" title="Dados de Mercado B3" class="gray-logo" />
+                    </div>
+                </div>
+            </div>
+        </section>
     <Footer />
 
-    <style>
+    <style is:global>
         :root {
             --primary: #0167c2;
-            --primary-hover: #003d6b;
-            --primary-light: #eef6fc;
-            --text-main: #001a2e;
+            --navy: #003d6b;
+            --text-main: #0f172a;
             --text-muted: #475569;
             --bg-light: #f8fafc;
-            --success: #4bac40;
         }
 
-        .hero-section {
-            text-align: center;
-            padding: 6rem 1.5rem 8rem;
-            background: linear-gradient(to bottom, var(--primary-light), white);
+        /* CORREÇÃO DE LARGURA E SCROLL */
+        .home-main {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+            display: block;
         }
-        .hero-content { max-width: 850px; margin: 0 auto; }
-        .hero-title { font-size: 3.5rem; font-weight: 800; color: var(--text-main); line-height: 1.1; margin-bottom: 1.5rem; }
-        .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6; }
-        .hero-actions { display: flex; gap: 1.2rem; justify-content: center; }
-        
-        .hero-button {
-            padding: 1rem 2.2rem;
-            background-color: var(--primary);
-            color: white;
-            font-weight: 700;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .hero-button:hover { background-color: var(--primary-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,61,107,0.15); }
-        .hero-button.secondary { background-color: white; color: var(--primary); border: 2px solid var(--primary); }
-        .hero-button.secondary:hover { background-color: var(--primary-light); }
 
-        .dashboard-wrapper { max-width: 1000px; margin: -5rem auto 4rem; padding: 0 1.5rem; position: relative; z-index: 10; }
-
-        .features-section { padding: 4rem 1.5rem; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.4rem; font-weight: 800; margin-bottom: 3.5rem; color: var(--text-main); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-        
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
+        .container-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            box-sizing: border-box;
         }
-        .feature-card:hover { border-color: var(--primary); transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 61, 107, 0.08); }
-        
-        .icon-wrapper {
-            background-color: var(--primary-light);
-            padding: 1rem;
-            border-radius: 14px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
+
+        /* HERO */
+        .hero-section { text-align: center; padding: 7rem 0; background: linear-gradient(to bottom, #eef6fc, white); }
+        .hero-title { font-size: 3.5rem; font-weight: 900; color: var(--navy); line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero-subtitle { font-size: 1.3rem; color: var(--text-muted); margin-bottom: 3rem; }
+        .hero-actions { display: flex; gap: 1rem; justify-content: center; }
+        .hero-button { padding: 1rem 2rem; background: var(--primary); color: white; border-radius: 12px; font-weight: 700; text-decoration: none; transition: 0.3s; }
+        .hero-button.secondary { background: white; color: var(--primary); border: 2px solid var(--primary); }
+
+        .dashboard-wrapper { max-width: 1100px; margin: -5rem auto 4rem; position: relative; z-index: 10; }
+
+        /* BADGE EDUCAÇÃO FINANCEIRA */
+        .badge {
+            background: #eef6fc;
             color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
-        .icon-wrapper svg { width: 2.5rem; height: 2.5rem; }
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); font-weight: 700; }
-        .feature-card p { color: var(--text-muted); line-height: 1.7; font-size: 1rem; }
 
-        .all-tools-link { text-align: center; margin-top: 3.5rem; }
-        .all-tools-link a { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.1rem; }
+        /* GRIDS */
+        .trilhas-grid, .features-grid, .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
 
-        .posts-section { padding: 6rem 1.5rem; background-color: var(--bg-light); }
-        .posts-wrapper { max-width: 1100px; margin: 0 auto; }
-        .posts-grid { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        /* CARDS - REMOÇÃO DE SUBLINHADO E AJUSTE DE PADDING */
+        .trilha-card, .feature-card, .post-card {
+            background: white;
+            padding: 2.5rem 1.8rem;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            text-decoration: none !important; /* Mata o sublinhado */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .trilha-card *, .feature-card *, .post-card * {
+            text-decoration: none !important; /* Garante que títulos não sublinhem */
+        }
+
+        .trilha-card:hover, .feature-card:hover { transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,61,107,0.08); }
+
+        .trilha-badge { font-size: 0.7rem; font-weight: 900; padding: 4px 10px; border-radius: 6px; color: white; margin-bottom: 1rem; width: fit-content; }
+        .nivel-1 .trilha-badge { background: #e11d48; }
+        .nivel-2 .trilha-badge { background: #05684e; }
+        .nivel-3 .trilha-badge { background: #0167c2; }
+
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 3.5rem; color: var(--navy); }
+
+        .trilhas-section, .features-section, .posts-section { padding: 5rem 0; width: 100%; }
+        .posts-section { background-color: var(--bg-light); }
+
+        .trilha-links { list-style: none; padding: 0; margin-top: auto; }
+        .trilha-links a { color: var(--primary); font-weight: 700; }
         
-        .post-card { background: white; border-radius: 20px; overflow: hidden; transition: 0.3s; border: 1px solid #e2e8f0; }
-        .post-card:hover { transform: scale(1.02); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
-        .post-card a { display: block; padding: 2.5rem; text-decoration: none; color: inherit; }
-        .post-title { font-size: 1.4rem; color: var(--text-main); margin-bottom: 0.8rem; font-weight: 700; line-height: 1.3; }
-        .post-card:hover .post-title { color: var(--primary); }
-        .post-date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.2rem; }
-        .post-description { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6; }
-        .read-more { font-weight: 800; color: var(--primary); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px; }
-
-        .all-posts-link { text-align: center; margin-top: 4rem; }
-        .all-posts-link a { font-weight: 700; color: var(--primary); text-decoration: none; font-size: 1.2rem; }
+        .card-btn, .read-more { margin-top: auto; color: var(--primary); font-weight: 700; padding-top: 1.5rem; }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.6rem; }
-            .hero-actions { flex-direction: column; }
-            .hero-button { width: 100%; text-align: center; }
-            .dashboard-wrapper { margin-top: -3rem; }
+            .hero-title { font-size: 2.4rem; }
+            .trilhas-grid, .features-grid, .posts-grid { grid-template-columns: 1fr; }
+        }
+
+                /* Seção de Transparência - Versão Ampliada */
+        .transparency-section {
+            background-color: #ffffff;
+            padding: 3rem 0;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            width: 100%;
+        }
+
+        .transparency-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem; /* Aumentado o espaço entre texto e logos */
+        }
+
+        .transparency-text {
+            flex: 1; /* Permite que o texto ocupe o espaço necessário mas ceda aos logos */
+            min-width: 300px;
+        }
+
+        .logos-grid {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-shrink: 0; /* IMPEDE que os logos diminuam se o texto crescer */
+        }
+
+        .gray-logo {
+            height: 85px; /* Aumentado para 85px - tamanho de autoridade */
+            width: auto;
+            max-width: 180px; /* Limite maior para logos horizontais */
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.4s ease;
+            object-fit: contain;
+        }
+
+        .gray-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        @media (max-width: 1024px) {
+            .gray-logo { height: 60px; } /* Ajuste para tablets */
+            .logos-grid { gap: 2rem; }
+        }
+
+        @media (max-width: 768px) {
+            .transparency-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .gray-logo { height: 70px; }
+            .logos-grid { flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </body>

@@ -2,16 +2,20 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
-import logo from 'src/assets/logo.svg';
+import logo from '../assets/logo.svg'; // Ajustado o caminho para garantir a importação
 ---
 
-<header>
-    <nav>
-        <a href="/"><Image src={logo} alt="Investilize" width="190" /></a>
+<header class="main-header">
+    <nav class="nav-container">
+        <div class="logo-wrapper">
+            <a href="/">
+                <Image src={logo} alt="Investilize" width={180} loading="eager" />
+            </a>
+        </div>
         
         <div class="internal-links">
-            <HeaderLink href="/noticias">Notícias</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
+            <HeaderLink href="/noticias/">Notícias</HeaderLink>
+            <HeaderLink href="/blog/">Blog</HeaderLink>
             
             <div class="dropdown-wrapper">
                 <span class="menu-trigger">
@@ -19,133 +23,174 @@ import logo from 'src/assets/logo.svg';
                 </span>
                 
                 <div class="dropdown-menu">
-                    <a href="/ferramentas/taxometro">📊 Taxômetro Tesouro</a>
-                    <a href="/ferramentas/tesouro-vs-bancao">🏦 Tesouro vs. Bancão</a>
-                    <a href="/ferramentas/taxa-real">📈 Calculadora Taxa Real</a>
-                    <a href="/ferramentas/poder-de-compra">💰 Poder de Compra</a>
-                    <a href="/ferramentas/calculadora-preco-justo">💰Calculadora Preço Justo</a>
-                    <a href="/ferramentas/independencia-financeira">💰Independência Financeira</a>
-                    
-                    
-                    <hr /> <a href="/ferramentas/" style="font-weight: bold;">🔍 Ver Todas</a>
+                    <div class="dropdown-grid">
+                        <div class="dropdown-col">
+                            <span class="col-title">Renda Fixa</span>
+                            <a href="/ferramentas/taxometro/">📊 Taxômetro</a>
+                            <a href="/ferramentas/tesouro-vs-bancao/">🏦 Tesouro vs. CDB</a>
+                            <a href="/ferramentas/taxa-real/">📈 Taxa Real</a>
+                        </div>
+                        <div class="dropdown-col">
+                            <span class="col-title">Estratégia</span>
+                            <a href="/ferramentas/poder-de-compra/">💰 Poder de Compra</a>
+                            <a href="/ferramentas/calculadora-preco-justo/">⚖️ Preço Justo</a>
+                            <a href="/ferramentas/independencia-financeira/">🏝️ Viver de Renda</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-footer">
+                        <a href="/ferramentas/" class="view-all">🔍 Ver Todas as Ferramentas →</a>
+                    </div>
                 </div>
             </div>
 
-            <HeaderLink href="/sobre">Sobre</HeaderLink>
+            <HeaderLink href="/sobre/">Sobre</HeaderLink>
         </div>
         
-        <div class="social-links">
+        <div class="header-actions">
             </div>
     </nav>
 </header>
 
 <style>
-    header {
+    .main-header {
         margin: 0;
-        padding: 0 1em;
+        padding: 0;
         background: white;
-        /* Sombra leve ajustada para o tom Marinho */
-        box-shadow: 0 2px 8px rgba(0, 61, 107, 0.08); 
-        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 61, 107, 0.08); 
+        position: sticky;
+        top: 0;
         z-index: 1000;
+        width: 100%;
     }
-    nav {
+
+    .nav-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 80px; /* Altura fixa para consistência */
+    }
+
+    .logo-wrapper a {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border: none !important;
     }
 
     .internal-links {
         display: flex;
         align-items: center;
+        gap: 1rem;
+        height: 100%;
     }
 
     /* --- ESTILO DOS LINKS --- */
-    nav a {
-        padding: 1em 0.5em;
-        /* Alterado para Azul Marinho */
-        color: #003d6b; 
-        border-bottom: 4px solid transparent;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: 600;
-    }
-    
-    nav a.active {
-        text-decoration: none;
-        /* Alterado para Azul Royal */
-        border-bottom-color: #0167c2; 
-    }
-
-    /* --- ESTILO DO GATILHO DO MENU --- */
-    .menu-trigger {
-        padding: 1em 0.5em;
-        /* Alterado para Azul Marinho */
-        color: #003d6b; 
-        border-bottom: 4px solid transparent;
+    .internal-links a, .menu-trigger {
+        padding: 0 0.5rem;
+        height: 80px;
         display: flex;
         align-items: center;
-        gap: 4px;
-        cursor: pointer;
+        color: #003d6b; 
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
         font-weight: 600;
-        user-select: none;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
     }
-
-    .menu-trigger:hover,
-    .dropdown-wrapper:hover .menu-trigger {
-        /* Alterado para Verde Médio (Destaque de Sucesso) */
+    
+    .internal-links a:hover, .menu-trigger:hover, .dropdown-wrapper:hover .menu-trigger {
+        color: #0167c2;
         border-bottom-color: #4bac40;
-        color: #0167c2; 
     }
 
     /* --- DROPDOWN LÓGICA --- */
     .dropdown-wrapper {
         position: relative;
-        display: flex;
-        align-items: center;
         height: 100%;
     }
 
     .dropdown-menu {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 80px; /* Alinhado com a altura do header */
         left: 50%;
         transform: translateX(-50%);
         background-color: white;
-        min-width: 240px;
-        box-shadow: 0 8px 16px rgba(0, 61, 107, 0.15);
-        border-radius: 8px;
-        padding: 8px 0;
+        min-width: 480px; /* Largura para acomodar o grid */
+        box-shadow: 0 15px 30px rgba(0, 61, 107, 0.15);
+        border-radius: 0 0 16px 16px;
+        padding: 1.5rem;
         z-index: 1001;
         border: 1px solid #f0f0f0;
+        border-top: none;
+    }
+
+    .dropdown-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .dropdown-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-title {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #94a3b8;
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+        padding-left: 0.5rem;
     }
 
     .dropdown-menu a {
         display: block;
-        padding: 10px 16px;
-        /* Texto das ferramentas em Marinho */
+        padding: 8px 12px;
+        height: auto;
         color: #003d6b; 
-        border-bottom: none;
-        font-size: 0.95rem;
+        border-bottom: none !important;
+        border-radius: 8px;
+        font-size: 0.9rem;
         text-align: left;
     }
 
     .dropdown-menu a:hover {
-        /* Fundo suave e texto em Verde no hover */
-        background-color: #f8fafc;
-        color: #4bac40; 
+        background-color: #f0f7ff;
+        color: #0167c2; 
+    }
+
+    .dropdown-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #f0f0f0;
+        text-align: center;
+    }
+
+    .view-all {
+        font-weight: 800 !important;
+        color: #0167c2 !important;
     }
 
     .dropdown-wrapper:hover .dropdown-menu {
         display: block;
     }
 
-    .social-links { display: flex; }
+    /* --- RESPONSIVIDADE --- */
+    @media (max-width: 960px) {
+        .dropdown-menu { min-width: 300px; left: auto; right: 0; transform: none; }
+        .dropdown-grid { grid-template-columns: 1fr; }
+    }
 
     @media (max-width: 720px) {
-        .social-links { display: none; }
-        nav { flex-wrap: wrap; }
-        .internal-links { width: 100%; justify-content: center; }
+        .nav-container { height: auto; padding: 1rem; flex-direction: column; gap: 1rem; }
+        .internal-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: 0.5rem; }
+        .internal-links a, .menu-trigger { height: 40px; border-bottom: none; }
+        .dropdown-menu { position: static; transform: none; min-width: 100%; box-shadow: none; border: none; padding: 1rem 0; }
     }
 </style>

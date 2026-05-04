@@ -23,77 +23,88 @@ const pageDescription = "Explore artigos, guias e insights atualizados em nosso 
     <head>
         <BaseHead title={SITE_TITLE} description={pageDescription} />
         <style>
-            main {
-                width: 960px;
-                max-width: calc(100% - 2em);
-                margin: auto;
-                padding: 3em 1em;
-            }
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-            ul li {
-                width: calc(50% - 1rem);
-            }
-            ul li * {
-                text-decoration: none;
-                transition: 0.2s ease;
-            }
-            ul li:first-child {
-                width: 100%;
-                margin-bottom: 1rem;
-                text-align: center;
-            }
-            ul li:first-child img {
-                width: 100%;
-            }
-            ul li:first-child .title {
-                font-size: 2.369rem;
-            }
-            ul li img {
-                margin-bottom: 0.5rem;
-                border-radius: 12px;
-            }
-            ul li a {
-                display: block;
-            }
-            .title {
-                margin: 0;
-                /* Alterado de Preto para Azul Marinho Profundo */
-                color: #003d6b; 
-                line-height: 1.2;
-                font-weight: 800;
-            }
-            .date {
-                margin: 0;
-                /* Alterado para um cinza azulado mais harmônico */
-                color: #475569; 
-            }
-            ul li a:hover .title {
-                /* Alterado de Roxo para Azul Royal no Hover */
-                color: #0167c2; 
-            }
-            ul a:hover img {
-                box-shadow: var(--box-shadow);
-            }
-            @media (max-width: 720px) {
-                ul {
-                    gap: 0.5em;
-                }
-                ul li {
-                    width: 100%;
-                    text-align: center;
-                }
-                ul li:first-child .title {
-                    font-size: 1.563em;
-                }
-            }
-        </style>
+    main {
+        width: 960px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 3em 1em;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        /* O segredo: 'border-box' faz o padding não aumentar o tamanho do card */
+        box-sizing: border-box; 
+        width: calc(50% - 1rem);
+        background: #ffffff;
+        padding: 1.5rem; /* Aumentei um pouco para respirar melhor */
+        border-radius: 16px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    /* Se você quiser que o primeiro post NÃO seja gigante, apague este bloco abaixo */
+    ul li:first-child {
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    ul li:first-child img {
+        width: 100%;
+    }
+
+    ul li img {
+        margin-bottom: 1rem;
+        border-radius: 12px;
+        width: 100%; /* Garante que a imagem siga o card */
+        height: auto;
+        object-fit: cover;
+    }
+    
+    ul li a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .title {
+        margin: 0.5rem 0;
+        color: #003d6b; 
+        line-height: 1.2;
+        font-weight: 800;
+        font-size: 1.5rem; /* Tamanho ajustado para o card */
+    }
+
+    .date {
+        margin: 0;
+        color: #475569; 
+        font-size: 0.9rem;
+    }
+
+    ul li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    ul li a:hover .title {
+        color: #0167c2; 
+    }
+
+    /* Responsividade para Celular */
+    @media (max-width: 720px) {
+        ul {
+            gap: 1.5rem;
+        }
+        ul li {
+            width: 100% !important; /* Em telas pequenas, volta a ser uma coluna */
+        }
+    }
+</style>
     </head>
     <body>
         <Header />
@@ -107,7 +118,7 @@ const pageDescription = "Explore artigos, guias e insights atualizados em nosso 
 
                             return (
                                 <li>
-                                    <a href={`/blog/${post.id}/`}>
+                                    <a href={`/blog/${post.id.replace(/\.[^/.]+$/, "")}/`}>
                                         {post.data.heroImage && (
                                             <Image 
                                                 width={720} 

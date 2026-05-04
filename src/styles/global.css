@@ -60,15 +60,65 @@ main {
     padding: 3em 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 0.5rem 0;
-    color: rgb(var(--black)); /* Aplica o Azul Marinho */
-    line-height: 1.2;
+h1 {
+  font-size: 2.25rem; /* Antes provavelmente era 3rem+ */
+  margin-top: 1rem;
 }
 
-h1 { font-size: 3.052em; }
-h2 { font-size: 2.441em; }
-h3 { font-size: 1.953em; }
+h2 {
+  font-size: 1.75rem; /* Tamanho ideal para seções do post */
+  margin-top: 2.5rem;
+  border-bottom: 1px solid #f1f5f9; /* Linha sutil para separar seções */
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+  text-transform: uppercase; /* Pequeno toque de design para subtítulos */
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Responsividade: Diminuir ainda mais no Mobile */
+@media (max-width: 768px) {
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+/* Localize sua Navbar e substitua/adicione este bloco */
+
+.menu-trigger, 
+.internal-links a, 
+.dropdown-menu a,
+.col-title {
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important; /* Tamanho reduzido para elegância */
+    letter-spacing: 0.12em !important; /* Espaçamento chique */
+    font-weight: 700 !important;
+}
+
+/* Garante que o ícone da setinha não sofra deformação */
+.arrow {
+    text-transform: none !important;
+    font-size: 0.8rem;
+    margin-left: 4px;
+}
+
+/* Ajuste das cores para manter o padrão Investilize */
+.menu-trigger, .internal-links a {
+    color: #003d6b !important; /* Seu Azul Marinho */
+}
+
+.menu-trigger:hover, .internal-links a:hover {
+    color: #0167c2 !important; /* Seu Azul Royal */
+}
+
 
 strong, b {
     font-weight: 700;

@@ -12,6 +12,10 @@ export default defineConfig({
   // ✅ NOVO: Garante que o sitemap e os canonicals sempre tenham a barra final, alinhando com a Netlify
   trailingSlash: 'always',
 
+  build: {
+    format: 'directory' // Isso ajuda a criar pastas físicas (index.html) para cada post
+  },
+
   // ✅ CORREÇÃO FINAL: Usando a estrutura de objeto com 'entrypoint'
   image: {
     service: {
@@ -20,12 +24,6 @@ export default defineConfig({
   },
 
   integrations: [mdx(), sitemap(), partytown()],
-
-  // ✅ NOVO: Redirecionamento 301 para corrigir o erro de digitação da URL
-  redirects: {
-    '/blog/renda-fix-veriavel-diferenca': { status: 301, destination: '/blog/renda-fixa-variavel-diferenca/' },
-    '/blog/renda-fix-veriavel-diferenca/': { status: 301, destination: '/blog/renda-fixa-variavel-diferenca/' },
-  },
 
   adapter: netlify({
     imageCDN: false
