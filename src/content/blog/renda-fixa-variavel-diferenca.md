@@ -129,6 +129,7 @@ Agora que você já entendeu a diferença entre as duas modalidades e sabe o pod
 👉 **[Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência em 2026](/blog/tesouro-selic-reserva-emergencia)**
 
 <script type="application/ld+json">
+{`
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -162,4 +163,5 @@ Agora que você já entendeu a diferença entre as duas modalidades e sabe o pod
     }
   }]
 }
+`}
 </script>
