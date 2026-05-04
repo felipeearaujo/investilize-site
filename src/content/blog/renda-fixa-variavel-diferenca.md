@@ -7,7 +7,7 @@ updatedDate: '2026-05-04'
 tags: ['Renda Fixa', 'Renda Variável', 'IRPF 2026', 'Investimentos']
 heroImage: '~/assets/blog/renda-fixa-renda-variavel.png'
 ---
-import TaxaReal from '../../components/ferramentas/taxa-real.astro'
+import TaxaReal from '../../components/ferramentas/CalculadoraTaxaReal.astro'
 
 > 🗺️ **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
 > * **Dia 1: Renda Fixa vs. Renda Variável: Por onde começar?** (Você está aqui)
