@@ -7,8 +7,6 @@ heroImage: ""
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-05/novo-desenrola-comeca-valer-nesta-terca-feira"
 ---
 
-# Novo Desenrola Brasil: MP 1.355 entra em vigor hoje com descontos de até 90%
-
 Entrou em operação nesta terça-feira (5) o Novo Desenrola Brasil, o programa do governo federal desenhado para que as famílias brasileiras renegociem suas dívidas e restabeleçam seu poder de compra. A base legal da iniciativa, a Medida Provisória nº 1.355, já está disponível para consulta no Diário Oficial da União.
 
 O texto foi assinado ontem (4) pelo presidente Luiz Inácio Lula da Silva, que reforçou o compromisso de facilitar a saída da inadimplência para quem possui débitos de baixo valor.
