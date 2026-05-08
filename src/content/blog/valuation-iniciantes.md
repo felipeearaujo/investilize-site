@@ -15,7 +15,7 @@ faqList:
 
 "Preço é o que você paga, valor é o que você leva". Essa frase, imortalizada por Warren Buffett, é a essência do investimento inteligente na bolsa de valores.
 
-Com a **Taxa Selic projetada para 13,00%** e a inflação (**IPCA**) rondando os 4,80% em 2026, o custo de oportunidade no Brasil está elevado. Isso significa que o investidor tem muitas opções seguras para colocar seu dinheiro (como a renda fixa). Portanto, a bolsa de valores só se torna uma escolha inteligente se você souber identificar **ativos que estão negociados abaixo do seu valor real**.
+Com a **Taxa Selic projetada para 13,00\%** e a inflação (**IPCA**) rondando os 4,80\% em 2026, o custo de oportunidade no Brasil está elevado. Isso significa que o investidor tem muitas opções seguras para colocar seu dinheiro (como a renda fixa). Portanto, a bolsa de valores só se torna uma escolha inteligente se você souber identificar **ativos que estão negociados abaixo do seu valor real**.
 
 É aqui que entra o **Valuation** (ou avaliação de empresas). É o processo de usar dados financeiros para descobrir o "Preço Justo" de uma ação.
 
@@ -29,7 +29,7 @@ O **Price-to-Earnings Ratio (P/L)** talvez seja o indicador mais popular da bols
 A fórmula simplificada é: `P/L = Preço da Ação / Lucro por Ação`
 
 **Como interpretar?**
-Imagine que você investe em uma empresa que paga R$ 1,00 de lucro por ano e a ação custa R$ 10,00. O P/L é 10. Teoricamente, levaria 10 anos para reaver seu investimento apenas com lucros, se eles se mantivessem constantes.
+Imagine que você investe em uma empresa que paga R\$ 1,00 de lucro por ano e a ação custa R\$ 10,00. O P/L é 10. Teoricamente, levaria 10 anos para reaver seu investimento apenas com lucros, se eles se mantivessem constantes.
 
 *   **P/L Baixo (ex: abaixo de 6 ou 8):** Pode indicar que a ação está **subvalorizada** (barata) ou que o mercado desconfia que a empresa terá problemas no futuro e por isso ninguém quer comprar (armadilha de valor).
 *   **P/L Alto (ex: acima de 20 ou 30):** O mercado acredita que a empresa crescerá muito nos próximos anos. É comum em empresas de tecnologia ou bancos digitais (como o **Nubank** no IPO), que investem todo o lucro para crescer e pagam pouco dividendos agora.
@@ -48,12 +48,12 @@ A fórmula simplificada é: `P/VP = Preço da Ação / Patrimônio por Ação`
 
 Nenhuma análise é perfeita. Mesmo os melhores analistas do mundo erram. Por isso, Benjamin Graham, pai do *value investing*, criou o conceito de **Margem de Segurança**.
 
-Imagine que, após sua análise, você calculou que o **Preço Justo** da ação da Vale (VALE3) é R$ 80,00. Mas ela está sendo negociada hoje por R$ 70,00. A diferença de R$ 10,00 (ou cerca de 12,5% de desconto) é sua margem de segurança.
+Imagine que, após sua análise, você calculou que o **Preço Justo** da ação da Vale (VALE3) é R\$ 80,00. Mas ela estã sendo negociada hoje por R\$ 70,00. A diferença de R\$ 10,00 (ou cerca de 12,5\% de desconto) é sua margem de segurança.
 
 **Por que ela é vital em 2026?**
-Com juros altos e cenário fiscal incerto, o mercado é volátil. Se você comprar uma ação exatamente pelo seu valor calculado e vier uma notícia ruim que derrube o preço em 5%, você terá prejuízo. Se você comprou com 20% de desconto (Margem de Segurança), essa notícia ruim pode apenas reduzir seu ganho, mas te salvará do prejuízo.
+Com juros altos e cenário fiscal incerto, o mercado é volátil. Se você comprar uma ação exatamente pelo seu valor calculado e vier uma notícia ruim que derrube o preço em 5\%, você terá prejuízo. Se você comprou com 20\% de desconto (Margem de Segurança), essa notícia ruim pode apenas reduzir seu ganho, mas te salvará do prejuízo.
 
-> 💡 **Regra de Ouro:** Compre quando o preço de mercado estiver, no mínimo, 10% a 20% abaixo do seu cálculo de Preço Justo.
+> 💡 **Regra de Ouro:** Compre quando o preço de mercado estiver, no mínimo, 10\% a 20\% abaixo do seu cálculo de Preço Justo.
 
 ### Ferramenta Prática: Automatizando a Análise
 

@@ -50,10 +50,10 @@ A Petrobrás é, sem dúvida, a ação mais comentada do "Bra$il". Sua importân
 
 ## Cenário Macro 2026: Juros Altos x Renda Variável
 
-Com a projeção da **Taxa Selic para 13,00%** ao ano, um investidor conservador pode questionar a lógica de assumir o risco da bolsa. A resposta matematicamente correta reside na combinação de **Valorização (Ganho de Capital) + Isenção Fiscal**.
+Com a projeção da **Taxa Selic para 13,00\%** ao ano, um investidor conservador pode questionar a lógica de assumir o risco da bolsa. A resposta matematicamente correta reside na combinação de **Valorização (Ganho de Capital) + Isenção Fiscal**.
 
-1.  **Isenção de IR:** Enquanto a renda fixa paga 22,5% a 15% de Imposto de Renda sobre os ganhos, os dividendos recebidos de ações são isentos de IR para pessoa física.
-2.  **Rendimento Real:** Se a inflação (IPCA) fechar em 4,80% e a Selic em 13%, sua taxa real na renda fixa gira em torno de 8,2%. As Blue Chips, com *Dividend Yields* médios históricos de 8% a 12% somados à potencial valorização do papel, podem ofertar uma atratividade competitiva, especialmente em um cenário de desvalorização cambial.
+1.  **Isenção de IR:** Enquanto a renda fixa paga 22,5\% a 15\% de Imposto de Renda sobre os ganhos, os dividendos recebidos de ações são isentos de IR para pessoa física.
+2.  **Rendimento Real:** Se a inflação (IPCA) fechar em 4,80\% e a Selic em 13\%, sua taxa real na renda fixa gira em torno de 8,2\%. As Blue Chips, com *Dividend Yields* médios históricos de 8\% a 12\% somados à potencial valorização do papel, podem ofertar uma atratividade competitiva, especialmente em um cenário de desvalorização cambial.
 
 ## Conclusão: O Próximo Passo na Trilha
 

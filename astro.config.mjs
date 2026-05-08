@@ -5,15 +5,30 @@ import sitemap from '@astrojs/sitemap';
 import netlify from '@astrojs/netlify';
 import partytown from '@astrojs/partytown';
 
+// Importe as dependências de matemática aqui:
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://investilize.com.br',
+  
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [
+      // ✅ O plugin e as opções DEVEM estar dentro de um array próprio
+      [rehypeKatex, {
+        strict: false,
+        throwOnError: false
+      }]
+    ],
+  },
 
   // ✅ Mantém a barra final em todos os links para alinhar com a Netlify
   trailingSlash: 'always',
 
   build: {
-    format: 'directory' // Isso ajuda a criar pastas físicas (index.html) para cada post
+    format: 'directory' // Cria pastas físicas (index.html) para cada post, excelente para SEO
   },
 
   image: {
@@ -22,7 +37,11 @@ export default defineConfig({
     }
   },
 
-  integrations: [mdx(), sitemap(), partytown()],
+  integrations: [
+    mdx(), // Permite usar componentes dentro do seu conteúdo
+    sitemap(), 
+    partytown()
+  ],
 
   // ✅ CORREÇÃO: Apenas uma rota de redirecionamento para evitar colisão
   redirects: {

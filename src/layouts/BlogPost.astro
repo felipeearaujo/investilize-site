@@ -28,6 +28,7 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
 
 <html lang="pt-br">
     <head>
+    	
     	<meta name="ezoic-site-verification" content="FEJWdNWd8kM54jgA3UKlWa7Q7OJipi" />
 
       <!-- CMP -->
@@ -40,6 +41,13 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
       window.ezstandalone = window.ezstandalone || {};
       ezstandalone.cmd = ezstandalone.cmd || [];
       </script>
+      
+      <!-- ✅ ADICIONE O CSS DO KATEX AQUI -->
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+          crossorigin="anonymous"
+        />
 
         <BaseHead title={dynamicTitle} description={dynamicDescription} image={resolvedImage} />        
         

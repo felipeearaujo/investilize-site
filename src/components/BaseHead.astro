@@ -50,6 +50,18 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
+<script>
+  import Clarity from '@microsoft/clarity';
+
+  // Substitua pelo seu ID real do projeto Clarity
+  const projectId = "wclce1s4ln";
+
+  // Inicializa apenas se estiver no navegador
+  if (typeof window !== 'undefined') {
+    Clarity.init(projectId);
+  }
+</script>
+
 <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-D8D6S7DDLR" async></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
