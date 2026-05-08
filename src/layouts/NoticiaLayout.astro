@@ -17,8 +17,12 @@ const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOStri
 
 // 3. LIMPEZA PROFUNDA DA IMAGEM
 let heroImage = frontmatter.heroImage || "";
-if (heroImage.includes("http")) {
+if (typeof heroImage === 'object' && heroImage.src) {
+    heroImage = heroImage.src;
+} else if (typeof heroImage === 'string' && heroImage.includes("http")) {
     heroImage = heroImage.substring(heroImage.indexOf("http"));
+} else if (typeof heroImage !== 'string') {
+    heroImage = String(heroImage);
 }
 
 const safeImage = (heroImage && !heroImage.includes("loading")) 
