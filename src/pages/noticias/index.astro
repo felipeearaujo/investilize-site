@@ -9,10 +9,8 @@ import FormattedDate from '../../components/FormattedDate.astro';
 const pageTitle = "Notícias Econômicas e Financeiras | Investilize";
 const pageDescription = "Fique por dentro dos principais acontecimentos que movimentam o mercado financeiro, economia nacional e indicadores oficiais.";
 
-// 1. Usando getCollection para melhor performance e SEO
 const allPosts = await getCollection('noticias');
 
-// 2. Ordenando por data (do mais novo para o mais antigo)
 const noticias = allPosts.sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -24,7 +22,6 @@ const noticias = allPosts.sort(
         <meta charset="utf-8" />
         <BaseHead title={pageTitle} description={pageDescription} />
         <style>
-            /* Seus estilos CSS permanecem os mesmos */
             main { width: 1000px; max-width: calc(100% - 2em); margin: 0 auto; padding: 3em 1em; }
             .news-hub-header { text-align: center; margin-bottom: 4rem; }
             .news-hub-header h1 { color: #003d6b; font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
@@ -35,6 +32,31 @@ const noticias = allPosts.sort(
             .news-content { padding: 1.5rem; }
             .news-title { color: #003d6b; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
             .read-more { color: #0167c2; font-weight: 800; }
+            
+            .news-card a {
+        text-decoration: none !important;
+        color: inherit;
+        display: block; /* Garante que o link ocupe o card todo */
+    }
+
+    .news-card a:hover .news-title {
+        color: #0167c2;
+    }
+
+    /* Remove sublinhado de qualquer texto interno */
+    .news-title, .news-excerpt, .read-more {
+        text-decoration: none !important;
+    }
+                         
+                         card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+}
+
+.card-link:hover .news-title {
+    color: #0167c2;
+}
         </style>
     </head>
     <body>
@@ -48,34 +70,41 @@ const noticias = allPosts.sort(
 
             {noticias.length > 0 ? (
                 <ul class="news-grid">
-                   {noticias.map((post) => {
-                        const cleanSlug = post.id.replace(/\.mdx?$/, '');
-                        return (
-                        <li class="news-card">
-                                
-                                {post.data.heroImage && (
-                                    <img 
-                                        class="news-image" 
-                                        src={typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage.src} 
-                                        alt={post.data.title} 
-                                    />
-                                )}
-                                
-                                <div class="news-content">
-                                    <div class="news-meta">
-                                        <span>Economia</span>
-                                        <span>•</span>
-                                        <FormattedDate date={post.data.pubDate} />
-                                    </div>
-                                    <h2 class="news-title" style="text-decoration: none;">{post.data.title}</h2>
-                                    <p class="news-excerpt" style="text-decoration: none;">{post.data.description}</p>
-                                    <span class="read-more">Ler notícia completa →</span>
-                                </div>
-                            </a>
-                        </li>
-                        )
-                    })}
-                </ul>
+              {noticias.map((post) => {
+                  // 1. Gera o slug limpo para SEO (identificado pelo Joules)
+                  const cleanSlug = post.id.replace(/\.mdx?$/, '');
+                  
+                  // 2. Trata a imagem do Astro 6: tenta .src, depois a string, depois o fallback
+                  const imageSrc = post.data.heroImage?.src || post.data.heroImage || '/_astro/default-investilize.C7k6Ic30.webp';
+                  
+                  return (
+                      <li class="news-card">
+                          {/* ✅ O LINK ENVOLVE TUDO: Isso garante que o card inteiro seja clicável */}
+                          <a href={`/noticias/${cleanSlug}/`} class="card-link">
+                              
+                              {post.data.heroImage && (
+                                  <img 
+                                      class="news-image" 
+                                      src={imageSrc} 
+                                      alt={post.data.title} 
+                                  />
+                              )}
+                              
+                              <div class="news-content">
+                                  <div class="news-meta">
+                                      <span>Economia</span>
+                                      <span>•</span>
+                                      <FormattedDate date={post.data.pubDate} />
+                                  </div>
+                                  <h2 class="news-title">{post.data.title}</h2>
+                                  <p class="news-excerpt">{post.data.description}</p>
+                                  <span class="read-more">Ler notícia completa →</span>
+                              </div>
+                          </a>
+                      </li>
+                  );
+              })}
+          </ul>
             ) : (
                 <div style="text-align: center; padding: 4rem; color: #64748b;">
                     <p>Nenhuma notícia encontrada.</p>
