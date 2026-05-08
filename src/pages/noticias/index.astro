@@ -52,12 +52,13 @@ const noticias = allPosts.sort(
                         const cleanSlug = post.id.replace(/\.mdx?$/, '');
                         return (
                         <li class="news-card">
-                            {/* ✅ CORREÇÃO: Usamos o slug limpo (sem extensão .md) */}
-                            <a href={`/noticias/${cleanSlug}/`}>
                                 
-                                {/* ⚠️ Nota: Garanta que heroImage exista no seu schema do config.ts */}
                                 {post.data.heroImage && (
-                                    <img class="news-image" src={post.data.heroImage} alt={post.data.title} />
+                                    <img 
+                                        class="news-image" 
+                                        src={typeof post.data.heroImage === 'string' ? post.data.heroImage : post.data.heroImage.src} 
+                                        alt={post.data.title} 
+                                    />
                                 )}
                                 
                                 <div class="news-content">
@@ -66,8 +67,8 @@ const noticias = allPosts.sort(
                                         <span>•</span>
                                         <FormattedDate date={post.data.pubDate} />
                                     </div>
-                                    <h2 class="news-title">{post.data.title}</h2>
-                                    <p class="news-excerpt">{post.data.description}</p>
+                                    <h2 class="news-title" style="text-decoration: none;">{post.data.title}</h2>
+                                    <p class="news-excerpt" style="text-decoration: none;">{post.data.description}</p>
                                     <span class="read-more">Ler notícia completa →</span>
                                 </div>
                             </a>
