@@ -1,13 +1,13 @@
 ---
 import { getCollection, render } from 'astro:content';
 import NoticiaLayout from '../../layouts/NoticiaLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro'; // ✅ 1. Importar o componente
 
 export async function getStaticPaths() {
   const noticias = await getCollection('noticias');
   return noticias
-    .filter(n => n.id !== 'index' && n.id !== 'index.md' && n.id !== 'index.mdx') // ✅ Filtra o index base se houver
+    .filter(n => n.id !== 'index' && n.id !== 'index.md' && n.id !== 'index.mdx')
     .map((noticia) => {
-      // Cria um slug limpo removendo a extensão do arquivo (.md ou .mdx)
       const cleanSlug = noticia.id.replace(/\.mdx?$/, '');
       return {
         params: { slug: cleanSlug },
@@ -21,5 +21,7 @@ const { Content } = await render(noticia);
 ---
 
 <NoticiaLayout frontmatter={noticia.data}>
+  {/* ✅ 2. Inserir o Breadcrumbs aqui para ele aparecer no topo da notícia */}
+  <Breadcrumbs /> 
   <Content />
 </NoticiaLayout>
