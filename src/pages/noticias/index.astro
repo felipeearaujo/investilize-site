@@ -48,12 +48,16 @@ const noticias = allPosts.sort(
 
             {noticias.length > 0 ? (
                 <ul class="news-grid">
-                    {noticias.map((post) => (
+                   {noticias.map((post) => (
                         <li class="news-card">
-                            <a href={`/noticias/${post.slug}/`}>
+                            {/* ✅ CORREÇÃO: Usamos post.id em vez de post.slug */}
+                            <a href={`/noticias/${post.id}/`}>
+                                
+                                {/* ⚠️ Nota: Garanta que heroImage exista no seu schema do config.ts */}
                                 {post.data.heroImage && (
                                     <img class="news-image" src={post.data.heroImage} alt={post.data.title} />
                                 )}
+                                
                                 <div class="news-content">
                                     <div class="news-meta">
                                         <span>Economia</span>

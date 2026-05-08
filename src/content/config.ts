@@ -27,6 +27,7 @@ const noticias = defineCollection({
         description: z.string(),
         pubDate: z.coerce.date(),
         originalUrl: z.string(),
+		heroImage: z.string().optional(),
     }),
 });
 
