@@ -54,7 +54,13 @@ const noticias = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
                     
                     // SEGURANÇA: Extrai a URL da imagem se for objeto ou usa a string
                     let raw = post.data.heroImage || "";
-                    let rawString = (typeof raw === 'object' && raw !== null) ? (raw.src || "") : String(raw);
+                    let rawString = "";
+                    if (typeof raw === 'object' && raw !== null && 'src' in raw) {
+                        const typedRaw = raw as { src?: string };
+                        rawString = typedRaw.src || "";
+                    } else {
+                        rawString = String(raw);
+                    }
                     
                     // Se o heroImage for o fallback padrão ou vazio, forçamos a busca pelo slug.webp
                     let displayPath = (rawString !== "" && !rawString.includes("default-investilize"))

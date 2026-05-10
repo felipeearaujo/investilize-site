@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import NoticiaLayout from '../../layouts/NoticiaLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro'; // ✅ 1. Importar o componente
 
 export async function getStaticPaths() {
   const noticias = await getCollection('noticias');
@@ -21,7 +20,5 @@ const { Content } = await render(noticia);
 ---
 
 <NoticiaLayout frontmatter={noticia.data}>
-  {/* ✅ 2. Inserir o Breadcrumbs aqui para ele aparecer no topo da notícia */}
-  <Breadcrumbs /> 
   <Content />
 </NoticiaLayout>
