@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "INSS suspende novos empréstimos consignados do C6 Consig a aposentados"
+heroImage: "/images/noticias/2026-03-17-inss-suspende-novos-emprestimos-consignados-do-c6-consig-a-aposentados.webp"
 description: "A suspensão de novos empréstimos do C6 Consig pelo INSS é um lembrete amargo de que o crescimento acelerado no crédito não pode atropelar a conformida..."
 pubDate: "2026-03-17"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/inss-suspende-novos-emprestimos-consignados-do-c6-consig-aposentados"
 ---
 

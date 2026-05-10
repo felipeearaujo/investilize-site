@@ -23,6 +23,16 @@
         0 16px 32px rgba(var(--gray), 33%);
 }
 
+/* Remove o sublinhado de todos os links do site */
+a {
+    text-decoration: none !important;
+}
+
+/* Garante que não apareça sublinhado ao passar o mouse */
+a:hover {
+    text-decoration: none !important;
+}
+
 @font-face {
     font-family: 'Atkinson';
     src: url('/fonts/atkinson-regular.woff') format('woff');

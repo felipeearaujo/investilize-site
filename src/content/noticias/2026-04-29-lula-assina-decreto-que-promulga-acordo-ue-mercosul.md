@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Lula assina decreto que promulga acordo UE-Mercosul"
+heroImage: "/images/noticias/2026-04-29-lula-assina-decreto-que-promulga-acordo-ue-mercosul.webp"
 description: "A assinatura do decreto pelo Luiz Inácio Lula da Silva que promulga o acordo entre União Europeia e Mercosul representa um passo relevante na tentativ..."
 pubDate: "2026-04-29"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/lula-assina-decreto-que-promulga-acordo-ue-mercosul"
 ---
 
@@ -15,7 +15,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/lula-ass
                     <img alt="Logo Agência Brasil" src="https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg" style="height: 54px;" />
 				</a></p>O presidente Luiz Inácio Lula da Silva assinou nesta terça-feira (28), em cerimônia no Palácio do Planalto, o decreto que oficializa a validade do acordo comercial entre Mercosul e União Europeia (UE), que entra em vigor a partir do dia 1º de maio. <img src="https://agenciabrasil.ebc.com.br/ebc.png?id=1687549&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /><img src="https://agenciabrasil.ebc.com.br/ebc.gif?id=1687549&amp;o=rss" style="width: 1px; height: 1px; display: inline;" /></p>
 
-<p><strong>Com o tratado, o bloco sul-americano, composto por Argentina, Brasil, Paraguai e Uruguai, vai zerar tarifas sobre 91\% dos bens europeus em até 15 anos. Já a UE eliminará tarifas sobre 95\% dos bens vendidos pelo Mercosul em até 12 anos.</strong></p>
+<p><strong>Com o tratado, o bloco sul-americano, composto por Argentina, Brasil, Paraguai e Uruguai, vai zerar tarifas sobre 91% dos bens europeus em até 15 anos. Já a UE eliminará tarifas sobre 95% dos bens vendidos pelo Mercosul em até 12 anos.</strong></p>
 
 <p><h3>Notícias relacionadas:</h3><ul><li><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/congresso-nacional-promulga-acordo-mercosul-uniao-europeia">Congresso Nacional promulga acordo Mercosul-União Europeia.</a></li><li><a href="https://agenciabrasil.ebc.com.br/politica/noticia/2026-04/lula-qualidade-do-agro-e-essencial-para-ampliar-exportacoes">Lula: qualidade do agro é essencial para ampliar exportações.</a></li><li><a href="https://agenciabrasil.ebc.com.br/internacional/noticia/2026-04/lula-defende-que-empresas-brasileiras-atuem-em-portugal">Lula defende que empresas brasileiras atuem em Portugal.</a></li></ul>Os <a href="https://agenciabrasil.ebc.com.br/internacional/noticia/2026-01/lideres-assinam-acordo-mercosul-uniao-europeia" target="_blank">termos do acordo foram assinados no fim de janeiro</a>, em Assunção, no Paraguai, entre representantes dos dois blocos, após 26 anos de negociações. </p>
 
@@ -43,7 +43,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/lula-ass
 
 <p>O outro acordo envolve o Mercosul e a Associação Europeia de Livre Comércio (EFTA), integrada por Suíça, Noruega, Islândia e Liechtenstein. </p>
 
-<p><strong>A parceria multilateral vai criar um mercado de 290 milhões de consumidores em economias que somam PIB de US$ 4,39 trilhões, o equivalente a mais de R\$ 23 trilhões em 2024.</strong> </p>
+<p><strong>A parceria multilateral vai criar um mercado de 290 milhões de consumidores em economias que somam PIB de US$ 4,39 trilhões, o equivalente a mais de R$ 23 trilhões em 2024.</strong> </p>
 
 <p>A negociação teve início em 2017 e, depois de 14 rodadas, os termos finais foram acertados em junho de 2025.</p>
 

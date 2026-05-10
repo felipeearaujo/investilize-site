@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Novo Desenrola Brasil- MP 1.355 entra em vigor hoje com descontos de até 90%"
+heroImage: "/images/noticias/2026-05-05-novo-desenrola-brasil-mp-1355-entra-em-vigor-hoje-com-descontos-de-ate-90.webp"
 description: "Novo Desenrola começa a valer nesta terça-feira"
 pubDate: "2026-05-05"
-heroImage: ""
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-05/novo-desenrola-comeca-valer-nesta-terca-feira"
 ---
 
@@ -17,7 +17,7 @@ O texto foi assinado ontem (4) pelo presidente Luiz Inácio Lula da Silva, que r
 
 Esta nova etapa é destinada exclusivamente a pessoas físicas que se enquadrem em critérios específicos de tempo de dívida e ganhos mensais. Os pré-requisitos são:
 
-*   Renda Mensal: Deve ser de até cinco salários mínimos (o que equivale a R\$ 8.105).
+*   Renda Mensal: Deve ser de até cinco salários mínimos (o que equivale a R$ 8.105).
 *   Atraso das Parcelas: O débito deve estar vencido entre 91 e 720 dias (contados até ontem, 04/05/2026).
 *   Data do Contrato: As operações de crédito devem ter sido celebradas até 31 de janeiro de 2026.
 
@@ -39,7 +39,7 @@ O programa foca nas modalidades de crédito que mais impactam o orçamento das f
 
 O Novo Desenrola oferece condições agressivas para facilitar a quitação dos débitos, visando uma solução definitiva para o endividamento:
 
-1.  Descontos Elevados: Abatimentos que podem chegar a 90\% do valor total da dívida.
+1.  Descontos Elevados: Abatimentos que podem chegar a 90% do valor total da dívida.
 2.  Juros Reduzidos: Taxas de financiamento menores do que as praticadas no mercado comum.
 3.  Uso do FGTS: O trabalhador poderá utilizar seu saldo do Fundo de Garantia para abater ou quitar as parcelas.
 

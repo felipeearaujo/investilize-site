@@ -1,9 +1,9 @@
 ---
 layout: '../../layouts/NoticiaLayout.astro'
 title: 'Receita encurta prazo para entregar declaração do IRPF 2026'
+heroImage: "/images/noticias/2026-03-17-receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda.webp"
 description: 'A redução no prazo para a entrega do IRPF 2026 coloca uma pressão extra na organização do contribuinte. Veja as novas regras e limites.'
 pubDate: '2026-03-17'
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: 'https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-encurta-prazo-para-entregar-declaracao-do-irpf-2026'
 ---
 
@@ -34,25 +34,25 @@ Em 2026, os contribuintes terão pouco mais de dois meses para prestar contas ao
 
 Com o adiamento do início do prazo, <strong>o programa gerador da declaração só será liberado na próxima sexta-feira (20), às 8h, para download e preenchimento, mas sem transmissão</strong>.
 
-Quem perder o prazo estará sujeito a multa de 1\% ao mês sobre o imposto devido de 2025, mesmo que o tributo já tenha sido quitado. A penalidade tem valor mínimo de R\$ 165,74 e pode chegar a 20\% do imposto devido, segundo a Receita.
+Quem perder o prazo estará sujeito a multa de 1% ao mês sobre o imposto devido de 2025, mesmo que o tributo já tenha sido quitado. A penalidade tem valor mínimo de R$ 165,74 e pode chegar a 20% do imposto devido, segundo a Receita.
 
 <p><a href="https://whatsapp.com/channel/0029VaoRTgrInlqYLSk59B2M" target="_blank">>> Siga o canal da <strong>Agência Brasil </strong>no WhatsApp
 
 <h2>Quem deve declarar</h2>
 
-<strong>Devem entregar a declaração os contribuintes que, em 2025, receberam rendimentos tributáveis acima de R\$ 35.584, como salários, aposentadorias, pensões ou aluguéis.</strong>
+<strong>Devem entregar a declaração os contribuintes que, em 2025, receberam rendimentos tributáveis acima de R$ 35.584, como salários, aposentadorias, pensões ou aluguéis.</strong>
 
-Também entram na obrigatoriedade pessoas que tiveram rendimentos isentos ou tributados na fonte acima de R\$ 200 mil, obtiveram ganho de capital na venda de bens, realizaram operações relevantes em bolsa ou possuíam bens e direitos acima de R\$ 800 mil em 31 de dezembro de 2025. 
+Também entram na obrigatoriedade pessoas que tiveram rendimentos isentos ou tributados na fonte acima de R$ 200 mil, obtiveram ganho de capital na venda de bens, realizaram operações relevantes em bolsa ou possuíam bens e direitos acima de R$ 800 mil em 31 de dezembro de 2025. 
 
 Para calcular a rentabilidade líquida de seus investimentos descontando a inflação e o peso dos tributos, utilize nossa <a href="/ferramentas/taxa-real">Calculadora de Taxa Real</a>.
 
-Produtores rurais com receita bruta superior a R\$ 177.920 e contribuintes que passaram a residir no Brasil em 2025 também precisam declarar.
+Produtores rurais com receita bruta superior a R$ 177.920 e contribuintes que passaram a residir no Brasil em 2025 também precisam declarar.
 
 <h2>Limites atualizados</h2>
 
 A Receita atualizou alguns valores que determinam a obrigatoriedade de entrega da declaração, acompanhando a mudança na tabela progressiva do imposto.
 
-O limite de rendimentos tributáveis subiu de R\$ 33.888 para R\$ 35.584, enquanto o piso de receita bruta da atividade rural passou de R\$ 169.440 para R\$ 177.920.
+O limite de rendimentos tributáveis subiu de R$ 33.888 para R$ 35.584, enquanto o piso de receita bruta da atividade rural passou de R$ 169.440 para R$ 177.920.
 
 <h2>Regras do exterior</h2>
 

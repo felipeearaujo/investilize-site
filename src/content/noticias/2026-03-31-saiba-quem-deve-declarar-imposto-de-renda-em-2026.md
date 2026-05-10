@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Saiba quem deve declarar Imposto de Renda em 2026"
+heroImage: "/images/noticias/2026-03-31-saiba-quem-deve-declarar-imposto-de-renda-em-2026.webp"
 description: "A declaração do Imposto de Renda em 2026, referente aos rendimentos recebidos em 2025, é uma obrigação que exige atenção de milhões de brasileiros. A ..."
 pubDate: "2026-03-31"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-quem-deve-declarar-imposto-de-renda-em-2026"
 ---
 
@@ -17,10 +17,10 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-qu
 <h2>&gt;&gt; Veja quem é obrigado a declarar IR:</h2>
 
 <ul>
-	<li>Rendimentos tributáveis: quem<strong> </strong>recebeu mais do que R\$ 35.584,00 em valores que precisam de ajuste de imposto</li>
-	<li>Atividade rural: quem recebeu R\$ 177.920,00 no ano </li>
-	<li>Aqueles que receberam rendimentos isentos, não tributáveis ou tributados exclusivamente na fonte superior a R\$ 200.000,00</li>
-	<li>Possuíam, em 31/12/2025, bens ou direitos de valor total superior a R\$ 800.000,00</li>
+	<li>Rendimentos tributáveis: quem<strong> </strong>recebeu mais do que R$ 35.584,00 em valores que precisam de ajuste de imposto</li>
+	<li>Atividade rural: quem recebeu R$ 177.920,00 no ano </li>
+	<li>Aqueles que receberam rendimentos isentos, não tributáveis ou tributados exclusivamente na fonte superior a R$ 200.000,00</li>
+	<li>Possuíam, em 31/12/2025, bens ou direitos de valor total superior a R$ 800.000,00</li>
 	<li>Optaram pela isenção do imposto sobre o ganho de capital de venda de imóveis residenciais</li>
 	<li>Possuem bens, direitos ou entidades controladas no exterior  conforme legislação vigente</li>
 	<li>Quem passou à condição de residente no Brasil no ano de 2025.</li>
@@ -98,7 +98,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/saiba-qu
 
 <p>A<a href="https://agenciabrasil.ebc.com.br/radioagencia-nacional/series/tira-duvidas-do-ir-2026" target="_blank"> série Tira-Dúvidas do IR</a> chega à sua edição de 2026 com 22 episódios que serão exibidos na <strong>Rádio Nacional</strong> e estarão disponíveis na <strong>Radioagência Nacional </strong>e <strong>Agência Brasil</strong>. Os episódios serão publicadas todas as segundas e sextas-feiras. </p>
 
-<p>Vamos falar sobre as mudanças nas regras da Receita Federal, explicar sobre as formas de declaração e dar dicas pontuais. Você sabe se precisa mesmo declarar Pix, se a isenção de R\$ 5 mil já está valendo ou mesmo a ordem da restituição? A gente explica. E não para por aí. Assim como no ano passado, a série também vai verificar e desmentir <em>fake news</em> relacionadas à declaração. </p>
+<p>Vamos falar sobre as mudanças nas regras da Receita Federal, explicar sobre as formas de declaração e dar dicas pontuais. Você sabe se precisa mesmo declarar Pix, se a isenção de R$ 5 mil já está valendo ou mesmo a ordem da restituição? A gente explica. E não para por aí. Assim como no ano passado, a série também vai verificar e desmentir <em>fake news</em> relacionadas à declaração. </p>
 
 <p>O Tira-Dúvidas do IR venceu o Prêmio Nacional de Educação Fiscal em 2024 e o repórter Edgard Matsuki foi escolhido entre os 50 jornalistas +Admirados da Imprensa de Economia, Negócios e Finanças em 2025.</p>
 

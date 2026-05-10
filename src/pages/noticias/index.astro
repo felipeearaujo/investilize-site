@@ -7,13 +7,10 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 
 const pageTitle = "Notícias Econômicas e Financeiras | Investilize";
-const pageDescription = "Fique por dentro dos principais acontecimentos que movimentam o mercado financeiro, economia nacional e indicadores oficiais.";
+const pageDescription = "Acompanhe as notícias que movimentam o mercado e a economia.";
 
 const allPosts = await getCollection('noticias');
-
-const noticias = allPosts.sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const noticias = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <!doctype html>
@@ -21,95 +18,78 @@ const noticias = allPosts.sort(
     <head>
         <meta charset="utf-8" />
         <BaseHead title={pageTitle} description={pageDescription} />
+        <script is:inline>
+            // Lógica de fallback para os cards da listagem (troca extensões se falhar)
+            function handleCardError(img) {
+                const fallback = "/images/noticias/default-investilize.webp";
+                if (img.src.includes('.webp')) {
+                    img.src = img.src.replace('.webp', '.jpg');
+                } else if (img.src.includes('.jpg')) {
+                    img.src = img.src.replace('.jpg', '.png');
+                } else {
+                    img.src = fallback;
+                    img.onerror = null;
+                }
+            }
+        </script>
         <style>
-            main { width: 1000px; max-width: calc(100% - 2em); margin: 0 auto; padding: 3em 1em; }
-            .news-hub-header { text-align: center; margin-bottom: 4rem; }
-            .news-hub-header h1 { color: #003d6b; font-size: 2.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+            main { width: 1100px; max-width: 95%; margin: 0 auto; padding: 2rem 0; }
             .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.5rem; list-style: none; padding: 0; }
-            .news-card { background: white; border-radius: 12px; border: 1px solid #e2e8e8; transition: all 0.3s ease; overflow: hidden; }
-            .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 61, 107, 0.08); border-color: #0167c2; }
-            .news-image { width: 100%; height: 200px; object-fit: cover; }
-            .news-content { padding: 1.5rem; }
-            .news-title { color: #003d6b; font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
-            .read-more { color: #0167c2; font-weight: 800; }
-            
-            .news-card a {
-        text-decoration: none !important;
-        color: inherit;
-        display: block; /* Garante que o link ocupe o card todo */
-    }
-
-    .news-card a:hover .news-title {
-        color: #0167c2;
-    }
-
-    /* Remove sublinhado de qualquer texto interno */
-    .news-title, .news-excerpt, .read-more {
-        text-decoration: none !important;
-    }
-                         
-                         card-link {
-    text-decoration: none !important;
-    color: inherit !important;
-    display: block;
-}
-
-.card-link:hover .news-title {
-    color: #0167c2;
-}
+            .news-card { background: white; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+            .news-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0, 61, 107, 0.1); border-color: #0167c2; }
+            .news-image-box { width: 100%; height: 200px; overflow: hidden; background: #f8fafc; }
+            .news-image { width: 100%; height: 100%; object-fit: cover; }
+            .news-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+            .news-title { font-size: 1.25rem; color: #003d6b; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.3; }
+            .card-link { text-decoration: none; color: inherit; height: 100%; display: flex; flex-direction: column; }
         </style>
     </head>
     <body>
         <Header />
         <main>
             <Breadcrumbs />
-            <header class="news-hub-header">
-                <h1>Notícias do Mercado</h1>
-                <p>Fatos e indicadores oficiais republicados via Agência Brasil.</p>
-            </header>
+            <ul class="news-grid">
+                {noticias.map((post) => {
+                    const slug = post.id.replace(/\.mdx?$/, '');
+                    
+                    // SEGURANÇA: Extrai a URL da imagem se for objeto ou usa a string
+                    let raw = post.data.heroImage || "";
+                    let rawString = (typeof raw === 'object' && raw !== null) ? (raw.src || "") : String(raw);
+                    
+                    // Se o heroImage for o fallback padrão ou vazio, forçamos a busca pelo slug.webp
+                    let displayPath = (rawString !== "" && !rawString.includes("default-investilize"))
+                        ? rawString
+                        : `/images/noticias/${slug}.webp`;
 
-            {noticias.length > 0 ? (
-                <ul class="news-grid">
-              {noticias.map((post) => {
-                  // 1. Gera o slug limpo para SEO (identificado pelo Joules)
-                  const cleanSlug = post.id.replace(/\.mdx?$/, '');
-                  
-                  // 2. Trata a imagem do Astro 6: tenta .src, depois a string, depois o fallback
-                  const imageSrc = post.data.heroImage?.src || post.data.heroImage || '/_astro/default-investilize.C7k6Ic30.webp';
-                  
-                  return (
-                      <li class="news-card">
-                          {/* ✅ O LINK ENVOLVE TUDO: Isso garante que o card inteiro seja clicável */}
-                          <a href={`/noticias/${cleanSlug}/`} class="card-link">
-                              
-                              {post.data.heroImage && (
-                                  <img 
-                                      class="news-image" 
-                                      src={imageSrc} 
-                                      alt={post.data.title} 
-                                  />
-                              )}
-                              
-                              <div class="news-content">
-                                  <div class="news-meta">
-                                      <span>Economia</span>
-                                      <span>•</span>
-                                      <FormattedDate date={post.data.pubDate} />
-                                  </div>
-                                  <h2 class="news-title">{post.data.title}</h2>
-                                  <p class="news-excerpt">{post.data.description}</p>
-                                  <span class="read-more">Ler notícia completa →</span>
-                              </div>
-                          </a>
-                      </li>
-                  );
-              })}
-          </ul>
-            ) : (
-                <div style="text-align: center; padding: 4rem; color: #64748b;">
-                    <p>Nenhuma notícia encontrada.</p>
-                </div>
-            )}
+                    if (!displayPath.startsWith('/') && !displayPath.startsWith('http')) {
+                        displayPath = `/images/noticias/${displayPath}`;
+                    }
+
+                    return (
+                        <li class="news-card">
+                            <a href={`/noticias/${slug}/`} class="card-link">
+                                <div class="news-image-box">
+                                    <img 
+                                        class="news-image" 
+                                        src={displayPath} 
+                                        alt={post.data.title} 
+                                        onerror="handleCardError(this)"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <div class="news-content">
+                                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem; font-weight: 600;">
+                                        ECONOMIA • <FormattedDate date={post.data.pubDate} />
+                                    </div>
+                                    <h2 class="news-title">{post.data.title}</h2>
+                                    <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1.5rem;">{post.data.description}</p>
+                                    <span style="color: #0167c2; font-weight: 700; font-size: 0.9rem; margin-top: auto;">Ler notícia →</span>
+                                </div>
+                            </a>
+                        </li>
+                    );
+                })}
+            </ul>
         </main>
         <Footer />
     </body>

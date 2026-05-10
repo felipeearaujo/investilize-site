@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Governo quer converter receitas extras com petróleo em desonerações"
+heroImage: "/images/noticias/2026-04-24-governo-quer-converter-receitas-extras-com-petroleo-em-desoneracoes.webp"
 description: "A proposta do governo de converter receitas extras do petróleo em desonerações revela uma tentativa de equilibrar interesses de curto prazo com estímu..."
 pubDate: "2026-04-24"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/governo-quer-converter-receitas-extras-com-petroleo-em-desoneracoes"
 ---
 
@@ -36,7 +36,7 @@ No fim, a medida pode até trazer ganhos imediatos, mas sua eficácia e sustenta
 
 <p>“Se houver aumento extraordinário da receita, esse aumento servirá de compensação para redução de tributos aplicáveis a esses combustíveis”, afirmou Moretti.</p>
 
-<p><strong>De acordo com o ministro, a cada redução de R\$ 0,10 nos tributos sobre a gasolina, por um período de dois meses, o impacto estimado é de R\$ 800 milhões.</strong></p>
+<p><strong>De acordo com o ministro, a cada redução de R$ 0,10 nos tributos sobre a gasolina, por um período de dois meses, o impacto estimado é de R$ 800 milhões.</strong></p>
 
 <h2>Articulação</h2>
 
@@ -46,9 +46,9 @@ No fim, a medida pode até trazer ganhos imediatos, mas sua eficácia e sustenta
 
 <h2>Medidas recentes</h2>
 
-<p>Nos últimos meses, o governo tem adotado medidas para conter a alta dos combustíveis. Entre elas, a <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/lula-zera-imposto-e-subsidia-diesel-para-conter-alta-do-petroleo" target="_blank">desoneração do PIS/Cofins sobre o diesel</a> e a concessão de subsídios que chegaram a R\$ 1,52 por litro para o diesel importado e a R\$ 1,12 por litro para o nacional.</p>
+<p>Nos últimos meses, o governo tem adotado medidas para conter a alta dos combustíveis. Entre elas, a <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/lula-zera-imposto-e-subsidia-diesel-para-conter-alta-do-petroleo" target="_blank">desoneração do PIS/Cofins sobre o diesel</a> e a concessão de subsídios que chegaram a R$ 1,52 por litro para o diesel importado e a R$ 1,12 por litro para o nacional.</p>
 
-<p>Segundo a Petrobras, os tributos federais representam cerca de R\$ 0,68 do valor final ao consumidor, no cálculo que considera um preço médio de R\$ 6,77 o litro.</p>
+<p>Segundo a Petrobras, os tributos federais representam cerca de R$ 0,68 do valor final ao consumidor, no cálculo que considera um preço médio de R$ 6,77 o litro.</p>
 
 <p>Atualmente, o diesel e o biodiesel estão com PIS e Cofins zerado. A gasolina e o etanol, no entanto, continuam com a mesma tributação de antes do início da guerra.</p>
 

@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Receita exigirá declaração de ganhos com bets no Imposto de Renda"
+heroImage: "/images/noticias/2026-03-17-receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda.webp"
 description: "A decisão da Receita Federal de exigir a declaração de ganhos com apostas encerra a era do Velho Oeste das Bets no Brasil. Veja como declarar e o impacto nos seus ganhos."
 pubDate: "2026-03-17"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-exigira-declaracao-de-ganhos-com-bets-no-imposto-de-renda"
 ---
 
@@ -14,7 +14,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/receita-
 
 O contribuinte terá de informar ao Fisco os ganhos obtidos em 2025 com apostas esportivas e plataformas de jogos online, conhecidas como “bets”, que deverão ser declarados no Imposto de Renda Pessoa Física (IRPF) de 2026. Além dos prêmios recebidos, os contribuintes também precisarão informar os saldos mantidos nas contas dessas plataformas no fim do ano passado.
 
-<strong>De acordo com o Fisco, a obrigação vale para quem recebeu mais de R\$ 28.467,20 em prêmios ao longo de 2025 em apostas de quota fixa, modalidade que inclui as plataformas digitais de apostas e algumas loterias.</strong>
+<strong>De acordo com o Fisco, a obrigação vale para quem recebeu mais de R$ 28.467,20 em prêmios ao longo de 2025 em apostas de quota fixa, modalidade que inclui as plataformas digitais de apostas e algumas loterias.</strong>
 
 <h3>Notícias relacionadas:</h3>
 <ul>
@@ -38,7 +38,7 @@ Os valores devem ser registrados de duas formas:
 - ganhos com apostas, informados como rendimento tributável;
 - saldo mantido nas contas das plataformas, declarado na ficha de “Bens e Direitos”.
 
-<strong>O saldo existente em 31 de dezembro de 2025 precisa ser informado quando ultrapassar R\$ 5 mil.</strong>
+<strong>O saldo existente em 31 de dezembro de 2025 precisa ser informado quando ultrapassar R$ 5 mil.</strong>
 
 Para facilitar o preenchimento, as plataformas devem oferecer ao usuário um documento chamado “ComprovaBet”, que reúne o histórico de movimentações e prêmios obtidos ao longo do ano.
 
@@ -46,7 +46,7 @@ Para facilitar o preenchimento, as plataformas devem oferecer ao usuário um doc
 
 <strong>Segundo as regras atuais, o imposto incide sobre o ganho líquido anual, ou seja, a diferença entre o total de prêmios recebidos e o valor gasto nas apostas.</strong>
 
-Caso o lucro anual ultrapasse R\$ 28.467,20, o valor excedente será tributado com alíquota de 15\%. Para saber quanto esse imposto e a inflação impactam o seu retorno de fato, utilize nossa <a href="/ferramentas/taxa-real">Calculadora de Taxa Real</a>.
+Caso o lucro anual ultrapasse R$ 28.467,20, o valor excedente será tributado com alíquota de 15%. Para saber quanto esse imposto e a inflação impactam o seu retorno de fato, utilize nossa <a href="/ferramentas/taxa-real">Calculadora de Taxa Real</a>.
 
 <h2>Mudanças</h2>
 
@@ -61,7 +61,7 @@ Caso o lucro anual ultrapasse R\$ 28.467,20, o valor excedente será tributado c
 
 <strong>O prazo de envio da declaração do IR 2026 será de 23 de março a 29 de maio. O programa para preenchimento poderá ser baixado pelos contribuintes a partir de sexta-feira (20), apenas para preenchimento, com as transmissões começando na segunda-feira (23) às 8h.</strong>
 
-Quem entregar a declaração após o prazo estará sujeito a multa mínima de R\$ 165,74, podendo chegar a 20\% do imposto devido.
+Quem entregar a declaração após o prazo estará sujeito a multa mínima de R$ 165,74, podendo chegar a 20% do imposto devido.
 
 A Receita Federal estima receber cerca de 44 milhões de declarações do Imposto de Renda em 2026.
 

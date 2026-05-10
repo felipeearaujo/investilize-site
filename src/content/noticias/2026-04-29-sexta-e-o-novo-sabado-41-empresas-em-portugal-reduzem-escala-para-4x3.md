@@ -1,9 +1,9 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Sexta é o Novo Sábado- 41 empresas em Portugal reduzem escala para 4x3"
+heroImage: "/images/noticias/2026-04-29-sexta-e-o-novo-sabado-41-empresas-em-portugal-reduzem-escala-para-4x3.webp"
 description: "A iniciativa de empresas em Portugal adotando a jornada 4x3 — com a sexta-feira funcionando como um “novo sábado” — mostra como o mercado de trabalho ..."
 pubDate: "2026-04-29"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-o-novo-sabado-41-empresas-em-portugal-reduzem-escala-para-4x3"
 ---
 
@@ -30,22 +30,22 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-
 <h2>Sexta é o novo sábado</h2>
 
 <div class="dnd-widget-wrapper context-medio_4colunas type-image atom-align-right"><div class="dnd-atom-rendered"><!-- scald=460944:medio_4colunas {"additionalClasses":""} -->
-            <img alt="Lucros e Receitas em Comparação com o ano anterior. Foto: Arte EBC" src="https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/loading_v2.gif" title="Arte EBC" />
+            <img alt="Lucros e Receitas em Comparação com o ano anterior. Foto: Arte EBC"  title="Arte EBC" />
         <noscript><img alt="Lucros e Receitas em Comparação com o ano anterior. Foto: Arte EBC" src="https://imagens.ebc.com.br/be4vWwaUYaF9aL0N9o1QZMb8efI=/365x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/29/lucros_e_receitas_copy.jpg?itok=C3-EdXeC" title="Arte EBC" /></noscript>
     <!-- END scald=460944 --></div></div>
 
 <p>O autor <a href="https://drive.google.com/file/d/1BRlwwshYlybcUQvPmUv2v_G7waeAriCu/view" target="_blank">analisou a redução da jornada</a> voluntária para 4x3 em 41 empresas portuguesas que somam mais de mil empregados, de diferentes setores e tamanhos.</p>
 
-<p><strong>Dessas companhias, 52\% afirmam que vão manter a jornada reduzida para quatro dias de trabalho; 23\% dizem que vão manter a jornada reduzida, mas em uma escala menor; e apenas 19\% disseram que vão retomar a jornada de 5x2.</strong></p>
+<p><strong>Dessas companhias, 52% afirmam que vão manter a jornada reduzida para quatro dias de trabalho; 23% dizem que vão manter a jornada reduzida, mas em uma escala menor; e apenas 19% disseram que vão retomar a jornada de 5x2.</strong></p>
 
-<p>Para mais de 90\% das empresas, a mudança não teve custos financeiros, com 86\% informando que aumentaram as receitas em relação ao ano anterior, sendo que 14\% tiveram receitas menores. Cerca de 70\% delas ainda concordam que melhoraram os processos da companhia após a mudança.</p>
+<p>Para mais de 90% das empresas, a mudança não teve custos financeiros, com 86% informando que aumentaram as receitas em relação ao ano anterior, sendo que 14% tiveram receitas menores. Cerca de 70% delas ainda concordam que melhoraram os processos da companhia após a mudança.</p>
 
 <p>“A semana de trabalho de quatro dias é uma prática de gestão legítima e viável, que proporciona benefícios operacionais às empresas, como melhor ambiente de trabalho, redução do absentismo [faltas] e aumento da atratividade no mercado de trabalho. No entanto, para ser bem-sucedida, a sua implementação requer uma reorganização profunda”, escreveu Gomes.</p>
 
 <p><strong>Entre as mudanças organizacionais realizadas pelas empresas portuguesas, a mais frequente foi a diminuição da duração das reuniões.</strong></p>
 
 <div class="dnd-widget-wrapper context-medio_4colunas type-image atom-align-left"><div class="dnd-atom-rendered"><!-- scald=460854:medio_4colunas {"additionalClasses":""} -->
-            <img alt="Brasília (DF), 28/04/2026 - FOTO DE ARQUIVO - Semana de 4 dias. O professor de economia da Universidade de Londres, o português Pedro Gomes. Foto: Pedro Gomes/Arquivo Pessoal" src="https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/loading_v2.gif" title="Pedro Gomes/Arquivo Pessoal" />
+            <img alt="Brasília (DF), 28/04/2026 - FOTO DE ARQUIVO - Semana de 4 dias. O professor de economia da Universidade de Londres, o português Pedro Gomes. Foto: Pedro Gomes/Arquivo Pessoal"  title="Pedro Gomes/Arquivo Pessoal" />
         <noscript><img alt="Brasília (DF), 28/04/2026 - FOTO DE ARQUIVO - Semana de 4 dias. O professor de economia da Universidade de Londres, o português Pedro Gomes. Foto: Pedro Gomes/Arquivo Pessoal" src="https://imagens.ebc.com.br/iCGcDSXmP_2ErT2qexIE2Hhjr9I=/365x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/28/20250722_150624.jpg?itok=B1fYv1fD" title="Pedro Gomes/Arquivo Pessoal" /></noscript>
     <!-- END scald=460854 --></div><div class="dnd-caption-wrapper">
 <h6 class="meta">Livro do professor de economia da Universidade de Londres Pedro Gomes traz experiências de mais de 40 empresas que reduziram a escala de trabalho para quatro dias, com três dias de folga - <strong>Pedro Gomes/Arquivo Pessoal</strong><!--END copyright=460854--></h6>
@@ -61,7 +61,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-
 
 <p>Pedro Gomes cita o exemplo do industrial Henry Ford, dono da montadora Ford, nos Estados Unidos (EUA), que reduziu, em 1926, há 100 anos, a jornada de trabalho na sua empresa para 40 horas semanais, consolidando o final de semana de dois dias.</p>
 
-<p>“Quando os EUA reduziram para 40 horas, 70\% das pessoas passaram a ir ao cinema. Isso fez consolidar Hollywood como uma das principais indústrias americanas. Foi muito positivo para empresas ligadas aos esportes, à música, aos livros, à cultura, aos hotéis”, disse Pedro.</p>
+<p>“Quando os EUA reduziram para 40 horas, 70% das pessoas passaram a ir ao cinema. Isso fez consolidar Hollywood como uma das principais indústrias americanas. Foi muito positivo para empresas ligadas aos esportes, à música, aos livros, à cultura, aos hotéis”, disse Pedro.</p>
 
 <p>Ainda segundo o economista, “é um passo que já foi feito há 100 anos nos EUA e, portanto, está mais do que na hora do Brasil, e os outros países da América Latina, façam essa passagem para as 40 horas”. </p>
 
@@ -81,7 +81,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-
  </p>
 
 <div class="dnd-widget-wrapper context-cheio_8colunas type-image"><div class="dnd-atom-rendered"><!-- scald=460943:cheio_8colunas {"additionalClasses":""} -->
-            <img alt="Semana de 4 dias - Impacto nas empresas e trabalhadores. Foto: Arte EBC" src="https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/loading_v2.gif" title="Arte EBC" />
+            <img alt="Semana de 4 dias - Impacto nas empresas e trabalhadores. Foto: Arte EBC"  title="Arte EBC" />
         <noscript><img alt="Semana de 4 dias - Impacto nas empresas e trabalhadores. Foto: Arte EBC" src="https://imagens.ebc.com.br/DtljRthPxFBcP9L_zY7-xcimFNM=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/29/impacto_nas_empresas_e_trabalhadores_copy.jpg?itok=0IfsvcCA" title="Arte EBC" /></noscript>
     <!-- END scald=460943 --></div></div>
 
@@ -99,7 +99,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-
  </p>
 
 <div class="dnd-widget-wrapper context-cheio_8colunas type-image"><div class="dnd-atom-rendered"><!-- scald=460856:cheio_8colunas -->
-            <img alt="In Lisbon, Portugal, on August 2, 2025, people walk past a Pronovias storefront. The Spanish bridalwear company reports EUR135.9 million in revenue for 2023 and a net loss of EUR128.6 million. In early 2025, Pronovias reduces its capital by EUR193 million and appoints Cristina Alba Ochoa as CEO to lead a new turnaround strategy focused on international growth and financial stabilization by 2027. (Photo by Luis Boza/NurPhoto)NO USE FRANCE" src="https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/loading_v2.gif" title="Reuters/Luis Boza/Arquivo/Proibida reprodução" />
+            <img alt="In Lisbon, Portugal, on August 2, 2025, people walk past a Pronovias storefront. The Spanish bridalwear company reports EUR135.9 million in revenue for 2023 and a net loss of EUR128.6 million. In early 2025, Pronovias reduces its capital by EUR193 million and appoints Cristina Alba Ochoa as CEO to lead a new turnaround strategy focused on international growth and financial stabilization by 2027. (Photo by Luis Boza/NurPhoto)NO USE FRANCE"  title="Reuters/Luis Boza/Arquivo/Proibida reprodução" />
         <noscript><img alt="In Lisbon, Portugal, on August 2, 2025, people walk past a Pronovias storefront. The Spanish bridalwear company reports EUR135.9 million in revenue for 2023 and a net loss of EUR128.6 million. In early 2025, Pronovias reduces its capital by EUR193 million and appoints Cristina Alba Ochoa as CEO to lead a new turnaround strategy focused on international growth and financial stabilization by 2027. (Photo by Luis Boza/NurPhoto)NO USE FRANCE" src="https://imagens.ebc.com.br/C5rTkrxgDIkSWgLXUBeZSvQ4W64=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2026/04/28/2025-08-02t000000z_1981652671_mt1nurpho000vckgco_rtrmadp_3_bridalgiant-pronovias-revival.jpg?itok=EFIiSGua" title="Reuters/Luis Boza/Arquivo/Proibida reprodução" /></noscript>
     <!-- END scald=460856 --></div><div class="dnd-caption-wrapper">
 <h6 class="meta">Rua comercial de Lisboa, em Portugal - <strong>Reuters/Luis Boza/Arquivo/proibida reprodução</strong><!--END copyright=460856--></h6>
@@ -109,7 +109,7 @@ originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-04/sexta-e-
 
 <p><strong>O economista rejeita a previsão de estudos que apontam para uma possível queda no Produto Interno Bruto (PIB) caso a redução da jornada e o fim da escala 6x1 seja aprovada no Brasil.</strong></p>
 
-<p>O autor Pedro Gomes verificou 250 casos de redução de jornada pela via legislativa que ocorreram no mundo a partir de 1910. Nos cinco anos antes da reforma, a média de crescimento do PIB foi de 3,2\%, subindo para 3,9\%, em média, após a redução da jornada de trabalho.</p>
+<p>O autor Pedro Gomes verificou 250 casos de redução de jornada pela via legislativa que ocorreram no mundo a partir de 1910. Nos cinco anos antes da reforma, a média de crescimento do PIB foi de 3,2%, subindo para 3,9%, em média, após a redução da jornada de trabalho.</p>
 
 <p>“Esses efeitos sobre a produtividade por hora foram muito significativos e compensaram amplamente a redução da jornada de trabalho. Além disso, todos esses outros efeitos macroeconômicos também tiveram impacto [no PIB]”, explicou.</p>
 

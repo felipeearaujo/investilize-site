@@ -1,14 +1,14 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Aplicativos deverão detalhar custos das corridas aos consumidores"
+heroImage: "/images/noticias/2026-03-25-aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores.webp"
 description: "Essa medida é um passo importante para abrir a caixa-preta dos algoritmos de transporte individual por aplicativo. Para o passageiro, é o fim daquel..."
 pubDate: "2026-03-25"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/aplicativos-deverao-detalhar-custos-das-corridas-aos-consumidores"
 ---
 
 <div style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;"><strong>Análise Técnica:</strong> Essa medida é um passo importante para abrir a "caixa-preta" dos algoritmos de transporte individual por aplicativo. Para o passageiro, é o fim daquele mistério de pagar um valor alto em um dia de chuva e se perguntar se o motorista está realmente sendo recompensado pelo esforço ou se a plataforma está abocanhando a maior fatia do bolo. Ao detalhar o que vai para o prestador, o que é taxa de intermediação e o que é imposto, o governo força uma transparência pedagógica: o consumidor passa a entender o valor real do serviço e para onde o seu dinheiro está fluindo de fato.
-Pelo lado das empresas, essa regra deve gerar um desconforto estratégico. Com os dados expostos, a comparação entre as plataformas deixa de ser apenas sobre o "preço final" e passa a ser sobre a ética da divisão. Se uma empresa retém 40\% de uma corrida e a concorrente retém 25\%, o usuário (e principalmente o motorista) tem em mãos um argumento poderoso para migrar de plataforma. Isso pode gerar uma pressão competitiva saudável para que as taxas de intermediação sejam mais justas, já que a reputação das marcas passará a estar diretamente atrelada à percepção de "justiça" na remuneração de quem está ao volante.
+Pelo lado das empresas, essa regra deve gerar um desconforto estratégico. Com os dados expostos, a comparação entre as plataformas deixa de ser apenas sobre o "preço final" e passa a ser sobre a ética da divisão. Se uma empresa retém 40% de uma corrida e a concorrente retém 25%, o usuário (e principalmente o motorista) tem em mãos um argumento poderoso para migrar de plataforma. Isso pode gerar uma pressão competitiva saudável para que as taxas de intermediação sejam mais justas, já que a reputação das marcas passará a estar diretamente atrelada à percepção de "justiça" na remuneração de quem está ao volante.
 No entanto, o desafio será a execução: como apresentar esses dados sem poluir a interface do aplicativo ou tornar a experiência de compra confusa? Além disso, existe o risco de as empresas tentarem "maquiar" custos sob nomenclaturas genéricas para evitar críticas. De qualquer forma, é uma vitória para o consumidor consciente, que ganha o direito de saber se o seu "luxo" de pedir um carro está sendo construído sobre uma base de divisão equilibrada ou se está apenas inflando as margens de lucro das gigantes de tecnologia.</div>
 
 <p><strong>O Ministério da Justiça e Segurança Pública (MJSP) determinou que as empresas de aplicativos de entrega e de transporte informem o quanto do preço final pago é da plataforma digital e o quanto é da remuneração de entregadores ou de motoristas.</strong></p>
@@ -21,7 +21,7 @@ No entanto, o desafio será a execução: como apresentar esses dados sem poluir
 
 <p>Segundo ele, “o descumprimento ao direito de informação, previsto há 35 anos no Código de Defesa do Consumidor, leva ao processo sancionatório.”</p>
 
-<p><strong>As multas por desrespeito à lei podem variar de R\$ 500 a R\$ 13 milhões.</strong></p>
+<p><strong>As multas por desrespeito à lei podem variar de R$ 500 a R$ 13 milhões.</strong></p>
 
 <p>“Nada como a transparência para mostrar quanto o trabalhador recebe, quanto essas plataformas estão lucrando de maneira abusiva com quase nada de custo”, afirmou o ministro-chefe da Secretaria-Geral da Presidência da República, Guilherme Boulos.</p>
 
@@ -45,7 +45,7 @@ No entanto, o desafio será a execução: como apresentar esses dados sem poluir
 <p>"É poder lavar a mão, poder usar o banheiro, poder se alimentar.”</p>
 </blockquote>
 
-<p>Jr. Freitas tem expectativa que o menor valor da corrida dos entregadores, por eles chamado de “taxa mínima”, suba de R\$ 7,50 para R\$ 10.</p>
+<p>Jr. Freitas tem expectativa que o menor valor da corrida dos entregadores, por eles chamado de “taxa mínima”, suba de R$ 7,50 para R$ 10.</p>
 
 <p>“Quanto menos a gente ganha, mais fica exposto. Quanto mais ficamos expostos, mais temos riscos de sofrer acidente. A remuneração é um ponto essencial para a saúde. Quando o trabalhador se acidenta, ele fica sem receber”, afirmou.</p>
 

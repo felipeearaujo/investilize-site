@@ -3,127 +3,98 @@ import { SEO } from "astro-seo";
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const { frontmatter } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 
-// 1. Títulos e Descrições (Sincronizados)
-const title = frontmatter.title || "Notícias | Investilize";
-const description = frontmatter.description || "Acompanhe as últimas notícias.";
+// 1. Identificação do Slug e da Imagem
+const slug = Astro.url.pathname.split('/').filter(Boolean).pop();
+let rawImage = frontmatter.capa || frontmatter.heroImage || "";
+let imageName = String(rawImage).split('/').pop();
 
-// 2. Tratamento de Datas (Necessário para o build passar)
-const safeDate = frontmatter.pubDate ? new Date(frontmatter.pubDate) : null;
-const isoPubDate = (safeDate && !isNaN(safeDate.getTime())) ? safeDate.toISOString() : undefined;
-
-// 3. LIMPEZA PROFUNDA DA IMAGEM
-let heroImage = frontmatter.heroImage || "";
-if (typeof heroImage === 'object' && heroImage.src) {
-    heroImage = heroImage.src;
-} else if (typeof heroImage === 'string' && heroImage.includes("http")) {
-    heroImage = heroImage.substring(heroImage.indexOf("http"));
-} else if (typeof heroImage !== 'string') {
-    heroImage = String(heroImage);
+// 2. Lógica de Fallback de Imagem
+let displayImage = "";
+if (!imageName || imageName === "" || imageName.includes("undefined") || imageName.includes("default-investilize")) {
+    displayImage = `/images/noticias/${slug}.webp`;
+} else {
+    displayImage = `/images/noticias/${imageName}`;
 }
 
-const safeImage = (heroImage && !heroImage.includes("loading")) 
-    ? heroImage 
-    : "https://investilize.com.br/logo.png";
+const fullImagePath = `https://investilize.com.br${displayImage}`;
 ---
 
 <html lang="pt-BR">
 <head>
-    <meta name="referrer" content="no-referrer">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <BaseHead title={title} description={description} image={safeImage} />
-
-    <SEO
-      title={title}
-      description={description}
-      canonical={canonicalURL}
-      openGraph={{
-        basic: {
-          title: title, // Corrigido de safeTitle para title
-          type: "article",
-          image: safeImage,
-          url: canonicalURL
-        },
-        article: {
-          publishedTime: isoPubDate,
-          authors: ["Investilize"],
-          section: "Economia"
-        }
-      }}
-      twitter={{
-        card: "summary_large_image",
-        title: title, // Corrigido de safeTitle para title
-        image: safeImage
-      }}
+    <BaseHead title={frontmatter.title} description={frontmatter.description} />
+    
+    <SEO 
+        title={frontmatter.title}
+        description={frontmatter.description}
+        canonical={canonicalURL}
+        openGraph={{
+            basic: {
+                title: frontmatter.title,
+                type: "article",
+                image: fullImagePath,
+                url: canonicalURL,
+            },
+            article: {
+                publishedTime: frontmatter.pubDate,
+                authors: ["Felipe Araújo"],
+                section: "Economia"
+            }
+        }}
+        twitter={{
+            card: "summary_large_image",
+            site: "@investilize",
+            title: frontmatter.title,
+            description: frontmatter.description,
+            image: fullImagePath,
+        }}
     />
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": frontmatter.title, 
-      "image": [safeImage],
-      "author": { "@type": "Organization", "name": "Agência Brasil" }
-    }
+    <script is:inline>
+        function handleImageError(img) {
+            const fallback = "/images/noticias/default-investilize.webp";
+            if (img.src.includes('.webp')) {
+                img.src = img.src.replace('.webp', '.jpg');
+            } else if (img.src.includes('.jpg')) {
+                img.src = img.src.replace('.jpg', '.png');
+            } else {
+                img.src = fallback;
+                img.onerror = null;
+            }
+        }
     </script>
 </head>
 
 <body>
     <Header />
-    <main>
+    <main style="width: 800px; max-width: 95%; margin: 2rem auto;">
         <article>
-            <header class="news-header">
-                <span class="category">Economia Nacional</span>
-                <h1>{title}</h1> <p class="source-credit">
-                    Fonte: Agência Brasil | Publicado em {safeDate?.toLocaleDateString("pt-BR")}
-                </p>
-            </header>
-
-            {safeImage && safeImage !== "https://investilize.com.br/logo.png" && (
-                <div class="imagem-destaque">
-                    <img 
-                        src={safeImage} 
-                        alt={title} 
-                        referrerpolicy="no-referrer"
-                        loading="eager" 
-                        decoding="async"
-                    />
-                </div>
-            )}
+            <Breadcrumbs />
+            
+            <h1 style="color: #003d6b; font-size: 2.2rem; margin-top: 1rem;">{frontmatter.title}</h1>
+            
+            <div style="margin: 2rem 0;">
+                <img 
+                    src={displayImage} 
+                    alt={frontmatter.title} 
+                    style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"
+                    onerror="handleImageError(this)"
+                    loading="eager"
+                />
+            </div>
 
             <div class="content">
                 <slot />
             </div>
-
-            <footer class="news-footer">
-                <p>
-                    <em>Este conteúdo foi republicado via Agência Brasil. <a href={frontmatter.originalUrl} target="_blank">Ver original</a></em>
-                </p>
-            </footer>
         </article>
     </main>
     <Footer />
 </body>
 </html>
-
-<style>
-    .news-header { margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-    .category { color: #4bac40; font-weight: 800; text-transform: uppercase; font-size: .8rem; }
-    .source-credit { color: #64748b; font-size: .9rem; font-style: italic; }
-    .news-footer { margin-top: 3rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; }
-    .content { line-height: 1.6; color: #334155; }
-    .imagem-destaque { margin-bottom: 2rem; width: 100%; }
-    .imagem-destaque img { 
-        width: 100%; 
-        max-height: 500px; 
-        object-fit: cover; 
-        border-radius: 8px; 
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
-    }
-    .content > :global(img:first-child) {
-        display: none !important;
-    }
-</style>

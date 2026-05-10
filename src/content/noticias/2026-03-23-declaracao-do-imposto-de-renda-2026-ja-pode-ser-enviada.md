@@ -1,16 +1,16 @@
 ---
 layout: "../../layouts/NoticiaLayout.astro"
 title: "Declaração do Imposto de Renda 2026 já pode ser enviada"
+heroImage: "/images/noticias/2026-03-23-declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada.webp"
 description: "O Leão acabou de abrir a jaula e a temporada de prestação de contas com a Receita Federal começou oficialmente nesta segunda-feira, 23 de março de 2..."
 pubDate: "2026-03-23"
-heroImage: "../../assets/images/default-investilize.webp"
 originalUrl: "https://agenciabrasil.ebc.com.br/economia/noticia/2026-03/declaracao-do-imposto-de-renda-2026-ja-pode-ser-enviada"
 ---
 
 <div class="analise-investilize" style="background:#f0f7ff; padding:20px; border-left:5px solid #0167c2; margin-bottom:30px; border-radius:8px;">
-    <strong>Análise Técnica:</strong> O "Leão" acabou de abrir a jaula e a temporada de prestação de contas com a Receita Federal começou oficialmente nesta segunda-feira, 23 de março de 2026. Para este ano, a Receita espera receber cerca de 44 milhões de declarações, e a grande novidade é que o prazo está um pouco mais apertado: as transmissões devem ser feitas até o dia 29 de maio. Estão obrigados a declarar os cidadãos que receberam rendimentos tributáveis acima de R\$ 35.584,00 ao longo de 2025, um valor atualizado que reflete os ajustes recentes na tabela progressiva. É importante notar que, embora muito se fale sobre a isenção para quem ganha até R\$ 5 mil, essa regra completa só terá pleno efeito na declaração de 2027; para agora, o que vale é o cálculo sobre o que foi recebido no ano passado. Para tirar dúvidas detalhadas, consulte nosso <a href="https://investilize.com.br/blog/imposto-de-renda-2026-quem-deve-declarar" style="color:#0167c2; font-weight:bold;">Guia Completo: Quem deve declarar o IR 2026</a>.
+    <strong>Análise Técnica:</strong> O "Leão" acabou de abrir a jaula e a temporada de prestação de contas com a Receita Federal começou oficialmente nesta segunda-feira, 23 de março de 2026. Para este ano, a Receita espera receber cerca de 44 milhões de declarações, e a grande novidade é que o prazo está um pouco mais apertado: as transmissões devem ser feitas até o dia 29 de maio. Estão obrigados a declarar os cidadãos que receberam rendimentos tributáveis acima de R$ 35.584,00 ao longo de 2025, um valor atualizado que reflete os ajustes recentes na tabela progressiva. É importante notar que, embora muito se fale sobre a isenção para quem ganha até R$ 5 mil, essa regra completa só terá pleno efeito na declaração de 2027; para agora, o que vale é o cálculo sobre o que foi recebido no ano passado. Para tirar dúvidas detalhadas, consulte nosso <a href="https://investilize.com.br/blog/imposto-de-renda-2026-quem-deve-declarar" style="color:#0167c2; font-weight:bold;">Guia Completo: Quem deve declarar o IR 2026</a>.
 
-O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, que já está disponível desde o primeiro dia e é a aposta do governo para reduzir erros e a temida malha fina. Além disso, a Receita incluiu campos inéditos, como a identificação de raça e cor (de preenchimento opcional) e uma ficha específica para ganhos com apostas esportivas, as populares "bets", refletindo a nova regulamentação do setor no Brasil. Outro ponto de atenção é a estratégia de restituição: este ano teremos apenas quatro lotes (entre maio e agosto), e o Fisco pretende quitar 80\% das devoluções logo nos dois primeiros meses. Por isso, a combinação de entrega antecipada, uso da declaração pré-preenchida e opção por receber via Pix continua sendo o "caminho das pedras" para quem quer ver o dinheiro de volta na conta o quanto antes e evitar o estresse de última hora. Para calcular o impacto do leão no seu bolso o ano todo, utilize nossa <a href="https://investilize.com.br/ferramentas/calculadora-ir-mensal" style="color:#0167c2; font-weight:bold;">Calculadora de IR Mensal</a>.
+O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, que já está disponível desde o primeiro dia e é a aposta do governo para reduzir erros e a temida malha fina. Além disso, a Receita incluiu campos inéditos, como a identificação de raça e cor (de preenchimento opcional) e uma ficha específica para ganhos com apostas esportivas, as populares "bets", refletindo a nova regulamentação do setor no Brasil. Outro ponto de atenção é a estratégia de restituição: este ano teremos apenas quatro lotes (entre maio e agosto), e o Fisco pretende quitar 80% das devoluções logo nos dois primeiros meses. Por isso, a combinação de entrega antecipada, uso da declaração pré-preenchida e opção por receber via Pix continua sendo o "caminho das pedras" para quem quer ver o dinheiro de volta na conta o quanto antes e evitar o estresse de última hora. Para calcular o impacto do leão no seu bolso o ano todo, utilize nossa <a href="https://investilize.com.br/ferramentas/calculadora-ir-mensal" style="color:#0167c2; font-weight:bold;">Calculadora de IR Mensal</a>.
 </div>
 
 <p>Os contribuintes podem acertar as contas com o Leão. Começa às 8h desta segunda-feira (23) o envio da Declaração do Imposto de Renda Pessoa Física 2026 (ano-base 2025).</p>
@@ -51,17 +51,17 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 
 <p>estimativa de 4 milhões de beneficiados;</p>
 
-<p>restituição média de R\$ 125;</p>
+<p>restituição média de R$ 125;</p>
 
-<p>valor máximo de R\$ 1 mil;</p>
+<p>valor máximo de R$ 1 mil;</p>
 
-<p>previsão de R\$ 500 milhões em pagamentos.</p>
+<p>previsão de R$ 500 milhões em pagamentos.</p>
 
 <p><strong>Quem terá direito</strong></p>
 
 <p>não estava obrigado a declarar em 2025;</p>
 
-<p>tem restituição de até R\$ 1 mil;</p>
+<p>tem restituição de até R$ 1 mil;</p>
 
 <p>possui CPF regular e baixo risco fiscal;</p>
 
@@ -73,9 +73,9 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 
 <p><strong>Devem informar os valores os contribuintes que:</strong></p>
 
-<p>tiveram ganhos acima de R\$ 28.467,20 em bets ou loterias de quota fixa em 2025;</p>
+<p>tiveram ganhos acima de R$ 28.467,20 em bets ou loterias de quota fixa em 2025;</p>
 
-<p>possuíam saldo superior a R\$ 5 mil em contas de apostas em 31 de dezembro de 2025.</p>
+<p>possuíam saldo superior a R$ 5 mil em contas de apostas em 31 de dezembro de 2025.</p>
 
 <p>Esses valores devem ser informados na declaração e podem gerar cobrança de imposto, dependendo da situação do contribuinte.</p>
 
@@ -83,17 +83,17 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 
 <p>Deve enviar a declaração quem, em 2025:</p>
 
-<p>recebeu rendimentos tributáveis acima de R\$ 35.584;</p>
+<p>recebeu rendimentos tributáveis acima de R$ 35.584;</p>
 
-<p>recebeu rendimentos isentos ou tributados na fonte acima de R\$ 200 mil;</p>
+<p>recebeu rendimentos isentos ou tributados na fonte acima de R$ 200 mil;</p>
 
 <p>teve ganho de capital na venda de bens ou direitos; Se você possui ativos na bolsa, não deixe de ler nosso <a href="https://investilize.com.br/blog/imposto-de-renda-investidores">Guia de Imposto de Renda para Investidores</a>.</p>
 
-<p>realizou operações em bolsa acima de R\$ 40 mil ou com lucro tributável;</p>
+<p>realizou operações em bolsa acima de R$ 40 mil ou com lucro tributável;</p>
 
-<p>teve receita rural acima de R\$ 177.920;</p>
+<p>teve receita rural acima de R$ 177.920;</p>
 
-<p>possuía bens ou direitos acima de R\$ 800 mil em 31 de dezembro;</p>
+<p>possuía bens ou direitos acima de R$ 800 mil em 31 de dezembro;</p>
 
 <p>passou à condição de residente no Brasil em 2025;</p>
 
@@ -105,7 +105,7 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 
 <p>não se enquadram nos critérios de obrigatoriedade;</p>
 
-<p>tiveram rendimentos declarados pelo cônjuge ou companheiro, com bens próprios abaixo de R\$ 800 mil;</p>
+<p>tiveram rendimentos declarados pelo cônjuge ou companheiro, com bens próprios abaixo de R$ 800 mil;</p>
 
 <p>constam como dependentes em declaração de outra pessoa.</p>
 
@@ -139,7 +139,7 @@ O destaque tecnológico de 2026 continua sendo a declaração pré-preenchida, q
 
 <p>demais contribuintes.</p>
 
-<p><strong>Quem entregar a declaração após 29 de maio terá que pagar multa de pelo menos R\$ 165,74, podendo chegar a 20\% do imposto devido.</strong></p>
+<p><strong>Quem entregar a declaração após 29 de maio terá que pagar multa de pelo menos R$ 165,74, podendo chegar a 20% do imposto devido.</strong></p>
 
 ---
 *Conteúdo original: Agência Brasil.*

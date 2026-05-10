@@ -74,7 +74,7 @@ Imagine uma **LCI** pagando **90\% do CDI** com prazo de 1 ano. Nesse período, 
 
 $$ \text{Taxa Equivalente} = \frac{90\%}{1 - 0{,}175} = \frac{90\%}{0{,}825} = 109{,}09\% \text{ do CDI} $$
 
-**Conclusão:** Se o CDB oferecido pagar **menos** que 109,09\% do CDI, a **LCI isenta** é a melhor escolha para o seu bolso![cite: 1]
+**Conclusão:** Se o CDB oferecido pagar **menos** que 109,09\% do CDI, a **LCI isenta** é a melhor escolha para o seu bolso!
 
 ---
 
@@ -84,7 +84,7 @@ $$ \text{Taxa Equivalente} = \frac{90\%}{1 - 0{,}175} = \frac{90\%}{0{,}825} = 1
 *   **Até 6 meses:** A isenção da LCI/LCA costuma ser imbatível devido ao IR alto (22,5\% a 20\%) do CDB.
 *   **Acima de 2 anos:** O IR do CDB cai para 15\%. CDBs de longo prazo podem ser agressivos e superar a LCI.
 
-> **Dica Pro:** Use nossa [Calculadora de Investimentos](/ferramentas/calculator-investments/) para fazer essa conta automaticamente e destacar os resultados para sua análise[cite: 1].
+> **Dica Pro:** Use nossa [Calculadora de Investimentos](/ferramentas/calculator-investments/) para fazer essa conta automaticamente e destacar os resultados para sua análise.
 
 ---
 
