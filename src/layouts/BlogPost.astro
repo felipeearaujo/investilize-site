@@ -32,12 +32,12 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
     	<meta name="ezoic-site-verification" content="FEJWdNWd8kM54jgA3UKlWa7Q7OJipi" />
 
       <!-- CMP -->
-      <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-      <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+      <script is:inline data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+      <script is:inline data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
 
       <!-- EZOIC CORRETO -->
-      <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-      <script>
+      <script is:inline async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+      <script is:inline>
       window.ezstandalone = window.ezstandalone || {};
       ezstandalone.cmd = ezstandalone.cmd || [];
       </script>
@@ -60,7 +60,7 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
 
         {faqList && <FaqSchema faqList={faqList} />}
 
-        <script type="application/ld+json" is:inline>
+        <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -72,7 +72,7 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
 
         <style>
             main { width: calc(100% - 2em); max-width: 100%; margin: 0; }
-            .hero-image { width: 100%; }
+            .hero-image { width: 100%; max-width: 720px; margin: 0 auto; }
             .hero-image img {
                 display: block;
                 margin: 0 auto;
@@ -102,7 +102,7 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
                 <div class="hero-image">
                     {heroImage && <Image
                         width={1020}
-                        height={510}
+                        height={680}
                         src={heroImage}
                         alt={heroImageAlt || dynamicTitle}
                         sizes="(max-width: 720px) 100vw, 720px"
@@ -134,7 +134,7 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
             </article>
         </main>
         <Footer />
-          <script>
+          <script is:inline>
           ezstandalone.cmd.push(function () {
               ezstandalone.showAds(100, 101, 102, 103);
           });

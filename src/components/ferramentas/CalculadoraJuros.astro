@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 // src/components/ferramentas/CalculadoraJuros.astro
 ---
 
@@ -42,8 +43,19 @@
         <strong id="res-juros" class="juros-text">R$ 0,00</strong>
       </div>
     </div>
+    
+    <!-- Skeleton Loading para o futuro gráfico dinâmico -->
+    <div id="chart-loading" class="chart-skeleton-container" style="display: none;">
+        <div class="chart-bar-skeleton" style="height: 30%"></div>
+        <div class="chart-bar-skeleton" style="height: 50%"></div>
+        <div class="chart-bar-skeleton" style="height: 70%"></div>
+        <div class="chart-bar-skeleton" style="height: 90%"></div>
+        <div class="chart-bar-skeleton" style="height: 100%"></div>
+    </div>
   </div>
 </div>
+
+<Disclaimer />
 
 <script>
   function calcularJuros() {
@@ -73,6 +85,15 @@
     document.getElementById('res-juros').innerText = formatarBRL(totalJuros);
     
     document.getElementById('resultado-box').classList.remove('hidden');
+    
+    // Simula o tempo de processamento/renderização do gráfico para UX
+    const chartLoader = document.getElementById('chart-loading');
+    chartLoader.style.display = 'flex';
+    
+    // Quando você integrar uma biblioteca como Chart.js no futuro, você inicializa o gráfico dentro deste timeout
+    setTimeout(() => {
+        // chartLoader.style.display = 'none'; // Descomente ao inserir o canvas do gráfico real
+    }, 1500);
   }
 
   // Adiciona o evento de clique ao botão assim que o componente carregar

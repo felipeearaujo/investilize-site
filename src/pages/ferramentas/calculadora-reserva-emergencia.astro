@@ -20,7 +20,7 @@ const faqData = [
     answer: "Para funcionários CLT, o recomendado são 6 meses de gastos. Para autônomos ou freelancers, o ideal são 12 meses devido à maior oscilação de renda."
   },
   {
-    question: "Onde guardar o dinheiro da reserva?",
+    question: "Onde investir a reserva de emergência?",
     answer: "A reserva deve ser investida em ativos de alta liquidez e baixo risco, como o Tesouro Selic ou CDBs de liquidez diária que rendam pelo menos 100% do CDI."
   }
 ];
@@ -28,7 +28,7 @@ const faqData = [
 // NOVO: Dados estruturados para a calculadora (Gera estrelas no Google)
 const toolSchema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": ["SoftwareApplication", "FinancialProduct"],
   "name": "Calculadora de Reserva de Emergência",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Web",
@@ -54,7 +54,7 @@ const toolSchema = {
     <div class="tool-page-wrapper">
         <div class="header-section">
             <div class="intro-seo">
-                <h1>Calculadora de Reserva de Emergência</h1>
+                <h1>Calculadora de Reserva de Emergência: Quanto precisa guardar hoje?</h1>
                 <p>
                     Planejar o futuro começa com segurança. Use nossa ferramenta gratuita para calcular o 
                     <strong>valor ideal da sua reserva</strong> com base no seu custo de vida e 

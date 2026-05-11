@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 const taxas = [
   { titulo: "Tesouro Selic 2029", taxa: "11,75% + 0,15%", var: "0.02", tipo: "up" },
   { titulo: "Tesouro IPCA+ 2035", taxa: "6,24%", var: "0.05", tipo: "down" },
@@ -37,6 +38,8 @@ const taxas = [
         </table>
     </div>
 </div>
+
+<Disclaimer />
 
 <style>
     .tool-card { background: white; padding: 2rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }

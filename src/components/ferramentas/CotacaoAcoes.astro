@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 // src/components/ferramentas/CotacaoAcoes.astro
 ---
 
@@ -16,7 +17,7 @@
     </div>
 
     <div id="quote-result-container">
-      <p class="info-text">Aguardando busca...</p>
+      <p class="info-text">Busque qualquer ativo para ver a <strong>Cotação Atualizada</strong>...</p>
     </div>
   </div>
 </div>
@@ -152,6 +153,8 @@
   }
 </style>
 
+<Disclaimer />
+
 <script>
   function setupQuoteTool() {
     const symbolInput = document.getElementById('symbol-input');
@@ -211,7 +214,7 @@
             <div class="change-badge ${changeClass}">
                ${arrow} ${changeSign}${changeValue.toFixed(2)} (${changeSign}${changePercent.toFixed(2)}%)
             </div>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: #9ca3af;">Atualizado recentemente</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #9ca3af;">Cotação Atualizada (sujeita a delay de 15-20 min da B3/Yahoo Finance)</p>
           </div>
         `;
         resultContainer.style.borderStyle = 'solid';

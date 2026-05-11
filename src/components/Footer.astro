@@ -1,21 +1,32 @@
 ---
 const today = new Date();
+const pathname = Astro.url.pathname;
+const isSobrePage = pathname === '/sobre' || pathname === '/sobre/';
 ---
 
 <footer>
     <div class="footer-container">
-        <div class="footer-author">
-            <div class="author-avatar">
-                <span>FA</span>
-            </div>
-            <div class="author-info">
-                <h4>Sobre o Autor</h4>
-                <p>
-                    <strong>Felipe Araújo</strong> é desenvolvedor e especialista em sistemas. 
-                    Criou o Investilize para transformar dados técnicos em ferramentas práticas para investidores. 
-                    Atua em Carpina, Pernambuco.
-                </p>
-            </div>
+        {!isSobrePage && (
+            <>
+                <div class="footer-author">
+                    <div class="author-avatar">
+                        <span>FA</span>
+                    </div>
+                    <div class="author-info">
+                        <h4>Sobre o Autor</h4>
+                        <p>
+                            <strong>Felipe Araújo</strong> é desenvolvedor de software especializado em arquitetura de dados financeiros. 
+                            Criou o Investilize para unir tecnologia de ponta e precisão algorítmica, transformando dados complexos do mercado em ferramentas transparentes para investidores. 
+                            Sua missão é garantir que cada simulação reflita rigorosamente os parâmetros oficiais do Banco Central e da CVM.
+                        </p>
+                    </div>
+                </div>
+                <hr class="footer-divider" />
+            </>
+        )}
+
+        <div class="site-disclaimer">
+            <p><strong>Aviso Legal:</strong> O conteúdo e as ferramentas do Investilize.com.br têm caráter puramente informativo e educacional. O Investilize não realiza recomendações de investimento ou consultoria financeira. Decisões de investimento são de inteira responsabilidade do usuário.</p>
         </div>
 
         <hr class="footer-divider" />
@@ -119,6 +130,17 @@ const today = new Date();
         opacity: 0.8;
     }
 
+    .site-disclaimer {
+        font-size: 0.8rem;
+        color: rgba(var(--gray), 0.8);
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* RESPONSIVIDADE PARA O CELULAR */
     @media (max-width: 720px) {
         .footer-author {
@@ -129,6 +151,9 @@ const today = new Date();
         .footer-nav {
             flex-wrap: wrap;
             gap: 1rem;
+        }
+        .site-disclaimer {
+            text-align: justify;
         }
     }
 </style>

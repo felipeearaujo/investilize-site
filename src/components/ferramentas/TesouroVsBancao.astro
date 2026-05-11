@@ -1,3 +1,6 @@
+---
+import Disclaimer from '../Disclaimer.astro';
+---
 <div class="tool-card">
     <h3 class="tool-title">Simulador: Tesouro vs. Bancão</h3>
     <p class="tool-desc">Compare um CDB (pós-fixado) com o Tesouro Selic.</p>
@@ -35,6 +38,8 @@
         <div id="vencedor-msg" class="vencedor-badge"></div>
     </div>
 </div>
+
+<Disclaimer />
 
 <script>
     document.getElementById('btn-comparar').addEventListener('click', () => {

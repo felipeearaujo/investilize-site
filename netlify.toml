@@ -30,3 +30,20 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# ==============================================================================
+# CABEÇALHOS DE SEGURANÇA (HEADERS)
+# ==============================================================================
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Impede que o site seja embutido em iframes de outros domínios (Clickjacking)
+    X-Frame-Options = "SAMEORIGIN"
+    # Previne que o navegador tente adivinhar o tipo do arquivo (MIME Sniffing)
+    X-Content-Type-Options = "nosniff"
+    # Habilita o filtro XSS nativo dos navegadores
+    X-XSS-Protection = "1; mode=block"
+    # Política de segurança de conteúdo otimizada para não quebrar o Ezoic
+    Content-Security-Policy = "upgrade-insecure-requests; frame-ancestors 'self';"
+    # Garante envio seguro da URL de origem em requisições
+    Referrer-Policy = "strict-origin-when-cross-origin"

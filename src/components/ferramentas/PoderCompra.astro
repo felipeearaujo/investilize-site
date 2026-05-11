@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 import ipcaData from '../../data/ipca_historico.json';
 const datasDisponiveis = Object.keys(ipcaData).reverse(); // Mais recentes primeiro
 ---
@@ -53,6 +54,8 @@ const datasDisponiveis = Object.keys(ipcaData).reverse(); // Mais recentes prime
         document.getElementById('perc-inflacao').innerText = inflacaoPerc.toFixed(2) + '%';
     });
 </script>
+
+<Disclaimer />
 
 <style>
     .tool-card { background: white; padding: 2rem; border-radius: 16px; border: 2px solid #f5f3ff; margin: 2rem 0; }

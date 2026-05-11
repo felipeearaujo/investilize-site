@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 // src/components/ferramentas/CalculadoraReserva.astro
 ---
 
@@ -6,7 +7,7 @@
     <div class="inputs-grid">
         <div class="input-field">
             <label>Custo de Vida Mensal (R$):</label>
-            <input type="number" id="custoMensal" value="3000" />
+            <input type="text" inputmode="decimal" id="custoMensal" value="3000" />
             <small>Soma de aluguel, contas, mercado, etc.</small>
         </div>
 
@@ -21,13 +22,15 @@
 
         <div class="input-field">
             <label>Valor já Poupado (R$):</label>
-            <input type="number" id="valorPoupado" value="0" />
+            <input type="text" inputmode="decimal" id="valorPoupado" value="0" />
         </div>
     </div>
 
     <div id="reservaResult" class="result-box" style="display: none;">
         </div>
 </div>
+
+<Disclaimer />
 
 <style>
     .calculator-card {
@@ -57,11 +60,26 @@
         font-size: 1rem;
     }
     .result-box {
-        background: #f0f7ff;
-        padding: 1.5rem;
-        border-radius: 10px;
+        background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+        padding: 2rem;
+        border-radius: 12px;
         text-align: center;
-        border-left: 5px solid #2563eb;
+        border-left: 6px solid #2563eb;
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+        margin-top: 2rem;
+    }
+    .progress-bar-bg {
+        background: #e5e7eb;
+        border-radius: 10px;
+        height: 12px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+    .progress-bar-fill {
+        background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+        height: 12px;
+        border-radius: 10px;
+        transition: width 0.5s ease-out;
     }
     @media (max-width: 600px) {
         .inputs-grid { grid-template-columns: 1fr; }
@@ -74,22 +92,27 @@
     const resultDiv = document.getElementById('reservaResult');
     const formatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
+    function parseInput(val) {
+        if (!val) return 0;
+        return parseFloat(val.toString().replace(/\./g, '').replace(',', '.')) || 0;
+    }
+
     function calcular() {
-        const custo = parseFloat(document.getElementById('custoMensal').value) || 0;
+        const custo = parseInput(document.getElementById('custoMensal').value);
         const meses = parseInt(document.getElementById('mesesCobertura').value) || 0;
-        const poupado = parseFloat(document.getElementById('valorPoupado').value) || 0;
+        const poupado = parseInput(document.getElementById('valorPoupado').value);
 
         const meta = custo * meses;
         const falta = Math.max(0, meta - poupado);
         const progresso = meta > 0 ? Math.min(100, (poupado / meta) * 100) : 0;
 
         resultDiv.innerHTML = `
-            <h3 style="margin-top:0; color:#1e3a8a;">Sua Meta de Reserva: ${formatter.format(meta)}</h3>
-            <p style="font-size: 1.1rem; color:#4b5563;">Faltam <strong>${formatter.format(falta)}</strong> para atingir seu objetivo.</p>
-            <div style="background:#e5e7eb; border-radius:10px; height:10px; margin:15px 0;">
-                <div style="background:#2563eb; height:10px; border-radius:10px; width:${progresso}%"></div>
+            <h3 style="margin-top:0; color:#1e3a8a; font-size: 1.5rem;">Sua Meta de Reserva: ${formatter.format(meta)}</h3>
+            <p style="font-size: 1.15rem; color:#4b5563;">Faltam <strong>${formatter.format(falta)}</strong> para atingir seu objetivo.</p>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" style="width:${progresso}%"></div>
             </div>
-            <small>${progresso.toFixed(0)}% da meta alcançada</small>
+            <small style="color: #64748b; font-weight: bold;">${progresso.toFixed(0)}% da meta alcançada</small>
         `;
         resultDiv.style.display = 'block';
     }

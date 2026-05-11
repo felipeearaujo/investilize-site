@@ -5,12 +5,12 @@ import CalculadoraJuros from '../../components/ferramentas/CalculadoraJuros.astr
 import TextoJurosCompostos from '../../components/ferramentas/TextoJurosCompostos.astro';
 
 const pageTitle = "Calculadora de Juros Compostos Online e Gratuita | Investilize";
-const pageDescription = "Simule seus investimentos agora. Descubra quanto o seu dinheiro pode render ao longo do tempo com a nossa calculadora de juros compostos. Rápido e fácil.";
+const pageDescription = "Simulador de Juros Compostos: Veja o seu dinheiro trabalhar por si em 2026. Gratuito e oficial.";
 
 // NOVO: Dados estruturados para a calculadora (Gera estrelas no Google)
 const toolSchema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": ["SoftwareApplication", "FinancialProduct"],
   "name": pageTitle,
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Web",
@@ -35,8 +35,8 @@ const toolSchema = {
         <div class="header-section">
             <div class="intro-seo">
                 <p>
-                    Descubra como pequenos aportes mensais podem se transformar em um grande patrimônio. 
-                    Use a simulação abaixo para ver a mágica dos juros compostos agindo sobre seu capital inicial.
+                    Descubra como pequenos aportes mensais podem se transformar em um grande <strong>crescimento patrimonial</strong>. 
+                    Use a simulação abaixo para ver a <strong>bola de neve financeira</strong> dos juros compostos agindo sobre seu capital inicial.
                 </p>
             </div>
         </div>
@@ -50,5 +50,31 @@ const toolSchema = {
     .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
     .header-section { text-align: center; margin-bottom: 3rem; }
     .header-section h1 { font-size: 2.5rem; color: #111827; margin-bottom: 1rem; }
-    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
+    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; line-height: 1.6; }
+    
+    /* Gráfico Skeleton (Performance e UX) */
+    :global(.chart-skeleton-container) {
+        width: 100%;
+        height: 200px;
+        margin-top: 1.5rem;
+        background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+        background-size: 200% 100%;
+        animation: pulseSkeleton 1.5s infinite;
+        border-radius: 8px;
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+        gap: 10px;
+    }
+
+    :global(.chart-bar-skeleton) {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 4px 4px 0 0;
+    }
+
+    @keyframes pulseSkeleton {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
 </style>

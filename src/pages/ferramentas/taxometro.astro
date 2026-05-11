@@ -7,6 +7,7 @@ import FaqSchema from '../../components/FaqSchema.astro';
 
 import Taxometro from '../../components/ferramentas/Taxometro.astro';
 import ConteudoTaxometro from '../../components/ferramentas/ConteudoTaxometro.astro';
+import Disclaimer from '../../components/Disclaimer.astro';
 
 const pageTitle = "Taxômetro Investilize: Taxas do Tesouro Direto Hoje";
 const pageDescription = "Acompanhe as taxas e preços dos títulos públicos em tempo real. Entenda a marcação a mercado e como os juros impactam sua rentabilidade.";
@@ -46,6 +47,9 @@ const dadosFaq = [
             </p>
 
             <Taxometro />
+            <div style="margin-top: 2rem;">
+                <Disclaimer />
+            </div>
             <div class="spacer"></div>
             <ConteudoTaxometro />
         </main>

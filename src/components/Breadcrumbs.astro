@@ -31,7 +31,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
+      "name": "Início",
       "item": Astro.site ? Astro.site.origin : url.origin
     },
     ...breadcrumbs.map((breadcrumb, index) => ({
@@ -48,7 +48,7 @@ const breadcrumbSchema = {
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb-list">
     <li>
-      <a href="/">Home</a>
+      <a href="/">Início</a>
       <span aria-hidden="true">›</span>
     </li>
     {breadcrumbs.map((breadcrumb) => (

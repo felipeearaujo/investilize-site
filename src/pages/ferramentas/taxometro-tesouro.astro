@@ -8,6 +8,7 @@ import FaqSchema from '../../components/FaqSchema.astro';
 // Componentes específicos da ferramenta
 import Taxometro from '../../components/ferramentas/Taxometro.astro';
 import ConteudoTaxometro from '../../components/ferramentas/ConteudoTaxometro.astro';
+import Disclaimer from '../../components/Disclaimer.astro';
 
 const pageTitle = "Taxómetro Tesouro Direto: Taxas e Preços em Tempo Real";
 const pageDescription = "Monitorize as taxas do Tesouro Direto hoje. Entenda a marcação a mercado e veja a variação dos títulos públicos em tempo real.";
@@ -39,6 +40,50 @@ const dadosFaq = [
             h1 { text-align: center; color: #111827; font-size: 2.5rem; margin-bottom: 1rem; }
             .intro-text { text-align: center; color: #4b5563; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
             .spacer { margin-bottom: 4rem; }
+
+            /* Explicação Visual: Nominal vs Real */
+            .visual-explanation {
+                max-width: 700px;
+                margin: 3rem auto;
+                padding: 1.5rem;
+                background: #f8fafc;
+                border-radius: 8px;
+                border: 1px solid #e2e8f0;
+            }
+            .visual-explanation h3 {
+                text-align: center;
+                color: #0f172a;
+                margin-bottom: 1.5rem;
+            }
+            .bar-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .bar-row {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .bar-label {
+                width: 120px;
+                font-weight: 600;
+                color: #475569;
+                font-size: 0.9rem;
+            }
+            .bar {
+                height: 30px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                color: white;
+                font-size: 0.85rem;
+                font-weight: bold;
+            }
+            .b-nominal { width: 100%; background-color: #94a3b8; }
+            .b-inflacao { width: 40%; background-color: #ef4444; }
+            .b-real { width: 60%; background-color: #10b981; }
         </style>
     </head>
     <body>
@@ -47,10 +92,35 @@ const dadosFaq = [
             <Breadcrumbs />
             <h1>{pageTitle}</h1>
             <p class="intro-text">
-                Acompanhe a variação das taxas dos títulos públicos e entenda como o cenário económico impacta a rentabilidade da sua carteira de renda fixa.
+                Acompanhe a variação das taxas dos títulos públicos e entenda como o cenário econômico impacta a rentabilidade da sua carteira. Fique de olho na <strong>Taxa Custódia B3</strong> e nas oportunidades do <strong>Tesouro Selic 2026</strong>.
             </p>
 
             <Taxometro />
+            
+            <div style="margin-top: 2rem;">
+                <Disclaimer />
+            </div>
+
+            <div class="visual-explanation">
+                <h3>O que sobra no seu bolso? (Nominal vs Real)</h3>
+                <div class="bar-container">
+                    <div class="bar-row">
+                        <div class="bar-label">Taxa Nominal</div>
+                        <div class="bar b-nominal">O que a corretora promete (ex: 10%)</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">- Inflação / Impostos</div>
+                        <div class="bar b-inflacao">Corrosão (ex: 4%)</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">= Ganho Real</div>
+                        <div class="bar b-real">Seu ganho de verdade (ex: 6%)</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #64748b;">
+                    Lembre-se: O <strong>Tesouro Selic 2026</strong> não sofre oscilações bruscas, mas os títulos atrelados ao IPCA garantem que a barra do "Ganho Real" nunca seja engolida pela barra da Inflação.
+                </p>
+            </div>
 
             <div class="spacer"></div>
 

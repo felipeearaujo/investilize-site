@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 // src/components/ferramentas/ConversorMoedas.astro
 ---
 
@@ -7,6 +8,19 @@
     <div class="header-icon">💱</div>
     <h2>Conversor de Moedas</h2>
     <p class="subtitle">Cotações comerciais atualizadas em tempo real</p>
+
+    <!-- Atalhos rápidos com flags visuais -->
+    <div class="currency-shortcuts" id="currency-shortcuts">
+      <button class="shortcut-btn active" data-from="USD" data-to="BRL">
+        <span class="flag">🇺🇸</span> Dólar (USD)
+      </button>
+      <button class="shortcut-btn" data-from="EUR" data-to="BRL">
+        <span class="flag">🇪🇺</span> Euro (EUR)
+      </button>
+      <button class="shortcut-btn" data-from="GBP" data-to="BRL">
+        <span class="flag">🇬🇧</span> Libra (GBP)
+      </button>
+    </div>
     
     <div class="converter-body">
       <div class="currency-group">
@@ -118,6 +132,35 @@
     font-size: 0.95rem;
   }
 
+  /* Atalhos de moeda com flags */
+  .currency-shortcuts {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .shortcut-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 30px;
+    background: #f9fafb;
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .shortcut-btn:hover, .shortcut-btn.active {
+    border-color: #0167c2;
+    background: #eff6ff;
+    color: #0167c2;
+  }
+  .flag { font-size: 1.2rem; line-height: 1; }
+
   @media (max-width: 500px) {
     .converter-body { flex-direction: column; align-items: center; }
     .currency-group { width: 100%; }
@@ -125,6 +168,8 @@
     .swap-icon-container:hover { transform: rotate(270deg); }
   }
 </style>
+
+<Disclaimer />
 
 <script>
   function initConverter() {
@@ -147,11 +192,19 @@
         const res = await fetch(`${API_URL}/currencies`);
         const data = await res.json();
         
-        // Função auxiliar para criar opções
+        // Mapa de flags emoji por código ISO
+        const flagMap = {
+          'USD': '🇺🇸', 'EUR': '🇪🇺', 'GBP': '🇬🇧', 'BRL': '🇧🇷',
+          'CAD': '🇨🇦', 'AUD': '🇦🇺', 'JPY': '🇯🇵', 'CHF': '🇨🇭',
+          'CNY': '🇨🇳', 'ARS': '🇦🇷', 'MXN': '🇲🇽', 'CLP': '🇨🇱'
+        };
+
+        // Função auxiliar para criar opções com flag
         const createOption = (code, name) => {
            const opt = document.createElement('option');
            opt.value = code;
-           opt.textContent = `${code} - ${name}`;
+           const flag = flagMap[code] ? `${flagMap[code]} ` : '';
+           opt.textContent = `${flag}${code} - ${name}`;
            return opt;
         };
 
@@ -241,6 +294,21 @@
             convert();
         });
     }
+
+    // Botões de atalho de moeda com flags
+    const shortcuts = document.querySelectorAll('.shortcut-btn');
+    shortcuts.forEach(btn => {
+        btn.addEventListener('click', () => {
+            shortcuts.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const from = btn.getAttribute('data-from');
+            const to = btn.getAttribute('data-to');
+            if (from) (fromSelect as HTMLSelectElement).value = from;
+            if (to) (toSelect as HTMLSelectElement).value = to;
+            (fromInput as HTMLInputElement).value = '1';
+            convert();
+        });
+    });
 
     // Inicializa
     populateCurrencies();

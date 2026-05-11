@@ -5,11 +5,7 @@ Allow: /
 # Bloqueia a API de cotação que deu erro
 Disallow: /api/  
 
-# Bloqueia arquivos de imagem baixáveis para não indexar no Google Imagens
-Disallow: /*.png$
-Disallow: /*.jpg$
-Disallow: /*.jpeg$
-Disallow: /*.svg$
+# (Removido o bloqueio de imagens para permitir a indexação no Google Imagens)
 
 # Sitemap (importante para ajudar o Google)
 Sitemap: https://investilize.com.br/sitemap-index.xml

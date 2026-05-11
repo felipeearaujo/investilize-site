@@ -1,6 +1,9 @@
 ---
 /* Conteúdo sobre CDB vs Tesouro */
 ---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet" />
 <article class="conteudo-tecnico">
     <section>
         <h2>CDI ou Selic: Qual a diferença?</h2>
@@ -21,6 +24,56 @@
             <strong>Dica Investilize:</strong> Para valores abaixo de R$ 10.000,00 no Tesouro Selic, há isenção da taxa da B3, 
             o que torna o Tesouro quase imbatível contra CDBs de bancos grandes.
         </div>
+
+        <h3>Comparativo de Rentabilidade: Tesouro vs Bancão</h3>
+        <div class="table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Investimento</th>
+                        <th>Rentabilidade</th>
+                        <th>Liquidez</th>
+                        <th>Risco</th>
+                        <th>Imposto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-destaque">
+                        <td><strong>Tesouro Selic</strong></td>
+                        <td class="taxa">100% Selic</td>
+                        <td>Diária (D+1)</td>
+                        <td class="risco-baixo">Soberano</td>
+                        <td class="taxa">IR Regressivo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CDB Bancão</strong></td>
+                        <td class="taxa">80–95% CDI</td>
+                        <td>Vencimento</td>
+                        <td class="risco-medio">FGC (até 250k)</td>
+                        <td class="taxa">IR Regressivo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CDB Digital</strong></td>
+                        <td class="taxa">110–130% CDI</td>
+                        <td>Vencimento</td>
+                        <td class="risco-medio">FGC (até 250k)</td>
+                        <td class="taxa">IR Regressivo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poupança</strong></td>
+                        <td class="taxa">~70% Selic</td>
+                        <td>Dia do Aniversário</td>
+                        <td class="risco-baixo">FGC</td>
+                        <td class="risco-baixo">Isento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="seo-faq-section">
+        <h2>Tesouro Direto ou CDB de Bancão: Qual rende mais?</h2>
+        <p>O Tesouro Selic e os CDBs de grandes bancos (bancões) são as portas de entrada da renda fixa. Historicamente, CDBs de bancões tradicionais rendem menos (em torno de 80% a 90% do CDI), o que os faz perderem para a caderneta de poupança em certos cenários. O Tesouro Selic rende 100% da Selic. Portanto, a menos que o seu bancão ofereça um CDB de 100% do CDI com liquidez diária, o Tesouro Direto ou um banco digital será muito mais rentável.</p>
     </section>
 </article>
 
@@ -28,4 +81,48 @@
     .conteudo-tecnico { line-height: 1.8; color: #374151; }
     h2, h3 { color: #111827; margin-top: 2rem; border-bottom: 2px solid #f5f3ff; }
     .destaque-box { background-color: #f5f3ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #4bac40; margin-top: 1.5rem; }
+
+    /* Tabela Comparativa */
+    .table-wrapper {
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
+    }
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+    }
+    .comparison-table thead {
+        background: #1e293b;
+        color: white;
+    }
+    .comparison-table th {
+        padding: 0.8rem 1rem;
+        text-align: left;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+    }
+    .comparison-table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #f1f5f9;
+        color: #374151;
+    }
+    .comparison-table tbody tr:last-child td { border-bottom: none; }
+    .comparison-table tbody tr:hover { background: #f8fafc; }
+
+    /* Linha em destaque (Tesouro Selic) */
+    .row-destaque { background: #f0f9ff; }
+    .row-destaque td { font-weight: 600; }
+
+    /* Fonte Atkinson Hyperlegible para números de taxas */
+    .taxa {
+        font-family: 'Atkinson Hyperlegible', monospace;
+        font-weight: 700;
+        color: #0167c2;
+        letter-spacing: 0.02em;
+    }
+    .risco-baixo { color: #16a34a; font-weight: 600; }
+    .risco-medio { color: #d97706; font-weight: 600; }
 </style>

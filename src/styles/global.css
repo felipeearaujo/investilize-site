@@ -23,14 +23,17 @@
         0 16px 32px rgba(var(--gray), 33%);
 }
 
-/* Remove o sublinhado de todos os links do site */
+/* Estilos globais de links com UX aprimorada */
 a {
-    text-decoration: none !important;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-/* Garante que não apareça sublinhado ao passar o mouse */
+/* Garante que links ganhem um destaque claro ao passar o mouse */
 a:hover {
-    text-decoration: none !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 @font-face {
@@ -173,10 +176,11 @@ pre > code { all: unset; }
 
 blockquote {
     border-left: 4px solid var(--accent-success); /* Borda Verde Médio */
-    padding: 0 0 0 20px;
-    margin: 0px;
-    font-size: 1.333em;
+    padding: 15px 20px;
+    margin: 1.5rem 0;
+    font-size: 1rem;
     background-color: rgba(75, 172, 64, 0.05); /* Fundo verde clarinho */
+    border-radius: 0 8px 8px 0;
 }
 
 hr {

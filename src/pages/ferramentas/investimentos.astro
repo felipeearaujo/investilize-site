@@ -5,23 +5,167 @@ import Footer from '../../components/Footer.astro';
 import SimuladorPerfil from '../../components/ferramentas/SimuladorPerfil.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const pageTitle="Descubra seu perfil de investidor";
-const pageDescription="Calculadora Perfil de Investidor: Conservador, Moderado ou Arrojado?";
+const pageTitle = "Ferramentas de Investimento Gratuitas | Investilize";
+const pageDescription = "Explore todas as calculadoras e simuladores financeiros do Investilize. Juros compostos, Preço Justo, Reserva de Emergência, Taxa Real e muito mais.";
+
+const ferramentas = [
+  { icon: "📈", titulo: "Juros Compostos", descricao: "Simule o crescimento do seu patrimônio com aportes mensais.", href: "/ferramentas/juros-compostos", destaque: true },
+  { icon: "💰", titulo: "Preço Justo (Graham & Bazin)", descricao: "Calcule o valor intrínseco e margem de segurança de ações.", href: "/ferramentas/calculadora-preco-justo", destaque: true },
+  { icon: "🛡️", titulo: "Reserva de Emergência", descricao: "Descubra quanto você precisa guardar para ter segurança financeira.", href: "/ferramentas/calculadora-reserva-emergencia", destaque: true },
+  { icon: "🏖️", titulo: "Independência Financeira (FIRE)", descricao: "Calcule quanto tempo falta para você viver de renda.", href: "/ferramentas/independencia-financeira" },
+  { icon: "📊", titulo: "Taxômetro Tesouro Direto", descricao: "Acompanhe as taxas dos títulos públicos em tempo real.", href: "/ferramentas/taxometro-tesouro" },
+  { icon: "🏦", titulo: "Tesouro vs Bancão", descricao: "Compare Tesouro Selic com CDBs de grandes bancos.", href: "/ferramentas/tesouro-vs-bancao" },
+  { icon: "💱", titulo: "Conversor de Moedas", descricao: "Converta Dólar, Euro, Libra e mais com cotação atualizada.", href: "/ferramentas/conversor-de-moedas" },
+  { icon: "📉", titulo: "Taxa Real de Juros", descricao: "Use a Equação de Fisher para calcular seu ganho acima da inflação.", href: "/ferramentas/taxa-real" },
+  { icon: "🛒", titulo: "Poder de Compra (IPCA)", descricao: "Veja o impacto da inflação no valor do seu dinheiro ao longo do tempo.", href: "/ferramentas/poder-de-compra" },
+  { icon: "🧾", titulo: "Calculadora de IR Mensal", descricao: "Simule seu imposto de renda e o custo do atraso no DARF.", href: "/ferramentas/calculadora-ir-mensal" },
+  { icon: "🚀", titulo: "Mercado Cripto ao Vivo", descricao: "Veja as maiores altas e quedas de criptomoedas nas últimas 24h.", href: "/ferramentas/mercado-cripto" },
+  { icon: "🔎", titulo: "Cotação de Ações", descricao: "Busque a cotação atualizada de qualquer ação da B3 ou EUA.", href: "/ferramentas/cotacao-acoes" },
+  { icon: "⚖️", titulo: "Comparador de Renda Fixa", descricao: "Compare CDB, LCI, LCA e Tesouro numa única simulação.", href: "/ferramentas/comparador-renda-fixa" },
+];
 ---
 <!doctype html>
 <html lang="pt-BR">
     <head>
-        {/* CORREÇÃO AQUI: Mude de 'title' para 'pageTitle' */}
-        <BaseHead pageTitle={pageTitle} description={pageDescription} />
+        <BaseHead title={pageTitle} description={pageDescription} />
     </head>
     <body>
         <Header />
-        <main>
+        <main class="hub-wrapper">
             <Breadcrumbs />
-            {}
-            <SimuladorPerfil />
-            
+
+            <div class="hub-header">
+                <h1>🧰 Todas as Ferramentas Financeiras</h1>
+                <p>Calculadoras e simuladores gratuitos para tomar decisões de investimento com dados e precisão.</p>
+            </div>
+
+            <!-- Simulador de Perfil (ferramenta principal da página) -->
+            <section class="perfil-section">
+                <h2>Descubra seu Perfil de Investidor</h2>
+                <SimuladorPerfil />
+            </section>
+
+            <!-- Hub visual: Sitemap de ferramentas -->
+            <section class="ferramentas-hub">
+                <h2>Explore Todas as Ferramentas</h2>
+                <div class="hub-grid">
+                    {ferramentas.map(f => (
+                        <a href={f.href} class={`hub-card ${f.destaque ? 'destaque' : ''}`}>
+                            <span class="hub-icon">{f.icon}</span>
+                            <div class="hub-info">
+                                <strong>{f.titulo}</strong>
+                                <p>{f.descricao}</p>
+                            </div>
+                            <span class="hub-arrow">→</span>
+                        </a>
+                    ))}
+                </div>
+            </section>
         </main>
         <Footer />
     </body>
 </html>
+
+<style>
+    .hub-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+    }
+    .hub-header {
+        text-align: center;
+        margin: 2rem 0 3rem;
+    }
+    .hub-header h1 {
+        font-size: 2.4rem;
+        color: #0f172a;
+        margin-bottom: 0.75rem;
+    }
+    .hub-header p {
+        color: #64748b;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .perfil-section {
+        margin-bottom: 4rem;
+    }
+    .perfil-section h2, .ferramentas-hub h2 {
+        font-size: 1.5rem;
+        color: #1e293b;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #f1f5f9;
+    }
+
+    /* Grid do Hub */
+    .hub-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .hub-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #1e293b;
+        background: #fff;
+        transition: all 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .hub-card:hover {
+        border-color: #0167c2;
+        box-shadow: 0 4px 12px rgba(1, 103, 194, 0.12);
+        transform: translateY(-2px);
+    }
+    .hub-card.destaque {
+        border-color: #bfdbfe;
+        background: linear-gradient(135deg, #fff 0%, #eff6ff 100%);
+    }
+    .hub-card.destaque:hover {
+        border-color: #0167c2;
+    }
+
+    .hub-icon {
+        font-size: 2rem;
+        flex-shrink: 0;
+        width: 2.5rem;
+        text-align: center;
+    }
+    .hub-info {
+        flex: 1;
+    }
+    .hub-info strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+        color: #0f172a;
+    }
+    .hub-info p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: #64748b;
+        line-height: 1.4;
+    }
+    .hub-arrow {
+        color: #94a3b8;
+        font-size: 1.1rem;
+        transition: color 0.2s, transform 0.2s;
+        flex-shrink: 0;
+    }
+    .hub-card:hover .hub-arrow {
+        color: #0167c2;
+        transform: translateX(3px);
+    }
+
+    @media (max-width: 600px) {
+        .hub-header h1 { font-size: 1.8rem; }
+        .hub-grid { grid-template-columns: 1fr; }
+    }
+</style>

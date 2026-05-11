@@ -1,3 +1,6 @@
+---
+import Disclaimer from '../Disclaimer.astro';
+---
 <div class="tool-card">
     <h3 class="tool-title">Calculadora de Ganho Real</h3>
     <p class="tool-desc">Aplique a Equação de Fisher para descobrir o seu lucro real.</p>
@@ -25,6 +28,8 @@
         <p class="feedback-msg" id="msg-feedback"></p>
     </div>
 </div>
+
+<Disclaimer />
 
 <script>
     document.getElementById('btn-calc-real').addEventListener('click', () => {

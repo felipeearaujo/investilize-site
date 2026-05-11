@@ -1,4 +1,5 @@
 ---
+import Disclaimer from '../Disclaimer.astro';
 // src/components/ferramentas/IndependenciaFinanceira.astro
 ---
 
@@ -11,23 +12,23 @@
     <div class="grid-inputs">
         <div class="input-group">
             <label for="rendaDesejada">Renda Mensal Desejada (R$):</label>
-            <input type="number" id="rendaDesejada" placeholder="Ex: 5000" />
+            <input type="text" inputmode="decimal" id="rendaDesejada" placeholder="Ex: 5.000" />
             <small>Quanto você quer receber por mês sem trabalhar.</small>
         </div>
 
         <div class="input-group">
             <label for="patrimonioAtual">Patrimônio Atual (R$):</label>
-            <input type="number" id="patrimonioAtual" placeholder="Ex: 10000" />
+            <input type="text" inputmode="decimal" id="patrimonioAtual" placeholder="Ex: 10.000" />
         </div>
 
         <div class="input-group">
             <label for="aporteMensal">Investimento Mensal (R$):</label>
-            <input type="number" id="aporteMensal" placeholder="Ex: 1500" />
+            <input type="text" inputmode="decimal" id="aporteMensal" placeholder="Ex: 1.500" />
         </div>
 
         <div class="input-group">
             <label for="taxaAnual">Rentabilidade Real Anual (%):</label>
-            <input type="number" id="taxaAnual" placeholder="Ex: 6" value="6" step="0.1" />
+            <input type="text" inputmode="decimal" id="taxaAnual" placeholder="Ex: 6" value="6" />
             <small>Acima da inflação (Ex: 5% a 7%).</small>
         </div>
     </div>
@@ -97,11 +98,12 @@
 
   .result-box {
     margin-top: 25px;
-    padding: 20px;
-    background-color: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 8px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-left: 6px solid #16a34a;
+    border-radius: 12px;
     color: #166534;
+    box-shadow: 0 10px 15px -3px rgba(22, 163, 74, 0.12);
     animation: fadeIn 0.5s ease-in;
   }
 
@@ -123,6 +125,8 @@
   }
 </style>
 
+<Disclaimer />
+
 <script>
   function initFireCalc() {
     const btn = document.getElementById('calc-fire-btn');
@@ -130,11 +134,16 @@
     
     if (!btn || !resultDiv) return;
 
+    function parseInput(val: string) {
+        if (!val) return 0;
+        return parseFloat(val.replace(/\./g, '').replace(',', '.')) || 0;
+    }
+
     btn.addEventListener('click', () => {
-        const rendaDesejada = parseFloat((document.getElementById('rendaDesejada') as HTMLInputElement).value);
-        const patrimonioAtual = parseFloat((document.getElementById('patrimonioAtual') as HTMLInputElement).value) || 0;
-        const aporteMensal = parseFloat((document.getElementById('aporteMensal') as HTMLInputElement).value);
-        const taxaAnual = parseFloat((document.getElementById('taxaAnual') as HTMLInputElement).value);
+        const rendaDesejada = parseInput((document.getElementById('rendaDesejada') as HTMLInputElement).value);
+        const patrimonioAtual = parseInput((document.getElementById('patrimonioAtual') as HTMLInputElement).value);
+        const aporteMensal = parseInput((document.getElementById('aporteMensal') as HTMLInputElement).value);
+        const taxaAnual = parseInput((document.getElementById('taxaAnual') as HTMLInputElement).value);
 
         if (!rendaDesejada || !aporteMensal || !taxaAnual) {
             resultDiv.innerHTML = '<p style="color:red">Preencha todos os campos obrigatórios.</p>';

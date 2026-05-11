@@ -7,7 +7,7 @@ import AltasEBaixasCripto from '../../components/AltasEBaixasCripto.astro';
 
 // Configurações de SEO
 const title = "Cotação de Criptomoedas ao Vivo: Maiores Altas e Quedas | Investilize";
-const description = "Acompanhe a cotação do Bitcoin e Ethereum em tempo real. Veja o nosso painel atualizado com as criptomoedas que mais subiram e caíram nas últimas 24 horas.";
+const description = "Acompanhe o Preço do Bitcoin 2026 e Ethereum em tempo real. Veja o nosso painel com Cotação Atualizada das criptomoedas com maiores altas e quedas nas últimas 24 horas.";
 const canonicalURL = new URL(Astro.url.pathname, "https://investilize.com.br").toString();
 const safeImage = "https://investilize.com.br/images/capa-ferramenta-cripto.png"; // Substitua pela sua imagem real
 ---
@@ -54,11 +54,23 @@ const safeImage = "https://investilize.com.br/images/capa-ferramenta-cripto.png"
                     <p class="subtitle">Acompanhe a movimentação das 100 maiores moedas digitais em tempo real. Descubra quais ativos estão dominando o mercado nas últimas 24 horas.</p>
                 </header>
                 
-                <AltasEBaixasCripto />
+                <!-- Wrapper com IntersectionObserver para lazy-load do painel de cripto -->
+                <div id="cripto-lazy-wrapper">
+                    <!-- Skeleton exibido enquanto o painel não entra na viewport -->
+                    <div id="cripto-skeleton" class="cripto-skeleton-grid" aria-hidden="true">
+                        <div class="sk-card"></div><div class="sk-card"></div>
+                        <div class="sk-card"></div><div class="sk-card"></div>
+                        <div class="sk-card"></div><div class="sk-card"></div>
+                    </div>
+                    <!-- Painel real, inicialmente oculto até a viewport -->
+                    <div id="cripto-panel" style="display: none;">
+                        <AltasEBaixasCripto />
+                    </div>
+                </div>
 
                 <div class="content-seo mt-12">
-                    <h2>Como funciona o mercado de criptomoedas?</h2>
-                    <p>Diferente da Bolsa de Valores (B3) que tem horário de abertura e fechamento, o mercado de criptoativos (como Bitcoin, Ethereum e Solana) funciona 24 horas por dia, 7 dias por semana. Isso significa que as cotações não param de se mover, gerando oportunidades e riscos a todo instante.</p>
+                    <h2>Preço do Bitcoin 2026: Como funciona o mercado de criptomoedas?</h2>
+                    <p>Diferente da Bolsa de Valores (B3) que tem horário de abertura e fechamento, o mercado de criptoativos (como Bitcoin, Ethereum e Solana) funciona 24 horas por dia, 7 dias por semana. Acompanhar o <strong>Preço Bitcoin 2026</strong> e a <strong>Cotação Atualizada</strong> é essencial para identificar movimentos de mercado.</p>
                     
                     <p>O painel acima monitora o volume financeiro global e filtra automaticamente as moedas que sofreram as maiores valorizações (🚀) e desvalorizações (📉) no período exato de 24 horas.</p>
 
@@ -94,6 +106,26 @@ const safeImage = "https://investilize.com.br/images/capa-ferramenta-cripto.png"
             }
           ]
         }
+        </script>
+
+        <!-- IntersectionObserver: ativa o painel cripto apenas quando o usuário faz scroll até ele -->
+        <script is:inline>
+            (function() {
+                const skeleton = document.getElementById('cripto-skeleton');
+                const panel    = document.getElementById('cripto-panel');
+                const wrapper  = document.getElementById('cripto-lazy-wrapper');
+                if (!skeleton || !panel || !wrapper) return;
+
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        skeleton.style.display = 'none';
+                        panel.style.display = 'block';
+                        observer.disconnect();
+                    }
+                }, { rootMargin: '200px' }); // Pré-carrega 200px antes de entrar na viewport
+
+                observer.observe(wrapper);
+            })();
         </script>
     </body>
 </html>
@@ -143,5 +175,24 @@ const safeImage = "https://investilize.com.br/images/capa-ferramenta-cripto.png"
     }
     .mt-12 {
         margin-top: 3rem;
+    }
+
+    /* Skeleton Grid para o Painel Cripto (Anti-CLS) */
+    .cripto-skeleton-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    .sk-card {
+        height: 90px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+    @keyframes shimmer {
+        0%   { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
     }
 </style>

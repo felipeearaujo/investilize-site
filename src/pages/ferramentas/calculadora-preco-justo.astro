@@ -15,13 +15,17 @@ const faqData = [
   {
     question: "Como funciona o método de Bazin?",
     answer: "O método de Décio Bazin foca em dividendos, estabelecendo que o preço justo é o dividendo anual pago dividido por 0,06 (exigindo 6% de yield)."
+  },
+  {
+    question: "O que é Margem de Segurança?",
+    answer: "A Margem de Segurança é a diferença entre o Preço Justo (Valor Intrínseco) de uma ação e o seu preço atual de mercado. Uma margem ampla reduz os riscos do investimento e aumenta o potencial de valorização."
   }
 ];
 
 // NOVO: Dados estruturados para a calculadora (Gera estrelas no Google)
 const calculatorSchema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": ["SoftwareApplication", "FinancialProduct"],
   "name": pageTitle,
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Web",
@@ -47,14 +51,22 @@ const calculatorSchema = {
 
     <div class="tool-page-wrapper">
         <div class="header-section">
+            <h2 class="seo-h2-title">Calculadora Bazin e Fórmula de Graham</h2>
             <div class="intro-seo">
                 <p>
-                    Descubra se uma ação está barata ou cara. Calcule o <strong>Valor Intrínseco</strong> pela fórmula de Graham ou o <strong>Teto de Preço</strong> pelo método Bazin de forma rápida e gratuita.
+                    Analise ativos com rigor técnico. Utilize a <strong>Fórmula de Graham</strong> para encontrar o <strong>Valor Intrínseco</strong> e a <strong>Calculadora Bazin</strong> para definir o seu <strong>Preço Teto de Dividendos</strong>. Descubra a sua <strong>Margem de Segurança</strong> antes de investir na bolsa de valores.
                 </p>
             </div>
         </div>
 
         <CalculadoraPrecoJusto />
+
+        <div class="eeat-note">
+            <p>
+                🛡️ <strong>Nota Técnica de Transparência:</strong> Esta ferramenta atua como um simulador focado em análise fundamentalista. Os dados de cotação das ações que alimentam os cálculos podem apresentar delay padrão de mercado (15 a 20 minutos), dependendo da latência da fonte (B3 ou Yahoo Finance). A fórmula aplicada não constitui recomendação de compra ou venda. <br><br><strong>Disclaimer: O Preço Justo é uma métrica teórica e não garante rentabilidade.</strong>
+            </p>
+        </div>
+
         <ConteudoPrecoJusto />
     </div>
 </Layout>
@@ -63,5 +75,47 @@ const calculatorSchema = {
     .tool-page-wrapper { width: 100%; max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
     .header-section { text-align: center; margin-bottom: 3rem; }
     .header-section h1 { font-size: 2.8rem; color: #111827; margin-bottom: 1rem; line-height: 1.2; }
-    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; }
+    .seo-h2-title { font-size: 2rem; color: #1e293b; margin-bottom: 1.5rem; font-weight: 700; }
+    .intro-seo { max-width: 700px; margin: 0 auto; color: #4b5563; font-size: 1.1rem; line-height: 1.6; }
+    
+    /* Nota Técnica EEAT */
+    .eeat-note {
+        background-color: #f8fafc;
+        border-left: 4px solid #64748b;
+        padding: 1rem;
+        margin: 2rem auto;
+        font-size: 0.85rem;
+        color: #475569;
+        border-radius: 4px;
+        max-width: 800px;
+        line-height: 1.5;
+    }
+
+    /* Prevenção de CLS e Skeleton Loaders (Sugestão de Performance) */
+    :global(.resultado-container) {
+        min-height: 120px; /* Reserva espaço para evitar pulo de layout quando a API carregar */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Garantia de Contraste AAA (WCAG) para os Resultados Numéricos */
+    :global(.resultado-container), :global(.resultado-valor), :global(.resultado-destaque) {
+        color: #0f172a !important; /* Cor extra escura para garantir contraste AAA sobre fundos claros/verdes */
+        font-weight: 800;
+    }
+
+    :global(.skeleton) {
+        background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+        background-size: 200% 100%;
+        animation: pulseSkeleton 1.5s infinite;
+        border-radius: 4px;
+        color: transparent !important;
+        user-select: none;
+    }
+
+    @keyframes pulseSkeleton {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+    }
 </style>

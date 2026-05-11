@@ -10,8 +10,8 @@ import Conteudoacoes from '../../components/ferramentas/Conteudoacoes.astro'; //
 import { Chart, registerables } from 'chart.js/auto';
 
 // 2. Definir o título e a descrição para o SEO desta página
-const pageTitle = "Cotação de Ações em Tempo Real";
-const pageDescription = "Veja a cotação de ações da B3 e do mercado internacional. Ferramenta gratuita de cotações.";
+const pageTitle = "Cotação Atualizada de Ações em Tempo Real | B3 e Internacional";
+const pageDescription = "Veja a Cotação Atualizada de ações da B3 e mercado internacional em 2026. Ferramenta gratuita com dados do Yahoo Finance. Busque PETR4, VALE3, AAPL e mais.";
 
 // 3. DEFINIR OS DADOS DO NOVO FAQ
 const dadosFaqMoedas = [
@@ -44,8 +44,10 @@ const dadosFaqMoedas = [
             <Breadcrumbs />
             {}
             <CotacaoAcoesComponent />
-            {/* O componente com todo o texto explicativo e FAQ */}
-            <Conteudoacoes />
+            {/* Conteúdo educativo e FAQ - carrega abaixo do fold */}
+            <div id="conteudo-lazy-acoes">
+                <Conteudoacoes />
+            </div>
             {}
         </main>
         <Footer />
