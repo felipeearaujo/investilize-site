@@ -17,8 +17,8 @@ faqList:
 ---
 
 > **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
-> * [Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência](/https://investilize.com.br/blog/reserva-emergencia/)
-> * [Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancário](https://investilize.com.br/blog/cdb-lci-lca-como-escolher/)
+> * [Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência](https://investilize.com.br/blog/tesouro-selic/)
+> * [Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancário](https://investilize.com.br/blog/ci-lca-brb-digimais-seguranca-fgc/)
 > * **Dia 4: Tesouro IPCA+: A blindagem definitiva contra a inflação** (Você está aqui)
 
 Imagine que você guardou R\$ 100 debaixo do colchão hoje. Se a inflação subir, daqui a alguns anos esses mesmos R\$ 100 não comprarão nem metade do que compram agora. 
@@ -95,4 +95,4 @@ Muitos acham que investir em governo é para ricos. Mentira. As buscas por "valo
 ### Próximo Passo: Dia 5 da Trilha
 Você aprendeu a se proteger da inflação com o Tesouro IPCA+. Mas e se você pudesse viver apenas desses juros? No **Dia 5**, vamos mergulhar no mundo da **Renda Passiva** e descobrir como transformar seus investimentos em uma máquina de pagar boletos.
 
-👉 **[Dia 5: Renda Passiva: Como montar uma carteira de dividendos em 2026](/blog/renda-passiva-carteira-dividendos)**
+👉 **[Dia 5: Prefixados: Quando vale a pena travar a taxa de juros?](/blog/prefixados-quando-travar-a-taxa-de-juros)**

@@ -3,11 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "python scripts/fetch_bacen.py && astro dev",
-    "build": "python scripts/fetch_bacen.py && python scripts/gerar_grafico_comparativo.py && astro build",
+    "dev": "./venv/bin/python scripts/fetch_bacen.py && astro dev",
+    "build": "./venv/bin/python scripts/fetch_bacen.py && ./venv/bin/python scripts/gerar_grafico_comparativo.py && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "build:full": "python scripts/fetch_bacen.py && python scripts/gerar_grafico_comparativo.py && astro build"
+    "build:full": "./venv/bin/python scripts/fetch_bacen.py && ./venv/bin/python scripts/gerar_grafico_comparativo.py && astro build"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.1",
