@@ -19,10 +19,10 @@ faqList:
     answer: "O FGC (Fundo Garantidor de Crédito) garante até R$ 250 mil por CPF e por instituição financeira. Sim, LCI e LCA possuem essa cobertura, assim como o CDB."
 ---
 
-> **Você estã na Trilha do Conhecimento: O Império da Renda Fixa**
-> * [Dia 1: Renda Fixa vs. Renda Variãvel: Por onde começar?](/blog/renda-fixa-variavel-diferenca/)
-> * [Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência](/blog/reserva-emergency/)
-> * **Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancãrio** (Você estã aqui)
+> **Você está na Trilha do Conhecimento: O Império da Renda Fixa**
+> * [Dia 1: Renda Fixa vs. Renda Variável: Por onde começar?](/blog/renda-fixa-variavel-diferenca)
+> * [Dia 2: Tesouro Selic: Onde colocar sua reserva de emergência](https://investilize.com.br/blog/tesouro-selic/)
+> * **Dia 3: CDB, LCI e LCA: Como escolher o melhor título bancário** (Você está aqui)
 > * [Dia 4: Tesouro IPCA+: A blindagem definitiva contra a inflação](/blog/tesouro-ipca-protecao-inflacao)
 
 Depois de arrumar a casa e montar sua reserva de emergência no Tesouro Selic, o próximo passo natural para fazer o seu dinheiro crescer de verdade é explorar os **títulos privados**. Em 2026, ativos como **CDB**, **LCI** e **LCA** continuam sendo os queridinhos do investidor brasileiro.
