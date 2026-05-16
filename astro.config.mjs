@@ -28,7 +28,8 @@ export default defineConfig({
   trailingSlash: 'always',
 
   build: {
-    format: 'directory' // Cria pastas físicas (index.html) para cada post, excelente para SEO
+    format: 'directory', // Cria pastas físicas (index.html) para cada post, excelente para SEO
+    inlineStylesheets: "always"
   },
 
   image: {
