@@ -158,6 +158,7 @@ const selicAtual = indicadores?.selic || "11.25";
     .chart-container { margin-top: 40px; height: 320px; position: relative; }
 </style>
 
+<script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script is:inline define:vars={{ selicAtual }}>
     function initIR() {
         const calculateBtn = document.getElementById('calculate-ir-btn');
@@ -214,7 +215,9 @@ const selicAtual = indicadores?.selic || "11.25";
                 penaltyAlert.style.display = 'none';
             }
 
-            // 4. Gráfico (Roxo e Verde)
+            // 4. Gráfico (Roxo e Verde) - Proteção contra erro "Chart is not defined"
+            if (typeof Chart === 'undefined') return;
+            
             if (irChart) irChart.destroy();
             irChart = new Chart(chartCanvas, {
                 type: 'doughnut',

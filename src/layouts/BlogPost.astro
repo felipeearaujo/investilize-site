@@ -31,17 +31,6 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
     	
     	<meta name="ezoic-site-verification" content="FEJWdNWd8kM54jgA3UKlWa7Q7OJipi" />
 
-      <!-- CMP -->
-      <script is:inline data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
-      <script is:inline data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
-
-      <!-- EZOIC CORRETO -->
-      <script is:inline async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-      <script is:inline>
-      window.ezstandalone = window.ezstandalone || {};
-      ezstandalone.cmd = ezstandalone.cmd || [];
-      </script>
-      
       <!-- ✅ ADICIONE O CSS DO KATEX AQUI -->
         <link
           rel="stylesheet"
@@ -106,6 +95,8 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
                         src={heroImage}
                         alt={heroImageAlt || dynamicTitle}
                         sizes="(max-width: 720px) 100vw, 720px"
+                        loading="eager"
+                        fetchpriority="high"
                     />}
                 </div>
                 <div id="ezoic-pub-ad-placeholder-100"></div>
@@ -134,10 +125,23 @@ const resolvedImage = (typeof heroImage === 'string' ? heroImage : heroImage?.sr
             </article>
         </main>
         <Footer />
-          <script is:inline>
-          ezstandalone.cmd.push(function () {
-              ezstandalone.showAds(100, 101, 102, 103);
-          });
-          </script>
+
+        <!-- Scripts de Terceiros movidos para o fim do body para performance (Manual de Otimização) -->
+        <!-- CMP -->
+        <script is:inline data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+        <script is:inline data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+
+        <!-- EZOIC CORRETO -->
+        <script is:inline async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+        <script is:inline>
+        window.ezstandalone = window.ezstandalone || {};
+        ezstandalone.cmd = ezstandalone.cmd || [];
+        </script>
+
+        <script is:inline>
+        ezstandalone.cmd.push(function () {
+            ezstandalone.showAds(100, 101, 102, 103);
+        });
+        </script>
     </body>
 </html>
